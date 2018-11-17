@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+	Candy's - Suggestion Box
+	</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+</head>
+	<body>
+ <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+<style>
+body {
+	background-color: #DCDCDC;
+	font-family: Arial, sans-serif;
+	}
+@media (max-width: 500px){
+    .boxes{
+		width: 100%;
+		display: grid;
+		grid-gap: 5px 0px;
+		grid-template-columns: 100%;
+		grid-template-rows: 1fr 1fr;
+		grid-template-areas:
+			"box1"
+			"box2";
+		justify-content: center;
+		}
+}
+.nav-bar {
+    background-color: #FF6347;
+    overflow: hidden;
+    position: fixed;
+    top: 0px;
+	width:100%;
+	font-family: Montserrat, sans-serif;
+}
+.nav-bar a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 10px 40px;
+    text-decoration: none;
+    font-size: 17px;
+}
+.nav-bar a:hover {
+    background-color: #FF7F50;
+    color: black;
+}
+.footer {
+		font-size: 14px;
+		width: 100%;
+		color: #f2f2f2;
+		background-color: #FF6347;
+		overflow: hidden;
+		position: fixed;
+		bottom: 0px;
+		width:100%;
+		font-family: Montserrat, sans-serif;
+		}
+.footer a {
+		float: right;
+		color: #f2f2f2;
+		text-align: center;
+		padding: 10px 40px;
+		text-decoration: none;
+		background-color: #556B2F;
+		}
+h1 {
+	padding-top: 40px;
+	padding-left: 20px;
+	color: #556B2F;
+	font-family: Montserrat, sans-serif;
+	}
+h2 {
+	color: #f2f2f2;
+	font-family: Montserrat, sans-serif;
+	}
+.boxes {
+		width: 100%;
+		min-height:100px;
+		display: grid;
+		grid-gap: 5px 0px;
+		grid-template-columns: 50% 50%;
+		grid-template-rows: auto;
+		grid-template-areas:
+			"box1 box2";
+		justify-content: center;
+		}
+.box1 {
+		justify-content: center;
+		background-color: #859E5A;
+		border-radius:5px;
+		padding:10px;
+		margin:15px;
+		border-style: solid;
+		border-width: 2px;
+		border-color: #FF7F50;
+		grid-area: box1;
+		}
+.box2 {
+		justify-content: center;
+		background-color: #859E5A;
+		border-radius:5px;
+		padding:10px;
+		margin:15px;
+		border-style: solid;
+		border-width: 2px;
+		border-color: #FF7F50;
+		grid-area: box2;
+		}
+.question {
+		justify-content: center;
+		background-color: white;
+		border-radius:5px;
+		padding:10px;
+		margin:15px;
+		border-style: solid;
+		border-width: 2px;
+		border-color: #FF7F50;
+		}
+.smallerbox {
+		width: 100%;
+		display: grid;
+		grid-gap: 0px;
+		grid-template-columns: 50% 50%;
+		grid-template-rows: auto;
+		justify-content: center;
+		}
+</style>
+<header id="header">
+		<div><nav class="nav-bar" id="navbar">
+			<a href="FCCCert1ProductRaw.html" id="nav-link" class="nav-link"><strong>Home</strong></a>
+			<a href="FCCCert1TechnicalRaw.html" id="nav-link" class="nav-link">Iconic Candies</a>
+			<a href="FCCCert1SurveyRaw.html" id="nav-link" class="nav-link">Suggestion Box</a>
+			<a href="FCCCert1TributeRaw.html" id="nav-link" class="nav-link" style="float:right;">About Us</a>
+			</nav></div>
+	</header>
+    <h1 id="title">Suggestion Box <i class="fas fa-inbox fa-1x"></i></h1>
+	<form>
+	<div class="boxes">
+		<div class="box1"><h2>What Can We Do?</h2>
+			<div class="question">
+				Which of these classic candies do you like to eat?<br/>
+				<label for="Necco_Wafers"><input id="Necco_Wafers" type="checkbox" name="candy_likes" value="Necco_Wafers">Necco Wafers</label><br/>
+				<label for="Candy_Buttons"><input id="Candy_Buttons" type="checkbox" name="candy_likes" value="Candy_Buttons">Candy Buttons</label><br/>
+				<label for="JuJuBes"><input id="JuJuBes" type="checkbox" name="candy_likes" value="JuJuBes">JuJuBes</label><br/>
+				<label for="Bit_O_Honey"><input id="Bit_O_Honey" type="checkbox" name="candy_likes" value="Bit_O_Honey">Bit-O-Honey</label><br/>
+				<label for="Charleston_Chew"><input id="Charleston_Chew" type="checkbox" name="candy_likes" value="Charleston_Chew">Charleston Chew</label><br/>
+			</div>
+			<div class="question">
+			What candy flavors do you like?<br/>
+			<div class="smallerbox">
+				<div>
+					<label for="caramel"><input id="caramel" type="checkbox" name="flavor_likes" value="caramel">caramel</label><br/>
+					<label for="cherry"><input id="cherry" type="checkbox" name="flavor_likes" value="cherry">cherry</label><br/>
+					<label for="chocolate"><input id="chocolate" type="checkbox" name="flavor_likes" value="chocolate">chocolate</label><br/>
+					<label for="cinnamon"><input id="cinnamon" type="checkbox" name="flavor_likes" value="cinnamon">cinnamon</label><br/>
+					<label for="coconut"><input id="coconut" type="checkbox" name="flavor_likes" value="coconut">coconut</label><br/>
+				</div>
+				<div>
+					<label for="lemon"><input id="lemon" type="checkbox" name="flavor_likes" value="lemon">lemon</label><br/>
+					<label for="licorice"><input id="licorice" type="checkbox" name="flavor_likes" value="licorice">licorice</label><br/>
+					<label for="marshmallow"><input id="marshmallow" type="checkbox" name="flavor_likes" value="marshmallow">marshmallow</label><br/>
+					<label for="orange"><input id="orange" type="checkbox" name="flavor_likes" value="orange">orange</label><br/>
+					<label for="peanut_butter"><input id="peanut_butter" type="checkbox" name="flavor_likes" value="peanut_butter">peanut butter</label>
+				</div>
+			</div>
+			</div>
+			<div class="question">
+				Are there any candies you'd love to see at our store?<br/>
+				<textarea type="textfield" rows="5" id="suggestions_stock" name="suggestions_stock" style="width: 100%; overflow: auto;">What should we stock?</textarea>
+			</div>
+			<div class="question">
+				Is there anything else you think our store could do better?<br/>
+				<textarea type="textfield" rows="5" id="suggestions_store" name="suggestions_store" style="width: 100%; overflow: auto;">Please let us know how we can improve!</textarea>
+			</div>
+			</div>
+		<div class="box2"><h2>Who Are You?</h2>
+			<div class="question">
+				<label id="name-label">Name:&nbsp;&nbsp;<input type="text" id="name" placeholder="enter your full name" required style="width: 100%; overflow: auto;"></label>
+			</div>
+			<div class="question">
+				<label id="email-label">Email:&nbsp;&nbsp;<input type="email" required id="email" placeholder="enter your email" style="width: 100%; overflow: auto;"></label>
+			</div>
+			<div class="question">
+				Age:&nbsp;&nbsp;<select id="dropdown">
+				<option name="age" value="0-18">0-18</option>
+				<option name="age" value="19-30">19-30</option>
+				<option name="age" value="31-50">31-50</option>
+				<option name="age" value="51-65">51-65</option>
+				<option name="age" value="65+">65+</option>
+				</select>
+			</div>
+			<div class="question">
+				<label id="number-label">How many times in the past year have you been to our store? <br/>
+				<input type="number" required id="number" placeholder="# 0-1000" min="0" max="1000"></label>
+			</div>
+			<div class="question">
+				How was your last visit to Candy's Candy Emporium?<br/>
+				<label for="Great"><input id="Great" type="checkbox" name="candy_likes" value="Great">Great</label>&nbsp;&nbsp;
+				<label for="Good"><input id="Good" type="checkbox" name="candy_likes" value="Good">Good</label>&nbsp;&nbsp;
+				<label for="Neutral"><input id="Neutral" type="checkbox" name="candy_likes" value="Neutral">Neutral</label>&nbsp;&nbsp;
+				<label for="Bad"><input id="Bad" type="checkbox" name="candy_likes" value="Bad">Bad</label>&nbsp;&nbsp;
+				<label for="No_History"><input id="No_History" type="checkbox" name="candy_likes" value="No_History">Never Been</label>
+			</div>
+			<div class="question">
+				Are you likely to recommend our store to a friend?<br/>
+				<label for="Yes"><input id="yes" type="radio" name="recommend" value="Yes" checked>Yes</label><br/>
+				<label for="No"><input id="no" type="radio" name="recommend" value="No">No</label><br/>
+			</div>
+		</div>
+	</div>
+	<div style="padding-bottom: 100px; display: block; margin-left: auto; margin-right: auto; width: 13%;">
+	<input type="image" src="images/submitcandy.png" alt="Submit" height="50px"></input>
+	</div>
+	</form>
+	<div id="footer" class="footer">
+Candy's Candy Emporium -- 1234 Central Ave. -- Your Town, AR 12345
+<a href="http://www.kariminger.com">Back to Portfolio</a></div>
+
+	</body>
+</html>
