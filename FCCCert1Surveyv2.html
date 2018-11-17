@@ -13,20 +13,7 @@ body {
 	background-color: #DCDCDC;
 	font-family: Arial, sans-serif;
 	}
-@media (max-width: 500px){
-    .boxes{
-		width: 100%;
-		display: grid;
-		grid-gap: 5px 0px;
-		grid-template-columns: 100%;
-		grid-template-rows: 1fr 1fr;
-		grid-template-areas:
-			"box1"
-			"box2";
-		justify-content: center;
-		}
-}
-.nav-bar {
+ .nav-bar {
     background-color: #FF6347;
     overflow: hidden;
     position: fixed;
@@ -38,7 +25,7 @@ body {
     float: left;
     color: #f2f2f2;
     text-align: center;
-    padding: 10px 40px;
+    padding: 10px 10px;
     text-decoration: none;
     font-size: 17px;
 }
@@ -47,7 +34,7 @@ body {
     color: black;
 }
 .footer {
-		font-size: 14px;
+		font-size: 10px;
 		width: 100%;
 		color: #f2f2f2;
 		background-color: #FF6347;
@@ -61,13 +48,14 @@ body {
 		float: right;
 		color: #f2f2f2;
 		text-align: center;
-		padding: 10px 40px;
+		padding: 10px 20px;
 		text-decoration: none;
 		background-color: #556B2F;
 		}
 h1 {
-	padding-top: 40px;
+	padding-top: 60px;
 	padding-left: 20px;
+	padding-bottom: 0px;
 	color: #556B2F;
 	font-family: Montserrat, sans-serif;
 	}
@@ -80,13 +68,13 @@ h2 {
 		min-height:100px;
 		display: grid;
 		grid-gap: 5px 0px;
-		grid-template-columns: 50% 50%;
-		grid-template-rows: auto;
-		grid-template-areas:
-			"box1 box2";
+		grid-template-areas: 
+		"box1"
+		"box2";
 		justify-content: center;
 		}
 .box1 {
+		grid-area: box1;
 		justify-content: center;
 		background-color: #859E5A;
 		border-radius:5px;
@@ -95,9 +83,9 @@ h2 {
 		border-style: solid;
 		border-width: 2px;
 		border-color: #FF7F50;
-		grid-area: box1;
 		}
 .box2 {
+		grid-area: box2;
 		justify-content: center;
 		background-color: #859E5A;
 		border-radius:5px;
@@ -106,8 +94,7 @@ h2 {
 		border-style: solid;
 		border-width: 2px;
 		border-color: #FF7F50;
-		grid-area: box2;
-		}
+				}
 .question {
 		justify-content: center;
 		background-color: white;
@@ -126,6 +113,52 @@ h2 {
 		grid-template-rows: auto;
 		justify-content: center;
 		}
+@media (min-width: 600px){
+    .boxes {
+		width: 100%;
+		min-height:100px;
+		display: grid;
+		grid-gap: 5px 0px;
+		grid-template-columns: 50% 50%;
+		grid-template-rows: auto;
+		grid-template-areas:
+			"box1 box2";
+		justify-content: center;
+		}
+	h1 {
+		padding-top: 40px;
+		padding-left: 20px;
+		color: #556B2F;
+		font-family: Montserrat, sans-serif;
+	}
+	.nav-bar a {
+		float: left;
+		color: #f2f2f2;
+		text-align: center;
+		padding: 10px 40px;
+		text-decoration: none;
+		font-size: 17px;
+	}	
+	.footer a {
+		float: right;
+		color: #f2f2f2;
+		text-align: center;
+		padding: 10px 40px;
+		text-decoration: none;
+		background-color: #556B2F;
+	}
+	.footer {
+		font-size: 14px;
+		width: 100%;
+		color: #f2f2f2;
+		background-color: #FF6347;
+		overflow: hidden;
+		position: fixed;
+		bottom: 0px;
+		width:100%;
+		font-family: Montserrat, sans-serif;
+		}
+  }
 </style>
 <header id="header">
 		<div><nav class="nav-bar" id="navbar">
