@@ -115,7 +115,7 @@ newCatButton.addEventListener("click", function(){
 	};
 	updStore();
 });
-
+//NOT WORKING
 function updStore(){
-	localStorage.pageContent = document.querySelector("body").innerHTML;
+	//localStorage.pageContent = document.querySelector("body").innerHTML;
 };
