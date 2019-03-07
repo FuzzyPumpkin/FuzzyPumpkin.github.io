@@ -2,10 +2,9 @@
 DONE Be able to add list items.
 DONE List items should fade and cross off when clicked.
 DONE Deleting items 
-Need a button to bring up print dialog.
 DONE Need a whole-list delete button.
-Categories? And organization by them. Want a drop-down with 
-	suggestions but	the ability to add new ones.
+DONE Categories? And organization by them. Want a drop-down with 
+	but the ability to add new ones.
 Saving list? Probably need back-end. */
 
 var editInput = document.querySelector(".newItem");
@@ -72,7 +71,7 @@ function delItem(){
 	this.parentNode.parentNode.removeChild(this.parentNode);
 }
 
-//delete whole list function
+//delete whole list
 delAll.addEventListener("click", function(){
 	fullList.textContent = " ";
 });
