@@ -7,9 +7,9 @@ DONE Categories? And organization by them. Want a drop-down with
 	but the ability to add new ones.
 Saving list? Probably need back-end. */
 
-//check for webstorage
+//NOT WORKING check for webstorage
 if (window.localStorage !== "undefined") {
-  document.querySelector("body").innerHTML = localStorage.pageContent;
+  //document.querySelector("body").innerHTML = localStorage.pageContent;
 } else {
   console.log("No web storage");
 };
