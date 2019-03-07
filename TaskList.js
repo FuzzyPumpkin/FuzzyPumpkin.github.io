@@ -7,6 +7,14 @@ DONE Categories? And organization by them. Want a drop-down with
 	but the ability to add new ones.
 Saving list? Probably need back-end. */
 
+//check for webstorage
+if (window.localStorage.pageContent != "undefined") {
+   document.querySelector("body").innerHTML = window.localStorage.pageContent;
+} else {
+  console.log("No web storage");
+};
+
+
 var editInput = document.querySelector(".newItem");
 var editButton = document.querySelector(".edit");
 var newCatButton = document.querySelector(".editCategory");
@@ -17,6 +25,7 @@ var fullList = document.querySelector(".fullList");
 var delAll = document.querySelector(".delAll");
 var dupeAlert = document.querySelector(".alert");
 var counter = 0;
+localStorage.pageContent = document.querySelector("body").innerHTML
 
 //add new items
 editButton.addEventListener("click", function(){
@@ -58,16 +67,19 @@ editButton.addEventListener("click", function(){
 	};
 	//clear input field
 	editInput.value = "";
+	updStore();
 });
 
 //check off an item
 function toggleItem(){
 	this.classList.toggle("checkedOff");
+	updStore();
 }
 
 //delete one item
 function delItem(){
 	this.parentNode.parentNode.removeChild(this.parentNode);
+	updStore();
 }
 
 //delete whole list
@@ -102,4 +114,9 @@ newCatButton.addEventListener("click", function(){
 		;
 		counter = 0;
 	};
+	updStore();
 });
+
+function updStore(){
+	localStorage.pageContent = document.querySelector("body").innerHTML;
+};
