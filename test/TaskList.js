@@ -9,7 +9,7 @@ Saving list? Probably need back-end. */
 
 //check for webstorage
 if (window.localStorage != "undefined") {
-  document.querySelector("body").innerHTML = localStorage.pageContent;
+   document.querySelector("body").innerHTML = window.localStorage.pageContent;
 } else {
   console.log("No web storage");
 };
