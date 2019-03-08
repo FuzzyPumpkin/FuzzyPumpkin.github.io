@@ -15,6 +15,10 @@ ul:nth-of-type(even){
 	width: 70%
 	
 }
+.delAllDiv {
+	margin-left: 30px;
+	width: 70%
+}
 
 h1 {
 	font-family: 'Great Vibes', cursive;
