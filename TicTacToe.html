@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head>
+	<title>Tic Tac Toe</title>
+<!-- Custom CSS -->
+<link rel="stylesheet" type="text/css" href="TicTacToe.css">
+<!--Google font-->
+<link href="https://fonts.googleapis.com/css?family=Luckiest+Guy|Open+Sans" rel="stylesheet">
+</head>
+<body>
+<div class="headSpace">
+	<h1>Tic - Tac - Toe</h1>
+	<p class="begin">Click any space to begin.</p>
+</div>
+
+<div class="menuBar">
+<span class="menuPad"><button>New Game</button></span> 
+<span class="menuPad">Score: <span id="score">0</span> </span>
+<span class="menuPad">Streak: <span id="streak">0</span></span>
+</div>
+
+
+<table class="board">
+<tbody>
+	<tr>
+		<td></td>
+		<td class="vertLines"></td>
+		<td></td>
+	</tr>
+	
+	<tr>
+		<td class="horLines"></td>
+		<td class="horLines vertLines"></td>
+		<td class="horLines"></td>
+	</tr>
+	
+	<tr>
+		<td></td>
+		<td class="vertLines"></td>
+		<td></td>
+	</tr>
+</tbody>
+</table>
+
+
+<!-- Custom JavaScript -->
+<script type="text/javascript" src="TicTacToe.js"></script>
+</body>
