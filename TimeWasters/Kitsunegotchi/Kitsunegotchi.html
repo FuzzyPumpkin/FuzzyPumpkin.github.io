@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kitsunegotchi</title>
+
+<!--Bootstrap -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<!-- Custom CSS -->
+<link rel="stylesheet" type="text/css" href="Kitsunegotchi.css">
+
+</head>
+<body>
+<div id="mainCont">
+	<div class="row announce">
+	<p>As you arrive home for the day, you are suddenly greeted by a small kitsune spirit. The kitsune is
+	 in a ragged state, tired but happy after its last prank. If you care for it well, it might reward you
+	  for your efforts. Fail to please it in time, and you will find yourself its latest victim.</p>
+	 <p>The kitsune does not understand human constructs like "pause" or "take a break", so before agreeing
+	   to help the creature, make sure you understand what it needs and how to help it. Like living creatures,
+	    the kitsune's needs decline with time and need tending to strategically.</p>
+		<div class="btnBox">
+			<img class="btnImg img-fluid" src="images/leaf.png">
+			<button>Play</button>
+		</div>
+		
+	</div>
+<!--container for play area-->
+<div class="container playArea">
+<div class="row">
+<!-- container for kitsune image -->
+<div class="container col-lg-4">
+<img src="images/neutral.png" class="img-fluid">
+</div>
+
+<!--container for bars and buttons-->
+<div class="container col-lg-8">
+
+<!--hunger bars-->
+	<div class="row">
+		<div class="col-lg-3">
+		Hunger:
+		</div>
+		<div class="col-lg-9">
+		<div class="row">
+			<div class="col-lg-1 col-1 hunger barPiece fulfilled"></div>
+			<div class="col-lg-1 col-1 hunger barPiece fulfilled"></div>
+			<div class="col-lg-1 col-1 hunger barPiece fulfilled"></div>
+			<div class="col-lg-1 col-1 hunger barPiece"></div>
+			<div class="col-lg-1 col-1 hunger barPiece"></div>
+			<div class="col-lg-1 col-1 hunger barPiece"></div>
+			<div class="col-lg-1 col-1 hunger barPiece"></div>
+			<div class="col-lg-1 col-1 hunger barPiece"></div>
+			<div class="col-lg-1 col-1 hunger barPiece"></div>
+			<div class="col-lg-1 col-1 hunger barPiece"></div>
+		</div>
+		</div>
+	</div>
+<!--amusement bars-->
+	<div class="row">
+		<div class="col-lg-3">
+		Amusement:
+		</div>
+		<div class="col-lg-9">
+		<div class="row">
+			<div class="col-lg-1 col-1 amuse barPiece fulfilled"></div>
+			<div class="col-lg-1 col-1 amuse barPiece fulfilled"></div>
+			<div class="col-lg-1 col-1 amuse barPiece fulfilled"></div>
+			<div class="col-lg-1 col-1 amuse barPiece fulfilled"></div>
+			<div class="col-lg-1 col-1 amuse barPiece fulfilled"></div>
+			<div class="col-lg-1 col-1 amuse barPiece fulfilled"></div>
+			<div class="col-lg-1 col-1 amuse barPiece fulfilled"></div>
+			<div class="col-lg-1 col-1 amuse barPiece"></div>
+			<div class="col-lg-1 col-1 amuse barPiece"></div>
+			<div class="col-lg-1 col-1 amuse barPiece"></div>
+		</div>
+		</div>
+	</div>
+<!--grooming bars-->
+	<div class="row">
+		<div class="col-lg-3">
+		Grooming:
+		</div>
+		<div class="col-lg-9">
+		<div class="row">
+			<div class="col-lg-1 col-1 groom barPiece fulfilled"></div>
+			<div class="col-lg-1 col-1 groom barPiece fulfilled"></div>
+			<div class="col-lg-1 col-1 groom barPiece fulfilled"></div>
+			<div class="col-lg-1 col-1 groom barPiece fulfilled"></div>
+			<div class="col-lg-1 col-1 groom barPiece fulfilled"></div>
+			<div class="col-lg-1 col-1 groom barPiece"></div>
+			<div class="col-lg-1 col-1 groom barPiece"></div>
+			<div class="col-lg-1 col-1 groom barPiece"></div>
+			<div class="col-lg-1 col-1 groom barPiece"></div>
+			<div class="col-lg-1 col-1 groom barPiece"></div>
+		</div>
+		</div>
+	</div>
+<!--energy bars-->
+	<div class="row">
+		<div class="col-lg-3">
+		Energy:
+		</div>
+		<div class="col-lg-9">
+		<div class="row">
+			<div class="col-lg-1 col-1 energy barPiece fulfilled"></div>
+			<div class="col-lg-1 col-1 energy barPiece fulfilled"></div>
+			<div class="col-lg-1 col-1 energy barPiece"></div>
+			<div class="col-lg-1 col-1 energy barPiece"></div>
+			<div class="col-lg-1 col-1 energy barPiece"></div>
+			<div class="col-lg-1 col-1 energy barPiece"></div>
+			<div class="col-lg-1 col-1 energy barPiece"></div>
+			<div class="col-lg-1 col-1 energy barPiece"></div>
+			<div class="col-lg-1 col-1 energy barPiece"></div>
+			<div class="col-lg-1 col-1 energy barPiece"></div>
+		</div>
+		</div>
+	</div>
+
+<!-- container for buttons -->
+	<div class="row">
+	<div class="btnBox">
+		<img class="btnImg img-fluid" src="images/leaf.png">
+		<button id="energyBtn">Nap</button>
+	</div>
+	<div class="btnBox">
+		<img class="btnImg img-fluid" src="images/leaf.png">
+		<button id="amusementBtn">Play</button>
+	</div>
+	<div class="btnBox">
+		<img class="btnImg img-fluid" src="images/leaf.png">
+		<button id="hungerBtn">Feed</button>
+	</div>
+	<div class="btnBox">
+		<img class="btnImg img-fluid" src="images/leaf.png">
+		<button id="groomingBtn">Brush</button>
+	</div>
+	</div>
+<!--end button container-->
+</div>
+
+</div>
+</div>
+<!--end play area container-->
+
+
+
+<!-- Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<!-- Custom JavaScript -->
+<script type="text/javascript" src="Kitsunegotchi.js"></script>
+</body>
+</html>
