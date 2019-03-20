@@ -1,0 +1,11 @@
+This fairly simple tic-tac-toe game was my second project in JavaScript. Made without tutorial or walkthrough, as my preference is to try to struggle through things on my own (with the help of Google and Stack Overflow) so that I learn instead of parrot.
+
+The game is a bit easy, though a coworker of mine said it took her four times to win. The "PC" moves are made randomly by picking a random indice in the array of available square indices. Streak is lost on a lost game or when "New Game" is clicked before the game was won.
+
+I had an awful time figuring out how to disable the event listeners on the squares. Due to assigning them using a for loop, I could not call the function in such a way that it could be removed in the standard way. Instead, I have the event listener function first check to verify that the square has no text. If it is not blank, the code does not fire.
+
+Project made using:
+HTML
+CSS
+JavaScript
+no libraries
