@@ -3,33 +3,32 @@
 <head>
 	<title>Keybored</title>
 	<script type="text/javascript" src="resources/paper-full.js"></script>
-<!--Bootstrap -->
-<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
-<!-- Custom CSS -->
-<link rel="stylesheet" type="text/css" href="Keybored.css">
-<!--Paper.js canvas-->
+	<link rel="stylesheet" type="text/css" href="Keybored.css">
+
 <script type="text/paperscript" canvas="myCanvas">
-<!--random circles-->
-	var colors = ["red", "blue", "yellow", "green", "purple", "white", "cyan", "pink", "white", "purple"];
-for(var x = 0; x < 10; x += 1){
-	var randOne = Math.floor(Math.random() * 600);
-	var randTwo = Math.floor(Math.random() * 600);
-	var randThree = Math.floor(Math.random() * 150);
-	var circle2 = new Path.Circle(new Point(randTwo, randOne), randThree);
-	circle2.fillColor = colors[x];
-	};
+	
+	var circles = [];
+	
+	function onKeyDown(event){
+		var maxPoint = new Point(view.size.width, view.size.height);//finds canvas limit
+		var randomPoint = Point.random();
+		var point = maxPoint * randomPoint;
+		var newCircle = new Path.Circle(point, 100);
+		newCircle.fillColor = "orange";
+		circles.push(newCircle);
+	}
+	
+	function onFrame(event){
+		for(var i = 0; i < circles.length; i++){
+			circles[i].fillColor.hue +=1;
+			circles[i].scale(.97);
+		}
+	}
+	
+	
 </script>
-
-
 </head>
 <body>
 	<canvas id="myCanvas" resize></canvas>
-
-<!-- Bootstrap JS -->
-<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
-<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
-<!-- Custom JavaScript -->
-<script type="text/javascript" src="Keybored.js"></script>
 </body>
 </html>
