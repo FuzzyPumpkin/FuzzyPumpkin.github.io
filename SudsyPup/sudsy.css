@@ -1,0 +1,31 @@
+#color1 {
+	background-color: #D4D8E6;
+}
+#color2 {
+	background-color: #41A8AC;
+}
+#color3 {
+	background-color: #7BBFC8;
+}
+#color4 {
+	background-color: #A6CDC6;
+}
+#color5 {
+	background-color: #DAD5D3;
+}
+#color6 {
+	background-color: #DDDFE3;
+}
+canvas {
+	width: 200px;
+	height: 100%;
+	background: #41A8AC;
+	border-right: 8px solid #7BBFC8;
+}
+body, html{
+	height: 100%;
+	margin: 0;
+}
+.wholeHeight {
+	height: 100%;
+}
