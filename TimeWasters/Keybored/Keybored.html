@@ -3,32 +3,49 @@
 <head>
 	<title>Keybored</title>
 	<script type="text/javascript" src="resources/paper-full.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.1/howler.js"></script>
 	<link rel="stylesheet" type="text/css" href="Keybored.css">
 
 <script type="text/paperscript" canvas="myCanvas">
 	
 	var circles = [];
-	
+	var soundDefault = new Howl({
+			src: ['resources/sounds/wipe.mp3']
+		});
 	function onKeyDown(event){
 		var maxPoint = new Point(view.size.width, view.size.height);//finds canvas limit
 		var randomPoint = Point.random();
 		var point = maxPoint * randomPoint;
 		var newCircle = new Path.Circle(point, 100);
-		newCircle.fillColor = "orange";
+		if(keyData[event.key]){
+			newCircle.fillColor = keyData[event.key].color;
+			keyData[event.key].sound.play();
+		}
+		else {
+			newCircle.fillColor = "yellow";
+			soundDefault.play();
+		};
 		circles.push(newCircle);
-	}
+	};
 	
 	function onFrame(event){
 		for(var i = 0; i < circles.length; i++){
-			circles[i].fillColor.hue +=1;
+			circles[i].fillColor.hue += .5;
 			circles[i].scale(.97);
-		}
-	}
+			if(circles[i].ares <1){
+				circles[i].remove();
+				circles.splice(i, 1);
+			};
+		};
+	};
 	
 	
 </script>
 </head>
 <body>
-	<canvas id="myCanvas" resize></canvas>
+<h1>Press a letter key (keys in the middle row recommended)</h1>
+	<canvas id="myCanvas" resize>
+	</canvas>
+	<script type="text/javascript" src="Keybored.js"></script>
 </body>
 </html>
