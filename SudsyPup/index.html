@@ -5,13 +5,32 @@
 <!-- Bootstrap 4.0 stuff -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <!-- paper.js -->
-<link rel="text/javascript" href="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.0/paper-full.js">
+<script type="text/javascript" src="resources/paper-full.js"></script>
 <!-- Custom CSS -->
 <link rel="stylesheet" type="text/css" href="sudsy.css">
 <link rel="stylesheet" type="text/css" href="index.css">
 
 <script type="text/paperscript" canvas="myCanvas">
-
+	var circles = [];
+	function onKeyDown(event){
+		var maxPoint = new Point(view.size.width, view.size.height);//finds canvas limit
+		var randomPoint = Point.random();
+		var point = maxPoint * randomPoint;
+		var newCircle = new Path.Circle(point, 100);
+		newCircle.fillColor = "yellow";
+		circles.push(newCircle);
+	};
+	
+	function onFrame(event){
+		for(var i = 0; i < circles.length; i++){
+			circles[i].fillColor.hue += .5;
+			circles[i].scale(.97);
+			if(circles[i].ares <1){
+				circles[i].remove();
+				circles.splice(i, 1);
+			};
+		};
+	};
 	
 </script>
 
