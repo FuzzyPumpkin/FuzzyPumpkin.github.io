@@ -29,3 +29,11 @@ body, html{
 .wholeHeight {
 	height: 100%;
 }
+nav {
+	background-color: #D4D8E6;
+}
+
+.searchBtn {
+	color: #41A8AC;
+    border-color: #41A8AC;
+}
