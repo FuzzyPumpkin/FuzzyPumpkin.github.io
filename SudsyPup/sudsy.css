@@ -34,6 +34,13 @@ nav {
 }
 
 .searchBtn {
-	color: #41A8AC;
-    border-color: #41A8AC;
+	color: black;
+    border-color: black;
+}
+.sudsyHome {
+	margin: 0;
+	padding: 0;
+}
+nav a {
+	color: black;
 }
