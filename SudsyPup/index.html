@@ -6,6 +6,8 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <!--Font Awesome-->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<!--Google Fonts-->
+<link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans+Condensed:300" rel="stylesheet">
 <!-- paper.js -->
 <script type="text/javascript" src="resources/paper-full.js"></script>
 <!-- Custom CSS -->
@@ -45,7 +47,7 @@ function onFrame(event) {
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
+    <ul class="navbar-nav mr-auto ml-5">
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Our Products
@@ -60,7 +62,7 @@ function onFrame(event) {
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <input class="form-control mr-sm-2" style="width: 400px"type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-sm my-2 my-sm-0 searchBtn" type="submit"><i class="fas fa-search"></i></button>
     </form>
     <ul class="navbar-nav ml-auto">
@@ -105,15 +107,18 @@ function onFrame(event) {
 <div id="foot" class="container wholeWidth">
 	<div class="row">
 		<div class="col-3">
-			<iframe class="img-fluid" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2965.2282736119637!2d-87.80832338434142!3d41.99537626604553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fc9728757ee21%3A0x549ca899b6f3ecb4!2s6284+N+Avondale+Ave%2C+Chicago%2C+IL+60631!5e0!3m2!1sen!2sus!4v1553815835564!5m2!1sen!2sus" frameborder="0" style="border:0" allowfullscreen></iframe>
-		</div>
-		<div class="col-3">
 			<ul>
 				<li>Customer Service</li>
 				<li>Shipping Options</li>
 				<li>What is "Pet-Safe?"</li>
 				<li>Our Suppliers</li>
 			</ul>
+		</div>
+		<div class="col-3 centered address">
+			<span>SudsyPup</span><br>
+			111 Local Street<br>
+			Your Town, AK 01010<br>
+			1-800-111-1234	
 		</div>
 		<div class="col-3">
 			<ul>
@@ -124,11 +129,9 @@ function onFrame(event) {
 			</ul>
 		</div>
 		<div class="col-3">
-			<span>SudsyPup</span><br>
-			111 Local Street<br>
-			Your Town, AK 01010<br>
-			1-800-111-1234	
+			<iframe class="img-fluid" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2965.2282736119637!2d-87.80832338434142!3d41.99537626604553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fc9728757ee21%3A0x549ca899b6f3ecb4!2s6284+N+Avondale+Ave%2C+Chicago%2C+IL+60631!5e0!3m2!1sen!2sus!4v1553815835564!5m2!1sen!2sus" frameborder="0" style="border:1px solid rgba(0, 0, 0, .5)" allowfullscreen></iframe>
 		</div>
+
 	</div>
 </div>
 	
