@@ -38,8 +38,11 @@ body, html{
 	margin: 0;
 	font-family: "Open Sans Condensed", sans-serif;
 }
-h2 {
+h1, h2, h3, h4 {
 	font-family: "Montserrat", sans-serif;
+}
+.jumbotron {
+	background-color: #A6CDC6;
 }
 .wholeHeight {
 	height: 100%;
@@ -94,6 +97,9 @@ footer {
 .sudsyHome {
 	margin: 0;
 	padding: 0;
+}
+.pageContent {
+	padding-bottom: 200px;
 }
 nav a {
 	color: black;
