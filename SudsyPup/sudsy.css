@@ -108,7 +108,27 @@ nav a {
 	font-family: "Montserrat", sans-serif;
 	font-weight: bold;
 }
+.petImgBox:hover .petName {
+	display: block;
+}
+.petImgBox:hover .roundImg {
+	border: 3px solid #41A8AC;
+}
 .roundImg {
 	border: 1px solid rgba(0,0,0,0.2);
 	border-radius: 50%;
+}
+.petName {
+	z-index: 2;
+	color: white;
+	position: absolute;
+	font-size: 40px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: none;
+	text-shadow: 1px 1px rgba(0,0,0,0.5),
+				1px -1px rgba(0,0,0,0.5),
+				-1px 1px rgba(0,0,0,0.5),
+				-1px -1px rgba(0,0,0,0.5);
 }
