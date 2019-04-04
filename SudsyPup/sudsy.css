@@ -108,3 +108,7 @@ nav a {
 	font-family: "Montserrat", sans-serif;
 	font-weight: bold;
 }
+.roundImg {
+	border: 1px solid rgba(0,0,0,0.2);
+	border-radius: 50%;
+}
