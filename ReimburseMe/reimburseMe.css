@@ -4,12 +4,6 @@ body, html{
 	font-family: "Open Sans", sans-serif;
 	background-color: #41423D;
 }
-/* .wholeHeight { */
-	/* height: 100%; */
-/* } */
-/* .wholeWidth { */
-	/* width: 100%; */
-/* } */
 .centered {
 	display: block;
 	margin: auto;
@@ -55,21 +49,45 @@ h1 {
 #super {
 	font-size: 40px;
 }
-.product {
-	background-color: #A1BB34;
-	color: white;
-	font-family: "Special Elite", sans-serif;
-	font-size: 30px;
-	padding: 10px 20px;
-	margin: 20px;
-	outline: none;
-	border: none;
-	display: inline-block;
-}
-.product:hover {
-	background-color: #BCD554;
-}
 .productBar {
 	position: absolute;
 	bottom: 10px;
+}
+.nav {
+	background-color: #A1BB34;
+	width: 100%;
+	height: 30px;
+	margin-bottom: 25px;
+	text-align: center;
+	position: relative;
+	border-bottom: 1px solid rgba(0,0,0,0.2);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.6);
+}
+button {
+	background-color: #A1BB34;
+	color: white;
+	font-family: "Special Elite", sans-serif;
+	border: none;
+	outline: none;
+}
+button:hover {
+	background-color: #BCD554;
+}
+button:focus {
+    outline: none;
+    border: none;
+}
+.announce button {
+	font-size: 30px;
+	padding: 10px 20px;
+	margin: 20px;
+}
+.navLink button {
+	font-size: 20px;
+	height: 100%;
+	padding-top: 5px;
+}
+.navLink {
+	margin: 0px 35px 0px 35px;
+	position: relative;
 }
