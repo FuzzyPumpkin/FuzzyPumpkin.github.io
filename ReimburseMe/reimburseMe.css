@@ -1,6 +1,8 @@
 body, html{
 	height: 100%;
 	margin: 0;
+	font-family: "Open Sans", sans-serif;
+	background-color: #41423D;
 }
 /* .wholeHeight { */
 	/* height: 100%; */
@@ -9,7 +11,7 @@ body, html{
 	/* width: 100%; */
 /* } */
 .centered {
-	display:block;
+	display: block;
 	margin: auto;
 	text-align: center;
 }
@@ -24,6 +26,12 @@ body, html{
 	background-position: right top;
 	background-repeat: no-repeat;
 	background-size: contain;
+	padding-left: 50px;
+	border: 1px solid black;
+	border-radius: 5%;
+	margin: 5% 10% 0px 10%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.6);
+	position: relative;
 }
 footer {
 	background-color: #D4D8E6;
@@ -34,4 +42,34 @@ footer {
     position: fixed;
     bottom: 0px;
 	width: 100%;
+}
+h1 {
+	font-family: "Special Elite", sans-serif;
+	font-size: 80px;
+	margin-bottom: 0;
+}
+#dollar {
+	color: #A1BB34;
+	font-size: 100px;
+}
+#super {
+	font-size: 40px;
+}
+.product {
+	background-color: #A1BB34;
+	color: white;
+	font-family: "Special Elite", sans-serif;
+	font-size: 30px;
+	padding: 10px 20px;
+	margin: 20px;
+	outline: none;
+	border: none;
+	display: inline-block;
+}
+.product:hover {
+	background-color: #BCD554;
+}
+.productBar {
+	position: absolute;
+	bottom: 10px;
 }
