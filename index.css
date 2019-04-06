@@ -1,0 +1,87 @@
+body {
+	background-color: #DEE1DC;
+	}
+.nav-bar {
+    background-color: #403433;
+    overflow: hidden;
+    position: fixed;
+    top: 0px;
+	width:100%;
+	font-family: Ubuntu, sans-serif;
+}
+.nav-bar a {
+    float: left;
+    color: #DCD4BA;
+    text-align: center;
+    padding: 10px 40px;
+    text-decoration: none;
+    font-size: 17px;
+}
+.nav-bar a:hover {
+    background-color: #9CA7B3;
+    color: #DCD4BA;
+}
+.welcome {
+	top: 0;
+	padding-top: 10%;	
+	width: 100%;
+	text-align: center;
+	position: relative;
+}
+h1 {
+	font-family: Ubuntu, sans-serif;
+	font-size: 60px;
+	font-style: bold;
+}
+h2 {
+	font-family: Ubuntu, sans-serif;
+	font-size: 18px;
+	font-style: italic;
+}
+.unicorn {
+	z-index: -1;
+	position: absolute;
+	left: 55%;
+	bottom: 0px;
+}
+.skills {
+		font-size: 12px;
+		width: 100%;
+		min-height:100px;
+		justify-content: center;
+		background: #D2B992;
+		text-align: center;
+		padding-top: 10px;
+		padding-bottom: 10px;
+}
+.education {
+		padding-top: 50px;
+		padding-bottom: 50px;
+		font-size: 18px;
+		width: 100%;
+		min-height:100px;
+		justify-content: center;
+		text-align: center;
+}
+.project {
+	margin: 10px;
+	width: 300px;
+	text-align: center;
+	font-family: Ubuntu, sans-serif;
+	font-size: 18px;
+	font-style: bold;
+	border: 2px solid #403433;
+	padding: 2px;
+}
+#project1 {
+	grid-area: project1;
+}
+#project2 {
+	grid-area: project2;
+}
+.row {
+	margin: auto;
+	display: grid;
+	grid-template: "project1 project2";
+	justify-content: center;
+}
