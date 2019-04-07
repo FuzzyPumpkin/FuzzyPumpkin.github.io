@@ -14,7 +14,7 @@ body, html{
 	margin-right: 40px;
 }
 .announce {
-	height: 70vh;
+	height: 680px;
 	background-color: white;
 	background-image: url("images/moneyInHand.jpg");
 	background-position: right top;
@@ -90,4 +90,13 @@ button:focus {
 .navLink {
 	margin: 0px 35px 0px 35px;
 	position: relative;
+}
+@viewport {
+  width: device-width;
+  zoom: 1.0;
+} 
+@media only screen and (max-width: 768px) {
+  body {
+    background-color: lightblue;
+  }
 }
