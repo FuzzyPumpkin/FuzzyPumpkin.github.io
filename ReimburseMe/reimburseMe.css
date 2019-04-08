@@ -27,6 +27,9 @@ body, html{
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.6);
 	position: relative;
 }
+.announce p {
+	margin-top:0;
+}
 footer {
 	background-color: #D4D8E6;
 	border-top: 1px solid rgba(0,0,0,0.2);
@@ -58,6 +61,8 @@ h1 {
 	width: 100%;
 	height: 30px;
 	margin-bottom: 25px;
+	position: fixed;
+    top: 0px;
 	text-align: center;
 	position: relative;
 	border-bottom: 1px solid rgba(0,0,0,0.2);
@@ -91,12 +96,17 @@ button:focus {
 	margin: 0px 35px 0px 35px;
 	position: relative;
 }
-@viewport {
-  width: device-width;
-  zoom: 1.0;
-} 
-@media only screen and (max-width: 768px) {
-  body {
-    background-color: lightblue;
-  }
+.faqContainer {
+	width: 70%;
+	background-color: white;
+	margin: 0 auto 80px auto;
+	border: 1px solid black;
+	border-radius: 5%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.6);
+	position: relative;
+	padding: 0px 30px;
+}
+h2 {
+	font-family: "Special Elite", sans-serif;
+	color: #A1BB34;
 }
