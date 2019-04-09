@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ReimburseMe - Flex Form</title>
+<!--Font Awesome-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<!--Google Fonts-->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
+<!-- Custom CSS -->
+<link rel="stylesheet" type="text/css" href="reimburseMe.css">
+</head>
+<body>
+<div class="nav">
+	<a href="index.html" class="navLink"><button><i class="fas fa-home"></i> Home</button></a>
+	<a href="faq.html" class="navLink"><button><i class="far fa-question-circle"></i> FAQ</button></a>
+	<a href="" class="navLink"><button><i class="far fa-user-circle"></i> Register</button></a>
+	<a href="" class="navLink"><button><i class="fas fa-user-circle"></i> Login</button></a>
+</div>
+
+<div class="faqContainer">
+	<h2>Flex Reimbursement Form</h2>
+	
+	<div>
+		Submitted by: <input type="text" placeholder="name">
+		Date: <input type="date"></input>
+	</div>
+	
+	<div>Labels</div>
+	
+	<div>
+		<input type="date"></input>
+		<select>
+			<option>Medical</option>
+			<option>Parking</option>
+			<option>Dependent</option>
+		</select>
+		<input type="text" placeholder="Description"></input>
+		$<input type="number" value="0"></input>
+		<button>+</button>
+	</div>
+	
+	<div>
+		Total: $<span>0.00</span>
+	</div>
+	
+	<div>
+		Comments:
+		<textarea></textarea>
+	</div>
+	
+	<div>
+		Internal Use Only
+		<hr>
+		<div></div>
+	</div>
+	
+	
+	
+</div>
+
+<!-- for number input, need javascript to myHTMLNumberInput.oninput = setTwoNumberDecimal;, function setTwoNumberDecimal(event) {
+    this.value = parseFloat(this.value).toFixed(2);} -->
+
+
+
+<footer>
+   <div>
+      <span>This is a mock site and does not belong to a real company.</span>
+	  <span class="setToRight">Interested in my work? <a href="mailto:kariminger@gmail.com?Subject=Portfolio">Email me!</a></span>
+   </div>
+</footer>
+
+<!-- Custom JavaScript -->
+</body>
+</html>
