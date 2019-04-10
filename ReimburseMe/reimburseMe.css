@@ -106,6 +106,16 @@ button:focus {
 	position: relative;
 	padding: 0px 30px;
 }
+.formContainer {
+	width: 60%;
+	background-color: white;
+	margin: 0 auto 80px auto;
+	border: 1px solid black;
+	border-radius: 5%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.6);
+	position: relative;
+	padding: 10px 50px;
+}
 h2 {
 	font-family: "Special Elite", sans-serif;
 	color: #A1BB34;
@@ -122,15 +132,25 @@ h2 {
 	width: 300px;
 	height: 25px;
 	margin-right: 5px;
+	display: inline-block;
 }
 .flexAmt {
 	width: 80px;
 	height: 25px;
+	display: inline-block;
 }
 .flexDate {
 	height: 27px;
+	width: 130px;
+	display: inline-block;
 }
 .flexType {
 	height: 31px;
+	width: 90px;
 	margin: 0px 5px;
+	display: inline-block;
 }
+.spacedContainer {
+	width: 100%
+	padding: 200px 10% 0px 10%;
+	}

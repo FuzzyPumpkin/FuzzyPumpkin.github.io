@@ -18,7 +18,7 @@
 	<a href="" class="navLink"><button><i class="fas fa-user-circle"></i> Login</button></a>
 </div>
 
-<div class="faqContainer">
+<div class="formContainer">
 	<h2>Flex Reimbursement Form</h2>
 	
 	<div>
@@ -28,7 +28,15 @@
 	</div>
 	
 	<div>
-		<div class="row">Labels</div>
+		<div class="row">
+			<strong>
+			<div class="flexDate">Date</div>
+			<div class="flexType">&nbsp Type</div>
+			<div class="flexDesc">&nbsp  Description</div>
+			<div class="flexAmt">&nbsp &nbsp Amount</div>
+			</strong>
+		
+		</div>
 		
 		<div class="row">
 			<input type="date" class="flexDate"></input>
@@ -58,9 +66,6 @@
 		<hr>
 		<p>Approved by:______________________  Date:______________</p>
 	</div>
-	
-	
-	
 </div>
 
 <!-- for number input, need javascript to myHTMLNumberInput.oninput = setTwoNumberDecimal;, function setTwoNumberDecimal(event) {
