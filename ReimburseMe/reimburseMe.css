@@ -110,3 +110,27 @@ h2 {
 	font-family: "Special Elite", sans-serif;
 	color: #A1BB34;
 }
+.internal {
+	height: 200px;
+}
+.addButton {
+	font-size: 1.4em;
+	padding: 3px 5px 0px 5px;
+	border-radius: 50%;
+}
+.flexDesc {
+	width: 300px;
+	height: 25px;
+	margin-right: 5px;
+}
+.flexAmt {
+	width: 80px;
+	height: 25px;
+}
+.flexDate {
+	height: 27px;
+}
+.flexType {
+	height: 31px;
+	margin: 0px 5px;
+}

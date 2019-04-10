@@ -24,35 +24,39 @@
 	<div>
 		Submitted by: <input type="text" placeholder="name">
 		Date: <input type="date"></input>
-	</div>
-	
-	<div>Labels</div>
-	
-	<div>
-		<input type="date"></input>
-		<select>
-			<option>Medical</option>
-			<option>Parking</option>
-			<option>Dependent</option>
-		</select>
-		<input type="text" placeholder="Description"></input>
-		$<input type="number" value="0"></input>
-		<button>+</button>
-	</div>
-	
-	<div>
-		Total: $<span>0.00</span>
-	</div>
-	
-	<div>
-		Comments:
-		<textarea></textarea>
-	</div>
-	
-	<div>
-		Internal Use Only
 		<hr>
-		<div></div>
+	</div>
+	
+	<div>
+		<div class="row">Labels</div>
+		
+		<div class="row">
+			<input type="date" class="flexDate"></input>
+			<select class="flexType">
+				<option>Medical</option>
+				<option>Parking</option>
+				<option>Dependent</option>
+			</select>
+			<input type="text" placeholder="Description" class="flexDesc" name="flexDesc"></input>
+			$<input type="number" class="flexAmt" name="flexAmt" value="0"></input>
+			<button class="addButton">+</button>
+		</div>
+		
+		<div class="row">
+			<hr>
+			<p class="setToRight">Total: $<span>0.00</span></p>
+		</div>
+
+		<div class="row">
+			Comments:
+			<textarea></textarea>
+		</div>
+	</div>
+	
+	<div class="internal">
+		<h3>Internal Use Only</h3>
+		<hr>
+		<p>Approved by:______________________  Date:______________</p>
 	</div>
 	
 	
