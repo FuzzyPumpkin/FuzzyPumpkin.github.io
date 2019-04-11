@@ -3,11 +3,11 @@ Project Description: A suite of form tools for employee/contractor/volunteer rei
 Used: HTML, CSS, JavaScript
 
 Design flow (Agile model)
-* Basic design, landing page
-* Basic design, FAQ page
-* Content, FAQ page
-* Basic design, flex form
-* Styling, flex form
+* Basic design, landing page - complete
+* Basic design, FAQ page - complete
+* Content, FAQ page - complete
+* Basic design, flex form - complete
+* Styling, flex form - in progress
 * Basic design, business expense form
 * Styling, business expense form
 * Basic design, travel form
