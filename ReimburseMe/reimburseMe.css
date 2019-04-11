@@ -11,7 +11,7 @@ body, html{
 }
 .setToRight {
 	float: right;
-	margin-right: 40px;
+	margin-top: 0px;
 }
 .announce {
 	height: 680px;
