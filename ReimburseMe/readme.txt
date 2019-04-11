@@ -7,7 +7,7 @@ Design flow (Agile model)
 * Basic design, FAQ page - complete
 * Content, FAQ page - complete
 * Basic design, flex form - complete
-* Styling, flex form - in progress
+* Styling, flex form - complete
 * Basic design, business expense form
 * Styling, business expense form
 * Basic design, travel form
@@ -26,3 +26,5 @@ Design flow (Agile model)
 * Login/new account programming
 * User profile section, user settings
 * Custom category integration
+* CSS refactor
+* JavaScript refactor
