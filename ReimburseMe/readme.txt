@@ -18,6 +18,7 @@ Design flow (Agile model)
 * Basic design, OFTRTA
 * Styling, OFTRA
 * Basic interactivity, OFTRA
+* Mobile display check
 * Print to PDF, main three forms
 * OFTRA programming to drop to main three forms
 * Basic design, user settings
@@ -26,5 +27,6 @@ Design flow (Agile model)
 * Login/new account programming
 * User profile section, user settings
 * Custom category integration
+* ADA usability
 * CSS refactor
 * JavaScript refactor
