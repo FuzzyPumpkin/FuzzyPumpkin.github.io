@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>ReimburseMe - Flex Form</title>
+	<title>ReimburseMe - Business Expense Form</title>
 <!--Font Awesome-->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 <!--Google Fonts-->
@@ -19,7 +19,7 @@
 </div>
 
 <div class="formContainer">
-	<h2>Flex Reimbursement Form</h2>
+	<h2>Business Expense Reimbursement Form</h2>
 	
 	<div>
 		Submitted by: <input type="text" placeholder="name">
@@ -31,22 +31,18 @@
 		<div class="row">
 			<strong>
 			<div class="date">Date</div>
-			<div class="type">&nbsp Type</div>
 			<div class="desc">&nbsp  Description</div>
 			<div class="amt">&nbsp &nbsp Amount</div>
+			<div>Bus. CC</div>
 			</strong>
 		
 		</div>
 		
 		<div class="row">
-			<input type="date" class="date" name="flexDate"></input>
-			<select class="type" name="flexType">
-				<option>Medical</option>
-				<option>Parking</option>
-				<option>Dependent</option>
-			</select>
-			<input type="text" placeholder="Description" class="desc" name="flexDesc"></input>
-			$<input type="number" class="amt" name="flexAmt" value="0"></input>
+			<input type="date" class="date" name="busDate"></input>
+			<input type="text" placeholder="Description" class="desc" name="busDesc"></input>
+			$<input type="number" class="amt" name="busAmt" value="0"></input>
+			<input type="checkbox" class="busCard" name="busCard"></input>
 			<button class="addButton">+</button>
 		</div>
 			<hr>
@@ -56,7 +52,8 @@
 		</div>
 
 		<div class="row">
-			<p class="setToRight"><strong>Total:</strong> $<span>0.00</span></p>
+			<p class="setToRight"><strong>Total:</strong> $<span>0.00</span>
+				&nbsp &nbsp <strong>Reimbursable:</strong> $<span>0.00</span></p>
 			<br>		
 			<p>Comments:</p>
 			<textarea rows="4" cols="100" name="userComments"></textarea>
