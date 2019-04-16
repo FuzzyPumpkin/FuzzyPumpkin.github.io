@@ -1,24 +1,23 @@
 {
-  "name": "v1",
+  "name": "app.js",
   "version": "1.0.0",
-  "description": "YelpCamp v1",
+  "description": "YelpCamp",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Colt Steele",
+  "author": "",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.14.1",
+    "body-parser": "^1.18.3",
     "connect-flash": "^0.1.1",
-    "ejs": "^2.3.4",
-    "express": "^4.13.3",
-    "express-session": "^1.11.3",
-    "method-override": "^2.3.5",
-    "mongoose": "^4.1.12",
-    "passport": "^0.3.0",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "express-session": "^1.16.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.4.22",
+    "passport": "^0.4.0",
     "passport-local": "^1.0.0",
-    "passport-local-mongoose": "^3.1.0",
-    "request": "^2.65.0"
+    "passport-local-mongoose": "^5.0.1"
   }
 }

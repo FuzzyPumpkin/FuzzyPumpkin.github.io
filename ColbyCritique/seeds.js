@@ -1,25 +1,25 @@
 var mongoose = require("mongoose");
-var Campground = require("./models/campground");
-var Comment   = require("./models/comment");
-
+var Campground = require("./models/campgrounds.js");
+var Comment   = require("./models/comments.js");
+ 
 var data = [
     {
-        name: "Cloud's Rest", 
-        image: "https://farm4.staticflickr.com/3795/10131087094_c1c0a1c859.jpg",
-        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
+        name: "Morro Bay", 
+        image: "https://farm4.staticflickr.com/3211/3062207412_03acc28b80.jpg",
+        description: "Morro Bay State Park campground is located close to Morro Bay, next to the marina and the Morro Bay Golf Course. The campground has a wide variety of sites for tents and RVs up to 25 feet or 35 feet. There are also several accessible campsites and Hike & Bike campsites. Picnickers may use the picnic areas of the campground."
     },
     {
-        name: "Desert Mesa", 
-        image: "https://farm6.staticflickr.com/5487/11519019346_f66401b6c1.jpg",
-        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
+        name: "Namakanipaio", 
+        image: "https://farm4.staticflickr.com/3319/3493312828_365d80acb7.jpg",
+        description: "Nestled amidst a fragrant eucalyptus grove, 4,000 feet above sea level, the historic Namakanipaio Campground offers a rustic, one-of-a-kind camping experience within Hawaii Volcanoes National Park."
     },
     {
-        name: "Canyon Floor", 
-        image: "https://farm1.staticflickr.com/189/493046463_841a18169e.jpg",
-        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
+        name: "Lost Creek", 
+        image: "https://farm2.staticflickr.com/1833/29139749948_a3cd13f49c.jpg",
+        description: "Lost Creek Campground is a fully accessible campground allowing anyone access to campsites, fishing and a paved nature trail that meanders through the area."
     }
 ]
-
+ 
 function seedDB(){
    //Remove all campgrounds
    Campground.remove({}, function(err){
@@ -27,32 +27,37 @@ function seedDB(){
             console.log(err);
         }
         console.log("removed campgrounds!");
-         //add a few campgrounds
-        data.forEach(function(seed){
-            Campground.create(seed, function(err, campground){
-                if(err){
-                    console.log(err)
-                } else {
-                    console.log("added a campground");
-                    //create a comment
-                    Comment.create(
-                        {
-                            text: "This place is great, but I wish there was internet",
-                            author: "Homer"
-                        }, function(err, comment){
-                            if(err){
-                                console.log(err);
-                            } else {
-                                campground.comments.push(comment);
-                                campground.save();
-                                console.log("Created new comment");
-                            }
-                        });
-                }
+        Comment.remove({}, function(err) {
+            if(err){
+                console.log(err);
+            }
+            console.log("removed comments!");
+             //add a few campgrounds
+            data.forEach(function(seed){
+                Campground.create(seed, function(err, campground){
+                    if(err){
+                        console.log(err);
+                    } else {
+                        console.log("added a campground");
+                        //create a comment
+                        Comment.create(
+                            {
+                                text: "This place is great, but I wish there was internet",
+                                author: "Homer"
+                            }, function(err, comment){
+                                if(err){
+                                    console.log(err);
+                                } else {
+                                    campground.comments.push(comment);
+                                    campground.save();
+                                    console.log("Created new comment");
+                                }
+                            });
+                    }
+                });
             });
         });
     }); 
-    //add a few comments
 }
-
+ 
 module.exports = seedDB;

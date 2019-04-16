@@ -2,8 +2,9 @@
  * Module dependencies.
  */
 
-var MongooseError = require('../error.js');
-var errorMessages = MongooseError.messages;
+'use strict';
+
+const MongooseError = require('./');
 
 /**
  * Schema validator error
@@ -14,19 +15,26 @@ var errorMessages = MongooseError.messages;
  */
 
 function ValidatorError(properties) {
-  var msg = properties.message;
+  let msg = properties.message;
   if (!msg) {
-    msg = errorMessages.general.default;
+    msg = MongooseError.messages.general.default;
   }
 
-  this.properties = properties;
-  var message = this.formatMessage(msg, properties);
+  const message = this.formatMessage(msg, properties);
   MongooseError.call(this, message);
-  this.stack = new Error().stack;
+
+  properties = Object.assign({}, properties, { message: message });
   this.name = 'ValidatorError';
+  if (Error.captureStackTrace) {
+    Error.captureStackTrace(this);
+  } else {
+    this.stack = new Error().stack;
+  }
+  this.properties = properties;
   this.kind = properties.type;
   this.path = properties.path;
   this.value = properties.value;
+  this.reason = properties.reason;
 }
 
 /*!
@@ -37,13 +45,27 @@ ValidatorError.prototype = Object.create(MongooseError.prototype);
 ValidatorError.prototype.constructor = MongooseError;
 
 /*!
+ * The object used to define this validator. Not enumerable to hide
+ * it from `require('util').inspect()` output re: gh-3925
+ */
+
+Object.defineProperty(ValidatorError.prototype, 'properties', {
+  enumerable: false,
+  writable: true,
+  value: null
+});
+
+/*!
  * Formats error messages
  */
 
 ValidatorError.prototype.formatMessage = function(msg, properties) {
-  var propertyNames = Object.keys(properties);
-  for (var i = 0; i < propertyNames.length; ++i) {
-    var propertyName = propertyNames[i];
+  if (typeof msg === 'function') {
+    return msg(properties);
+  }
+  const propertyNames = Object.keys(properties);
+  for (let i = 0; i < propertyNames.length; ++i) {
+    const propertyName = propertyNames[i];
     if (propertyName === 'message') {
       continue;
     }

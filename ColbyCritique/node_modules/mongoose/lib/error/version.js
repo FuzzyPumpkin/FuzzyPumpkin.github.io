@@ -1,9 +1,10 @@
+'use strict';
 
 /*!
  * Module dependencies.
  */
 
-var MongooseError = require('../error.js');
+const MongooseError = require('./');
 
 /**
  * Version Error constructor.
@@ -12,10 +13,13 @@ var MongooseError = require('../error.js');
  * @api private
  */
 
-function VersionError() {
-  MongooseError.call(this, 'No matching document found.');
-  Error.captureStackTrace && Error.captureStackTrace(this, arguments.callee);
+function VersionError(doc, currentVersion, modifiedPaths) {
+  const modifiedPathsStr = modifiedPaths.join(', ');
+  MongooseError.call(this, 'No matching document found for id "' + doc._id +
+    '" version ' + currentVersion + ' modifiedPaths "' + modifiedPathsStr + '"');
   this.name = 'VersionError';
+  this.version = currentVersion;
+  this.modifiedPaths = modifiedPaths;
 }
 
 /*!

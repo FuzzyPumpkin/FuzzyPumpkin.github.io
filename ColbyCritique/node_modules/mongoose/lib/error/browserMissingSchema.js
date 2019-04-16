@@ -1,9 +1,10 @@
-/* eslint no-unused-vars: 1 */
 /*!
  * Module dependencies.
  */
 
-var MongooseError = require('../error.js');
+'use strict';
+
+const MongooseError = require('./');
 
 /*!
  * MissingSchema Error constructor.
@@ -11,12 +12,16 @@ var MongooseError = require('../error.js');
  * @inherits MongooseError
  */
 
-function MissingSchemaError(name) {
-  var msg = 'Schema hasn\'t been registered for document.\n'
+function MissingSchemaError() {
+  const msg = 'Schema hasn\'t been registered for document.\n'
           + 'Use mongoose.Document(name, schema)';
   MongooseError.call(this, msg);
-  Error.captureStackTrace && Error.captureStackTrace(this, arguments.callee);
   this.name = 'MissingSchemaError';
+  if (Error.captureStackTrace) {
+    Error.captureStackTrace(this);
+  } else {
+    this.stack = new Error().stack;
+  }
 }
 
 /*!
