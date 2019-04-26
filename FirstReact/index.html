@@ -18,11 +18,17 @@
                     name: "Kari",
                     age: 40
                 }
+                handleClick(e){console.log(e.target);}
+                handleHover(e){console.log(e);}
+                handleCopy(e){console.log("Try being original");}
                 render(){
                     return (
                         <div>
                             <h1>Hello</h1>
                             <p>My name is: {this.state.name}</p>
+                            <button onClick={this.handleClick}>Click</button>
+                            <button onMouseOver={this.handleHover}>Hover</button>
+                            <p onCopy={this.handleCopy}>What we think, we become</p>
                         </div>
                     )
                 }
