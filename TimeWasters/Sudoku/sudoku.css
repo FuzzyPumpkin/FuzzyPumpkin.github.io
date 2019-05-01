@@ -1,0 +1,95 @@
+body {
+	font-family: "Open Sans", sans-serif;
+}
+table {
+	margin: auto;
+	border-collapse: collapse;
+	color: #6FB882;
+	font-family: "Luckiest Guy", sans-serif;
+	font-size: 80px;
+	text-align: center;
+}
+td {
+	width: 40px;
+	height: 40px;
+}
+.pencil {
+	width: 8px;
+	height: 8px;
+	border: 1px solid #E0E7E0;
+	font-size: 7px;
+}
+h1 {
+	font-family: "ZCOOL KuaiLe", sans-serif;
+	font-size: 80px;
+	margin-bottom: 1px;
+}
+
+button {
+	border: none;
+	background-color: #E0E7E0;
+	font-size: 16px;
+	text-transform: uppercase;
+	height: 100%;
+}
+	
+button:hover {
+	background-color: #6FB882;
+	color: white;
+}
+
+button:focus {
+    outline: none;
+    border: none;
+}
+.headSpace {
+	background-color: #6FB882;
+	color: white;
+	width: 100%;
+	margin: 0px;
+	height: 190px;
+	padding: 5px 0px 30px 0px;
+	text-align: center;
+	font-size: 16px;
+}
+.menuBar {
+	background-color: #E0E7E0; 
+	width: 100%;
+	height: 30px;
+	margin-bottom: 25px;
+	/* padding: 1px; */
+	text-align: center;
+	text-transform: uppercase;
+	position: relative;
+}
+.menuPad {
+	padding: 0px 35px 0px 35px;
+	position: relative;
+}
+.vertLines {
+	border-left: 2px solid #2A5F9E;
+	border-right: 2px solid #2A5F9E;
+}
+.vertGridLines {
+	border-left: 2px solid #2A5F9E;
+	border-right: 4px solid #2A5F9E;
+}
+.horLines {
+	border-top: 2px solid #2A5F9E;
+	border-bottom: 2px solid #2A5F9E;
+}
+.horGridLines {
+	border-top: 2px solid #2A5F9E;
+	border-bottom: 4px solid #2A5F9E;
+}
+.available:hover {
+	background-color: #E0E7E0;
+}
+.winner {
+	background-color: #2A5F9E;
+	color: white;
+}
+
+
+
+

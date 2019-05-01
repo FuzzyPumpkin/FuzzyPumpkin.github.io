@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<head>
+	<title>Sudoku</title>
+<!-- Custom CSS -->
+<link rel="stylesheet" type="text/css" href="sudoku.css">
+<!--Google font-->
+<link href="https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe|Open+Sans" rel="stylesheet">
+</head>
+<body>
+<div class="headSpace">
+	<h1>Sudoku</h1>
+	<p class="begin">Click any space to begin.</p>
+</div>
+
+<div class="menuBar">
+<span class="menuPad"><button>New Game</button></span> 
+<span class="menuPad">Score: <span id="score">0</span> </span>
+<span class="menuPad">Streak: <span id="streak">0</span></span>
+</div>
+
+
+<table class="board">
+<tbody>
+	<!-- row 1 -->
+	<tr>
+		<td class="grid1">
+			<table>
+				<tr>
+					<td class="pencil">1</td>
+					<td class="pencil">2</td>
+					<td class="pencil">3</td>
+					<td class="pencil">4</td>
+					<td class="pencil">5</td>
+				</tr>
+				<tr>
+					<td class="pencil">6</td>
+					<td class="pencil">7</td>
+					<td class="pencil">8</td>
+					<td class="pencil">9</td>
+					<td class="pencil"></td>
+				</tr>
+			</table>
+		</td>
+		<td class="vertLines grid1"></td>
+		<td class="vertGridLines grid1"></td>
+		<td class="vertLines grid4"></td>
+		<td class="vertLines grid4"></td>
+		<td class="vertGridLines grid4"></td>
+		<td class="vertLines grid7"></td>
+		<td class="vertLines grid7"></td>
+		<td class="grid7"></td>
+	</tr>
+	<!-- row 2 -->
+	<tr>
+		<td class="horLines grid1"></td>
+		<td class="horLines vertLines grid1"></td>
+		<td class="horLines vertGridLines grid1"></td>
+		<td class="horLines vertLines grid4"></td>
+		<td class="horLines vertLines grid4"></td>
+		<td class="horLines vertGridLines grid4"></td>
+		<td class="horLines vertLines grid7"></td>
+		<td class="horLines vertLines grid7"></td>
+		<td class="horLines grid7"></td>
+	</tr>
+	<!-- row 3 -->
+	<tr>
+		<td class="horGridLines grid1"></td>
+		<td class="horGridLines vertLines grid1"></td>
+		<td class="horGridLines vertGridLines grid1"></td>
+		<td class="horGridLines vertLines grid4"></td>
+		<td class="horGridLines vertLines grid4"></td>
+		<td class="horGridLines vertGridLines grid4"></td>
+		<td class="horGridLines vertLines grid7"></td>
+		<td class="horGridLines vertLines grid7"></td>
+		<td class="horGridLines grid7"></td>
+	</tr>
+	<!-- row 4 -->
+	<tr>
+		<td class="horLines grid2"></td>
+		<td class="horLines vertLines grid2"></td>
+		<td class="horLines vertGridLines grid2"></td>
+		<td class="horLines vertLines grid5"></td>
+		<td class="horLines vertLines grid5"></td>
+		<td class="horLines vertGridLines grid5"></td>
+		<td class="horLines vertLines grid8"></td>
+		<td class="horLines vertLines grid8"></td>
+		<td class="horLines grid8"></td>
+	</tr>
+	<!-- row 5 -->
+	<tr>
+		<td class="horLines grid2"></td>
+		<td class="horLines vertLines grid2"></td>
+		<td class="horLines vertGridLines grid2"></td>
+		<td class="horLines vertLines grid5"></td>
+		<td class="horLines vertLines grid5"></td>
+		<td class="horLines vertGridLines grid5"></td>
+		<td class="horLines vertLines grid8"></td>
+		<td class="horLines vertLines grid8"></td>
+		<td class="horLines grid8"></td>
+	</tr>
+	<!-- row 6 -->
+	<tr>
+		<td class="horGridLines grid2"></td>
+		<td class="horGridLines vertLines grid2"></td>
+		<td class="horGridLines vertGridLines grid2"></td>
+		<td class="horGridLines vertLines grid5"></td>
+		<td class="horGridLines vertLines grid5"></td>
+		<td class="horGridLines vertGridLines grid5"></td>
+		<td class="horGridLines vertLines grid8"></td>
+		<td class="horGridLines vertLines grid8"></td>
+		<td class="horGridLines grid8"></td>
+	</tr>
+	<!-- row 7 -->
+	<tr>
+		<td class="horLines grid3"></td>
+		<td class="horLines vertLines grid3"></td>
+		<td class="horLines vertGridLines grid3"></td>
+		<td class="horLines vertLines grid6"></td>
+		<td class="horLines vertLines grid6"></td>
+		<td class="horLines vertGridLines grid6"></td>
+		<td class="horLines vertLines grid9"></td>
+		<td class="horLines vertLines grid9"></td>
+		<td class="horLines grid9"></td>
+	</tr>
+	<!-- row 8 -->
+	<tr>
+		<td class="horLines grid3"></td>
+		<td class="horLines vertLines grid3"></td>
+		<td class="horLines vertGridLines grid3"></td>
+		<td class="horLines vertLines grid6"></td>
+		<td class="horLines vertLines grid6"></td>
+		<td class="horLines vertGridLines grid6"></td>
+		<td class="horLines vertLines grid9"></td>
+		<td class="horLines vertLines grid9"></td>
+		<td class="horLines grid9"></td>
+	</tr>
+	<!-- row 9 -->
+	<tr>
+		<td class="grid3"></td>
+		<td class="vertLines grid3"></td>
+		<td class="vertGridLines grid3"></td>
+		<td class="vertLines grid6"></td>
+		<td class="vertLines grid6"></td>
+		<td class="vertGridLines grid6"></td>
+		<td class="vertLines grid9"></td>
+		<td class="vertLines grid9"></td>
+		<td class="grid9"></td>
+	</tr>
+</tbody>
+</table>
+
+
+<!-- Custom JavaScript -->
+<script type="text/javascript" src=""></script>
+</body>
