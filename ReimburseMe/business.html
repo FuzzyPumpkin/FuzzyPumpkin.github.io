@@ -30,19 +30,24 @@
 	<div>
 		<div class="row">
 			<strong>
+			<div class="card">Bus. CC</div>
 			<div class="date">Date</div>
 			<div class="desc">&nbsp  Description</div>
 			<div class="amt">&nbsp &nbsp Amount</div>
-			<div>Bus. CC</div>
+			
 			</strong>
 		
 		</div>
 		
 		<div class="row">
+			<label for="busCard" class="busCard">
+				<input type="checkbox" id="busCard" class="busCardInput" />
+				<span class="busCardButton"></span>
+			</label>	
 			<input type="date" class="date" name="busDate"></input>
 			<input type="text" placeholder="Description" class="desc" name="busDesc"></input>
 			$<input type="number" class="amt" name="busAmt" value="0"></input>
-			<input type="checkbox" class="busCard" name="busCard"></input>
+			
 			<button class="addButton">+</button>
 		</div>
 			<hr>

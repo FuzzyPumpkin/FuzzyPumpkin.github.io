@@ -150,6 +150,9 @@ h2 {
 	margin: 0px 5px;
 	display: inline-block;
 }
+.card {
+	display: inline-block;
+}
 .busCard {
 	height: 27px;
 	width: 27px;
@@ -159,3 +162,48 @@ h2 {
 	width: 100%
 	padding: 200px 10% 0px 10%;
 	}
+	
+.busCard {
+    font-family: Helvetica, sans-serif;
+    display: inline-block;
+    margin: 0 15px 0 0;
+    vertical-align: top;
+}
+    .busCardInput {
+        display: none;
+    }
+    .busCardButton {
+        position: relative;
+        display: inline-block;
+        font-size: 1rem;
+        line-height: 20px;
+        background-color: #f2395a;
+        border: 1px solid #f2395a;
+        color: white;
+        width: 40px;
+        height: 30px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+        .busCardButton::before {
+            position: absolute;
+            content: "P";
+            display: inline-block;
+            height: 20px;
+            padding: 0 3px;
+            background: white;
+            color: white;
+            transition: all 0.3s ease;
+            top: 5px;
+            left: 20px;
+        }
+    /*style button only if status of input is checked */
+    .busCardInput:checked + .busCardButton {
+        background: #A1BB34;
+        border: 1px solid #A1BB34;
+    }
+    .busCardInput:checked + .busCardButton::before {
+        left: 5px;
+        content: "B";
+        color: white;
+    }
