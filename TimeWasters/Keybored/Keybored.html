@@ -2,17 +2,12 @@
 <html>
 <head>
 	<title>Keybored</title>
-	<!-- <script type="text/javascript" src="resources/paper-full.js"></script> -->
-<script type="text/javascript" src="resources/paper-full.js"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.1/howler.js"></script>
+	<script type="text/javascript" src="resources/paper-full.js"></script>
 	<link rel="stylesheet" type="text/css" href="Keybored.css">
 
 <script type="text/paperscript" canvas="myCanvas">
 	
 	var circles = [];
-	var soundDefault = new Howl({
-			src: ['resources/sounds/wipe.mp3']
-		});
 	function onKeyDown(event){
 		var maxPoint = new Point(view.size.width, view.size.height);//finds canvas limit
 		var randomPoint = Point.random();
@@ -20,11 +15,9 @@
 		var newCircle = new Path.Circle(point, 100);
 		if(keyData[event.key]){
 			newCircle.fillColor = keyData[event.key].color;
-			keyData[event.key].sound.play();
 		}
 		else {
-			newCircle.fillColor = "yellow";
-			soundDefault.play();
+			newCircle.fillColor = "white";
 		};
 		circles.push(newCircle);
 	};
@@ -39,14 +32,64 @@
 			};
 		};
 	};
-	
-	
 </script>
 </head>
 <body>
-<h1>Press a letter key (keys in the middle row recommended)</h1>
+		<div class="keys">
+				<div data-key="65" class="key whiteKey">
+				  <kbd>A</kbd>
+				</div>
+				<div data-key="87" class="key blackKey">
+				  <kbd>W</kbd>
+				</div>
+				<div data-key="83" class="key whiteKey">
+				  <kbd>S</kbd>
+				</div>
+				<div data-key="69" class="key blackKey">
+				  <kbd>E</kbd>
+				</div>
+				<div data-key="68" class="key whiteKey">
+				  <kbd>D</kbd>
+				</div>
+				<div data-key="70" class="key whiteKey">
+				  <kbd>F</kbd>
+				</div>
+				<div data-key="84" class="key blackKey">
+				  <kbd>T</kbd>
+				</div>
+				<div data-key="71" class="key whiteKey">
+				  <kbd>G</kbd>
+				</div>
+				<div data-key="89" class="key blackKey">
+				  <kbd>Y</kbd>
+				</div>
+				<div data-key="72" class="key whiteKey">
+				  <kbd>H</kbd>
+				</div>
+				<div data-key="85" class="key blackKey">
+				  <kbd>U</kbd>
+				</div>
+				<div data-key="74" class="key whiteKey">
+				  <kbd>J</kbd>
+				</div>
+		</div>
+			  <audio data-key="65" src="sounds/a-piano-c.wav"></audio>
+			  <audio data-key="87" src="sounds/w-piano-cs.wav"></audio>
+			  <audio data-key="83" src="sounds/s-piano-d.wav"></audio>
+			  <audio data-key="69" src="sounds/e-piano-eb.wav"></audio>
+			  <audio data-key="68" src="sounds/d-piano-e.wav"></audio>
+			  <audio data-key="70" src="sounds/f-piano-f.wav"></audio>
+			  <audio data-key="84" src="sounds/t-piano-fs.wav"></audio>
+			  <audio data-key="71" src="sounds/g-piano-g.wav"></audio>
+			  <audio data-key="89" src="sounds/y-piano-gs.wav"></audio>
+			  <audio data-key="72" src="sounds/h-piano-a.wav"></audio>
+			  <audio data-key="85" src="sounds/u-piano-bb.wav"></audio>
+			  <audio data-key="74" src="sounds/j-piano-b.wav"></audio>
 	<canvas id="myCanvas" resize>
+		
 	</canvas>
+	
 	<script type="text/javascript" src="Keybored.js"></script>
+	<script type="text/javascript" src="sounds.js"></script>
 </body>
 </html>
