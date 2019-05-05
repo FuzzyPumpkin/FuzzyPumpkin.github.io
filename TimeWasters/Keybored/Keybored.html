@@ -4,34 +4,9 @@
 	<title>Keybored</title>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.0/paper-full.js"></script>
 	<link rel="stylesheet" type="text/css" href="Keybored.css">
-
+	<script type="text/paperscript" src="Keybored.js" canvas="myCanvas"></script>
 <script type="text/paperscript" canvas="myCanvas">
 	
-	var circles = [];
-	function onKeyDown(event){
-		var maxPoint = new Point(view.size.width, view.size.height);
-		var randomPoint = Point.random();
-		var point = maxPoint * randomPoint;
-		var newCircle = new Path.Circle(point, 100);
-		if(keyData[event.key]){
-			newCircle.fillColor = keyData[event.key].color;
-		}
-		else {
-			newCircle.fillColor = "white";
-		};
-		circles.push(newCircle);
-	};
-	
-	function onFrame(event){
-		for(var i = 0; i < circles.length; i++){
-			circles[i].fillColor.hue += .5;
-			circles[i].scale(.97);
-			if(circles[i].ares <1){
-				circles[i].remove();
-				circles.splice(i, 1);
-			};
-		};
-	};
 </script>
 </head>
 <body>
@@ -88,8 +63,6 @@
 	<canvas id="myCanvas" resize>
 		
 	</canvas>
-	
-	<script type="text/javascript" src="Keybored.js"></script>
 	<script type="text/javascript" src="sounds.js"></script>
 </body>
 </html>
