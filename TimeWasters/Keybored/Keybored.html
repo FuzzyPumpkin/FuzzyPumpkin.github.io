@@ -2,14 +2,14 @@
 <html>
 <head>
 	<title>Keybored</title>
-	<script type="text/javascript" src="resources/paper-full.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.0/paper-full.js"></script>
 	<link rel="stylesheet" type="text/css" href="Keybored.css">
 
 <script type="text/paperscript" canvas="myCanvas">
 	
 	var circles = [];
 	function onKeyDown(event){
-		var maxPoint = new Point(view.size.width, view.size.height);//finds canvas limit
+		var maxPoint = new Point(view.size.width, view.size.height);
 		var randomPoint = Point.random();
 		var point = maxPoint * randomPoint;
 		var newCircle = new Path.Circle(point, 100);
