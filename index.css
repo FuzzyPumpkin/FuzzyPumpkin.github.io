@@ -54,34 +54,10 @@ h2 {
 		padding-top: 10px;
 		padding-bottom: 10px;
 }
-.education {
-		padding-top: 50px;
-		padding-bottom: 50px;
+#education {
+		padding: 25px 50px;
 		font-size: 18px;
 		width: 100%;
 		min-height:100px;
-		justify-content: center;
-		text-align: center;
-}
-.project {
-	margin: 10px;
-	width: 300px;
-	text-align: center;
-	font-family: Ubuntu, sans-serif;
-	font-size: 18px;
-	font-style: bold;
-	border: 2px solid #403433;
-	padding: 2px;
-}
-#project1 {
-	grid-area: project1;
-}
-#project2 {
-	grid-area: project2;
-}
-.row {
-	margin: auto;
-	display: grid;
-	grid-template: "project1 project2";
-	justify-content: center;
+		background: #D2B992;
 }

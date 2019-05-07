@@ -10,9 +10,8 @@
 
   .panel {
     display: flex;
-    background: #6B0F9C;
-    box-shadow: inset 0 0 0 5px rgba(255,255,255,0.1);
-    color: white;
+    background: #9ba6b2;
+     color: white;
     text-align: center;
     align-items: center;
     /* Safari transitionend event.propertyName === flex */
@@ -22,12 +21,11 @@
       flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
       background 0.2s;
     font-size: 20px;
-    background-size: cover;
-    background-position: center;
     flex: 1;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border: 1px solid black;
 
   }
 
@@ -46,19 +44,31 @@
     justify-content: center;
     align-items: center;
   }
-        /*move out of screen until active */
-        .panel > *:last-child {transform: translateY(100%);}
-        .panel.open-active > *:last-child {transform: translateY(1%);}
-  .panel p {
-    text-transform: uppercase;
-    font-family: 'Amatic SC', cursive;
-    text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
-    font-size: 2em;
-  }
-  
   .panel img {
     max-width: 90%;
   }
   .panel.open {
     flex: 8;
+    background-color: #DEE1DC;
   }
+  .panel.closed {
+    flex: 1;
+    background-color: #9ba6b2;
+  }
+      .panel.closed img {
+        display: none;
+      }
+      .panel.closed a {
+        display: none;
+      }
+      .panel.closed h4 {
+        display: flex;
+        transform: rotate(270deg);
+            -webkit-transform: rotate(270deg);
+            transform-origin: center center;
+            -webkit-transform-origin: center center;
+        font-size: 40px;
+        white-space: nowrap;
+        /* margin-block-start: 0;
+        margin-block-end: 0; */
+      }
