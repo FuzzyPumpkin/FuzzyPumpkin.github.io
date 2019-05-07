@@ -11,7 +11,6 @@
   .panel {
     display: flex;
     background: #9ba6b2;
-     color: white;
     text-align: center;
     align-items: center;
     /* Safari transitionend event.propertyName === flex */
@@ -28,7 +27,9 @@
     border: 1px solid black;
 
   }
-
+  .projNameDiv {
+    position: relative;
+  }
   .panel1 { background-color: #9ba6b2;}
   .panel2 { background-color: #9ba6b2; }
   .panel3 { background-color: #9ba6b2;}
@@ -63,6 +64,7 @@
       }
       .panel.closed h4 {
         display: flex;
+        position: absolute;
         transform: rotate(270deg);
             -webkit-transform: rotate(270deg);
             transform-origin: center center;
