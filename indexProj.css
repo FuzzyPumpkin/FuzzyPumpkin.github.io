@@ -1,0 +1,119 @@
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  .panels {
+    display: flex;
+    min-height: 530px;
+    max-height: 60vh;
+    overflow: hidden;
+  }
+
+  .panel {
+    display: flex;
+    background: #9ba6b2;
+    text-align: center;
+    align-items: center;
+    transition:
+      font-size 0.3s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+      flex 0.3s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+      background 0.2s;
+    font-size: 20px;
+    font-family: sans-serif;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+  }
+  .projNameDiv {
+    position: relative;
+  }
+
+  .panel > * {
+    margin: 0;
+    width: 100%;
+    transition: transform 0.3s;
+    flex: 1 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .panel img {
+    max-width: 90%;
+    border: 1px solid #403433;
+  }
+  .panel.open {
+    flex: 7;
+    background-color: #DEE1DC;
+    transition: transform 0.5s;
+  }
+  .panel.closed {
+    flex: 1;
+    background-color: #9ba6b2;
+    transition: transform 0.5s;
+    background-size: cover;
+    background-position: center;
+  }
+      .panel.closed a {
+        display: none;
+      }
+      .panel.closed h3 {
+        display: flex;
+        width: 100%;
+        left: 0;
+        position: absolute;
+        transform: rotate(270deg);
+            -webkit-transform: rotate(270deg);
+            transform-origin: center center;
+            -webkit-transform-origin: center center;
+        font-size: 40px;
+        text-shadow: 1px 1px 2px white;
+        white-space: nowrap;
+      }
+      .panel.closed .tech {
+        display: none;
+      }
+      .panel.closed.panel1 {background-image: url(images/colbyBg.jpg);}
+      .panel.closed.panel2 {background-image: url(images/SudsyBg.jpg);}
+      .panel.closed.panel3 {background-image: url(images/moneyBg.jpg);}
+      .panel.closed.panel4 {background-image: url(images/timeBg.jpg);}
+
+
+.tech {
+  display: inline;
+  font-size: 16px;
+  width: 80%;
+  text-align: left;
+  margin: 25px;
+  border-top: 1px solid #403433;
+}
+.tech ul {
+  /* list-style-type: none; */
+  border-bottom: 1px solid #403433;
+  padding-bottom: 10px;
+}
+.panelInner {
+  display: flex;
+  overflow: hidden;
+}
+.projSumm {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+  .panel.closed .projSumm {
+    bottom: 0;
+  }
+.projReadme {
+  display: none;
+} 
+    .panel.open .projReadme {
+      display: flex;
+      flex: 2;
+      flex-direction: column;
+      height: 100%;
+      text-align: left;
+      padding: 0px 25px;
+      border-left: 1px solid black;
+    }
