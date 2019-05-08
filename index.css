@@ -38,6 +38,11 @@ h2 {
 	font-size: 18px;
 	font-style: italic;
 }
+h3 {
+	font-family: Ubuntu, sans-serif;
+	font-size: 28px;
+	font-style: bold;
+}
 .unicorn {
 	z-index: -1;
 	position: absolute;
