@@ -1,26 +1,69 @@
 body {
 	background-color: #DEE1DC;
-	}
-.nav-bar {
-    background-color: #403433;
-    overflow: hidden;
-    position: fixed;
-    top: 0px;
-	width:100%;
 	font-family: Ubuntu, sans-serif;
-}
-.nav-bar a {
-    float: left;
-    color: #DCD4BA;
-    text-align: center;
-    padding: 10px 40px;
-    text-decoration: none;
-    font-size: 17px;
-}
-.nav-bar a:hover {
-    background-color: #9CA7B3;
-    color: #DCD4BA;
-}
+	}
+	header {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		background: #403433;
+		text-align: center;
+		position: fixed;
+		z-index: 3;
+		width: 100%;
+		top: 0;
+	}
+	nav {
+		display: flex;
+		position: relative;
+		justify-content: flex-end;
+		align-items: center;
+		text-align: left;
+		transition: none;
+		top: initial;
+		left: initial;
+		background: var(--background);
+		width: 100%;
+		transform: scale(1, 1);
+		transform-origin: top;
+		transition: transform 400ms ease-in-out;
+		grid-column: 2;
+		padding: 10px 0;
+	}
+	nav ul {
+		display: flex;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	nav li {
+		margin-left: 3em;
+		margin-bottom: 0;
+	}
+	nav a {
+		position: relative;
+		color: white;
+		text-decoration: none;
+		font-size: 1.2rem;
+		text-transform: uppercase;
+		opacity: 1;
+		transition: opacity 150ms ease-in-out;
+	}
+		nav a::before {
+			content: "";
+			display: block;
+			height: 5px;
+			background: #9CA7B3;
+			position: absolute;
+			top: 1.25em;
+			left: 0;
+			right: 0;
+			transform: scale(0, 1);
+			transition: transform ease-in-out 250ms;
+		}
+		nav a:hover {
+			color: #DCD4BA;
+		}
+			nav a:hover::before {transform: scale(1,1);}
 .welcome {
 	top: 0;
 	padding-top: 10%;	
@@ -29,17 +72,14 @@ body {
 	position: relative;
 }
 h1 {
-	font-family: Ubuntu, sans-serif;
 	font-size: 60px;
 	font-style: bold;
 }
 h2 {
-	font-family: Ubuntu, sans-serif;
 	font-size: 18px;
 	font-style: italic;
 }
 h3 {
-	font-family: Ubuntu, sans-serif;
 	font-size: 28px;
 	font-style: bold;
 }
@@ -50,19 +90,20 @@ h3 {
 	bottom: 0px;
 }
 .skills {
-		font-size: 12px;
-		width: 100%;
-		min-height:100px;
-		justify-content: center;
-		background: #D2B992;
-		text-align: center;
-		padding-top: 10px;
-		padding-bottom: 10px;
+	font-size: 12px;
+	width: 100%;
+	min-height:100px;
+	justify-content: center;
+	background: #D2B992;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 #education {
-		padding: 25px 50px;
-		font-size: 18px;
-		width: 100%;
-		min-height:100px;
-		background: #D2B992;
+	box-sizing: border-box;
+	padding: 25px 50px;
+	font-size: 18px;
+	width: 100%;
+	min-height:100px;
+	background: #D2B992;
 }
