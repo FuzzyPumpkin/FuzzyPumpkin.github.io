@@ -1,18 +1,46 @@
 body {
 	font-family: "Open Sans", sans-serif;
 }
-table {
+.playingField {
+	display: grid;
+	grid-template-areas: "subGrid1 subGrid2 subGrid3"
+							"subGrid4 subGrid5 subGrid6"
+							"subGrid7 subGrid8 subGrid9";
 	margin: auto;
-	border-collapse: collapse;
-	color: #6FB882;
-	font-family: "Luckiest Guy", sans-serif;
-	font-size: 80px;
+}
+#subGrid1 {grid-area: subGrid1;}
+#subGrid2 {grid-area: subGrid2;}
+#subGrid3 {grid-area: subGrid3;}
+#subGrid4 {grid-area: subGrid4;}
+#subGrid5 {grid-area: subGrid5;}
+#subGrid6 {grid-area: subGrid6;}
+#subGrid7 {grid-area: subGrid7;}
+#subGrid8 {grid-area: subGrid8;}
+#subGrid9 {grid-area: subGrid9;}
+.subGrid {
+	display: grid;
+	border: 4px solid #2A5F9E;
+	grid-template-areas: "tile1 tile2 tile3"
+						"tile4 tile5 tile6"
+						"tile7 tile8 tile9";
+}
+
+.tile1 {grid-area: tile1;}
+.tile2 {grid-area: tile2;}
+.tile3 {grid-area: tile3;}
+.tile4 {grid-area: tile4;}
+.tile5 {grid-area: tile5;}
+.tile6 {grid-area: tile6;}
+.tile7 {grid-area: tile7;}
+.tile8 {grid-area: tile8;}
+.tile9 {grid-area: tile9;}
+.tile {
+	display: grid;
+	border: 2px solid #2A5F9E;
+	font-size: 35px;
 	text-align: center;
 }
-td {
-	width: 40px;
-	height: 40px;
-}
+
 .pencil {
 	width: 8px;
 	height: 8px;
@@ -66,22 +94,7 @@ button:focus {
 	padding: 0px 35px 0px 35px;
 	position: relative;
 }
-.vertLines {
-	border-left: 2px solid #2A5F9E;
-	border-right: 2px solid #2A5F9E;
-}
-.vertGridLines {
-	border-left: 2px solid #2A5F9E;
-	border-right: 4px solid #2A5F9E;
-}
-.horLines {
-	border-top: 2px solid #2A5F9E;
-	border-bottom: 2px solid #2A5F9E;
-}
-.horGridLines {
-	border-top: 2px solid #2A5F9E;
-	border-bottom: 4px solid #2A5F9E;
-}
+
 .available:hover {
 	background-color: #E0E7E0;
 }
