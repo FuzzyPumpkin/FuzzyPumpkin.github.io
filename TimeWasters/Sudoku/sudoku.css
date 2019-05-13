@@ -7,6 +7,7 @@ body {
 							"subGrid4 subGrid5 subGrid6"
 							"subGrid7 subGrid8 subGrid9";
 	margin: auto;
+	width: 65%;
 }
 #subGrid1 {grid-area: subGrid1;}
 #subGrid2 {grid-area: subGrid2;}
@@ -39,8 +40,11 @@ body {
 	border: 2px solid #2A5F9E;
 	font-size: 35px;
 	text-align: center;
+	height: 60px;
 }
-
+.tile:hover {
+	background-color: rgb(179, 216, 189);
+}
 .pencil {
 	width: 8px;
 	height: 8px;
