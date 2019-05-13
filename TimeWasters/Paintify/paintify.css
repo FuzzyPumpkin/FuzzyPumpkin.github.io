@@ -1,0 +1,42 @@
+html, body {
+    margin: 0;
+    background-color: gray;
+}
+.headspace {
+    min-height: 5vh;
+    max-height: 600px;
+    color: white;
+}
+canvas {
+    height: 100%;
+    width: 100%;
+    border: 1px solid black;
+    background-color: white;
+}
+.tools button {
+    height: 40px;
+    width: 40px;
+    border: none;
+}
+    .tools button:hover {
+        border: 1px solid white;
+    }
+.selected {
+    border: 2px solid black;
+}
+input {
+    height: 40px;
+    width: 40px;
+    border: none;
+}
+
+#red {background-color: red;}
+#orange {background-color: orange;}
+#yellow {background-color: yellow;}
+#green {background-color: green;}
+#blue {background-color: blue;}
+#violet {background-color: violet;}
+#black {background-color: black;}
+#white {background-color: white;}
+#brown {background-color: brown;}
+#custom {background-color: yellowgreen;}
