@@ -4,11 +4,14 @@
   <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="paintify.css">
     <!--Google font-->
-    <link href="https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe|Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Raleway" rel="stylesheet"> 
 </head>
 <body>
 <div class="headspace">
     <h1>Paintify</h1>
+    <div class="controls">
+        <span>Weight:</span> <input type="range" name="lineWidth" class="widthSlider" min="0" max="50" step="1" value="1">
+    </div>
     <div class="tools">
         <button id="red" class="selected"></button>
         <button id="orange"></button>
@@ -19,7 +22,10 @@
         <button id="black"></button>
         <button id="white"></button>
         <button id="brown"></button>
-        <input type="color">
+        <div class="colorPickerContainer">
+            Custom Color:<br>
+            <input type="color" class="colorPicker">
+         </div>
     </div>
 </div>
 <div class="canvas"><canvas id="draw"></canvas></div>
