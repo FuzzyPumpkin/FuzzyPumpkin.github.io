@@ -9,6 +9,7 @@ body {
 	margin: auto;
 	width: 65%;
 }
+
 #subGrid1 {grid-area: subGrid1;}
 #subGrid2 {grid-area: subGrid2;}
 #subGrid3 {grid-area: subGrid3;}
@@ -45,11 +46,33 @@ body {
 .tile:hover {
 	background-color: rgb(179, 216, 189);
 }
-.pencil {
-	width: 8px;
-	height: 8px;
-	border: 1px solid #E0E7E0;
-	font-size: 7px;
+
+.pencilToggle {
+	background-color: #6FB882;
+	height: 6px;
+}
+.pencilGrid {
+	display: grid;
+	grid-template-areas: "pTile1 pTile2 pTile3"
+						"pTile4 pTile5 pTile6"
+						"pTile7 pTile8 pTile9";
+	width: 100%;
+	box-sizing: border-box;
+}
+.pTile1 {grid-area: pTile1;}
+.pTile2 {grid-area: pTile2;}
+.pTile3 {grid-area: pTile3;}
+.pTile4 {grid-area: pTile4;}
+.pTile5 {grid-area: pTile5;}
+.pTile6 {grid-area: pTile6;}
+.pTile7 {grid-area: pTile7;}
+.pTile8 {grid-area: pTile8;}
+.pTile9 {grid-area: pTile9;}
+.pencilTile {
+	display: grid;
+	font-size: 10px;
+	color: #6FB882;
+	box-sizing: border-box;
 }
 h1 {
 	font-family: "ZCOOL KuaiLe", sans-serif;
@@ -63,17 +86,16 @@ button {
 	font-size: 16px;
 	text-transform: uppercase;
 	height: 100%;
-}
-	
-button:hover {
-	background-color: #6FB882;
-	color: white;
-}
+}	
+	button:hover {
+		background-color: #6FB882;
+		color: white;
+	}
 
-button:focus {
-    outline: none;
-    border: none;
-}
+	button:focus {
+		outline: none;
+		border: none;
+	}
 .headSpace {
 	background-color: #6FB882;
 	color: white;
@@ -98,15 +120,6 @@ button:focus {
 	padding: 0px 35px 0px 35px;
 	position: relative;
 }
-
-.available:hover {
-	background-color: #E0E7E0;
+.hidden {
+	display: none;
 }
-.winner {
-	background-color: #2A5F9E;
-	color: white;
-}
-
-
-
-
