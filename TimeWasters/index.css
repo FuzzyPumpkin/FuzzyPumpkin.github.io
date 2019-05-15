@@ -1,6 +1,9 @@
-html, body {
-    width: 100%;
+body {
     font-family: sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.45;
+    display: flex;
+    flex-wrap: wrap;
 }
 footer {
 	background-color: #D4D8E6;
@@ -15,6 +18,47 @@ footer {
 .setRight {
     float: right;
     padding: 10px 30px 10px 0px;
-
+}
+.main-content { 
+    padding: 10%;
+    width: 80%;
+    min-height: 80vh;
 }
 
+/* personally I prefer using named areas and a grid area template,
+but wanted to use spans for this exercise just for a bit of variety */
+.gameGrid {
+    display: grid;
+    height: 100%;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 20px;
+}
+    .gameGridCell {
+        background: #D4D8E6;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid black;
+    }
+    .gameGridCell.medium {
+        grid-row: span 2;
+        grid-column: span 2;
+    }
+    .gameGridCell.large {
+        grid-row: span 3;
+        grid-column: span 3;
+    }
+    .gameGridCell.tall {
+        grid-row: span 3;
+        grid-column: span 2;
+    }
+    .gameGridCell.wide {
+        grid-row: span 2;
+        grid-column: span 3;
+    }
+    .one {
+        background-image: url(images/paintify.png);
+        background-size: cover;
+        background-position: top left;
+    }
