@@ -1,6 +1,7 @@
 const addButton = document.querySelector(".addButton");
 const list = document.querySelector("ul");
 //need a change handler, I think. As is, it blanks out the lines as it's not storing the values.
+//!!! Don't do it this way! Just append a child! 
 function createLine (){
     listText = list.innerHTML;
     newItemHTML = `

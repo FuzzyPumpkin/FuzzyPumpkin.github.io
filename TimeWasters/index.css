@@ -92,7 +92,62 @@ but wanted to use spans for this exercise just for a bit of variety */
         grid-column: span 1;
     }    
 
-.one {background-color: rgb(105, 120, 172);}
+.one {
+    background-color: black;
+    position: relative;
+    overflow: hidden;
+}
+    .neon-wrapper {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display:inline-flex;
+        filter: brightness(300%);
+        overflow: hidden;
+    }
+    .siteTitle {
+        color: #ffffff;
+        background:#000000;
+        font-size: 3em;
+        font-weight: bold;
+        font-family: Arial;
+    }
+        .siteTitle::before {
+            content: "TimeWasters";
+            position: absolute;
+            mix-blend-mode: difference;
+            filter: blur(2px);
+        }
+    .gradient{
+        background: linear-gradient(-247.25506942900734deg, 
+                        rgba(156, 177, 214,1) 49.521484375%,
+                        rgba(127, 143, 198,1) 58.7890625%,
+                        rgba(68, 73, 166,1) 77.197265625%,
+                        rgba(68, 73, 166,1) 78.466796875%);
+        position: absolute;
+        top: 0;
+        left:0;
+        width: 100%;
+        height:100%;
+        mix-blend-mode: multiply;
+    }
+    .dodge {
+        background: radial-gradient(circle,white,black 35%) center / 25% 25%;
+        position: absolute;
+        top:-100%;
+        left:-100%;
+        right:0;
+        bottom:0;
+        mix-blend-mode: color-dodge;
+        animation: dodge-area 5s linear infinite;
+    }
+    @keyframes dodge-area {
+        to {
+            transform: translate(50%,50%);
+        }
+    }
+    
 .two {background-color: rgb(20, 218, 201);}
 .three {background-color: rgb(160, 130, 73);}
 .four {background-color: rgb(211, 168, 189);}
@@ -103,6 +158,157 @@ but wanted to use spans for this exercise just for a bit of variety */
 .nine {background-color: rgb(96, 97, 100);}
 .ten {background-color: rgb(54, 109, 110);}
 .eleven {background-color: rgb(180, 196, 112);}
-.twelve {background-color: rgb(206, 72, 105);}
+.twelve {background-color: black;}
 .thirteen {background-color: rgb(230, 240, 174);}
 
+/* PacMan div animations */
+.path {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background: #333;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+    .path::after {
+        content: "";
+        position: absolute;
+        display: block;
+        border-top: 12px dotted white;
+        width: 90%;
+        top: 45%;
+        left: 5%;
+    }
+.pacman {
+    position: absolute;
+    z-index: 99;
+    top: 50%;
+    animation: moveForward 5s linear infinite;
+}
+    .pacman::before, .pacman::after {
+        content: "";
+        display: block;
+        height: 0;
+        width: 0;
+        position: absolute;
+        border: 30px solid yellow;
+        margin-top: -30px;
+        border-radius: 50%;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        animation: mouthTop 0.7s ease infinite;
+    }
+    .pacman::after {
+        border-color: yellow;
+        border-right-color: transparent;
+        border-top-color: transparent;
+        animation: mouthBottom 0.7s ease infinite;
+    }
+
+.ghost {
+    position: absolute;
+    z-index: 99;
+    top: 50%;
+    left: -20%;
+    margin-top: -35px;
+    height: 70px;
+    width: 60px;
+    background: red;
+    border-top-left-radius: 70px;
+    border-top-right-radius: 70px;
+    animation: moveForward 5s linear infinite;
+    animation-delay: 1.5s;
+}
+    .ghost::before, .ghost::after {
+        /* for eyes */
+        content: "";
+        position: absolute;
+        background: white;
+        height: 25px;
+        width: 20px;
+        border-radius: 100%;
+        top: 15px;
+        left: 4px;
+    }
+    .ghost::after {
+        left: 28px;
+    }
+    .eyes::before, .eyes::after {
+        content: "";
+        position: absolute;
+        background: black;
+        height: 10px;
+        width: 10px;
+        border-radius: 100%;
+        top: 25px;
+        left: 10px;
+        z-index: 99;
+    }
+    .eyes::after {
+        left: 35px;
+    }
+    .skirt, .skirt::before, .skirt::after  {
+        position: absolute;
+        height: 0;
+        width: 0;
+        border: 10px solid #333;
+        border-top-color: transparent;
+        bottom: -10px;
+    }
+        .skirt::before {
+            content: "";
+            left: 10px;
+        }
+        .skirt::after {
+            content: "";
+            left: 30px;
+        }
+
+.ghost2 {
+    position: absolute;
+    z-index: 99;
+    top: 50%;
+    left: -20%;
+    margin-top: -35px;
+    height: 70px;
+    width: 60px;
+    background: blue;
+    border-top-left-radius: 70px;
+    border-top-right-radius: 70px;
+    animation: moveForward 5s linear infinite;
+    animation-delay: 2.4s;
+}
+    .ghost2::before, .ghost2::after {
+        content: "";
+        position: absolute;
+        background: white;
+        height: 25px;
+        width: 20px;
+        border-radius: 100%;
+        top: 15px;
+        left: 4px;
+    }
+    .ghost2::after {
+        left: 28px;
+    }
+
+@keyframes mouthTop {
+    50% {
+        transform: rotate(44deg);
+    }
+}
+@keyframes mouthBottom {
+    50% {
+        transform: rotate(-44deg);
+    }
+}
+@keyframes moveForward {
+    0% {
+        /* starts off screen */
+        left: -10%
+    }
+    100% {
+        left: 100%;
+    }
+}
