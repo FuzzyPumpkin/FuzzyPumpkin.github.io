@@ -120,6 +120,13 @@ h2 {
 	font-family: "Special Elite", sans-serif;
 	color: #A1BB34;
 }
+li {
+	list-style: none;
+}
+ul {
+	padding-inline-start: 0px;
+	margin-top: 2px;
+}
 .internal {
 	height: 200px;
 }
