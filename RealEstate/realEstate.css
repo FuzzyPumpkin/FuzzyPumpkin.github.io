@@ -1,0 +1,77 @@
+body {
+    font-family: sans-serif;
+    width: 100%;
+}
+header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr 1fr;
+    background: #ddd5d4;
+    color: black;
+    text-align: center;
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+.logo {
+    display: flex;
+    position: relative;
+    grid-column: 1;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: right;
+}
+nav {
+    display: flex;
+    position: relative;
+    grid-column: 3;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: left;
+    transition: none;
+    top: initial;
+    left: initial;
+    background: var(--background);
+    width: 100%;
+    transform: scale(1, 1);
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;
+    padding: 10px 0;
+}
+nav ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+nav li {
+    margin-left: 3em;
+    margin-bottom: 0;
+}
+nav a {
+    position: relative;
+    color: black;
+    text-decoration: none;
+    font-size: 1.2rem;
+    opacity: 1;
+    transition: opacity 150ms ease-in-out;
+}
+    nav a::before {
+        content: "";
+        display: block;
+        height: 12px;
+        background: rgba(204, 130, 34, 0.5);
+        position: absolute;
+        top: .45em;
+        width: 150%;
+        left: -25%;
+        right: 0;
+        transform: scale(0, 1);
+        transition: transform ease-in-out 250ms;
+    }
+    nav a:hover {
+        /* leaving as a placeholder, but I want the text weight to go up...need right font */
+        color: black;
+    }
+        nav a:hover::before {transform: scale(1,1);}
