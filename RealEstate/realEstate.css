@@ -129,3 +129,52 @@ h1 {
     71% {margin-top:0px;}
     100% {margin-top:0px;}
   }
+  #about {
+    display: block;
+    text-align: center;
+    background: rgba(204, 130, 34, 0.6);
+    padding: 2% 10%;  
+  }
+  h2 {
+    font-family: Oswald, sans-serif;
+    font-size: 2em;
+  }
+  #testimonials {
+    text-align: center;
+    padding: 2% 15%;
+  }
+
+  /* Slideshow container */
+.slideshow-container {
+  position: relative;
+}
+.mySlides {
+  display: none;
+  padding: 80px;
+  text-align: center;
+}
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.prev {left: 0;}
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+}
+q {font-style: italic;}
+.author {color: cornflowerblue;}
