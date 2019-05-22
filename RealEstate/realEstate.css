@@ -207,6 +207,7 @@ q {font-style: italic;}
     border-radius: 50%;
     float: left;
     margin: 25px;
+    padding-bottom: 40px;
   }
 .floater {
   position: relative;
