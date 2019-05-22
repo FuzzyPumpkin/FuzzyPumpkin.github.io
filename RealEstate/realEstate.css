@@ -189,7 +189,8 @@ q {font-style: italic;}
   position: relative;
   width: 100%;
   min-height: 350px;
-  padding: 0px 50px;
+  padding: 40px 0px;
+  box-sizing: border-box;
   background-image: url(images/houses.jpg);
   background-size: cover;
   background-position: center;
