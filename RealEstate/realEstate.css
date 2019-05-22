@@ -188,6 +188,8 @@ q {font-style: italic;}
 .experience {
   position: relative;
   width: 100%;
+  min-height: 350px;
+  padding: 0px 50px;
   background-image: url(images/houses.jpg);
   background-size: cover;
   background-position: center;
@@ -206,7 +208,7 @@ q {font-style: italic;}
     border: 2px solid rgb(76, 75, 68);
     border-radius: 50%;
     float: left;
-    margin: 25px;
+    margin: -10px 25px 25px 0px;
     padding-bottom: 40px;
   }
 .floater {
