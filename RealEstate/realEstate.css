@@ -249,8 +249,15 @@ footer li a {
 
 @media screen and (max-width: 480px) {
   h1 {
-    font-size: 40px;
-    margin-top: 40px;
+    font-size: 35px;
+  }
+  .jumbo {
+    box-sizing: border-box;
+    padding-top: 25%;
+    padding-bottom: 25%;
+  }
+  .jumbo-contact {
+    padding-top: 10%;
   }
   .slider-wrapper {
     font-size: 30px;
