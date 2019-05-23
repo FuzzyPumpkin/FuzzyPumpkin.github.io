@@ -3,9 +3,10 @@
         <title>Stacey Evy : Realtor</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="realEstate.css">
         <link href="https://fonts.googleapis.com/css?family=Oswald:300,600&display=swap" rel="stylesheet"> 
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+        <link rel="stylesheet" href="realEstate.css">
+        <link rel="stylesheet" href="contact.css">
     </head>
     <body>
     <header>
@@ -23,10 +24,46 @@
     <div class="floater">
     <div class="jumbo jumbo-contact">
         <h1>Schedule a Consultation</h1>
-    </div>
-    
+    </div>    
+    <div class="floater">
     <main>
-
+        <section>
+            <div class="formContainer">
+                <form>
+                    <label><strong>Name:</strong> <input type="text" placeholder="Your Name"></label><br>
+                    <label><strong>Email:</strong> <input type="text" placeholder="Your Email Address"></label><br>
+                    <label><strong>Phone:</strong> <input type="text" placeholder="XXX-XXX-XXXX"></label><br>
+                    <strong>Help Needed With:</strong><br>
+                        <label class="checkbox">Buying my First Home
+                            <input type="checkbox" name="needs" value="firstHome">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="checkbox">Buying a New Home
+                            <input type="checkbox" name="needs" value="nextHome">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="checkbox">Selling my Home
+                            <input type="checkbox" name="needs" value="sellHome">
+                            <span class="checkmark"></span>
+                        </label>
+                    <br>
+                    <label>
+                        <strong>Details About Your Needs:</strong><br>
+                        <textarea placeholder="Message"></textarea>
+                    </label><br>
+                    <label><strong>How Did You Get Here?</strong>
+                        <select>
+                            <option value="referral">Word-of-Mouth</option>
+                            <option value="facebook">Facebook</option>
+                            <option value="instagram">Instagram</option>
+                            <option value="pinterest">Pinterest</option>
+                            <option value="twitter">Twitter</option>
+                        </select>
+                    </label>
+                    <button>SEND <i class="fas fa-arrow-circle-right"></i></button>
+                </form>
+            </div>
+        </section>
     </main>
     </div>
     <footer>
