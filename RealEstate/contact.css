@@ -109,7 +109,11 @@ i {
         -ms-transform: rotate(45deg);
         transform: rotate(45deg);
     }
-
+span {
+    color: red;
+    font-size: 10px;
+    text-align: center;
+}
 @media screen and (min-width: 700px) {
     .formContainer {
         width: 60%;

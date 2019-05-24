@@ -1,29 +1,63 @@
 const nameInput = document.querySelector("#nameInput"),
       emailInput = document.querySelector("#emailInput"),
       phoneInput = document.querySelector("#phoneInput"),
-      submitBtn = document.querySelector("button");
+      submitBtn = document.querySelector("button"),
+      nameErr = document.querySelector("#nameErr"),
+      emailErr = document.querySelector("#emailErr"),
+      phoneErr = document.querySelector("#phoneErr"),
+      formErr = document.querySelector("#formErr");
 
 let namePresence = false,
     emailPresence = false,
     phonePresence = false;
 
-//NAME AUTH
-    //at least 3 characters
-    //no numbers
+function checkName(){
+    if(nameInput.value.search(/[0-9]/g) > 0){
+        nameErr.innerHTML = "Name must not contain numbers.";
+        return false;
+    } else if(nameInput.value.length < 3){
+        nameErr.innerHTML = "Name is too short.";
+        return false;
+    } else {
+        nameErr.innerHTML = "";
+        return true;
+    };
+};
 
-//CONTACT AUTH
-    //must have either phone or email (flag with ok status on either)
+function checkPhone(){
+    const phoneRegex = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+    if(phoneInput.value.match(phoneRegex)){
+        phoneErr.innerHTML = "";
+        return true;
+    } else {
+        phoneErr.innerHTML = "Not a valid phone number."
+        return false;
+    };
+};
 
-//PHONE AUTH
-    //numbers and dashes only
-    //with dashes removed, length must be at least 10
+function checkEmail(){
+    const emailRegex = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    if(!emailRegex.test(emailInput.value)){
+        emailErr.innerHTML = "Not a valid email address.";
+        return false;
+    } else {
+        emailErr.innerHTML = "";
+        return true;
+    };
+};
 
-//EMAIL AUTH
-    //must have @
-    //at least 3 characters before @ 
-    //must have a period somewhere after @
-    //bit after period must be at least 2 characters
-    //bit before period but after @ must be at least 2 characters
+function checkForm(){
+    if(checkName() && checkPhone() || checkEmail()){
+        nameErr.innerHTML = "";
+        phoneErr.innerHTML = "";
+        emailErr.innerHTML = "";
+        formErr.innerHTML = "This is a mock site, but thanks for testing!";
+        return true;
+    } else {
+        formErr.innerHTML = "Please include a name and a way to contact you!"
+        return false;
+    };
+    
+};
 
-//ON SUCCESSFUL PASSING
-    //flash message stating this is a mock site and form authenticates content only, submission not enabled
+submitBtn.addEventListener("click", checkForm);

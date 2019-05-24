@@ -32,13 +32,19 @@
                 <form>
                     <label><strong>Name:</strong> 
                         <input type="text" placeholder="Your Name" id="nameInput">
-                    </label><br>
+                    </label>
+                        <span id="nameErr"></span>
+                        <br>
                     <label><strong>Email:</strong> 
                         <input type="text" placeholder="Your Email Address" id="emailInput">
-                    </label><br>
+                    </label>
+                        <span id="emailErr"></span>
+                        <br>
                     <label><strong>Phone:</strong> 
                         <input type="text" placeholder="XXX-XXX-XXXX" id="phoneInput">  
-                    </label><br>
+                    </label>
+                        <span id="phoneErr"></span>
+                        <br>
                     <strong>Help Needed With:</strong><br>
                         <label class="checkbox">Buying my First Home
                             <input type="checkbox" name="needs" value="firstHome">
@@ -66,7 +72,10 @@
                             <option value="twitter">Twitter</option>
                         </select>
                     </label>
-                    <button>SEND <i class="fas fa-arrow-circle-right"></i></button>
+                    <!--button type is specified so that it doesn't refresh on submit. 
+                        As this is a mock site, I didn't actually want to submit the form anywhere.-->
+                    <button type="button">SEND <i class="fas fa-arrow-circle-right"></i></button>
+                    <span id="formErr"></span>
                 </form>
             </div>
         </section>
