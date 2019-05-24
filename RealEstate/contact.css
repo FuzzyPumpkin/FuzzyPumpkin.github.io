@@ -1,3 +1,7 @@
+.jumbo-contact {
+    padding-top: 10%;
+    height: 30vh;
+}
 .formContainer {
     width: 85%;
     margin: auto;
@@ -121,6 +125,6 @@ span {
 }
 @media screen and (min-width: 1000px) {
     .formContainer {
-        width: 50%;
+        width: 40%;
     }
 }

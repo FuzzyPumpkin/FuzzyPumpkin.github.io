@@ -7,10 +7,6 @@ const nameInput = document.querySelector("#nameInput"),
       phoneErr = document.querySelector("#phoneErr"),
       formErr = document.querySelector("#formErr");
 
-let namePresence = false,
-    emailPresence = false,
-    phonePresence = false;
-
 function checkName(){
     if(nameInput.value.search(/[0-9]/g) > 0){
         nameErr.innerHTML = "Name must not contain numbers.";

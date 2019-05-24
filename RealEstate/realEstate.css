@@ -81,9 +81,6 @@ nav a {
     color: white;
     text-align: center;
 }
-.jumbo-contact {
-  height: 30vh;
-}
 h1 {
     font-family: Oswald, sans-serif;
     font-weight: 600;
@@ -255,9 +252,6 @@ footer li a {
     box-sizing: border-box;
     padding-top: 25%;
     padding-bottom: 25%;
-  }
-  .jumbo-contact {
-    padding-top: 10%;
   }
   .slider-wrapper {
     font-size: 30px;
