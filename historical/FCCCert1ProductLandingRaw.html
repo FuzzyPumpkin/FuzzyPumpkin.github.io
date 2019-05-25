@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Product Landing Page</title>
+</head>
+<body id="main">
+<!-- So awful. Intentionally, but still! Expand nav bar to full width of screen. a:active code needs looking at because it's 
+not functioning and it was before I made a tweak required by the Codepen. Remove gummy worms. Ick. Add animated bunting on left side.
+Delay on page load, then flags appear to spell "Candy's Classic Candy" and remain. Obviously tweak spacing before h1, but I want that
+ to be an image file with the store logo. Theme to font styling from technical page.
+
+Needs lots more content. Maybe a link to a fake Yelp page, review snippets from said fake Yelp. Treatise on Lyle the Lizard. More
+ exhaustive listing of candy offerings with a link to the survey page for suggestions. 
+
+Bottom grid needs a map and holy hell that spacing! 
+
+Phone display actually not terrible at the moment, but it's a low bar. Nix the animated bunting for phone and have page content run into
+ that space.-->
+	<style>
+body {
+	background-color: #DCDCDC;
+	}
+@media (max-width: 350px) {
+    body {
+      background-color: #000000;
+  }
+}
+.nav-bar {
+    background-color: #FF6347;
+    overflow: hidden;
+    position: fixed;
+    top: 0px;
+    left: 0px:
+}
+.nav-bar a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 10px 40px;
+    text-decoration: none;
+    font-size: 17px;
+}
+.nav-bar a:hover {
+    background-color: #FF7F50;
+    color: black;
+}
+.nav-bar a.active {
+    background-color: #556B2F;
+    color: white;
+}
+.infobox {font-size: 2em;
+		min-height:100px;
+		display: flex;
+		border-style: solid;
+		border-width: 6px;
+		border-color: #FF7F50;
+		border-radius: 6px;
+		background: #FFFFFF;
+		grid-gap: 5px 5px;
+		grid-template-columns: 50% 50%;
+		grid-template-rows: auto;
+		justify-content: left;
+		}
+footer {font-size: .75em;
+		min-height:50px;
+		display: flex;
+		border-style: solid;
+		border-width: 3px;
+		border-color: #FF7F50;
+		border-radius: 3px;
+		background: #FFFFFF;
+		grid-gap: 5px 5px;
+		grid-template-columns: 50% 50%;
+		grid-template-rows: auto;
+		justify-content: space-around;
+		}
+h1 {
+	padding: 150px 0px 0px 0px;
+	}
+	</style>
+	<header id="header">
+<!-- here be the header -->
+		<div><nav class="nav-bar" id="nav-bar">
+			<a href="#start" id="nav-link" class="nav-link">Home</a>
+			<a href="#about" id="nav-link" class="nav-link">About</a>
+			<a href="#form" id="nav-link" class="nav-link">More Information</a>
+			<a href="#contact" id="nav-link" class="nav-link">Contact</a><!--tweak-->
+			</nav></div>
+
+	<div><h1 id="start">Candy's Classic Candy Emporium</h1><img src="images/gummies.png" id="header-img"></div>
+	</header>
+<div class="infobox">
+	<div><iframe id="video" height="315" src="https://www.youtube-nocookie.com/embed/qDdXBtlVASA?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe></div>
+	<div id="about"><ul>
+		<li>Established in 1992.</li>
+		<li>Stocks classic candies such as Red Hots, Necco Wafers, and candy buttons.</li>
+		<li>If we don't have it, we'll find it for you!</li>
+		<li>Come see the shop pet: Lyle the lizard.</li>
+	</ul>
+	</div>
+</div>
+<!-- form -->
+<h2>Sign up for our newsletter</h2>
+  <form id="form" action="https://www.freecodecamp.com/email-submit">
+	<div>
+		<label>Email:<input type="email" name="email" required id="email" placeholder="enter your email"></label>
+	</div>
+	<input type="submit" id="submit"></input><br/><br/><br/>
+	</form>
+<!-- at least one media query -->
+<footer id="contact">
+	<div>Candy's Candy Emporium<br/>
+		1234 Central Ave.</br>
+		Your Town, AR 12345
+	</div>
+	<div>Phone: 1-332-123-4567<br/>
+		Email: contactus@notrealemail.com</div>
+</footer>
+</body>
+</html>

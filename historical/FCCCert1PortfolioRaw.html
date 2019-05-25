@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Personal Portfolio</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+</head>
+<body>
+<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet" type="text/css">
+	<style>
+body {
+	background-color: #DEE1DC;
+	}
+@media (max-width: 350px) {
+    body {
+      background-color: #000000;
+  }
+}
+.nav-bar {
+    background-color: #403433;
+    overflow: hidden;
+    position: fixed;
+    top: 0px;
+	width:100%;
+	font-family: Ubuntu, sans-serif;
+}
+.nav-bar a {
+    float: left;
+    color: #DCD4BA;
+    text-align: center;
+    padding: 10px 40px;
+    text-decoration: none;
+    font-size: 17px;
+}
+.nav-bar a:hover {
+    background-color: #9CA7B3;
+    color: #DCD4BA;
+}
+.welcome {
+	top: 0;
+	min-height: 90vh;
+	padding-top: 10vh;	
+	width: 100%;
+	text-align: center;
+}
+h1 {
+	font-family: Ubuntu, sans-serif;
+	font-size: 18px;
+}
+h2 {
+	font-family: Ubuntu, sans-serif;
+	font-size: 60px;
+	font-style: bold;
+}
+h3 {
+	font-family: Ubuntu, sans-serif;
+	font-size: 18px;
+	font-style: italic;
+}
+.skills {
+		font-size: 12px;
+		width: 100%;
+		min-height:100px;
+		justify-content: center;
+		background: #D2B992;
+		text-align: center;
+		}
+.projects {
+		font-size: 12px;
+		width: 100%;
+		min-height:100px;
+		display: grid;
+		grid-gap: 5px 0px;
+		grid-template-columns: 25% 25% 25% 25%;
+		grid-template-rows: auto auto;
+		justify-content: center;
+		}
+.project-title {
+		border-style: solid;
+		border-width: 2px;
+		border-color: #403433;
+		background: #FFFFFF;
+		}
+.education {
+		padding-top: 50px;
+		padding-bottom: 50px;
+		font-size: 18px;
+		width: 100%;
+		min-height:100px;
+		justify-content: center;
+		text-align: center;
+		}
+.contact {
+		font-size: 17px;
+		width: 100%;
+		color: #DCD4BA;
+		background-color: #403433;
+		overflow: hidden;
+		position: fixed;
+		bottom: 0px;
+		width:100%;
+		font-family: Ubuntu, sans-serif;
+		}
+.contact a {
+    float: right;
+    color: #DCD4BA;
+    text-align: center;
+    padding: 10px 40px;
+    text-decoration: none;
+    font-size: 17px;
+}
+.contact a:hover {
+    background-color: #9CA7B3;
+    color: #DCD4BA;
+}
+	</style>
+	<header id="header">
+		<div><nav class="nav-bar" id="navbar">
+			<a href="#welcome" id="nav-link" class="nav-link">Top</a>
+			<a href="#skills" id="nav-link" class="nav-link">Skills</a>
+			<a href="#projects" id="nav-link" class="nav-link">Examples of Work</a>
+			<a href="#education" id="nav-link" class="nav-link">Education</a>
+			<a href="#contact" id="nav-link" class="nav-link" style="float:right;">Contact</a>
+			</nav></div>
+	</header>
+<div id="welcome-section" class="welcome">
+<h1>FreeCodeCamp Portfolio Page</h1>
+<h2>Kari Minger</h2>
+<h3>Future full-stack developer</h3>
+</div>
+<div class="skills" id="skills">
+<h1>My current coding skills</h1>
+<i class="fab fa-html5 fa-4x"></i>
+<i class="fab fa-css3 fa-4x"></i>
+<i class="fab fa-js-square fa-4x"></i>
+<i class="fab fa-github fa-4x"></i>
+</div>
+<div id="projects" class="projects">
+	<div class="project-title"><a href="https://fuzzypumpkin.github.io/FCCCert1TributeRaw.html" target="_blank"><img src="images/rawTrib.jpg" style="max-width:100%"></a></div>
+	<div class="project-title"><a href="https://fuzzypumpkin.github.io/FCCCert1SurveyRaw.html" target="_blank"><img src="images/rawSurv.jpg" style="max-width:100%"></a></div>
+	<div class="project-title"><a href="https://fuzzypumpkin.github.io/FCCCert1ProductLandingRaw.html" target="_blank"><img src="images/rawProd.jpg" style="max-width:100%"></a></div>
+	<div class="project-title"><a href="https://fuzzypumpkin.github.io/FCCCert1TechnicalRaw.html" target="_blank"><img src="images/rawTech.jpg" style="max-width:100%"></a></div>
+	<div>Tribute Page</div>
+	<div>Survey Form</div>
+	<div>Product Landing Page</div>
+	<div>Technical Documentation</div>
+</div>
+<div id="education" class="education">
+<h1>Relevant Education</h1>
+Responsive Web Design Certification - <strong>FreeCodeCamp.org</strong> - 11/15/18
+</div>
+<div id="contact" class="contact">
+<a href="https://github.com/FuzzyPumpkin" target="_blank" id="profile-link">GitHub</a>
+<a href="mailto:kariminger@gmail.com?Subject=FCC%20Portfolio" target="_top">Email Me</a>
+</div>
+</body>
+</html>

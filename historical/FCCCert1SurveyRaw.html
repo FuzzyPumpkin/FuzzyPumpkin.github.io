@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+	Whatsit Wizard Product Use Survey
+	</title>
+</head>
+	<body>
+<!-- Pretty much a complete redo needed. Theme to candy store, color scheme, nav bar. Set a submit action. Thinking this could be a 
+survey about favorite candies/flavors and where they get their candy fix from. Input boxes are horribly tiny on phone screen. Will need
+ to research how to fix that!-->
+<style>
+</style>
+    <h1 id="title">Whatsit Wizard Survey</h1>
+    <p id="description">Please complete the survey below to let us know your familiarity with our site and anything we can do to address your needs.</p>
+	<form id="survey-form">
+	<div>
+		<label id="name-label">Name: <input type="text" id="name" placeholder="enter your full name" required></label>
+	</div>
+	<div>
+		<label id="email-label">Email:<input type="email" required id="email" placeholder="enter your email"></label>
+	</div>
+	<div>
+		Age:
+		<select id="dropdown">
+		<option value="0-18">0-18</option>
+		<option value="19-30">19-30</option>
+		<option value="31-50">31-50</option>
+		<option value="51-65">51-65</option>
+		<option value="65+">65+</option>
+		</select>
+	</div>
+	<div>
+		Have you ever heard of Whatsit Wizard?<br/>
+		<label for="Yes"><input id="Yes" type="checkbox" name="familiarity" value="yes" checked>Yes</label><br>
+		<label for="No"><input id="No" type="checkbox" name="familiarity" value="no">No</label>
+	</div>
+	<div>
+		Have you ever used Whatsit Wizard?<br/>
+		<label for="Yes">
+			<input id="yes" type="radio" name="used-product" value="Yes" checked>Yes
+		</label><br/>
+		<label for="No">
+			<input id="no" type="radio" name="used-product" value="No">No
+		</label><br/>
+		<label for="NotSure">
+			<input id="notsure" type="radio" name="used-product" value="NotSure">Not Sure
+		</label>
+	</div>
+	<div>
+		<label id="number-label">How many times in the last year have you used a personal online shopper, including services other than Whatsit Wizard? <br/>
+      <input type="number" required id="number" placeholder="# 0-1000" min="0" max="1000"></label>
+	</div>
+	<div>
+		If you have used Whatsit Wizard, please let us know your thoughts. If you have not used the site, please enter "N/A":<br/>
+		<textarea type="textfield" rows="6" cols="100" id="thoughts" name="thoughts" required>Please enter your thoughts</textarea>
+	</div>
+	<p>Submit for a chance to win a giftcard for a grand total of $0.00 in value!</p>
+	<button type="submit" id="submit">Submit</button>
+	</form>
+	</body>
+</html>

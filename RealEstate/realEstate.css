@@ -183,8 +183,9 @@ h1 {
   color: white;
 }
 q {font-style: italic;}
-.author {color: cornflowerblue;}
+.author {color: rgb(204, 130, 34);}
 
+/* end slideshow */
 .experience {
   position: relative;
   width: 100%;
@@ -253,8 +254,14 @@ footer li a {
     padding-top: 25%;
     padding-bottom: 25%;
   }
+  #testimonials {
+    padding: 2% 5%;
+  }
   .slider-wrapper {
     font-size: 30px;
+  }
+  .experience img {
+    float: none;
   }
   footer ul {
     padding-inline-start: 0px;

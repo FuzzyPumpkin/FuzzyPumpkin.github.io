@@ -9,8 +9,6 @@ section {
     width: 100%;
     margin: auto;
     background-color: white;
-    border: 2px solid rgba(204, 130, 34, 0.7);
-    border-radius: 6px;
 }
 h2 {
     font-size: 20px;
@@ -55,30 +53,18 @@ i {
     box-sizing: border-box;
     padding: 10px 40px;
 }
-/* image slide-in styles */
+/* image fade-in styles */
 main img {
+    position: relative;
     margin: 5px;
     padding: 5px;
     z-index: 1;
+    transition: opacity 3s ease;
 }
-.align-left {
-    position: relative;
-    transform: translateX(-30%) scale(0.95);
-}
-.align-right {
-    position: absolute;
-    top: 5px;
-    right: 0;
-    transform: translateX(30%) scale(0.95);
-}
-.slide-in {
+.hidden {
     opacity: 0;
     transition: all .5s;
 }
-    .slide-in.active {
-        opacity: 1;
-        transform: translateX(0%) scale(1);
-    }
 
 @media screen and (max-width: 480px) {
     main img {
