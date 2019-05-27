@@ -1,0 +1,36 @@
+body {
+    background-color: yellow;
+}
+header {
+    width: 100%;
+    height: 400px;
+    background-color: red;
+}
+nav {
+    position: relative;
+    top: 300px;
+    width: 100%;
+    height: 100px;
+    background-color: blue;
+}
+.bounds {
+    width: 100%;
+    height: 500px;
+    background-color: gray;
+}
+footer {
+    width: 100%;
+    height: 200px;
+    background-color: yellowgreen;
+}
+h2 {
+    margin: 0;
+}
+
+
+.parallax {
+    background: url(images/cayla1-150730-unsplash.jpg) fixed;
+}
+.parallax-inner {
+    height: 100vh;
+}
