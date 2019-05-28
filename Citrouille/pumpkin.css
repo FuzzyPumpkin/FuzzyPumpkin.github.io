@@ -12,13 +12,17 @@ nav {
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 100px;
-    background-color: rgb(157, 53,16);
+    height: 80px;
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: rgb(249, 162, 3);
 }
 .bounds {
     width: 100%;
     height: 500px;
     background-color: rgb(98, 86, 48);
+    background-image: url(images/bronze.jpg);
+    background-repeat: repeat;
     color: rgb(220, 220, 220);
 }
 footer {
