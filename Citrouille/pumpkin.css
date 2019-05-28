@@ -1,35 +1,42 @@
+
 body {
-    background-color: yellow;
+    background-color: rgb(220, 220, 220);
 }
 header {
+    position: relative;
     width: 100%;
     height: 400px;
-    background-color: red;
+    background-color: rgb(220, 220, 220);
 }
 nav {
-    position: relative;
-    top: 300px;
+    position: absolute;
+    bottom: 0;
     width: 100%;
     height: 100px;
-    background-color: blue;
+    background-color: rgb(157, 53,16);
 }
 .bounds {
     width: 100%;
     height: 500px;
-    background-color: gray;
+    background-color: rgb(98, 86, 48);
+    color: rgb(220, 220, 220);
 }
 footer {
     width: 100%;
     height: 200px;
-    background-color: yellowgreen;
+    background-color: rgb(249, 162, 3);
 }
 h2 {
     margin: 0;
 }
 
-
 .parallax {
-    background: url(images/cayla1-150730-unsplash.jpg) fixed;
+    background-image: url(images/soup.jpg); 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-clip: content-box;
+    background-size: 100vw 100vh;
 }
 .parallax-inner {
     height: 100vh;
