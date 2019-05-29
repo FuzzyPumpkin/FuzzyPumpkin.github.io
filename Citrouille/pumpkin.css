@@ -4,6 +4,7 @@ html, body {
     background-color: rgb(220, 220, 220);
     font-family: sans-serif;
     margin: 0;
+    padding: 0;
     color: black;
 }
 h1, h2 {
@@ -19,7 +20,7 @@ li {
 header {
     position: relative;
     width: 100%;
-    height: 800px;
+    height: 770px;
     background-color: rgb(220, 220, 220);
     background-image: url(images/restaurant.jpg);
     background-repeat: no-repeat;
@@ -40,6 +41,7 @@ nav {
     border-bottom: 1px solid rgba(0, 0, 0, 0.6);
     box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
     transition: all 0.5s;
+    z-index: 2;
 }
     .fixed-nav nav {
         position: fixed;
@@ -63,17 +65,63 @@ footer, .about {
     box-sizing: border-box;
     padding: 20px;
 }
-    .food img {
-        float: right;
-        padding: 0px 0px 10px 10px;
-    }
+/*image slide-ins */
+.slide {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+.slide img {
+    display: inline-block;
+    vertical-align: middle;
+}
+.slide-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(0,0,0,0.6);
+    padding: 20px;
+    color: white;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+}
+.slide:hover .slide-content {
+    transform: translate(0, 0);
+}
+.slide-right {
+    float: right;
+    margin: 0px 0px 20px 20px;
+}
+.slide-right .slide-content {
+    transform: translate(100%, 0);
+}
+.slide-left {
+    float: left;
+    margin: 0px 20px 20px 0px;
+}
+.slide-left .slide-content {
+    transform: translate(-100%, 0);
+}
+/*end slide-ins */
+
 .history {border-right: 1px double rgba(0,0,0,0.6);}
-    .history img {
-        float: left;
-        padding: 0px 10px 10px 0px;
-    }
 
-
+.resCushion {
+    width: 60%;
+    box-sizing: border-box;
+    padding: 20px;
+    margin: auto;
+    text-align: center;
+}
 
 footer {
     border-top: 2px solid rgba(0, 0, 0, .5);

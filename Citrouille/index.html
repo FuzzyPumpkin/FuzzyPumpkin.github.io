@@ -20,7 +20,10 @@
 <div class="bounds">
     <section class="about">
         <article class="history">
-            <img src="images/pasta.jpg" alt="pumpkin pasta">
+            <div class="slide slide-left">
+                <div class="slide-content">rotini a la gourd</div>
+                <img src="images/pasta.jpg" alt="pumpkin pasta">
+            </div>
             <h2>Our History</h2>
             <p>Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth 
                 tatsoi tomatillo melon azuki bean garlic.</p>
@@ -29,7 +32,10 @@
                 peanut soko zucchini.</p>
         </article>
         <article class="food">
-            <img src="images/cake.jpg" alt="pumpkin cake">
+            <div class="slide slide-right">
+                <div class="slide-content">pumpkin cake</div>
+                <img src="images/cake.jpg" alt="pumpkin cake">
+            </div>
             <h2>Our Culinary Focus</h2>
             <p>Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth water 
                 spinach avocado daikon napa cabbage asparagus winter purslane kale. Celery potato scallion 
@@ -44,7 +50,41 @@
             <div class="parallax-inner"></div>
         </section>
 <div class="bounds">
-    <section>
+    <section class="reservations">
+        <div class="resCushion">
+            <h2>Reservations</h2>
+            <form>
+                <label><strong>Name:</strong> 
+                        <input type="text" placeholder="Your Name" id="nameInput">
+                </label>
+                    <span id="nameErr"></span>
+                    <br>
+                <label><strong>Guests:</strong> 
+                        <input type="number" placeholder="1" id="numInput">
+                </label>
+                    <br>
+                <label><strong>Email:</strong> 
+                    <input type="text" placeholder="Your Email Address" id="emailInput">
+                </label>
+                    <span id="emailErr"></span>
+                    <br>
+                <label><strong>Phone:</strong> 
+                    <input type="text" placeholder="XXX-XXX-XXXX" id="phoneInput">  
+                </label>
+                    <span id="phoneErr"></span>
+                    <br>
+                <label><strong>Desired Date:</strong>
+                    <input type="date" id="resDate">
+                </label><br>
+                <label><strong>Desired Time:</strong>
+                    <input type="time" id="resTime">
+                </label><br>
+                <!--button type is specified so that it doesn't refresh on submit. 
+                        As this is a mock site, I didn't actually want to submit the form anywhere.-->
+                <button type="button">SEND <i class="fas fa-arrow-circle-right"></i></button>
+                <span id="formErr"></span>
+            </form>
+        </div>
     </section>
     
 </main>
