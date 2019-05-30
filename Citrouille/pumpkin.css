@@ -12,7 +12,10 @@ h1, h2 {
     font-family: Tangerine, cursive;
     font-weight: 700;
 }
-h2 {font-size: 40px;}
+h2 {
+    font-size: 40px;
+    margin: 0;
+}
 ul {padding-inline-start: 0;}
 li {
     list-style: none;
@@ -55,7 +58,6 @@ nav {
     background-image: url(images/bronze.jpg);
     background-repeat: repeat;
 }
-
 footer, .about {
     display: flex;
     flex-direction: row;
@@ -65,6 +67,7 @@ footer, .about {
     box-sizing: border-box;
     padding: 20px;
 }
+.history {border-right: 1px double rgba(0,0,0,0.6);}
 /*image slide-ins */
 .slide {
     position: relative;
@@ -113,16 +116,82 @@ footer, .about {
 }
 /*end slide-ins */
 
-.history {border-right: 1px double rgba(0,0,0,0.6);}
 
+
+
+/* parallax bg */
+.parallax {
+    background-image: url(images/soup.jpg); 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-clip: content-box;
+    background-size: 100vw 100vh;
+}
+.parallax-inner {
+    height: 100vh;
+}
+
+/*reservations form */
 .resCushion {
-    width: 60%;
+    width: 50%;
     box-sizing: border-box;
     padding: 20px;
     margin: auto;
     text-align: center;
 }
+form {
+    display: grid;
+    height: 100%;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+input {
+    display: block;
+    width: 100%;
+    background-color: rgba(0,0,0,0.6);
+    border: none;
+    font-size: 15px;
+    line-height: 1.5;
+    height: 25px;
+    padding: 0 30px;
+    color: gray;
+    outline: none;
+    box-sizing: border-box;
+    border-radius: 25px;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.5), 0 1px rgba(255, 255, 255, 0.08);
+}
+button {
+    min-width: 100px;
+    height: 30px;
+    border-radius: 25px;
+    background-color: rgba(0, 0, 0, 0.6);
+    font-size: 15px;
+    line-height: 1.5;
+    color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 25px;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 16px auto;
+    grid-row: span 1;
+    grid-column: span 2;
+}
+    button:hover {
+        background-color: rgba(0, 0, 0, 0.2);
+        color: black;
+    }
+i {
+    padding-left: 20px;
+}
 
+
+/*footer */
 footer {
     border-top: 2px solid rgba(0, 0, 0, .5);
     background-image: url(images/bronze.jpg);
@@ -155,18 +224,5 @@ footer {
     transform: rotate(45deg);
 }
 
-h2 {
-    margin: 0;
-}
 
-.parallax {
-    background-image: url(images/soup.jpg); 
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    background-clip: content-box;
-    background-size: 100vw 100vh;
-}
-.parallax-inner {
-    height: 100vh;
-}
+
