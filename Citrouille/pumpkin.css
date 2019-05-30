@@ -31,6 +31,7 @@ header {
     background-clip: content-box;
     background-size: 100vw 100vh;
 }
+/*nav begin */
 nav {
     position: absolute;
     bottom: 0;
@@ -51,6 +52,31 @@ nav {
         box-shadow: 0 5px rgba(0,0,0,0.1);
         top: 0;
     }
+    nav ul {
+		display: flex;
+		margin: 0;
+		padding: 0;
+        list-style: none;
+        font-family: Tangerine, script;
+        line-height: 80px;
+	}
+	nav li {
+		margin-left: 30px;
+		margin-bottom: 0;
+	}
+	nav a {
+        position: relative;
+        color: black;
+		text-decoration: none;
+		font-size: 40px;
+		opacity: 1;
+		transition: opacity 150ms ease-in-out;
+	}
+		nav a:hover {
+			color: #DCD4BA;
+		}
+            nav a:hover::before {transform: scale(1,1);}
+/*end nav */
 .bounds {
     width: 100%;
     min-height: 300px;
