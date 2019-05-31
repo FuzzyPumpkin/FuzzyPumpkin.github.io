@@ -7,25 +7,32 @@ html, body {
     padding: 0;
     color: black;
 }
-h1, h2 {
+h1, h2, h3, h4 {
     color: black;
     font-family: Tangerine, cursive;
     font-weight: 700;
+    margin: 0;
 }
 h1 {
     position: relative;
     font-size: 200px;
     text-align: center;
     text-shadow: 0px 2px 20px white;
-    margin: 0px;
     top: 100px;
     padding: 50px 0px 0px 0px;
     background-color: rgba(255,255,255,0.2);
 }
-h2 {
-    font-size: 40px;
-    margin: 0;
+h2 {font-size: 40px;}
+h3 {
+    font-size: 34px;
+    border-bottom: double black;
+    margin: 15px auto;
 }
+h4 {
+    font-size: 28px;
+    margin-top: 10px;
+}
+
 ul {padding-inline-start: 0;}
 li {
     list-style: none;
@@ -165,8 +172,9 @@ footer, .about {
     position: relative; 
     margin: auto;
     width: 500px; 
-    height: 700px; 
+    height: 650px; 
     background: none; 
+    text-align: center;
     
 } 
     /* THE CARD HOLDS THE FRONT AND BACK FACES */ 
@@ -178,6 +186,10 @@ footer, .about {
         transform-style: preserve-3d; 
         transition: all 0.8s ease; 
     } 
+    .thefront, .theback {
+        box-sizing: border-box;
+        padding: 20px;
+    }
     /*change this to JavaScript on click */
     /* THE PSUEDO CLASS CONTROLS THE FLIP ON MOUSEOVER AND MOUSEOUT */ 
     .thecard:hover{ transform: rotateY(180deg); } 
