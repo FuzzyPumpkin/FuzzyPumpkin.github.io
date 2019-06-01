@@ -1,5 +1,8 @@
 const nav = document.querySelector("nav");
 const topOfNav = nav.offsetTop;
+const flipBtn1 = document.querySelector("#flip1");
+const flipBtn2 = document.querySelector("#flip2");
+const menuCard = document.querySelector(".thecard");
 
 function fixNav(){
     if(window.scrollY >= topOfNav){
@@ -13,4 +16,10 @@ function fixNav(){
     };
 };
 
+function flipMenu(){
+  menuCard.classList.toggle("flip");
+};
+
 window.addEventListener("scroll", fixNav);
+flipBtn1.addEventListener("click", flipMenu);
+flipBtn2.addEventListener("click", flipMenu);
