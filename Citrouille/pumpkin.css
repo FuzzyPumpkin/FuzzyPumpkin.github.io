@@ -1,10 +1,11 @@
-
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;}
 html, body {
     width: 100%;
     background-color: rgb(220, 220, 220);
     font-family: sans-serif;
-    margin: 0;
-    padding: 0;
     color: black;
 }
 h1, h2, h3, h4 {
@@ -78,8 +79,10 @@ nav {
         line-height: 80px;
 	}
 	nav li {
+        flex: 1;
 		margin-left: 30px;
-		margin-bottom: 0;
+        margin-bottom: 0;
+        text-align: center;
 	}
 	nav a {
         position: relative;
@@ -107,6 +110,7 @@ footer, .about {
     width: 100%;
 }
 .food, .history {
+    flex: 1;
     box-sizing: border-box;
     padding: 20px;
 }
@@ -167,7 +171,6 @@ footer, .about {
     box-sizing: border-box;
     padding: 50px 0px;
 }
-/* THE MAINCONTAINER HOLDS EVERYTHING */ 
 .maincontainer{ 
     position: relative; 
     margin: auto;
@@ -177,7 +180,6 @@ footer, .about {
     text-align: center;
     
 } 
-    /* THE CARD HOLDS THE FRONT AND BACK FACES */ 
     .thecard { 
         position: relative; 
         width: 100%; 
@@ -197,10 +199,7 @@ footer, .about {
         padding: 20px;
         box-shadow: 10px 10px 14px 4px rgba(0,0,0,0.8);
     }
-    /*change this to JavaScript on click */
-    /* THE PSUEDO CLASS CONTROLS THE FLIP ON MOUSEOVER AND MOUSEOUT */ 
     .flip { transform: rotateY(180deg); } 
-    /* THE FRONT FACE OF THE CARD, WHICH SHOWS BY DEFAULT */ 
     .thefront { 
         position: absolute; 
         top: 0; 
@@ -213,7 +212,6 @@ footer, .about {
         background: url(images/menu.jpg); 
         color: #000; 
     } 
-    /* THE BACK FACE OF THE CARD, WHICH SHOWS ON MOUSEOVER */ 
     .theback { 
         position: absolute; 
         top: 0; 
@@ -228,10 +226,6 @@ footer, .about {
         text-align: center; 
         transform: rotateY(180deg); 
     }
-
-
-
-
 
 /* parallax bg */
 .parallax {
@@ -268,8 +262,9 @@ input {
     border: none;
     font-size: 15px;
     line-height: 1.5;
+    text-align: center;
     height: 25px;
-    padding: 0 30px;
+    padding: 0 5px;
     color: gray;
     outline: none;
     box-sizing: border-box;
@@ -303,7 +298,14 @@ form button {
 i {
     padding: 0px 10px;
 }
-
+form span {
+    color: rgb(139, 35, 35);
+    font-size: 12px;
+}
+#formErr {
+    grid-row: span 1;
+    grid-column: span 2;
+}
 
 /*footer */
 footer {
@@ -337,6 +339,46 @@ footer {
     margin: 20px auto;
     transform: rotate(45deg);
 }
+table {
+    display: flex;
+    flex-direction: column;
+}
+tr {
+    display: flex;
+    flex-direction: row;
+}
+td {
+    flex: 1;
+    text-align: right;
+}
+tr td:nth-of-type(2){
+    max-width: 12px;
+    text-align: center;
+}
+tr td:nth-of-type(3){
+    text-align: left;
+}
 
 
-
+@media screen and (max-width: 768px) {
+    header {
+        height: 80vh;
+        background-size: cover;}
+    h1 {font-size: 100px;}
+    nav li {margin-left: 10px;}
+    nav a {font-size: 30px;}
+    footer, .about {flex-direction: column;}
+    .history {border-bottom: 1px double rgba(0,0,0,0.6);}
+    .slide-right, .slide-left {float: top;}
+    .maincontainer {
+        width: auto;
+        margin: 10px;
+    }
+    .thecard {font-size: 12px;}
+    .parallax {background-size: cover;}
+    .resCushion {width: 90%;}
+    .addressBox, .hoursBox {margin: 0;}
+    .addressBox {border-bottom: 1px double rgba(0,0,0,0.6);}
+    .separator {display: none;}
+    
+}

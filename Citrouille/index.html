@@ -109,34 +109,34 @@
     <section class="reservations" id="reservations">
         <div class="resCushion">
             <h2>Reservations</h2>
+            <p>Reservations are strongly encouraged. They are available every 15 minutes, from opening to two hours before 
+                closing. Please call to make reservations for groups larger than 8.</p>
             <form>
                 <label>Name:
                     <input type="text" placeholder="Your Name" id="nameInput">
+                    <span id="nameErr"></span>
                 </label>
-                    <!-- <span id="nameErr"></span> -->
                 <label>Guests:
-                        <input type="number" placeholder="1" id="numInput">
+                        <input type="number" placeholder="1" min="1" max="8" id="numInput">
                 </label>
-
                 <label>Email:
                     <input type="text" placeholder="Your Email Address" id="emailInput">
+                    <span id="emailErr"></span>
                 </label>
-                    <!-- <span id="emailErr"></span> -->
-
                 <label>Phone:
                     <input type="text" placeholder="XXX-XXX-XXXX" id="phoneInput">  
+                    <span id="phoneErr"></span>
                 </label>
-                    <!-- <span id="phoneErr"></span> -->
-
                 <label>Desired Date:
                     <input type="date" id="resDate">
+                    <span id="dateErr"></span>
                 </label>
                 <label>Desired Time:
-                    <input type="time" id="resTime">
+                    <input type="time" id="resTime" min="17:00" max="22:00" step="900" required>
                 </label>
                 <!--button type is specified so that it doesn't refresh on submit. 
                         As this is a mock site, I didn't actually want to submit the form anywhere.-->
-                <button type="button">SEND <i class="fas fa-arrow-circle-right"></i></button>
+                <button type="button" id="subBtn">SEND <i class="fas fa-arrow-circle-right"></i></button>
                 <span id="formErr"></span>
             </form>
         </div>
@@ -163,16 +163,30 @@
         </div>
         <div class="hoursBox">
             <h2>Hours</h2>
-            <ul>
-                <li>Monday: Closed</li>
-                <li>Tuesday: 5:00PM - 12:00AM</li>
-                <li>Wednesday: 5:00PM - 12:00AM</li>
-                <li>Thursday: 5:00PM - 12:00AM</li>
-                <li>Friday: 5:00PM - 12:00AM</li>
-                <li>Saturday: 5:00PM - 12:00AM</li>
-                <li>Sunday: 5:00PM - 12:00AM</li>
-            </ul>
-            <p>Currently <span class="openStatus">Open</span></p>
+            <table>
+                <tr>
+                    <td>Monday</td><td>:</td><td>Closed</td>
+                </tr>
+                <tr>
+                    <td>Tuesday</td><td>:</td><td>5:00PM - 12:00AM</td>
+                </tr>
+                <tr>
+                    <td>Wednesday</td><td>:</td><td>5:00PM - 12:00AM</td>
+                </tr>
+                <tr>
+                    <td>Thursday</td><td>:</td><td>5:00PM - 12:00AM</td>
+                </tr>
+                <tr>
+                    <td>Friday</td><td>:</td><td>5:00PM - 12:00AM</td>
+                </tr>
+                <tr>
+                    <td>Saturday</td><td>:</td><td>5:00PM - 12:00AM</td>
+                </tr>
+                <tr>
+                    <td>Sunday</td><td>:</td><td>5:00PM - 12:00AM</td>
+                </tr>
+            </table>
+            <p><strong>Currently <span class="openStatus">Open</span></strong></p>
         </div>
     </footer>
 </div> 
