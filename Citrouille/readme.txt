@@ -5,7 +5,7 @@ This is a site created for a fictious restaurant. I gave myself a challenge of c
 
 Also, I really like pumpkin.
 
-Site passes all Lighthouse audits with 93% or above. Site is fully mobile-friendly and tested on such, though it displays well on standard desktop and wide-screen monitors.
+Site passes all Lighthouse audits with 93% or above. Background sizes set to cover always mess up that "Best Practices" score. Site is fully mobile-friendly and tested on such, though it displays well on standard desktop and wide-screen monitors.
 
 Languages/Frameworks/Databases used:
 
