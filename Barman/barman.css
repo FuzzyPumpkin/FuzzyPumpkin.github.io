@@ -1,15 +1,25 @@
-div {
-    transition: all 1s;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main {
+    position: relative;
+    height: 100vh; width: 100%;
+    background-color: rgb(153, 73, 106);
+    padding: 20px;
+}
+.bgStart {
+    height: 100%; width: 100%;
+    background-image: linear-gradient(to right bottom, rgba(206, 98, 143, 0.5), rgba(218, 116, 167, 0.5)), 
+                        url(images/barmanBg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-clip: content-box;
+    clip-path: url(#myClip);
 }
 .clip-svg {
     opacity: 1;
     clip-path: url(#myClip);
   }
-.notClipped {
-    animation: unClip 1s ease;
-}
-
-@keyframes unClip {
-    0%{opacity: 1;}
-    100%{opacity: 0;}
-}

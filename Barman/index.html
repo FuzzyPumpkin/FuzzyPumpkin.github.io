@@ -5,18 +5,21 @@
         <link rel="stylesheet" href="barman.css">
     </head>
 <body>
-    <div>
-    <img class="clip-svg" src="http://lorempixel.com/output/animals-q-c-640-480-7.jpg">
-</div>
-    <svg width="0" height="0">
-      <defs>
-        <clipPath id="myClip">
-          <polygon points="400,50 400,320, 140,300"/>
-          <polygon points="450,10 500,200 600,100" />
-          <polygon points="150,10 100,200 300,100" />
-        </clipPath>
-      </defs>
-    </svg>
-    <button>Click</button>
+    <main>
+      <div class="bgStart"></div>
+    </main>
+ 
+<svg width="0" height="0">
+    <defs>
+      <clipPath id="myClip" clipPathUnits="objectBoundingBox">
+        <polygon points="0 0, .2 0, 0 .5" />
+        <polygon points="1 1, 1 .5, .8 1" />
+        <polygon points="1 0, .6 1, .4 1, .8 0" />
+        <polygon points=".6 0, .2 1, 0 1, .4 0" />
+
+      </clipPath>
+    </defs>
+  </svg>
+  
 </body>
 </html>
