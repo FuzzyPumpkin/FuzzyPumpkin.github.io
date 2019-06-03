@@ -1,0 +1,15 @@
+div {
+    transition: all 1s;
+}
+.clip-svg {
+    opacity: 1;
+    clip-path: url(#myClip);
+  }
+.notClipped {
+    animation: unClip 1s ease;
+}
+
+@keyframes unClip {
+    0%{opacity: 1;}
+    100%{opacity: 0;}
+}
