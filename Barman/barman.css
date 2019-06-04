@@ -39,13 +39,15 @@ main {
     display: none;
 }
 .bgEnd {
+    display: flex;
+    flex-direction: column;
     height: 100%; width: 100%;
-    background-image: url(images/barmanBg2.jpg);
+    background-image: url(images/barmanBg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-clip: content-box;
-    clip-path: polygon(100% 0%, 100% 100%, 80% 100%, 80% 10%, 20% 10%, 20% 100%, 0% 100%, 0% 0%);
+    clip-path: url(#bgEndClip);
     opacity: 1;
     /* opacity: 0; */
     /* display: none; */
@@ -72,4 +74,67 @@ main {
     100%{
         opacity: 1;
     }
+}
+
+/* 2nd view */
+.info {
+    position: absolute;
+    top:0; left:0;
+    height: 100%; width: 100%;
+    padding: 20px;
+}
+header {
+    height: 50%;
+}
+    .navBtn {
+        height: 100px; width: 100px;
+        background-color: white;
+        border: 1px solid black;
+        border-radius: 50%;
+        margin: 10px;
+        outline: none;
+    }
+    .headline {
+        display: flex;
+        flex-direction: row;
+        width: 80%;
+        margin: auto;
+        font-family: "Montserrat Alternates", sans-serif;
+        line-height: 20px;
+        padding-top: 60px;
+    }
+        .headline h1 {
+            flex: 1;
+            text-align: right;
+            padding: 10px;
+            font-weight: 900;
+            font-size: 120px;
+        }
+        .initialLtr {font-size: 200px;}
+        .headline p {
+            flex: 2;
+            text-align: left;
+            padding: 10px;
+            font-size: 30px;
+            font-weight: 500;
+            line-height: 30px;
+        }
+
+
+
+
+.description {
+    display: flex;
+    flex-direction: row;
+    height: 50%;
+}
+.desc1, .desc2 {
+    display: flex;
+    flex: 1;
+}
+.desc1 {
+    background-color: rgba(255, 0, 0, 0.363);
+}
+.desc2 {
+    background-color: rgba(0, 0, 255, 0.295);
 }
