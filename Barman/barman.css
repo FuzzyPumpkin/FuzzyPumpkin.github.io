@@ -3,6 +3,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+h2 {
+    width: 100%;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-size: 24px;
+}
 main {
     position: relative;
     height: 100vh; width: 100%;
@@ -86,6 +91,18 @@ main {
 header {
     height: 50%;
 }
+    .drink {
+        position: absolute;
+        top: 50%; left: 50%;
+        height: 160px; width: 160px;
+        transform: translate(-55%, -50%);
+        background-color: white;
+        border: 1px solid black;
+        border-radius: 50%;
+        margin: 10px;
+        outline: none;
+        z-index: 3;
+    }
     .navBtn {
         height: 100px; width: 100px;
         background-color: white;
@@ -112,7 +129,7 @@ header {
         }
         .initialLtr {font-size: 200px;}
         .headline p {
-            flex: 2;
+            width: 260px;
             text-align: left;
             padding: 10px;
             font-size: 30px;
@@ -128,13 +145,30 @@ header {
     flex-direction: row;
     height: 50%;
 }
+    .description p {
+        padding: 65px 30px 20px 30px;
+        font-size: 20px;
+    }
 .desc1, .desc2 {
-    display: flex;
     flex: 1;
 }
-.desc1 {
-    background-color: rgba(255, 0, 0, 0.363);
-}
-.desc2 {
-    background-color: rgba(0, 0, 255, 0.295);
+    .desc1 h2 {
+        padding: 0px 110px 5px 20px;
+        text-align: right;
+    }
+    .desc2 h2 {
+        padding: 0px 20px 5px 110px;
+        text-align: left;
+    }
+.infoBtn {
+    position: relative;
+    height: 54px; width: 200px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 55%;
+    margin: auto 50%;
+    transform: translateX(-50%);
+    outline: none;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-size: 24px;
 }
