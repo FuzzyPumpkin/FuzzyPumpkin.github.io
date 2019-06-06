@@ -124,7 +124,7 @@ header {
             font-weight: 900;
             text-align: right;
         }
-        .headline__h1--initialLtr {font-size: 200px;}
+        .headline__h1--initialLtr {font-size: 20rem;}
         .headline__p {
             width: 26rem;
             padding: 1rem;
@@ -178,4 +178,40 @@ header {
 @keyframes whiteOut {
     0% {opacity: 0;}
     100%{opacity: 1;}
+}
+
+/* mobile tweaks */
+@media screen and (max-width: 768px){
+    html {font-size: 6px;}
+    .headline, .bg--bgEnd, .description {
+        flex-direction: column;
+    }
+    .headline{padding-top: 4rem;}
+    .headline__h1{
+        font-size: 8rem;
+        text-align: left;    
+    }
+    .headline__h1--initialLtr{font-size: 10rem;}
+    .headline__p{
+        width: auto;
+        font-size: 2.5rem;
+    }
+    .btn--navBtn {
+        height: 8rem; width: 8rem;
+    }
+    .btn--drinkBtn {
+        top: 30%; left: 50%;
+        height: 12rem; width: 12rem;
+        background-size: contain;
+    } 
+    .description {height: 50%;}
+    .description__p {
+        padding: 2rem 3rem .5rem 3rem;
+        font-size: 1.6rem;
+    }
+    .btn--infoBtn {
+        height: 3.25rem; width: 17rem;
+        margin: 0% 35% 0% 35%;
+        font-size: 1.8rem;
+    }
 }
