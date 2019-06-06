@@ -163,10 +163,7 @@ header {
     font-family: "Montserrat Alternates", sans-serif;
     font-size: 2.4rem;
 }
-/* MOBILE ADJUSTMENTS */
-@media screen and (max-width: 768px) {
-    h1 { background-color: red;}
-}
+
 /* ANIMATIONS */
 @keyframes startToMid {
     0% {
@@ -182,4 +179,3 @@ header {
     0% {opacity: 0;}
     100%{opacity: 1;}
 }
-
