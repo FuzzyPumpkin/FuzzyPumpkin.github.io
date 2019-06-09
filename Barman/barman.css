@@ -20,6 +20,9 @@ main {
     padding: 2rem;
     background-color: white;
 }
+p {
+    font-size: 1.6rem;
+}
 .btn {
     background-color: white;
     border: 1px solid black;
@@ -206,7 +209,6 @@ header {
     .description {height: 50%;}
     .description__p {
         padding: .5rem 3rem .5rem 3rem;
-        font-size: 1.6rem;
     }
     .btn--infoBtn {
         height: 3.25rem; width: 17rem;
