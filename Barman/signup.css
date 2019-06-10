@@ -1,74 +1,41 @@
-/* common styles */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+.headline__h1 {
+    top: 10%; right: -37%;
 }
-html {
-    width: 99vw; height: 99vh;
-    font-family: sans-serif;
-    font-size: 10px;
-}
-h2 {
-    width: 100%;
-    font-family: "Montserrat Alternates", sans-serif;
-    font-size: 2.4rem;
-}
-main {
-    position: relative;
-    height: 100vh; width: 100%;
-    padding: 2rem;
-    background-color: white;
-}
-.btn {
-    background-color: white;
-    border: 1px solid black;
-    border-radius: 50%;
-    outline: none;
-    box-shadow: inset 0 1px 0 rgba(0,0,0,0.8),
-                0 2px 0 rgba(0,0,0,0.8),
-                0 3px 0 rgba(0,0,0,0.7),
-                0 4px 0 rgba(0,0,0,0.6),
-                0 5px 0 rgba(0,0,0,0.5),
-                0 6px 0 rgba(0,0,0,0.4),
-                0 7px 0 rgba(0,0,0,0.3),
-                0 8px 0 rgba(0,0,0,0.2),
-                0 9px 0 rgba(0,0,0,0.1);
-} 
-    .btn:active {
-      top: 2px;
-      box-shadow: inset 0 1px 0 rgba(0,0,0,0.8),
-                    0 2px 0 rgba(0,0,0,0.8),
-                    0 3px 0 rgba(0,0,0,0.7),
-                    0 4px 0 rgba(0,0,0,0.6),
-                    0 5px 0 rgba(0,0,0,0.5),
-                    0 6px 0 rgba(0,0,0,0.4);
-    }
-.btn--navBtn {
-    height: 10rem; width: 10rem;
-    margin: 1rem;
-    background-color: rgb(100, 0, 2);
-    z-index: 4;
-}
-/* BACKGROUND*/
-.bg {
-    height: 100%; width: 100%;
-    background-clip: content-box;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.bg--bgEnd {
+.options {
     display: flex;
-    flex-direction: column;
-    background-image: url(images/barmanBg.jpg);
-    clip-path: url(#bgEndClip);
-    opacity: 1;
+    flex-direction: row;
 }
-
-.info {
+.cardContainer {
+    position: relative;
+    width: 30rem;
+    height: 50rem;
+    margin: 5rem 2rem 0 2rem;
+}
+.card {
     position: absolute;
-    top:0; left:0;
-    height: 100%; width: 100%;
-    padding: 2rem;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(243, 235, 235);
+    border: 2px black solid;
+    border-radius: 1rem;
+    transform-style: preserve-3d; 
+    transition: all 1s ease; 
+}
+.card:hover, .card:hover, .card:hover {transform: rotateX(180deg);}
+.card--front, .card--back {
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    border-radius: 1rem; 
+    backface-visibility: hidden; 
+    overflow: hidden; 
+}
+.card--front { 
+    background-color: rgb(243, 235, 235);;
+} 
+.card--back { 
+    background-color: rgba(196, 156, 69, 0.9);
+    transform: rotateX(180deg); 
 }
