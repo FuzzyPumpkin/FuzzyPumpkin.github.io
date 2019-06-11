@@ -74,7 +74,7 @@ p {
     padding: 2rem;
 }
 /* title for secondary pages */
-.headline__h1 {
+.headline__h1--secondary {
     position: absolute;
     top: 10%; right: -40%;
     padding: 1rem 3rem;
