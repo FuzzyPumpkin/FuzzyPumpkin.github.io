@@ -115,11 +115,10 @@ header {
 
 /* mobile tweaks */
 @media screen and (max-width: 760px){
-    html {font-size: 6px;}
-    .headline, .bg--bgEnd, .description {
+    .headline, .description {
         flex-direction: column;
     }
-    .headline{padding-top: 2.5rem;}
+    .headline {padding-top: 2.5rem;}
     .headline__h1{
         font-size: 8rem;
         text-align: left;    
@@ -128,9 +127,6 @@ header {
     .headline__p{
         width: auto;
         font-size: 2.5rem;
-    }
-    .btn--navBtn {
-        height: 8rem; width: 8rem;
     }
     .btn--drinkBtn {
         top: 30%; left: 50%;
@@ -148,7 +144,6 @@ header {
     }
 }
 @media screen and (min-height: 1000px){
-    html {font-size: 9px;}
     .headline {
         flex-direction: column;
     }

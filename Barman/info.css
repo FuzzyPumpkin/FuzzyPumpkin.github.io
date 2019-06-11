@@ -1,4 +1,7 @@
 .info__faq {
+    position: absolute;
+    top: 0; left: 0;
+    padding: 7%;
     height: 100%;
 }
 /* faq body */
@@ -7,3 +10,25 @@
     padding: 5rem 16rem 0rem 9rem;
 }
 .faq__li {padding-bottom: 2rem;}
+
+/* mobile tweaks */
+
+@media screen and (max-width: 400px){
+    .faq__ul{padding: 12rem 12rem 0rem 0rem;}
+    .headline__h1--secondary{
+        top: 15%;
+        right: -81%;
+        padding: 0rem 1rem;
+    }
+    .headline__h1--initialLtr {font-size: 7rem;}
+}
+@media screen and (max-width: 330px){
+    .faq__ul{
+        padding: 10rem 12rem 0rem 0rem;
+    }
+    .headline__h1--secondary {
+        right: -93%;
+    }
+    h2 {font-size: 2rem;}
+}
+/* phones 401-414 are messy, also iPads. Widescreens not too bad, but tweak h1 */

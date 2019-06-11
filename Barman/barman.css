@@ -76,7 +76,7 @@ p {
 /* title for secondary pages */
 .headline__h1--secondary {
     position: absolute;
-    top: 10%; right: -40%;
+    top: -8%; right: -37%;
     padding: 1rem 3rem;
     font-size: 5rem;
     font-weight: 900;
@@ -101,4 +101,20 @@ p {
 @keyframes whiteOut {
     0% {opacity: 0;}
     100%{opacity: 1;}
+}
+
+
+
+/* mobile tweaks */
+@media screen and (max-width: 760px){
+    html {font-size: 6px;}
+    .bg--bgEnd {
+        flex-direction: column;
+    }
+    .btn--navBtn {
+        height: 8rem; width: 8rem;
+    }
+}
+@media screen and (min-height: 1000px){
+    html {font-size: 9px;}
 }
