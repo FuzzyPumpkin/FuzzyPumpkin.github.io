@@ -13,23 +13,30 @@
 .faq__li {padding-bottom: 2rem;}
 
 /* mobile tweaks */
-
-@media screen and (max-width: 400px){
-    .faq__ul{padding: 12rem 12rem 0rem 0rem;}
+@media screen and (max-width: 440px){
+    .faq__ul{padding: 18rem 12rem 0rem 0rem;}
     .headline__h1--secondary{
-        top: 15%;
-        right: -81%;
+        top: 50rem;
+        right: -22rem;
         padding: 0rem 1rem;
     }
     .headline__h1--initialLtr {font-size: 7rem;}
+}
+
+@media screen and (max-width: 400px){
+    .faq__ul{padding: 12rem 12rem 0rem 0rem;}
 }
 @media screen and (max-width: 330px){
     .faq__ul{
         padding: 10rem 12rem 0rem 0rem;
     }
-    .headline__h1--secondary {
-        right: -93%;
-    }
     h2 {font-size: 2rem;}
 }
+@media screen and (min-height: 1000px){
+    .faq__ul{padding: 18rem 12rem 0rem 0rem;}
+    .headline__h1--secondary{
+        top: 60rem;
+    }
+}
+/* widescreen good! */
 /* phones 401-414 are messy, also iPads. Widescreens not too bad, but tweak h1 */
