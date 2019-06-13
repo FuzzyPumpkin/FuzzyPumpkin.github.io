@@ -2,7 +2,7 @@
 .info__faq {
     position: absolute;
     top: 0; left: 0;
-    padding: 7%;
+    margin: 7%;
     height: 100%;
 }
 /* faq body */
@@ -22,7 +22,6 @@
     }
     .headline__h1--initialLtr {font-size: 7rem;}
 }
-
 @media screen and (max-width: 400px){
     .faq__ul{padding: 12rem 12rem 0rem 0rem;}
 }
@@ -37,6 +36,15 @@
     .headline__h1--secondary{
         top: 60rem;
     }
+}
+@media screen and (min-width: 1280px){
+    .headline__h1--secondary{
+        top: 37rem;
+    }
+    .faq__ul{
+        padding: 10rem 16rem 0rem 15rem;
+    }
+    h2 {font-size: 2rem;}
 }
 /* widescreen good! */
 /* phones 401-414 are messy, also iPads. Widescreens not too bad, but tweak h1 */

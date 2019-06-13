@@ -1,6 +1,3 @@
-.headline__h1 {
-    top: 10%; right: -37%;
-}
 .options {
     display: flex;
     flex-direction: row;
@@ -27,6 +24,8 @@
 .card:hover {transform: translateY(3px) scale(1.1);}
 .card--front {
     position: absolute; 
+    display: flex;
+    flex-direction: column;
     top: 0; 
     left: 0; 
     width: 100%; 
@@ -63,3 +62,70 @@ li:not(:last-child) {
     .btn--signup:hover{
         background-color: rgb(129, 9, 11);
     }
+    .btn--signup:active {bottom: calc(3rem - 2px);}
+
+/* mobile tweaks */
+@media screen and (max-width: 440px){
+    .headline__h1--secondary{
+        top: 50rem;
+        right: -22rem;
+        padding: 0rem 1rem;
+    }
+    .headline__h1--initialLtr {font-size: 7rem;}
+}
+@media screen and (max-width: 400px){
+    
+}
+@media screen and (max-width: 330px){
+    /* start here, having issues fitting all the cards in. Could we layer them? */
+    .options {
+        flex-direction: column;
+    }
+    .headline__h1--secondary {
+        top: 42rem; right: -17rem;
+        font-size: 4rem;
+    }
+    .headline__h1--initialLtr {font-size: 6rem;}
+}
+@media screen and (min-height: 1000px){
+    .headline__h1--secondary{
+        top: 50rem;
+    }
+    .options {
+        flex-direction: column;
+    }
+    .cardContainer {
+        width: 65rem;
+        height: 28rem;
+        margin: 2rem 2rem 0 1rem;
+    }
+    .card:hover {transform: translateY(2px) scale(1.05);}
+    .card--front {
+        flex-direction: row;
+    }
+    ul {
+        padding-left: 6rem;
+    }
+    .btn--signup {
+        bottom: 3rem; right: 40%;
+    }
+}
+@media screen and (min-height: 1200px){
+    html {font-size: 10px;}
+    .headline__h1--secondary{
+        top: 60rem;
+    }
+    .cardContainer {
+        width: 70rem;
+        height: 30rem;
+        margin: 5rem 2rem 0 12rem;
+    }
+}
+@media screen and (min-width: 1280px){
+    .headline__h1--secondary{
+        top: 37rem; right: -21rem;
+    }
+    .cardContainer {
+        margin: 5rem 3rem 0 3rem;
+    }
+}
