@@ -1,31 +1,50 @@
+.h2--options {
+    position: relative;
+    width: 100%;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-size: 2.2rem;
+    text-align: left;
+    padding: 1.1rem;
+    top: -3rem; left: -3rem;
+    color: black;
+    background-color: rgba(100, 0, 2, .3);
+}
 .options {
     display: flex;
     flex-direction: row;
 }
 .cardContainer {
     position: relative;
-    width: 30rem;
-    height: 50rem;
+    width: calc(30rem + 4px);
+    height: calc(50rem + 4px);
     margin: 5rem 2rem 0 2rem;
+    background-color: black;
+    clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 10%, 67% 10%, 67% 0%);
+    -webkit-clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 10%, 67% 10%, 67% 0%);
+    transition: all 1s ease; 
 }
 .card {
     position: absolute;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
+    top: 2px; left: 2px;
+    width: 30rem;
+    height: 50rem;
     background-image: linear-gradient(30deg, white, rgb(218, 214, 214));
+    clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 10%, 66.5% 10%, 66.5% 0%);
+    -webkit-clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 10%, 66.5% 10%, 66.5% 0%);
     padding: 3rem;
-    border: 2px black solid;
-    border-radius: 1rem;
     text-align: center;
     align-content: center;
     box-shadow: 0px 5px 10px rgba(0,0,0,.5);
-    transform-style: preserve-3d; 
-    transition: all 1s ease; 
-    
+    z-index: 1;
 }
-.card:hover {transform: translateY(3px) scale(1.1);}
+.cardContainer:hover {
+    transform: translateY(3px) scale(1.1);
+    z-index: 2;
+}
+.card__inside {
+    display: flex;
+    flex-direction: column;
+}
 
 .pricing {
     color: rgb(100, 0, 2);
@@ -63,42 +82,89 @@ li:not(:last-child) {
         padding: 0rem 1rem;
     }
     .headline__h1--initialLtr {font-size: 7rem;}
-}
-@media screen and (max-width: 400px){
-    
-}
-@media screen and (max-width: 330px){
-    /* start here, having issues fitting all the cards in. Could we layer them? */
+    .h2--options {
+        padding: 1rem 1rem 0rem 1rem;
+        top: -.75rem; left: -1.5rem;
+    }
+    .card__inside {
+        flex-direction: row;
+    }
+    .cardContainer {
+        width: calc(45rem + 4px);
+        height: calc(25rem + 4px);
+        margin: 4rem 1rem -10rem 0;
+        clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 12%, 45.5% 12%, 45.5% 0%);
+        -webkit-clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 12%, 45.5% 12%, 45.5% 0%);
+    }
+    .card {
+        width: 45rem;
+        height: 25rem;
+        clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 12%, 45% 12%, 45% 0%);
+        -webkit-clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 12%, 45% 12%, 45% 0%);
+    }
+    .cardContainer:hover {
+        transform: translateY(3px) scale(1);
+    }
+    .card {
+        flex-direction: row;
+        padding: 0 1rem 1rem 1rem;
+    }
+    .pricing__value {font-size: 8rem;}
     .options {
         flex-direction: column;
     }
-    .headline__h1--secondary {
-        top: 42rem; right: -17rem;
-        font-size: 4rem;
+    ul {
+        font-size: 1.4rem;
+        padding-left: 3rem;
     }
-    .headline__h1--initialLtr {font-size: 6rem;}
+    .btn--signup {
+        bottom: 2.5rem; right: 20%;
+    }
+}
+@media screen and (max-width: 330px){
+    .headline__h1--secondary{
+        font-size: 3rem;
+        top: 6rem; right: 3rem;
+        transform: rotate(0deg);
+    }
+   
 }
 @media screen and (min-height: 1000px){
     .headline__h1--secondary{
         top: 50rem;
     }
-    .options {
-        flex-direction: column;
+    .h2--options {
+        padding: 1rem 1rem .2rem 1rem;
+        top: -4rem; left: -3rem;
     }
-    .cardContainer {
-        width: 65rem;
-        height: 28rem;
-        margin: 2rem 2rem 0 1rem;
-    }
-    .card:hover {transform: translateY(2px) scale(1.05);}
-    .card--front {
+    .card__inside {
         flex-direction: row;
     }
+    .cardContainer {
+        width: calc(65rem + 4px);
+        height: calc(28rem + 4px);
+        margin: 2rem 2rem 0 1rem;
+        clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 10%, 32.5% 10%, 32.5% 0%);
+        -webkit-clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 10%, 32.5% 10%, 32.5% 0%);
+    }
+    .card {
+        width: 65rem;
+        height: 28rem;
+        clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 10%, 32% 10%, 32% 0%);
+        -webkit-clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 10%, 32% 10%, 32% 0%);
+    }
+    .cardContainer:hover {
+        transform: translateY(3px) scale(1);
+    }
+    .card {
+        flex-direction: row;
+    }
+    .options {flex-direction: column;}
     ul {
         padding-left: 6rem;
     }
     .btn--signup {
-        bottom: 3rem; right: 40%;
+        bottom: 2.5rem; right: 40%;
     }
 }
 @media screen and (min-height: 1200px){
@@ -107,14 +173,21 @@ li:not(:last-child) {
         top: 60rem;
     }
     .cardContainer {
+        width: calc(70rem + 4px);
+        height: calc(30rem + 4px);
+        margin: 5rem 2rem 0 12rem;
+    }
+    .cardContainer:hover {
+        transform: translateY(3px) scale(1);
+    }
+    .card {
         width: 70rem;
         height: 30rem;
-        margin: 5rem 2rem 0 12rem;
     }
 }
 @media screen and (min-width: 1280px){
     .headline__h1--secondary{
-        top: 37rem; right: -21rem;
+        top: 40rem; right: -21rem;
     }
     .cardContainer {
         margin: 5rem 3rem 0 3rem;
