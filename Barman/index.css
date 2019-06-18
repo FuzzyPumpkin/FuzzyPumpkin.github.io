@@ -48,7 +48,7 @@ header {
         flex-direction: row;
         width: 80%;
         margin: auto;
-        padding-top: 6rem;
+        padding-top: 16rem;
         font-family: "Montserrat Alternates", sans-serif;
         line-height: 2rem;
     }
@@ -118,7 +118,6 @@ header {
     .headline, .description {
         flex-direction: column;
     }
-    .headline {padding-top: 2.5rem;}
     .headline__h1{
         font-size: 8rem;
         text-align: left;    

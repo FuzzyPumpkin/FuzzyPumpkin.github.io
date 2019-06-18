@@ -12,6 +12,7 @@
 .options {
     display: flex;
     flex-direction: row;
+    padding-top: 12rem;
 }
 .cardContainer {
     position: relative;
