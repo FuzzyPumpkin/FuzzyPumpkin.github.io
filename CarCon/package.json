@@ -1,0 +1,14 @@
+{
+  "name": "carcon",
+  "version": "1.0.0",
+  "description": "Classic car convention site",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css"
+  },
+  "author": "Kari Minger",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.12.0"
+  }
+}
