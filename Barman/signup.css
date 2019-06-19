@@ -74,6 +74,41 @@ li:not(:last-child) {
         background-color: rgb(129, 9, 11);
     }
     .btn--signup:active {bottom: calc(3rem - 2px);}
+/* signup form */
+.form {
+    height: 100%; width: 100%;
+    position: fixed;
+    top: 0; left: 0;
+    background-color: white;
+    z-index: 90;
+    /* display: none; */
+}
+.form__container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 60rem; width: 70%;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #888;
+    font-size: 2rem;
+}
+.form__row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 1rem;
+}
+.form__group {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+input {
+    margin: 2px 1rem;
+    height: 2.5rem;
+}
+
 
 /* mobile tweaks */
 @media screen and (max-width: 440px){

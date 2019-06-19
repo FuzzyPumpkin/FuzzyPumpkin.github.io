@@ -88,7 +88,55 @@
             </article>
           </div>
         </section>
-        
+        <div class="form">
+          <div class="form__container">
+            <form>
+              <div class="form__row">
+                <div class="form__group">
+                  <input type="text" class="form__name" id="firstName">
+                  <label for="firstName" class="form__label">First Name</label>                             
+                </div>
+                <div class="form__group">
+                  <input type="text" class="form__name" id="lastName">
+                  <label for="lastName" class="form__label">Last Name</label>
+                </div>
+              </div>
+              <div class="form__row">
+                <input type="text" class="form__address--street" id="street">
+                <label for="street" class="form__label">Street Address</label>
+              </div>
+              <div class="form__row">
+                <input type="text" class="form__address--city" id="city">
+                <label for="city" class="form__label">City</label>
+                <input type="text" class="form__address--state" id="state">
+                <label for="state" class="form__label">State</label>
+                <input type="text" class="form__address--zip" id="zip">
+                <label for="zip" class="form__label">Zip Code</label>
+              </div>
+              <div class="form__row">
+                <input type="tel" class="form__phone" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                <label for="phone" class="form__label">Phone Number</label>
+                <input type="email" class="form__email" id="email">
+                <label for="email" class="form__label">Email</label>
+              </div>
+              <div class="form__row">
+                <input type="text" class="form__plan" id="plan">
+                <label for="plan" class="form__label">Plan</label>
+              </div>
+              <div class="form__row">
+                  <input type="tel" class="form__cc--num" id="ccNum" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}">
+                  <label for="ccNum" class="form__label">Credit Card Number</label>
+                </div>
+                <div class="form__row">
+                  <input type="month" class="form__cc--exp" name="ccExp">
+                  <label for="ccExp" class="form__label">Exp. Date</label>
+                  <input type="number" class="form__cc--sec" id="ccSec">
+                  <label for="ccSec" class="form__label">Sec. Code</label>
+                </div>
+              <button class="btn btn--signup">Submit</button>
+            </form>
+          </div>
+        </div>
       </div>
     </main>
  
