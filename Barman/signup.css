@@ -61,16 +61,18 @@ ul {
 li:not(:last-child) {
     margin-bottom: 1rem;
 }
-.btn--signup {
+.btn--signup, .btn--submit {
     height: 4rem; width: 12rem;
-    position: absolute;
-    bottom: 3rem; right: 9rem;
     background-color: rgb(100, 0, 2);
     color: white;
     font-family: "Montserrat Alternates", sans-serif;
     font-size: 2rem;
 }
-    .btn--signup:hover{
+.btn--signup {
+    position: absolute;
+    bottom: 3rem; right: 9rem;
+}
+    .btn--signup:hover, .btn--submit:hover {
         background-color: rgb(129, 9, 11);
     }
     .btn--signup:active {bottom: calc(3rem - 2px);}
@@ -81,19 +83,37 @@ li:not(:last-child) {
     top: 0; left: 0;
     background-color: white;
     z-index: 90;
-    /* display: none; */
+    display: none;
+    margin: auto;
+    align-content: center;
+}
+.show {
+    display: auto;
 }
 .form__container {
     display: flex;
     flex-direction: column;
     position: relative;
-    height: 60rem; width: 70%;
+    width: 70%;
     top: 50%; left: 50%;
     transform: translate(-50%, -50%);
     padding: 3rem 6rem;
     background-color: #888;
     font-size: 2rem;
+    
 }
+form {
+    position: relative;
+    align-content: center;
+    text-align: center;
+}
+.btn--submit {
+    position: relative;
+    margin: auto;
+    right: auto; bottom: auto;
+    margin-top: 1.5rem;
+}
+    .btn--submit:active {bottom: -2px;}
 .form__row {
     display: flex;
     flex-direction: row;
@@ -106,6 +126,7 @@ li:not(:last-child) {
     flex: 1;
     text-align: center;
 }
+
 input, select {
     margin: 2px 1.5rem;
     height: 3rem;
@@ -113,7 +134,7 @@ input, select {
     border-radius: 6px;
     box-shadow: inset 0 2px 4px rgba(0,0,0,0.5); 
     border-bottom: 1px solid white;
-    background-color: rgb(231, 216, 216);
+    background-color: white;
 }
     input:focus, select:focus {
         outline: none;
