@@ -77,19 +77,41 @@ li:not(:last-child) {
     }
     .btn--signup:active {bottom: calc(3rem - 2px);}
 /* signup form */
+form {
+    position: relative;
+    align-content: center;
+    text-align: center;
+}
 .form {
     height: 100%; width: 100%;
     position: fixed;
     top: 0; left: 0;
-    background-color: white;
+    background-color: rgba(255,255,255, .8);
     z-index: 90;
     display: none;
     margin: auto;
     align-content: center;
+    opacity: 0;
+    transition: all 1s ease-in;
 }
 .show {
-    display: auto;
+    display: block;
+    opacity: 1;
 }
+.form__close {
+    height: 3rem; width: 3rem;
+    color: black;
+    text-align: center;
+    line-height: 1;
+}
+.form__close:link, .form__close:visited {
+    position: absolute;
+    top: 2.5rem; right: 2.5rem;
+    font-size: 3rem;
+    text-decoration: none;
+    display: inline-block;
+}
+
 .form__container {
     display: flex;
     flex-direction: column;
@@ -102,18 +124,6 @@ li:not(:last-child) {
     font-size: 2rem;
     
 }
-form {
-    position: relative;
-    align-content: center;
-    text-align: center;
-}
-.btn--submit {
-    position: relative;
-    margin: auto;
-    right: auto; bottom: auto;
-    margin-top: 1.5rem;
-}
-    .btn--submit:active {bottom: -2px;}
 .form__row {
     display: flex;
     flex-direction: row;
@@ -126,7 +136,13 @@ form {
     flex: 1;
     text-align: center;
 }
-
+.btn--submit {
+    position: relative;
+    margin: auto;
+    right: auto; bottom: auto;
+    margin-top: 1.5rem;
+}
+    .btn--submit:active {bottom: -2px;}
 input, select {
     margin: 2px 1.5rem;
     height: 3rem;

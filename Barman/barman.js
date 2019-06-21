@@ -1,9 +1,13 @@
 const signupBtn = document.querySelectorAll(".btn--signup");
 const form = document.querySelector(".form");
-//fix this ---ran out of time on lunch. Needs to be a forEach since there are 3 buttons.
-signupBtn.addEventListener("click", openForm);
+const closeBtn = document.querySelector(".form__close");
 
-function openForm(){
+for(let i = 0; i < 3; i++){
+    signupBtn[i].addEventListener("click", toggleForm);
+};
+closeBtn.addEventListener("click", toggleForm);
+
+function toggleForm(){
     form.classList.toggle("show");
-}
+};
 
