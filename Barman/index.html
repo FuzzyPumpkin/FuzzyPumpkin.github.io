@@ -9,9 +9,7 @@
     </head>
 <body>
     <main>
-      <!-- divs for backgrounds at start and end of animation -->
-      <div class="bg bg--bgStart"></div>
-      <div class="bg bg--bgEnd"></div>
+      <div class="bg"></div>
       <!-- central button stays constant -->
       <button class="btn btn--drinkBtn"></button>
       <!-- info panel to show after animation done -->
@@ -61,12 +59,6 @@
  
 <svg width="0" height="0">
     <defs>
-      <clipPath id="bgStartClip" clipPathUnits="objectBoundingBox">
-        <polygon points="0 0, .2 0, 0 .5" />
-        <polygon points="1 1, 1 .5, .8 1" />
-        <polygon points="1 0, .6 1, .4 1, .8 0" />
-        <polygon points=".6 0, .2 1, 0 1, .4 0" />
-      </clipPath>
       <clipPath id="bgEndClip" clipPathUnits="objectBoundingBox">
         <polygon points="0 1, .8 1, 0 .8" />
         <polygon points="1 0, 1 .2, .2 0" />

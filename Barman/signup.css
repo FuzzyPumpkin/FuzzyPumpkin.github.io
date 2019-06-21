@@ -72,9 +72,7 @@ li:not(:last-child) {
     position: absolute;
     bottom: 3rem; right: 9rem;
 }
-    .btn--signup:hover, .btn--submit:hover {
-        background-color: rgb(129, 9, 11);
-    }
+    .btn--signup:hover, .btn--submit:hover {background-color: rgb(129, 9, 11);}
     .btn--signup:active {bottom: calc(3rem - 2px);}
 /* signup form */
 form {
@@ -103,10 +101,10 @@ form {
     color: black;
     text-align: center;
     line-height: 1;
-}
-.form__close:link, .form__close:visited {
     position: absolute;
     top: 2.5rem; right: 2.5rem;
+}
+.form__close:link, .form__close:visited {
     font-size: 3rem;
     text-decoration: none;
     display: inline-block;
@@ -156,15 +154,14 @@ input, select {
         outline: none;
         border-bottom: 3px solid rgb(100, 0, 2);
     }
-    input:focus:invalid, select:focus:invalid {
-        border: 3px solid rgb(100, 0, 2);
-    }
+    input:focus:invalid, select:focus:invalid {border: 3px solid rgb(100, 0, 2);}
     input:placeholder-shown + .form__label {
         opacity: 0;
         visibility: hidden;
         transform: translateY(-4rem);
     }
 label {
+    font-size: 1rem;
     transition: all .2s ease-in;
 }
 
@@ -180,9 +177,7 @@ label {
         padding: 1rem 1rem 0rem 1rem;
         top: -.75rem; left: -1.5rem;
     }
-    .card__inside {
-        flex-direction: row;
-    }
+    .card__inside {flex-direction: row;}
     .cardContainer {
         width: calc(45rem + 4px);
         height: calc(25rem + 4px);
@@ -196,23 +191,29 @@ label {
         clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 12%, 45% 12%, 45% 0%);
         -webkit-clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 12%, 45% 12%, 45% 0%);
     }
-    .cardContainer:hover {
-        transform: translateY(3px) scale(1);
-    }
+    .cardContainer:hover {transform: translateY(3px) scale(1);}
     .card {
         flex-direction: row;
         padding: 0 1rem 1rem 1rem;
     }
     .pricing__value {font-size: 8rem;}
-    .options {
-        flex-direction: column;
-    }
+    .options {flex-direction: column;}
     ul {
         font-size: 1.4rem;
         padding-left: 3rem;
     }
-    .btn--signup {
-        bottom: 2.5rem; right: 20%;
+    .btn--signup {bottom: 2.5rem; right: 20%;}
+    .form__container {
+        width: 90%;
+        font-size: 1.5rem;
+        padding: 2rem 3rem;
+        top: 55%; left: 50%;
+    }
+    .form__row {flex-direction: column;}
+    .form__close {top: 1.5rem; right: 1.5rem;}
+    input, select {
+        margin: 0px 1.5rem;
+        height: 3rem;
     }
 }
 @media screen and (max-width: 330px){
@@ -221,19 +222,14 @@ label {
         top: 6rem; right: 3rem;
         transform: rotate(0deg);
     }
-   
 }
 @media screen and (min-height: 1000px){
-    .headline__h1--secondary{
-        top: 50rem;
-    }
+    .headline__h1--secondary{top: 50rem;}
     .h2--options {
         padding: 1rem 1rem .2rem 1rem;
         top: -4rem; left: -3rem;
     }
-    .card__inside {
-        flex-direction: row;
-    }
+    .card__inside {flex-direction: row;}
     .cardContainer {
         width: calc(65rem + 4px);
         height: calc(28rem + 4px);
@@ -247,43 +243,28 @@ label {
         clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 10%, 32% 10%, 32% 0%);
         -webkit-clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 10%, 32% 10%, 32% 0%);
     }
-    .cardContainer:hover {
-        transform: translateY(3px) scale(1);
-    }
-    .card {
-        flex-direction: row;
-    }
+    .cardContainer:hover {transform: translateY(3px) scale(1);}
+    .card {flex-direction: row;}
     .options {flex-direction: column;}
-    ul {
-        padding-left: 6rem;
-    }
-    .btn--signup {
-        bottom: 2.5rem; right: 40%;
-    }
+    ul {padding-left: 6rem;}
+    .btn--signup {bottom: 2.5rem; right: 40%;}
+    .form__container {width: 90%;}
 }
 @media screen and (min-height: 1200px){
     html {font-size: 10px;}
-    .headline__h1--secondary{
-        top: 60rem;
-    }
+    .headline__h1--secondary{top: 60rem;}
     .cardContainer {
         width: calc(70rem + 4px);
         height: calc(30rem + 4px);
         margin: 5rem 2rem 0 12rem;
     }
-    .cardContainer:hover {
-        transform: translateY(3px) scale(1);
-    }
+    .cardContainer:hover {transform: translateY(3px) scale(1);}
     .card {
         width: 70rem;
         height: 30rem;
     }
 }
 @media screen and (min-width: 1280px){
-    .headline__h1--secondary{
-        top: 40rem; right: -21rem;
-    }
-    .cardContainer {
-        margin: 5rem 3rem 0 3rem;
-    }
+    .headline__h1--secondary{top: 40rem; right: -21rem;}
+    .cardContainer {margin: 5rem 3rem 0 3rem;}
 }
