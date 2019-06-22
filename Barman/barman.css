@@ -19,9 +19,18 @@ main {
     padding: 2rem;
     background-color: white;
 }
-p {
-    font-size: 1.6rem;
-}
+p {font-size: 1.6rem;}
+.logo {
+    position: absolute;
+    opacity: .5;
+    margin: 1rem;
+    z-index: 2;
+} 
+    .logo--mid {
+        top: 50%; left: 50%;
+        transform: translate(-55%, -50%);
+    } 
+    .logo--btm {right: 15%; bottom: 5%;} 
 .btn {
     background-color: white;
     border: 1px solid black;
@@ -64,10 +73,7 @@ p {
     padding: 2rem;
 }
 /* NAVIGATION MENU */
-
-.navigation__checkbox {
-    display: none;
-}
+.navigation__checkbox {display: none;}
 .navigation__button {
     background-color: rgb(100, 0, 2);
     border: 1px solid black;
@@ -88,9 +94,7 @@ p {
                 0 8px 0 rgba(0,0,0,0.2),
                 0 9px 0 rgba(0,0,0,0.1);
 }
-    .navigation__button:active {
-        top: calc(4rem + 2px);
-    }
+    .navigation__button:active {top: calc(4rem + 2px);}
 .navigation__background {
     height: 6rem; width: 6rem;
     border-radius: 50%;
@@ -120,9 +124,7 @@ p {
     list-style: none;
     text-align: center;
 }
-.navigation__item {
-    margin: 1rem;
-}
+.navigation__item {margin: 1rem;}
 .navigation__link:link,
 .navigation__link:visited {
     display: inline-block;
@@ -141,9 +143,7 @@ p {
     transform: translateY(1rem);
 }
 /*link background scale/link show to checkbox being checked (or rather label being clicked)*/
-.navigation__checkbox:checked ~ .navigation__background {
-        transform: scale(90);
-    }
+.navigation__checkbox:checked ~ .navigation__background {transform: scale(90);}
 .navigation__checkbox:checked ~ .navigation__nav {
     opacity: 1;
     width: 100%;
@@ -191,33 +191,13 @@ p {
     transform: rotate(90deg);
 }
 .headline__h1--initialLtr {font-size: 7rem;}
-/* ANIMATIONS */
-@keyframes startToMid {
-    0% {
-        opacity: 0;
-        transform: scaleX(0.1) scaleY(0.1);
-    }
-    100%{
-        opacity: 1;
-        transform: scaleX(1) scaleY(1);
-    }
-}
-@keyframes whiteOut {
-    0% {opacity: 0;}
-    100%{opacity: 1;}
-}
-
 
 
 /* mobile tweaks */
 @media screen and (max-width: 760px){
     html {font-size: 6px;}
-    .bg--bgEnd {
-        flex-direction: column;
-    }
-    .btn--navBtn {
-        height: 8rem; width: 8rem;
-    }
+    .bg {flex-direction: column;}
+    .btn--navBtn {height: 8rem; width: 8rem;}
 }
 @media screen and (min-height: 1000px){
     html {font-size: 9px;}

@@ -1,63 +1,48 @@
-header {
-    height: 40%;
+header {height: 40%;}
+.headline {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin: auto;
+    padding-top: 16rem;
+    font-family: "Montserrat Alternates", sans-serif;
+    line-height: 2rem;
 }
-    .btn--drinkBtn {
-        position: absolute;
-        top: 50%; left: 50%;
-        height: 16rem; width: 16rem;
-        margin: 1rem;
-        background-image: url(images/cocktailBtn.jpg);
-        background-repeat: no-repeat;
-        background-position: center;
-        transform: translate(-55%, -50%);
-        z-index: 2;
-    } 
-    /* look at past project, mb best to do a calc on this instead of % as will be changing everything to rem */
-        .btn--drinkBtn:active {top: calc(50% + 2px);}
-    .headline {
-        display: flex;
-        flex-direction: row;
-        width: 80%;
-        margin: auto;
-        padding-top: 16rem;
-        font-family: "Montserrat Alternates", sans-serif;
-        line-height: 2rem;
-    }
-        .headline__h1 {
-            padding: 1rem;
-            font-size: 12rem;
-            font-weight: 900;
-        }
-        .headline__h1--initialLtr {font-size: 20rem;}
-        .headline__p {
-            width: 26rem;
-            padding: 1rem;
-            font-size: 3rem;
-            font-weight: 500;
-            text-align: left;
-            line-height: 3rem;
-        }
+.headline__h1 {
+    padding: 1rem;
+    font-size: 12rem;
+    font-weight: 900;
+}
+    .headline__h1--initialLtr {font-size: 20rem;}
+.headline__p {
+    width: 26rem;
+    padding: 1rem;
+    font-size: 3rem;
+    font-weight: 500;
+    text-align: left;
+    line-height: 3rem;
+}
 .description {
     position: relative;
     display: flex;
     flex-direction: row;
     height: 60%;
 }
-    .description__p {
-        padding: 6.5rem 10rem 2rem 10rem;
-        font-size: 1.8rem;
-    }
+.description__p {
+    padding: 6.5rem 10rem 2rem 10rem;
+    font-size: 1.8rem;
+}
 .description__desc1, .description__desc2 {
     flex: 1;
 }
-    .desc1__h2 {
-        padding: 0rem 11rem .5rem 2rem;
-        text-align: right;
-    }
-    .desc2__h2 {
-        padding: 0rem 2rem .5rem 11rem;
-        text-align: left;
-    }
+.desc1__h2 {
+    padding: 0rem 11rem .5rem 2rem;
+    text-align: right;
+}
+.desc2__h2 {
+    padding: 0rem 2rem .5rem 11rem;
+    text-align: left;
+}
 .btn--infoBtn {
     position: relative;
     height: 5.4rem; width: 20rem;
@@ -68,27 +53,10 @@ header {
     font-size: 2.4rem;
 }
 
-/* ANIMATIONS */
-@keyframes startToMid {
-    0% {
-        opacity: 0;
-        transform: scaleX(0.1) scaleY(0.1);
-    }
-    100%{
-        opacity: 1;
-        transform: scaleX(1) scaleY(1);
-    }
-}
-@keyframes whiteOut {
-    0% {opacity: 0;}
-    100%{opacity: 1;}
-}
 
 /* mobile tweaks */
 @media screen and (max-width: 760px){
-    .headline, .description {
-        flex-direction: column;
-    }
+    .headline, .description {flex-direction: column;}
     .headline__h1{
         font-size: 8rem;
         text-align: left;    
@@ -98,15 +66,9 @@ header {
         width: auto;
         font-size: 2.5rem;
     }
-    .btn--drinkBtn {
-        top: 30%; left: 50%;
-        height: 12rem; width: 12rem;
-        background-size: contain;
-    } 
+    .logo--mid {top: 30%; left: 50%;} 
     .description {height: 50%;}
-    .description__p {
-        padding: .5rem 3rem .5rem 3rem;
-    }
+    .description__p {padding: .5rem 3rem .5rem 3rem;}
     .btn--infoBtn {
         height: 3.25rem; width: 17rem;
         margin: 0% 35% 0% 35%;
@@ -114,20 +76,12 @@ header {
     }
 }
 @media screen and (min-height: 1000px){
-    .headline {
-        flex-direction: column;
-    }
+    .headline {flex-direction: column;}
     .headline__h1{
         line-height: 7rem; 
         padding: 0;
     }
-    .headline__p{
-        width: auto;
-    }
-    .description__p--left {
-        padding: 1rem 10rem .5rem 1rem;
-    }
-    .description__p--right {
-        padding: 1rem 1rem .5rem 10rem;
-    }
+    .headline__p{width: auto;}
+    .description__p--left {padding: 1rem 10rem .5rem 1rem;}
+    .description__p--right {padding: 1rem 1rem .5rem 10rem;}
 }

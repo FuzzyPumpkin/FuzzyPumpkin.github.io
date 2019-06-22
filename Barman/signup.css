@@ -1,11 +1,11 @@
 .h2--options {
     position: relative;
+    top: -3rem; left: -3rem;
     width: 100%;
+    padding: 1.1rem;
     font-family: "Montserrat Alternates", sans-serif;
     font-size: 2.2rem;
     text-align: left;
-    padding: 1.1rem;
-    top: -3rem; left: -3rem;
     color: black;
     background-color: rgba(100, 0, 2, .3);
 }
@@ -27,14 +27,13 @@
 .card {
     position: absolute;
     top: 2px; left: 2px;
-    width: 30rem;
-    height: 50rem;
-    background-image: linear-gradient(30deg, white, rgb(218, 214, 214));
-    clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 10%, 66.5% 10%, 66.5% 0%);
-    -webkit-clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 10%, 66.5% 10%, 66.5% 0%);
+    width: 30rem; height: 50rem;
     padding: 3rem;
     text-align: center;
     align-content: center;
+    background-image: linear-gradient(30deg, white, rgb(218, 214, 214));
+    clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 10%, 66.5% 10%, 66.5% 0%);
+    -webkit-clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 10%, 66.5% 10%, 66.5% 0%);
     box-shadow: 0px 5px 10px rgba(0,0,0,.5);
     z-index: 1;
 }
@@ -46,10 +45,9 @@
     display: flex;
     flex-direction: column;
 }
-
 .pricing {
-    color: rgb(100, 0, 2);
     font-size: 2.5rem;
+    color: rgb(100, 0, 2);
 }
 .pricing__value {font-size: 10rem;}
 ul {
@@ -58,15 +56,13 @@ ul {
     list-style: circle;
     text-align: left;
 }
-li:not(:last-child) {
-    margin-bottom: 1rem;
-}
+li:not(:last-child) {margin-bottom: 1rem;}
 .btn--signup, .btn--submit {
     height: 4rem; width: 12rem;
-    background-color: rgb(100, 0, 2);
-    color: white;
     font-family: "Montserrat Alternates", sans-serif;
     font-size: 2rem;
+    background-color: rgb(100, 0, 2);
+    color: white;
 }
 .btn--signup {
     position: absolute;
@@ -81,46 +77,45 @@ form {
     text-align: center;
 }
 .form {
-    height: 100%; width: 100%;
     position: fixed;
     top: 0; left: 0;
-    background-color: rgba(255,255,255, .8);
-    z-index: 90;
-    display: none;
+    height: 100%; width: 100%;
     margin: auto;
+    background-color: rgba(255,255,255, .8);
     align-content: center;
-    opacity: 0;
     transition: all 1s ease-in;
+    display: none;
+    opacity: 0;
+    z-index: 90;
 }
 .show {
     display: block;
     opacity: 1;
 }
 .form__close {
+    position: absolute;
+    top: 2.5rem; right: 2.5rem;
     height: 3rem; width: 3rem;
     color: black;
     text-align: center;
     line-height: 1;
-    position: absolute;
-    top: 2.5rem; right: 2.5rem;
+
 }
 .form__close:link, .form__close:visited {
+    display: inline-block;
     font-size: 3rem;
     text-decoration: none;
-    display: inline-block;
 }
-
 .form__container {
     display: flex;
     flex-direction: column;
     position: relative;
-    width: 70%;
     top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
+    width: 70%;
     padding: 3rem 6rem;
     background-color: #888;
     font-size: 2rem;
-    
+    transform: translate(-50%, -50%);
 }
 .form__row {
     display: flex;
@@ -136,19 +131,19 @@ form {
 }
 .btn--submit {
     position: relative;
-    margin: auto;
     right: auto; bottom: auto;
+    margin: auto;
     margin-top: 1.5rem;
 }
     .btn--submit:active {bottom: -2px;}
 input, select {
-    margin: 2px 1.5rem;
     height: 3rem;
+    margin: 2px 1.5rem;
     text-align: center;
+    background-color: white;
     border-radius: 6px;
     box-shadow: inset 0 2px 4px rgba(0,0,0,0.5); 
     border-bottom: 1px solid white;
-    background-color: white;
 }
     input:focus, select:focus {
         outline: none;
