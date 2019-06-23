@@ -1,8 +1,11 @@
   *, *:before, *:after {
-    box-sizing: inherit;
+    -webkit-box-sizing: inherit;
+            box-sizing: inherit;
   }
 
   .panels {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     min-height: 530px;
     max-height: 60vh;
@@ -10,19 +13,44 @@
   }
 
   .panel {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     background: #9ba6b2;
     text-align: center;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transition:
+      font-size 0.3s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+      background 0.2s,
+      -webkit-box-flex 0.3s cubic-bezier(0.61,-0.19, 0.7,-0.11);
+    transition:
+      font-size 0.3s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+      background 0.2s,
+      -webkit-box-flex 0.3s cubic-bezier(0.61,-0.19, 0.7,-0.11);
     transition:
       font-size 0.3s cubic-bezier(0.61,-0.19, 0.7,-0.11),
       flex 0.3s cubic-bezier(0.61,-0.19, 0.7,-0.11),
       background 0.2s;
+    transition:
+      font-size 0.3s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+      flex 0.3s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+      background 0.2s,
+      -webkit-box-flex 0.3s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+      -ms-flex 0.3s cubic-bezier(0.61,-0.19, 0.7,-0.11);
     font-size: 20px;
     font-family: sans-serif;
-    flex: 1;
-    flex-direction: column;
-    justify-content: center;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     align-items: center;
     border: 1px solid black;
   }
@@ -33,25 +61,46 @@
   .panel > * {
     margin: 0;
     width: 100%;
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: -webkit-transform 0.3s;
     transition: transform 0.3s;
-    flex: 1 0 auto;
+    transition: transform 0.3s, -webkit-transform 0.3s;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .panel img {
     max-width: 90%;
     border: 1px solid #403433;
   }
   .panel.open {
-    flex: 7;
+    -webkit-box-flex: 7;
+        -ms-flex: 7;
+            flex: 7;
     background-color: #DEE1DC;
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: -webkit-transform 0.5s;
     transition: transform 0.5s;
+    transition: transform 0.5s, -webkit-transform 0.5s;
   }
   .panel.closed {
-    flex: 1;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
     background-color: #9ba6b2;
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: -webkit-transform 0.5s;
     transition: transform 0.5s;
+    transition: transform 0.5s, -webkit-transform 0.5s;
     background-size: cover;
     background-position: center;
   }
@@ -59,6 +108,8 @@
         display: none;
       }
       .panel.closed h3 {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         width: 100%;
         left: 0;
@@ -94,13 +145,22 @@
   padding-bottom: 10px;
 }
 .panelInner {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   overflow: hidden;
 }
 .projSumm {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex: 1;
-  flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
   .panel.closed .projSumm {
     bottom: 0;
@@ -109,9 +169,16 @@
   display: none;
 } 
     .panel.open .projReadme {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      flex: 2;
-      flex-direction: column;
+      -webkit-box-flex: 2;
+          -ms-flex: 2;
+              flex: 2;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
       height: 100%;
       text-align: left;
       padding: 0px 25px;

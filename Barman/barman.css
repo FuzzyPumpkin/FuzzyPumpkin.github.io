@@ -1,5 +1,6 @@
 * {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
@@ -28,7 +29,8 @@ p {font-size: 1.6rem;}
 } 
     .logo--mid {
         top: 50%; left: 50%;
-        transform: translate(-55%, -50%);
+        -webkit-transform: translate(-55%, -50%);
+                transform: translate(-55%, -50%);
     } 
     .logo--btm {right: 15%; bottom: 5%;} 
 .btn {
@@ -36,7 +38,16 @@ p {font-size: 1.6rem;}
     border: 1px solid black;
     border-radius: 50%;
     outline: none;
-    box-shadow: inset 0 1px 0 rgba(0,0,0,0.8),
+    -webkit-box-shadow: inset 0 1px 0 rgba(0,0,0,0.8),
+                0 2px 0 rgba(0,0,0,0.8),
+                0 3px 0 rgba(0,0,0,0.7),
+                0 4px 0 rgba(0,0,0,0.6),
+                0 5px 0 rgba(0,0,0,0.5),
+                0 6px 0 rgba(0,0,0,0.4),
+                0 7px 0 rgba(0,0,0,0.3),
+                0 8px 0 rgba(0,0,0,0.2),
+                0 9px 0 rgba(0,0,0,0.1);
+            box-shadow: inset 0 1px 0 rgba(0,0,0,0.8),
                 0 2px 0 rgba(0,0,0,0.8),
                 0 3px 0 rgba(0,0,0,0.7),
                 0 4px 0 rgba(0,0,0,0.6),
@@ -47,7 +58,13 @@ p {font-size: 1.6rem;}
                 0 9px 0 rgba(0,0,0,0.1);
 } 
     .btn:active {
-      box-shadow: inset 0 1px 0 rgba(0,0,0,0.8),
+      -webkit-box-shadow: inset 0 1px 0 rgba(0,0,0,0.8),
+                    0 2px 0 rgba(0,0,0,0.8),
+                    0 3px 0 rgba(0,0,0,0.7),
+                    0 4px 0 rgba(0,0,0,0.6),
+                    0 5px 0 rgba(0,0,0,0.5),
+                    0 6px 0 rgba(0,0,0,0.4);
+              box-shadow: inset 0 1px 0 rgba(0,0,0,0.8),
                     0 2px 0 rgba(0,0,0,0.8),
                     0 3px 0 rgba(0,0,0,0.7),
                     0 4px 0 rgba(0,0,0,0.6),
@@ -60,10 +77,16 @@ p {font-size: 1.6rem;}
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     background-image: url(images/barmanBg.jpg);
-    clip-path: url(#bgEndClip);
+    -webkit-clip-path: url(#bgEndClip);
+            clip-path: url(#bgEndClip);
     opacity: 1;
 }
 .info {
@@ -84,7 +107,16 @@ p {font-size: 1.6rem;}
     z-index: 101;
     text-align: center;
     cursor: pointer;
-    box-shadow: inset 0 1px 0 rgba(0,0,0,0.8),
+    -webkit-box-shadow: inset 0 1px 0 rgba(0,0,0,0.8),
+                0 2px 0 rgba(0,0,0,0.8),
+                0 3px 0 rgba(0,0,0,0.7),
+                0 4px 0 rgba(0,0,0,0.6),
+                0 5px 0 rgba(0,0,0,0.5),
+                0 6px 0 rgba(0,0,0,0.4),
+                0 7px 0 rgba(0,0,0,0.3),
+                0 8px 0 rgba(0,0,0,0.2),
+                0 9px 0 rgba(0,0,0,0.1);
+            box-shadow: inset 0 1px 0 rgba(0,0,0,0.8),
                 0 2px 0 rgba(0,0,0,0.8),
                 0 3px 0 rgba(0,0,0,0.7),
                 0 4px 0 rgba(0,0,0,0.6),
@@ -103,7 +135,10 @@ p {font-size: 1.6rem;}
     background-image: radial-gradient(rgb(199, 109, 0), rgb(245, 158, 1));
     z-index: 99;
     /*for animation*/
+    -webkit-transition: -webkit-transform .8s cubic-bezier(.86, 0, .05, 1.18);
+    transition: -webkit-transform .8s cubic-bezier(.86, 0, .05, 1.18);
     transition: transform .8s cubic-bezier(.86, 0, .05, 1.18);
+    transition: transform .8s cubic-bezier(.86, 0, .05, 1.18), -webkit-transform .8s cubic-bezier(.86, 0, .05, 1.18);
 }
 .navigation__nav {
     height: 100vh;
@@ -114,13 +149,15 @@ p {font-size: 1.6rem;}
     opacity: 0;
     width: 0;
     visibility: hidden;
+    -webkit-transition: all .8s cubic-bezier(.86, 0, .05, 1.18);
     transition: all .8s cubic-bezier(.86, 0, .05, 1.18);
 }
 .navigation__list {
     position: absolute;
     top: 50%; left: 50%;
     width: 100%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     list-style: none;
     text-align: center;
 }
@@ -134,16 +171,18 @@ p {font-size: 1.6rem;}
     color: black;
     text-decoration: none;
     text-transform: uppercase;
+    -webkit-transition: all 1s;
     transition: all 1s;
 }
         
 .navigation__link:hover,
 .navigation__link:active {
     color: white;
-    transform: translateY(1rem);
+    -webkit-transform: translateY(1rem);
+            transform: translateY(1rem);
 }
 /*link background scale/link show to checkbox being checked (or rather label being clicked)*/
-.navigation__checkbox:checked ~ .navigation__background {transform: scale(90);}
+.navigation__checkbox:checked ~ .navigation__background {-webkit-transform: scale(90);transform: scale(90);}
 .navigation__checkbox:checked ~ .navigation__nav {
     opacity: 1;
     width: 100%;
@@ -164,6 +203,7 @@ p {font-size: 1.6rem;}
     content: "";
     position: absolute;
     left: 0;
+    -webkit-transition: all .2s;
     transition: all .2s;
 }
 .navigation__icon::before {top: -1.5rem;}
@@ -174,11 +214,13 @@ p {font-size: 1.6rem;}
 .navigation__checkbox:checked ~ .navigation__button .navigation__icon {background-color: transparent;}
 .navigation__checkbox:checked ~ .navigation__button .navigation__icon::before {
     top: 0;
-    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
 }
 .navigation__checkbox:checked ~ .navigation__button .navigation__icon::after {
     top: 0;
-    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
 }
 
 /* title for secondary pages */
@@ -188,7 +230,8 @@ p {font-size: 1.6rem;}
     padding: 1rem 3rem;
     font-size: 5rem;
     font-weight: 900;
-    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
 }
 .headline__h1--initialLtr {font-size: 7rem;}
 
@@ -196,7 +239,7 @@ p {font-size: 1.6rem;}
 /* mobile tweaks */
 @media screen and (max-width: 760px){
     html {font-size: 6px;}
-    .bg {flex-direction: column;}
+    .bg {-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;}
     .btn--navBtn {height: 8rem; width: 8rem;}
 }
 @media screen and (min-height: 1000px){

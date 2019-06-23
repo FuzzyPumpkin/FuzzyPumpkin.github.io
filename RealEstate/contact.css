@@ -8,7 +8,8 @@
     background-color: rgba(204, 130, 34, 0.7);
     border: 1px solid white;
     border-radius: 7px;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     padding: 20px;
 }
 section {
@@ -25,7 +26,8 @@ select, input[type="text"], textarea {
     line-height: 1.5;
     color: #666666;
     outline: none;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     border-radius: 25px;
 }
 select, input[type="text"] {
@@ -51,13 +53,20 @@ button {
     font-size: 15px;
     line-height: 1.5;
     color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 0 25px;
     outline: none;
     border: none;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     text-align: center;
     margin: 16px auto;
 }
@@ -73,7 +82,10 @@ i {
     position: relative;
     padding-left: 25px;
     margin: 6px 0px;
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
 }
     .checkbox input {
     position: absolute;
@@ -110,7 +122,6 @@ i {
         border: solid white;
         border-width: 0 3px 3px 0;
         -webkit-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
         transform: rotate(45deg);
     }
 span {

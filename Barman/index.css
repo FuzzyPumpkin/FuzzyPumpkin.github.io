@@ -1,7 +1,12 @@
 header {height: 40%;}
 .headline {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     width: 80%;
     margin: auto;
     padding-top: 16rem;
@@ -24,8 +29,13 @@ header {height: 40%;}
 }
 .description {
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     height: 60%;
 }
 .description__p {
@@ -33,7 +43,9 @@ header {height: 40%;}
     font-size: 1.8rem;
 }
 .description__desc1, .description__desc2 {
-    flex: 1;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
 }
 .desc1__h2 {
     padding: 0rem 11rem .5rem 2rem;
@@ -56,7 +68,7 @@ header {height: 40%;}
 
 /* mobile tweaks */
 @media screen and (max-width: 760px){
-    .headline, .description {flex-direction: column;}
+    .headline, .description {-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;}
     .headline__h1{
         font-size: 8rem;
         text-align: left;    
@@ -76,7 +88,7 @@ header {height: 40%;}
     }
 }
 @media screen and (min-height: 1000px){
-    .headline {flex-direction: column;}
+    .headline {-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;}
     .headline__h1{
         line-height: 7rem; 
         padding: 0;

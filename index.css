@@ -13,23 +13,37 @@ body {
 		top: 0;
 	}
 	nav {
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
 		position: relative;
-		justify-content: flex-end;
-		align-items: center;
+		-webkit-box-pack: end;
+		    -ms-flex-pack: end;
+		        justify-content: flex-end;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
 		text-align: left;
+		-webkit-transition: none;
 		transition: none;
 		top: initial;
 		left: initial;
 		background: var(--background);
 		width: 100%;
-		transform: scale(1, 1);
-		transform-origin: top;
+		-webkit-transform: scale(1, 1);
+		        transform: scale(1, 1);
+		-webkit-transform-origin: top;
+		        transform-origin: top;
+		-webkit-transition: -webkit-transform 400ms ease-in-out;
+		transition: -webkit-transform 400ms ease-in-out;
 		transition: transform 400ms ease-in-out;
+		transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
 		grid-column: 2;
 		padding: 10px 0;
 	}
 	nav ul {
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
 		margin: 0;
 		padding: 0;
@@ -46,6 +60,7 @@ body {
 		font-size: 1.2rem;
 		text-transform: uppercase;
 		opacity: 1;
+		-webkit-transition: opacity 150ms ease-in-out;
 		transition: opacity 150ms ease-in-out;
 	}
 		nav a::before {
@@ -57,13 +72,17 @@ body {
 			top: 1.25em;
 			left: 0;
 			right: 0;
-			transform: scale(0, 1);
+			-webkit-transform: scale(0, 1);
+			        transform: scale(0, 1);
+			-webkit-transition: -webkit-transform ease-in-out 250ms;
+			transition: -webkit-transform ease-in-out 250ms;
 			transition: transform ease-in-out 250ms;
+			transition: transform ease-in-out 250ms, -webkit-transform ease-in-out 250ms;
 		}
 		nav a:hover {
 			color: #DCD4BA;
 		}
-			nav a:hover::before {transform: scale(1,1);}
+			nav a:hover::before {-webkit-transform: scale(1,1);transform: scale(1,1);}
 .welcome {
 	top: 0;
 	padding-top: 10%;	
@@ -93,14 +112,17 @@ h3 {
 	font-size: 12px;
 	width: 100%;
 	min-height:100px;
-	justify-content: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 	background: #D2B992;
 	text-align: center;
 	padding-top: 10px;
 	padding-bottom: 10px;
 }
 #education {
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 	padding: 25px 50px;
 	font-size: 18px;
 	width: 100%;
