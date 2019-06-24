@@ -1,0 +1,35 @@
+//for anything on index page, order in sections via BEM
+.section-hero {
+    position: relative;
+    width: 100%; height: 400px;
+}
+.hero {
+    &__container {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        width: 100%; height: 100%;
+        margin: auto;
+        align-items: center;
+    }
+    &__date, &__headlines {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: center;
+    }
+    &__date {
+        flex: 1;
+        padding: 0 2rem;
+        font-family: Comfortaa, sans-serif;
+        font-size: 6rem;
+        text-align: center;
+        background-color: rgba($color-primary, .3);
+    }
+    &__headlines {
+        flex: 3;
+    }
+    &__headline-pad {
+        margin: auto;
+    }
+}

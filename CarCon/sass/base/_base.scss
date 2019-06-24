@@ -1,0 +1,9 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+//font size equiv to 10px, but allows for accessibility devices to change font size
+html {font-size: 62.5%;}

@@ -1,0 +1,12 @@
+//for heading elements, paragraphs
+.heading__h1--hero {
+    font-family: Comfortaa, sans-serif;
+    font-size: 11rem;
+}
+.heading__h2 {
+    font-family: Pacifico, cursive;
+    font-size: 3rem;
+    
+    &--right {text-align: right;
+    }
+}
