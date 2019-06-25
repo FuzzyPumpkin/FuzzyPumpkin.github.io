@@ -1,7 +1,14 @@
 //for heading elements, paragraphs
-.heading__h1--hero {
-    font-family: Comfortaa, sans-serif;
-    font-size: 11rem;
+.heading__h1 {
+    &--hero {
+        font-family: Righteous, sans-serif;
+        font-size: 11rem;
+        margin: -3rem 0;
+    }
+    &--initial {
+        font-family: "Faster One", sans-serif;
+        font-size: 16rem;
+    }
 }
 .heading__h2 {
     font-family: Pacifico, cursive;

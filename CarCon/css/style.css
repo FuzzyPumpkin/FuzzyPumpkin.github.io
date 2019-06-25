@@ -10,8 +10,13 @@ html {
   font-family: "Muli", sans-serif; }
 
 .heading__h1--hero {
-  font-family: Comfortaa, sans-serif;
-  font-size: 11rem; }
+  font-family: Righteous, sans-serif;
+  font-size: 11rem;
+  margin: -3rem 0; }
+
+.heading__h1--initial {
+  font-family: "Faster One", sans-serif;
+  font-size: 16rem; }
 
 .heading__h2 {
   font-family: Pacifico, cursive;
@@ -111,7 +116,7 @@ p {
   .nav__link {
     margin-top: 1rem;
     font-size: 1.8rem;
-    font-family: Comfortaa, sans-serif;
+    font-family: Righteous, sans-serif;
     color: #d5f4f3; }
 
 input[name="choice"] {
@@ -160,7 +165,7 @@ input[name="choice"] {
 .hero__date {
   flex: 1;
   padding: 0 2rem;
-  font-family: Comfortaa, sans-serif;
+  font-family: Righteous, sans-serif;
   font-size: 6rem;
   text-align: center;
   background-color: rgba(133, 209, 207, 0.3); }
