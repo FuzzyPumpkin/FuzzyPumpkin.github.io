@@ -39,14 +39,14 @@
     height: 400px;//temp
 }
 .about {
-    //fix overflow on right...overflow hidden doesn't work. Might have to edit image.
     &__image {
         position: absolute;
-        right: -20rem; top: -12rem;
+        right: 0; top: -12rem;
         z-index: 50;
     }
     &__paragraph {
         padding: 2rem;
+        margin-top: 5rem;
     }
     &__wrap-shape {
         float: right;

@@ -1,97 +1,81 @@
-
+*, *:before, *:after {
+  position: relative;
+  box-sizing: border-box;
+  transition: all .3s cubic-bezier(.5, 0, .5, 1);
+}
 #nav-container {
-    position: relative;
-    width: 100%;
+  position: relative;
+  width: 100%;
 }
 
-*, *:before, *:after {
-    position: relative;
-    box-sizing: border-box;
-    transition: all .3s cubic-bezier(.5, 0, .5, 1);
-  }
-  
-  /* ---------------------------------- */
+.nav {
+  flex: 1;
+  overflow: hidden;
+  position: absolute;
+  top: -3.5rem;
+  left: 0;
+  right: 0;
+  height: 9.3rem;
+  display: flex;
+  align-items: stretch;
+  text-align: center;
+  z-index: 3;
 
-  
-  .ui-nav {
-    overflow: hidden;
-    position: absolute;
-    top: -3.5rem;
-    left: 0;
-    right: 0;
-    height: 9.3rem;
-    display: flex;
-    align-items: stretch;
-    text-align: center;
-    border-radius: .75rem .75rem 1.25rem 1.25rem;
-    z-index: 3;
-  }
-  
-  $cutout-size: 100px;
-  
-  .ui-bg {
+  &__bg {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 50%;
     height: 100%;
-  
-    .ui-dot {
-      $size: $cutout-size;
-      width: $size;
-      height: $size;
-      border-radius: 50%;
+    //movement of dot
+    transform: translateX(calc(var(--x) * 25%)); 
+  }
+  &__dot {
+    $size: $cutout-size;
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+    background-color: $color-primary-dark;
+    border: solid 2px $color-primary-light;
+    position: absolute;
+    left: calc((25% - #{$size}) / 2);//placement of dot
+    top: 0%;
+    z-index: 2;
+    transform: scale(.85);
+    box-shadow: 0px 0.5vh 1vh rgba(0,0,0,.3);
+  }
+  &__cutout {
+    $size: $cutout-size;
+    width: $size;
+    height: $size;
+    top: 0px;
+    left: calc((25% - #{$size}) / 2);//calculated placement of cutout
+    z-index: 1;
+    border-radius: 50%;
+    box-shadow:
+      $size / 2 $size / 2 0 $color-primary-dark,
+      -$size / 2 $size / 2 0 $color-primary-dark,
+      0 $size 0 $color-primary-dark;
+
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      width: 1000%;
+      height: 130%;
+      top: 30%;
       background-color: $color-primary-dark;
       border-top: solid 2px #FFF;
-      position: absolute;
-      left: calc((33.3333% - #{$size}) / 2);
-      top: 0%;
-      // top: 50%;
-      z-index: 2;
-      transform: scale(.85);
-      box-shadow: 0px 0.5vh 1vh rgba(0,0,0,.3);
     }
-  
-    > .ui-cutout {
-      $size: $cutout-size;
-      width: $size;
-      height: $size;
-      top: 0px;
-      left: calc((33.3333% - #{$size}) / 2);
-      z-index: 1;
-      border-radius: 50%;
-      //very important! need to figure out how to reverse
-      box-shadow:
-        $size / 2 $size / 2 0 $color-primary-dark,
-        -$size / 2 $size / 2 0 $color-primary-dark,
-        0 $size 0 $color-primary-dark;
-  
-      &:before, &:after {
-        content: '';
-        position: absolute;
-        width: 800%;
-        height: 130%;
-        
-        top: 30%;
-        // bottom: 30%;
-        background-color: $color-primary-dark;
-        border-top: solid 2px #FFF;
-        // border-bottom: solid 2px #FFF;
-      }
-  
-      &:before {
-        right: 100%;
-        border-top-right-radius: 1vh;
-      }
-  
-      &:after {
-        left: 100%;
-        border-top-left-radius: 1vh;
-      }
+    &:before {
+      right: 100%;
+      border-top-right-radius: 1vh;
+    }
+    &:after {
+      left: 100%;
+      border-top-left-radius: 1vh;
     }
   }
-  
-  .ui-label {
+  &__label {
     flex: 1;
     display: flex;
     align-items: center;
@@ -99,26 +83,31 @@
     cursor: pointer;
     z-index: 2;
     top: 20%;
-    font-size: $cutout-size / 2.5;
   }
-  
-  /* ---------------------------------- */
-  input[name="choice"] { 
-    position: absolute; 
-    top: 0; 
-    opacity: 0;
+  &__filler {
+    flex: 4;
   }
+  &__link {
+    margin-top: 1rem;
+    font-size: 1.8rem;
+    font-family: Comfortaa, sans-serif;
+    color: $color-primary-light;
+  }
+}
+
+input[name="choice"] { 
+  position: absolute; 
+  top: 0; 
+  opacity: 0;
+}
   
-  #nav-1:checked ~ * label[for="nav-1"],
-  #nav-2:checked ~ * label[for="nav-2"],
-  #nav-3:checked ~ * label[for="nav-3"]
-  {transform: translateY(-20%);}
+#nav-1:checked ~ * label[for="nav-1"],
+#nav-2:checked ~ * label[for="nav-2"],
+#nav-3:checked ~ * label[for="nav-3"],
+#nav-4:checked ~ * label[for="nav-4"] {transform: translateY(-10%);}
   
  //movement code for dot
-  .ui-bg { 
-    transform: translateX(calc(var(--x) * 33.3333%)); 
-  }
-  @for $i from 1 through 3 {
+  @for $i from 1 through 4 {
     #nav-#{$i}:checked ~ #nav-container {
       --x: #{$i - 1};
     }
