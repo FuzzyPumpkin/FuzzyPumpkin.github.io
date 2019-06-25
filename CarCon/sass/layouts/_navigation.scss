@@ -1,19 +1,125 @@
-nav {
+
+#nav-container {
+    position: relative;
     width: 100%;
-    height: 80px;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    padding: 10px;
-    background-color: $color-primary-dark;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.6);
-    -webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
-            box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s;
-    z-index: 10;
 }
-//note to self
-.fixed-nav nav {
-    position: fixed;
+
+*, *:before, *:after {
+    position: relative;
+    box-sizing: border-box;
+    transition: all .3s cubic-bezier(.5, 0, .5, 1);
+  }
+  
+  /* ---------------------------------- */
+
+  
+  .ui-nav {
+    overflow: hidden;
+    position: absolute;
+    top: -3.5rem;
+    left: 0;
+    right: 0;
+    height: 9.3rem;
+    display: flex;
+    align-items: stretch;
+    text-align: center;
+    border-radius: .75rem .75rem 1.25rem 1.25rem;
+    z-index: 3;
+  }
+  
+  $cutout-size: 100px;
+  
+  .ui-bg {
+    position: absolute;
     top: 0;
-}
+    left: 0;
+    width: 100%;
+    height: 100%;
+  
+    .ui-dot {
+      $size: $cutout-size;
+      width: $size;
+      height: $size;
+      border-radius: 50%;
+      background-color: $color-primary-dark;
+      border-top: solid 2px #FFF;
+      position: absolute;
+      left: calc((33.3333% - #{$size}) / 2);
+      top: 0%;
+      // top: 50%;
+      z-index: 2;
+      transform: scale(.85);
+      box-shadow: 0px 0.5vh 1vh rgba(0,0,0,.3);
+    }
+  
+    > .ui-cutout {
+      $size: $cutout-size;
+      width: $size;
+      height: $size;
+      top: 0px;
+      left: calc((33.3333% - #{$size}) / 2);
+      z-index: 1;
+      border-radius: 50%;
+      //very important! need to figure out how to reverse
+      box-shadow:
+        $size / 2 $size / 2 0 $color-primary-dark,
+        -$size / 2 $size / 2 0 $color-primary-dark,
+        0 $size 0 $color-primary-dark;
+  
+      &:before, &:after {
+        content: '';
+        position: absolute;
+        width: 800%;
+        height: 130%;
+        
+        top: 30%;
+        // bottom: 30%;
+        background-color: $color-primary-dark;
+        border-top: solid 2px #FFF;
+        // border-bottom: solid 2px #FFF;
+      }
+  
+      &:before {
+        right: 100%;
+        border-top-right-radius: 1vh;
+      }
+  
+      &:after {
+        left: 100%;
+        border-top-left-radius: 1vh;
+      }
+    }
+  }
+  
+  .ui-label {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 2;
+    top: 20%;
+    font-size: $cutout-size / 2.5;
+  }
+  
+  /* ---------------------------------- */
+  input[name="choice"] { 
+    position: absolute; 
+    top: 0; 
+    opacity: 0;
+  }
+  
+  #nav-1:checked ~ * label[for="nav-1"],
+  #nav-2:checked ~ * label[for="nav-2"],
+  #nav-3:checked ~ * label[for="nav-3"]
+  {transform: translateY(-20%);}
+  
+ //movement code for dot
+  .ui-bg { 
+    transform: translateX(calc(var(--x) * 33.3333%)); 
+  }
+  @for $i from 1 through 3 {
+    #nav-#{$i}:checked ~ #nav-container {
+      --x: #{$i - 1};
+    }
+  }
