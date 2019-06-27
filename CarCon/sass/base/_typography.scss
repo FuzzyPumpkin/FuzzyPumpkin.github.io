@@ -1,4 +1,23 @@
 //for heading elements, paragraphs
+
+h1, h2 {
+    font-family: Righteous, sans-serif;
+    color: $color-gray-dark;
+}
+h2 {
+    font-family: Righteous, sans-serif;
+    font-size: 4rem;
+    color: $color-gray-dark;
+}
+h3 {
+    font-family: Muli, sans-serif;
+    font-size: 3rem;
+    color: $color-gray-dark;
+}
+
+p {
+    font-size: 2rem;
+}
 .heading__h1 {
     &--hero {
         font-family: Righteous, sans-serif;
@@ -16,7 +35,4 @@
     
     &--right {text-align: right;
     }
-}
-p {
-    font-size: 2rem;
 }
