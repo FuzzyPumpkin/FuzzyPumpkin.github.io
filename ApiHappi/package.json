@@ -1,0 +1,18 @@
+{
+  "name": "apihappi",
+  "version": "1.0.0",
+  "description": "A dashboard app that calls on a few apis for data",
+  "main": "index.js",
+  "dependencies": {
+    "node-sass": "^4.12.0",
+    "npm-run-all": "^4.1.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "watch:sass": "node-sass sass/main.scss css/style.css -w",
+    "devserver": "live-server",
+    "start": "npm-run-all --parallel devserver watch:sass"
+  },
+  "author": "Kari Minger",
+  "license": "ISC"
+}

@@ -1,1 +1,36 @@
 //for anything on index page, order in sections via BEM
+.section-nav {
+    width: 100%; height: 5rem;
+}
+.main-content {
+    display: grid;
+    width: 100%; min-height: 75rem;
+    grid-template-areas: "news news weather"
+                        "news news weather"
+                        "news news hangman"
+                        "news news tasks"
+                        "notes notes tasks"
+                        "notes notes tasks"
+                        "recipe flip flip"
+                        "recipe trivia trivia"
+                        "stopwatch trivia trivia"
+                        "timezone calculator calculator"
+                        "currency calculator calculator";
+    gap: 1px;
+}
+//theme-fodder
+.app { border: 1px solid black;}
+//end
+
+.section-news{ grid-area: news;}
+.section-weather{ grid-area: weather;}
+.section-hangman{ grid-area: hangman;}
+.section-tasks{ grid-area: tasks;}
+.section-notes{ grid-area: notes;}
+.section-recipe{ grid-area: recipe;}
+.section-stopwatch{ grid-area: stopwatch;}
+.section-flip{ grid-area: flip;}
+.section-trivia{ grid-area: trivia;}
+.section-timezone{ grid-area: timezone;}
+.section-currency{ grid-area: currency;}
+.section-calculator{ grid-area: calculator;}
