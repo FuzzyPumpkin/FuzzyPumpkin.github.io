@@ -10,10 +10,12 @@ html {
     font-size: 62.5%;
 }
 body {
-    background-color: rgb(160, 89, 160);
+    background-color: $color-accent;
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
 }
 .page-container {
     width: $app-width;
     margin: auto;
-    background-color: white;
+    background-color: $color-accent;
 }

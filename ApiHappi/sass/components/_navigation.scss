@@ -3,6 +3,22 @@
         width: 100%; height: 100%;
         display: flex;
         flex-direction: row;
-        background-color: aquamarine;
+        background-image: linear-gradient(to right bottom, $color-main, $color-main-light);
+        box-shadow: 0px 4px 6px rgba(0,0,0,.5);
+        border-radius: 6px;
+        align-items: center;
+    }
+    &__title {
+        margin-right: auto;
+    }
+    &__container > * {
+        padding: 0 1rem;
+    }
+    &__user-greeting {
+        font-size: 1.5rem;
+    }
+    &__title {
+        font-size: 2rem;
+        font-family: Barriecito, sans-serif;
     }
 }

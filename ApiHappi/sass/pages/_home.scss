@@ -17,6 +17,7 @@
                         "timezone calculator calculator"
                         "currency calculator calculator";
     grid-template-columns: 33.33% 33.33% 33.34%;
+    grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
     gap: 1px;
     position: relative;
     overflow: hidden;
@@ -24,18 +25,11 @@
 }
 
 .app {
-    border: 1px solid black;
+    box-shadow: 0px 4px 6px rgba(0,0,0,.5);
     border-radius: 6px;
+    background-color: white;
+    overflow: hidden;
 }
-
-//move to class tied to JS click after testing done
-.app:hover {
-    position: fixed;
-    width: $app-width;
-    height: 100%;
-    transform: scale(1);
-}
-//end move
 
 .section-news{ grid-area: news;}
 .section-weather{ grid-area: weather;}
