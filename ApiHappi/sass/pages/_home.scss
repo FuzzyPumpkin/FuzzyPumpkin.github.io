@@ -11,16 +11,31 @@
                         "news news tasks"
                         "notes notes tasks"
                         "notes notes tasks"
-                        "recipe flip flip"
+                        "recipe stopwatch stopwatch"
                         "recipe trivia trivia"
-                        "stopwatch trivia trivia"
+                        "flip trivia trivia"
                         "timezone calculator calculator"
                         "currency calculator calculator";
+    grid-template-columns: 33.33% 33.33% 33.34%;
     gap: 1px;
+    position: relative;
+    overflow: hidden;
+    transition: all .5s ease;
 }
-//theme-fodder
-.app { border: 1px solid black;}
-//end
+
+.app {
+    border: 1px solid black;
+    border-radius: 6px;
+}
+
+//move to class tied to JS click after testing done
+.app:hover {
+    position: fixed;
+    width: $app-width;
+    height: 100%;
+    transform: scale(1);
+}
+//end move
 
 .section-news{ grid-area: news;}
 .section-weather{ grid-area: weather;}
@@ -28,9 +43,16 @@
 .section-tasks{ grid-area: tasks;}
 .section-notes{ grid-area: notes;}
 .section-recipe{ grid-area: recipe;}
-.section-stopwatch{ grid-area: stopwatch;}
-.section-flip{ grid-area: flip;}
-.section-trivia{ grid-area: trivia;}
+.section-stopwatch{
+    grid-area: stopwatch;
+}
+.section-flip {
+    grid-area: flip;
+}
+.section-trivia{
+    grid-area: trivia;
+}
 .section-timezone{ grid-area: timezone;}
 .section-currency{ grid-area: currency;}
 .section-calculator{ grid-area: calculator;}
+

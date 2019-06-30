@@ -1,1 +1,7 @@
 //for utility classes, like margins
+.section__expanded {
+    position: fixed;
+    width: $app-width;
+    height: 100%;
+    transform: scale(1);
+}

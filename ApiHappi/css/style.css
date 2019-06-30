@@ -16,6 +16,53 @@ body {
   margin: auto;
   background-color: white; }
 
+h2 {
+  color: black; }
+
+.section__expanded {
+  position: fixed;
+  width: 36rem;
+  height: 100%;
+  transform: scale(1); }
+
+.flip__container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+
+.flip__icon-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem auto; }
+
+.flip__icon-box > * {
+  margin: 0 .25rem; }
+
+.flip__icon {
+  width: 3rem;
+  height: 3rem;
+  fill: black; }
+  .flip__icon--dice {
+    width: 2rem;
+    height: 2rem;
+    padding: .5rem; }
+
+.flip__button {
+  border: none;
+  border-radius: 6px;
+  background-color: yellow; }
+
+.flip__title--top {
+  margin-top: -2.5rem; }
+
+.flip__title--bottom {
+  margin-bottom: -2.5rem; }
+
 .nav__container {
   width: 100%;
   height: 100%;
@@ -31,11 +78,22 @@ body {
   display: grid;
   width: 100%;
   min-height: 75rem;
-  grid-template-areas: "news news weather" "news news weather" "news news hangman" "news news tasks" "notes notes tasks" "notes notes tasks" "recipe flip flip" "recipe trivia trivia" "stopwatch trivia trivia" "timezone calculator calculator" "currency calculator calculator";
-  gap: 1px; }
+  grid-template-areas: "news news weather" "news news weather" "news news hangman" "news news tasks" "notes notes tasks" "notes notes tasks" "recipe stopwatch stopwatch" "recipe trivia trivia" "flip trivia trivia" "timezone calculator calculator" "currency calculator calculator";
+  grid-template-columns: 33.33% 33.33% 33.34%;
+  gap: 1px;
+  position: relative;
+  overflow: hidden;
+  transition: all .5s ease; }
 
 .app {
-  border: 1px solid black; }
+  border: 1px solid black;
+  border-radius: 6px; }
+
+.app:hover {
+  position: fixed;
+  width: 36rem;
+  height: 100%;
+  transform: scale(1); }
 
 .section-news {
   grid-area: news; }

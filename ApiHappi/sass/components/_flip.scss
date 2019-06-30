@@ -1,0 +1,39 @@
+//for coinflip/yes-no app
+.flip {
+    &__container {
+        width:100%; height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    &__icon-box {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin: 1rem auto;
+    }
+    &__icon-box > * {margin: 0 .25rem;}
+    &__icon {
+        width: 3rem; height: 3rem;
+        fill: $color-text-primary;
+        &--dice {
+            width: 2rem; height: 2rem;
+            padding: .5rem;
+        }
+    }
+    &__button {
+        border: none;
+        border-radius: 6px;
+        background-color: yellow;
+    }
+    &__title {
+        &--top {
+            margin-top: -2.5rem;
+        }
+        &--bottom {
+            margin-bottom: -2.5rem;
+        }
+    }
+}
