@@ -11,13 +11,12 @@
                         "news news tasks"
                         "notes notes tasks"
                         "notes notes tasks"
-                        "recipe stopwatch stopwatch"
                         "recipe trivia trivia"
-                        "flip trivia trivia"
-                        "timezone calculator calculator"
-                        "currency calculator calculator";
-    grid-template-columns: 33.33% 33.33% 33.34%;
-    grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+                        "recipe calculator calculator"
+                        "flip calculator calculator"
+                        "timezone currency currency";
+    grid-template-columns: repeat(auto-fit, minmax(12rem 1fr));
+    grid-template-rows: repeat(10, 1fr);
     gap: 1px;
     position: relative;
     overflow: hidden;
@@ -25,10 +24,10 @@
 }
 
 .app {
-    box-shadow: 0px 4px 6px rgba(0,0,0,.5);
     border-radius: 6px;
     background-color: white;
     overflow: hidden;
+    box-sizing: border-box;
 }
 
 .section-news{ grid-area: news;}
@@ -37,9 +36,6 @@
 .section-tasks{ grid-area: tasks;}
 .section-notes{ grid-area: notes;}
 .section-recipe{ grid-area: recipe;}
-.section-stopwatch{
-    grid-area: stopwatch;
-}
 .section-flip {
     grid-area: flip;
 }

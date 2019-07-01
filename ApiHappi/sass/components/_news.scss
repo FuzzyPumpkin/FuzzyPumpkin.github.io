@@ -1,0 +1,10 @@
+.news {
+    &__container {
+        height: 100%; width: 100%;
+        padding: .5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}

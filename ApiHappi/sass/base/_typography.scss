@@ -1,4 +1,12 @@
 //for heading elements, paragraphs
 h2 {
     color: $color-text-primary;
+    font-family: "Roboto", sans-serif;
+}
+h3 {
+    color: $color-main-dark;
+    font-family: "Roboto", sans-serif;
+}
+p {
+    font-family: "Roboto Condensed", sans-serif;
 }
