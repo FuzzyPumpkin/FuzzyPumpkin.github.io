@@ -15,8 +15,8 @@
                         "recipe calculator calculator"
                         "flip calculator calculator"
                         "timezone currency currency";
-    grid-template-columns: repeat(auto-fit, minmax(12rem 1fr));
-    grid-template-rows: repeat(10, 1fr);
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
     gap: 1px;
     position: relative;
     overflow: hidden;
