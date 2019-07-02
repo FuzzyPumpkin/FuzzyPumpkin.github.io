@@ -22,25 +22,78 @@
     <section class="section-news app">
       <div class="news__container">
         <h2 class="news__title">News Headlines</h2>
-        <article class="news__story">
-          <h3 class="news__headline">Story One</h3>
-          <p class="news__story">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam 
-            eius sed recusandae excepturi sequi voluptate expedita.</p>
-        </article>
-        <article class="news__story">
-            <h3 class="news__headline">Story Two</h3>
+        <div class="news__all-stories">
+          <article class="news__story">
+            <h3 class="news__headline">Story One</h3>
             <p class="news__story">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam 
-              eius sed recusandae excepturi sequi voluptate expedita, beatae voluptatibus rem, 
-              ullam ipsa dolore tempore ad, magnam ea distinctio molestiae provident officia!</p>
-        </article>
-        <article class="news__story">
-            <h3 class="news__headline">Story Three</h3>
-            <p class="news__story">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam 
-              eius sed recusandae excepturi sequi voluptate expedita.</p>
-        </article>
+              eius sed recusandae excepturi sequi voluptate expedita. 
+              <a href="#" class="news__link">Read More</a></p>
+          </article>
+          <article class="news__story">
+              <h3 class="news__headline">Story Two</h3>
+              <p class="news__story">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam 
+                eius sed recusandae excepturi sequi voluptate expedita, beatae voluptatibus rem, 
+                ullam ipsa dolore tempore ad, magnam ea distinctio molestiae provident officia! 
+                <a href="#" class="news__link">Read More</a></p>
+          </article>
+          <article class="news__story">
+              <h3 class="news__headline">Story Three</h3>
+              <p class="news__story">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam 
+                eius sed recusandae excepturi sequi voluptate expedita. 
+                <a href="#" class="news__link">Read More</a></p>
+          </article>
+        </div>
       </div>
     </section>
-    <section class="section-weather app">Weather</section>
+    <section class="section-weather app">
+      <div class="weather__container">
+        <h2 class="weather__title">Weather</h2>
+        <div class="weather__forecast">
+          <div class="weather__today">
+            <div class="weather__col1">
+              <svg class="weather__icon">
+                <use xlink:href="images/symbol-defs.svg#icon-cloudy"></use>
+              </svg>
+              <svg class="weather__therm">
+                  <use xlink:href="images/symbol-defs.svg#icon-thermometer-2"></use>
+              </svg>
+            </div>
+             <div class="weather__col2">
+               <p class="weather__high">65 
+                  <svg class="weather__degree">
+                      <use xlink:href="images/symbol-defs.svg#icon-Fahrenheit"></use>
+                  </svg>
+               </p>
+               <p class="weather__high">65 
+                  <svg class="weather__degree">
+                      <use xlink:href="images/symbol-defs.svg#icon-Fahrenheit"></use>
+                  </svg>
+               </p>
+            </div>
+          </div>
+          <div class="weather__tomorrow">
+              <svg class="weather__icon">
+                <use xlink:href="images/symbol-defs.svg#icon-lightning"></use>
+              </svg>
+              <svg class="weather__therm">
+                  <use xlink:href="images/symbol-defs.svg#icon-thermometer-2"></use>
+              </svg>
+             <div class="weather__col2">
+               <p class="weather__high">65 
+                  <svg class="weather__degree">
+                      <use xlink:href="images/symbol-defs.svg#icon-Fahrenheit"></use>
+                  </svg>
+               </p>
+               <p class="weather__high">65 
+                  <svg class="weather__degree">
+                      <use xlink:href="images/symbol-defs.svg#icon-Fahrenheit"></use>
+                  </svg>
+               </p>
+             </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <section class="section-hangman app">Hangman</section>
     <section class="section-tasks app">Tasks</section>
     <section class="section-notes app">Notes</section>

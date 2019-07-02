@@ -59,8 +59,8 @@ p {
   height: 3rem;
   fill: #3b3a39; }
   .flip__icon--dice {
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
     padding: .5rem; }
 
 .flip__button {
@@ -102,11 +102,80 @@ p {
 .news__container {
   height: 100%;
   width: 100%;
-  padding: .5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f7f1b1; }
+
+.news__story:not(:last-child) {
+  margin-bottom: 1.5rem; }
+
+.news__title {
+  margin: 1rem 0;
+  font-weight: 300; }
+
+.news__all-stories {
+  background-color: white;
+  width: 100%;
+  padding: 1.5rem;
+  border-top: 1px solid #c5bf7a;
+  border-bottom: 1px solid #c5bf7a; }
+
+.news__link {
+  color: #c78947; }
+  .news__link:hover, .news__link:visited {
+    background-color: #fec97c; }
+
+.weather__container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: linear-gradient(to right bottom, #c8e2ef, #a3c5d6); }
+
+.weather__title {
+  margin: 1rem 0;
+  font-weight: 300; }
+
+.weather__forecast {
+  display: flex;
+  flex-direction: column;
+  width: 100%; }
+
+.weather__today {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: red;
+  align-items: center;
+  justify-content: center; }
+
+.weather__tomorrow {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: green;
+  align-items: center;
+  justify-content: center; }
+
+.weather__icon {
+  width: 4rem;
+  height: 4rem; }
+
+.weather__col2 {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center; }
+
+.weather__degree {
+  width: 2rem;
+  height: 2rem; }
+
+.weather__therm {
+  width: 2rem;
+  height: 2rem; }
 
 .section-nav {
   width: 100%;
@@ -116,21 +185,14 @@ p {
   display: grid;
   width: 100%;
   min-height: 75rem;
-  grid-template-areas: "news news weather"
- "news news weather"
- "news news hangman"
- "news news tasks"
- "notes notes tasks"
- "notes notes tasks"
- "recipe trivia trivia"
- "recipe calculator calculator"
- "flip calculator calculator"
- "timezone currency currency";
+  grid-template-areas: "news news weather" "news news weather" "news news hangman" "news news tasks" "notes notes tasks" "notes notes tasks" "recipe trivia trivia" "recipe calculator calculator" "flip calculator calculator" "timezone currency currency";
   grid-auto-columns: 1fr;
   grid-auto-rows: 1fr;
-  gap: 1px;
+  gap: 2px;
   position: relative;
   overflow: hidden;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+  border-radius: 6px;
   transition: all .5s ease; }
 
 .app {
