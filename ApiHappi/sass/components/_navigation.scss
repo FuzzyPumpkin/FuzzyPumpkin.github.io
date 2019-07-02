@@ -21,4 +21,13 @@
         font-size: 2rem;
         font-family: Barriecito, sans-serif;
     }
+    &__icon {
+        width: 3rem; height: 3rem;
+        fill: $color-text-primary;
+        transition: all .4s ease-in;
+
+        &:hover {
+            fill: $color-text-light;
+        }
+    }
 }

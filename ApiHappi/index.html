@@ -13,7 +13,7 @@
     <nav class="nav__container">
       <h1 class="nav__title">Api Happi</h1>
       <p class="nav__user-greeting">Hi, <span class="nav__username">Kari</span></p>
-      <svg class="flip__icon">
+      <svg class="nav__icon">
         <use xlink:href="images/symbol-defs.svg#icon-cog"></use>
       </svg>
     </nav>
@@ -48,6 +48,12 @@
     <section class="section-weather app">
       <div class="weather__container">
         <h2 class="weather__title">Weather</h2>
+        <h3 class="weather__location">
+            <svg class="weather__icon--map">
+              <use xlink:href="images/symbol-defs.svg#icon-map-marker"></use>
+            </svg>
+          <span class="weather__city">Chicago, IL</span>
+        </h3>
         <div class="weather__forecast">
           <div class="weather__today">
             <div class="weather__col1">
@@ -72,12 +78,14 @@
             </div>
           </div>
           <div class="weather__tomorrow">
-              <svg class="weather__icon">
-                <use xlink:href="images/symbol-defs.svg#icon-lightning"></use>
-              </svg>
-              <svg class="weather__therm">
-                  <use xlink:href="images/symbol-defs.svg#icon-thermometer-2"></use>
-              </svg>
+              <div class="weather__col1">
+                <svg class="weather__icon">
+                  <use xlink:href="images/symbol-defs.svg#icon-lightning"></use>
+                </svg>
+                <svg class="weather__therm">
+                    <use xlink:href="images/symbol-defs.svg#icon-thermometer-2"></use>
+                </svg>
+            </div>
              <div class="weather__col2">
                <p class="weather__high">65 
                   <svg class="weather__degree">
