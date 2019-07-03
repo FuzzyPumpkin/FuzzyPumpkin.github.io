@@ -19,6 +19,8 @@
     &__icon {
         width: 3rem; height: 3rem;
         fill: $color-text-primary;
+        border-radius: 6px;
+        
         &--dice {
             width: 2.5rem; height: 2.5rem;
             padding: .5rem;
@@ -39,4 +41,8 @@
     &__title {
         font-weight: 300;
     }
+}
+.green {
+    background-color: $color-green;
+    border: 2px solid $color-green;
 }
