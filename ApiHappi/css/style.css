@@ -35,6 +35,51 @@ p {
   height: 100%;
   transform: scale(1); }
 
+.calc__container {
+  font-size: 2rem;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column; }
+
+.calc__row {
+  display: flex;
+  flex-direction: row;
+  flex: 1; }
+
+.calc__cell, .calc__tip, .calc__window {
+  display: flex;
+  flex: 1;
+  text-align: center;
+  align-items: center;
+  justify-content: center; }
+
+.calc__cell, .calc__window {
+  border: 1px solid #a3c5d6; }
+
+.calc__cell {
+  transition: all .2s ease; }
+  .calc__cell:hover {
+    background-color: #fec97c; }
+
+.calc__num {
+  background-color: #c8e2ef; }
+
+.calc__window {
+  flex: 3; }
+
+.calc__op {
+  background-color: #e4ecf0; }
+
+.calc__tip {
+  background-color: #a3c5d6;
+  font-size: 1.5rem;
+  border: 1px solid #e4ecf0;
+  transition: all .2s ease; }
+  .calc__tip:hover {
+    background-color: #e4ecf0; }
+
 .flip__container {
   width: 100%;
   height: 100%;

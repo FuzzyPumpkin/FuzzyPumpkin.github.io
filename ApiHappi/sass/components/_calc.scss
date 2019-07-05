@@ -1,0 +1,49 @@
+.calc {
+    &__container {
+        font-size: 2rem;
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    &__row {
+        display: flex;
+        flex-direction: row;
+        flex: 1;
+    }
+    &__cell, &__tip, &__window {
+        display: flex;
+        flex: 1;
+        text-align: center;
+        align-items: center;
+        justify-content: center; 
+    }
+    &__cell, &__window {
+        border: 1px solid $color-accent-dark; 
+    }
+    &__cell {
+        transition: all .2s ease;
+        &:hover {
+            background-color: $color-main-light;
+        }
+    }
+    &__num {
+        background-color: $color-accent;
+    }
+    &__window {
+        flex: 3;
+    }
+    &__op {
+        background-color: $color-accent-light;
+    }
+    &__tip {
+        background-color: $color-accent-dark;
+        font-size: 1.5rem;
+        border: 1px solid $color-accent-light;
+        transition: all .2s ease;
+        &:hover {
+            background-color: $color-accent-light;
+        }
+    }
+}
