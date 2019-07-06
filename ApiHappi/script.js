@@ -39,10 +39,15 @@ const oneBtn = document.querySelector("#num1"),
     resultDisp = document.querySelector("#window");
 let runningTotal = 0;
 let lastOperator = "";
+let clearDisplay = false;
 
 function dispNum(num){
-    if(resultDisp.innerHTML.length <= 10){
-        resultDisp.innerHTML = resultDisp.innerHTML + num;}
+    if(clearDisplay == true){
+        resultDisp.innerHTML = num;
+        clearDisplay = false;
+    } else if(resultDisp.innerHTML.length <= 10){
+        resultDisp.innerHTML = resultDisp.innerHTML + num;
+    };
 };
 
 function clearDisp(){
@@ -51,7 +56,21 @@ function clearDisp(){
 };
 
 function calcOperation(oper){
-    lastOper = oper;
+    console.log(oper);
+    if(lastOperator == "plus"){
+        runningTotal = runningTotal + parseFloat(resultDisp.innerHTML);
+    } else if(lastOperator == "minus"){
+        runningTotal = runningTotal - parseFloat(resultDisp.innerHTML);
+    } else if(lastOperator == "divide"){
+        runningTotal = runningTotal / parseFloat(resultDisp.innerHTML);
+    } else if(lastOperator == "multi"){
+        runningTotal = runningTotal * parseFloat(resultDisp.innerHTML);
+    } else{
+        runningTotal = parseFloat(resultDisp.innerHTML);
+    };
+    resultDisp.innerHTML = runningTotal;
+    lastOperator = oper;
+    clearDisplay = true;
 };
 
 function tipCalc(num){
@@ -76,5 +95,6 @@ plusBtn.addEventListener("click", function(){calcOperation("plus");});
 minusBtn.addEventListener("click", function(){calcOperation("minus");});
 divideBtn.addEventListener("click", function(){calcOperation("divide");});
 multiBtn.addEventListener("click", function(){calcOperation("multi");});
+equalBtn.addEventListener("click", function(){calcOperation("equal");});
 fifteenBtn.addEventListener("click", function(){tipCalc(15);});
 twentyBtn.addEventListener("click", function(){tipCalc(20);});
