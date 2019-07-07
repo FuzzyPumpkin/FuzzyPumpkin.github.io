@@ -1,0 +1,29 @@
+.budget {
+    &__container {
+        height: 100%; width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-image: linear-gradient(to right bottom, $color-two-light, $color-two);
+    }
+    &__title {
+        font-weight: 300;
+        margin-top: .5rem;
+        font-size: 1.3rem;
+    }
+    &__row {
+        display: flex;
+        flex-direction: row;
+    }
+    &__spent, &__available {
+        text-align: center;
+        padding: .5rem;
+    }
+    &__available {
+        margin: 0 auto;
+    }
+    &__amount {
+        text-align: center;
+    }
+}
+

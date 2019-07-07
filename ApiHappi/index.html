@@ -4,6 +4,8 @@
     <head>
         <title>Api Happi</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon">
         <link href="https://fonts.googleapis.com/css?family=Barriecito&text:ApiHa|Roboto+Condensed|Roboto:300,400,700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css">
     </head>
@@ -102,10 +104,29 @@
         </div>
       </div>
     </section>
-    <section class="section-hangman app">Hangman</section>
-    <section class="section-tasks app">Tasks</section>
-    <section class="section-notes app">Notes</section>
-    <section class="section-recipe app">Recipe</section>
+    <section class="section-hangman app">
+      <svg class="expandIcon">
+        <use xlink:href="images/symbol-defs.svg#icon-search-plus"></use>
+      </svg>
+      Hangman</section>
+    <section class="section-tasks app">
+      <svg class="expandIcon">
+        <use xlink:href="images/symbol-defs.svg#icon-search-plus"></use>
+      </svg>
+      Tasks
+    </section>
+    <section class="section-notes app">
+      <svg class="expandIcon">
+        <use xlink:href="images/symbol-defs.svg#icon-search-plus"></use>
+      </svg>
+      Notes
+    </section>
+    <section class="section-recipe app">
+      <svg class="expandIcon">
+        <use xlink:href="images/symbol-defs.svg#icon-search-plus"></use>
+      </svg>
+      Recipe
+    </section>
     <section class="section-flip app">
       <div class="flip__container">
         <h2 class="flip__title">Decision</h2>
@@ -125,7 +146,24 @@
         <h2 class="flip__title">Maker</h2>
       </div>
     </section>
-    <section class="section-trivia app">Trivia</section>
+    <section class="section-budget app">
+      <svg class="expandIcon">
+        <use xlink:href="images/symbol-defs.svg#icon-search-plus"></use>
+      </svg>
+      <div class="budget__container">
+        <h2 class="budget__title">Budget Tracking</h2>
+        <div class="budget__row">
+          <div class="budget__spent">
+            <h3 class="budget__subheading">Spent</h3>
+            <p class="budget__amount">$<span class="budget__amtSpent">0.00</span></p>
+          </div>
+          <div class="budget__available">
+            <h3 class="budget__subheading">Available</h3>
+            <p class="budget__amount">$<span class="budget__amtAvailable">0.00</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
     <section class="section-timezone app">Timezone</section>
     <section class="section-currency app">Currency</section>
     <section class="section-calculator app">
