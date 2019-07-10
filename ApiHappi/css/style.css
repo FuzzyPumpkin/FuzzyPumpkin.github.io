@@ -211,6 +211,35 @@ p {
   .news__link:hover, .news__link:visited {
     background-color: #fec97c; }
 
+.timezone__container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  z-index: 2; }
+
+.timezone__title {
+  font-weight: 300; }
+
+.timezone__row {
+  display: flex;
+  flex-direction: row; }
+
+.timezone__local, .timezone__other {
+  flex-direction: column;
+  width: 100%; }
+
+.timezone__timezone, .timezone__local, .timezone__other {
+  display: flex;
+  flex: 1; }
+
+.timezone__bgicon {
+  fill: rgba(176, 173, 170, 0.5);
+  position: absolute;
+  bottom: -3rem;
+  right: -1rem;
+  z-index: 1; }
+
 .weather__container {
   height: 100%;
   width: 100%;
@@ -337,7 +366,9 @@ p {
   position: relative; }
 
 .section-timezone {
-  grid-area: timezone; }
+  grid-area: timezone;
+  position: relative;
+  overflow: hidden; }
 
 .section-currency {
   grid-area: currency; }

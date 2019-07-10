@@ -57,7 +57,11 @@
     grid-area: budget;
     position: relative;
 }
-.section-timezone { grid-area: timezone;}
+.section-timezone { 
+    grid-area: timezone;
+    position: relative;
+    overflow: hidden;
+}
 .section-currency { grid-area: currency;}
 .section-calculator { 
     grid-area: calculator;
