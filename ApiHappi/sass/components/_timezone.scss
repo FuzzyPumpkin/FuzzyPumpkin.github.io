@@ -3,14 +3,21 @@
         display: flex;
         flex-direction: column;
         height: 100%; width: 100%;
-        z-index: 2;
+        align-items: center;
     }
     &__title {
         font-weight: 300;
+        margin: .5rem auto;
+        background-color: $color-main-light;
+        width: 100%;
+        text-align: center;
     }
     &__row {
         display: flex;
         flex-direction: row;
+        width: 100%;
+        justify-content: center;
+        z-index: 2;
     }
     &__local, &__other {
         flex-direction: column;
@@ -19,12 +26,19 @@
     &__timezone, &__local, &__other {
         display: flex;
         flex: 1;
+        align-items: center;
+        font-size: 1.5rem;
     }
     &__bgicon {
-        fill: rgba($color-text-light, .5);
+        fill: rgba($color-text-light, .4);
         position: absolute;
         bottom: -3rem;
         right: -1rem;
         z-index: 1;
+    }
+    &__timezone {
+        font-size: 1.2rem;
+        font-style: "Roboto Condensed", sans-serif;
+        color: $color-main;
     }
 }

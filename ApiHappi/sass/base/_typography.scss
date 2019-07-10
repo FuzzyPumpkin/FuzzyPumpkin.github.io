@@ -2,6 +2,11 @@
 h2 {
     color: $color-text-primary;
     font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    margin: .5rem auto;
+    background-color: $color-main-light;
+    width: 100%;
+    text-align: center;
 }
 h3 {
     color: $color-main-dark;

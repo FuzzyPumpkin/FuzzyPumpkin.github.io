@@ -6,7 +6,6 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        background-color: $color-two-light;
     }
     &__icon-box {
         display: flex;
@@ -39,7 +38,7 @@
         }
     }
     &__title {
-        font-weight: 300;
+        margin: 0 0 .5rem 0;
     }
 }
 .green {

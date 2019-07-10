@@ -20,7 +20,12 @@ body {
 
 h2 {
   color: #3b3a39;
-  font-family: "Roboto", sans-serif; }
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  margin: .5rem auto;
+  background-color: #fec97c;
+  width: 100%;
+  text-align: center; }
 
 h3 {
   color: #c78947;
@@ -40,13 +45,7 @@ p {
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  background-image: linear-gradient(to right bottom, #f7f1b1, #fcf49c); }
-
-.budget__title {
-  font-weight: 300;
-  margin-top: .5rem;
-  font-size: 1.3rem; }
+  align-items: center; }
 
 .budget__row {
   display: flex;
@@ -113,8 +112,7 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  background-color: #f7f1b1; }
+  justify-content: center; }
 
 .flip__icon-box {
   display: flex;
@@ -147,7 +145,7 @@ p {
     transform: translateY(2px); }
 
 .flip__title {
-  font-weight: 300; }
+  margin: 0 0 .5rem 0; }
 
 .green {
   background-color: rgba(111, 155, 111, 0.705);
@@ -197,7 +195,7 @@ p {
 
 .news__title {
   margin: 1rem 0;
-  font-weight: 300; }
+  background-color: transparent; }
 
 .news__all-stories {
   background-color: white;
@@ -216,14 +214,21 @@ p {
   flex-direction: column;
   height: 100%;
   width: 100%;
-  z-index: 2; }
+  align-items: center; }
 
 .timezone__title {
-  font-weight: 300; }
+  font-weight: 300;
+  margin: .5rem auto;
+  background-color: #fec97c;
+  width: 100%;
+  text-align: center; }
 
 .timezone__row {
   display: flex;
-  flex-direction: row; }
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  z-index: 2; }
 
 .timezone__local, .timezone__other {
   flex-direction: column;
@@ -231,14 +236,21 @@ p {
 
 .timezone__timezone, .timezone__local, .timezone__other {
   display: flex;
-  flex: 1; }
+  flex: 1;
+  align-items: center;
+  font-size: 1.5rem; }
 
 .timezone__bgicon {
-  fill: rgba(176, 173, 170, 0.5);
+  fill: rgba(176, 173, 170, 0.4);
   position: absolute;
   bottom: -3rem;
   right: -1rem;
   z-index: 1; }
+
+.timezone__timezone {
+  font-size: 1.2rem;
+  font-style: "Roboto Condensed", sans-serif;
+  color: #fdad58; }
 
 .weather__container {
   height: 100%;
@@ -253,7 +265,7 @@ p {
 
 .weather__title {
   margin: 1rem 0;
-  font-weight: 300; }
+  background-color: transparent; }
 
 .weather__forecast {
   display: flex;
