@@ -23,6 +23,8 @@
     box-shadow: 0px 4px 6px rgba(0,0,0,.5);
     border-radius: 6px;
     transition: all .5s ease;
+    //testing
+    display: none;
 }
 
 .app {
@@ -41,6 +43,7 @@
 .section-tasks { 
     grid-area: tasks;
     position: relative;
+    background-color: $color-accent-light;
 }
 .section-notes { 
     grid-area: notes;
@@ -76,4 +79,14 @@
     &:hover {
         fill: $color-text-light;
     }
+}
+
+//testing
+.full-screen {
+    width: 100%; min-height: 75rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 4px 6px rgba(0,0,0,.5);
+    border-radius: 6px;
+    background-color: white;
 }
