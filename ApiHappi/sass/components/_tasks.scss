@@ -11,6 +11,11 @@
         bottom: 1rem; left: 0;
         z-index: 1;
         width: 15rem; height: 15rem;
+
+        &--full {
+            bottom: 1rem; left: 0;
+            width: 35rem; height: 35rem;
+        }
     }
     &__list {
         list-style: circle;
@@ -19,5 +24,44 @@
         font-size: 1.5rem;
         margin-bottom: .5rem;
         border-bottom: 1px solid $color-text-light;
+    }
+}
+.full-tasks {
+    &__headline {
+        font-size: 3rem;
+    }
+    &__list {
+
+    }
+    &__list--complete {
+        & li {
+            text-decoration: line-through;
+            text-decoration-color: $color-main-dark;
+        }
+    }
+    &__list-item {
+        font-size: 1.5rem;
+        margin-bottom: .5rem;
+        border-bottom: 1px solid $color-text-light;
+        transition: all .2s ease;
+
+        &:hover {
+            background-color: $color-two-light;
+        }
+    }
+    &__category {
+        font-size: 2rem;
+        margin: 1rem 0;
+    }
+    &__trash {
+        height: 1.25rem; width: 1.25rem;
+        fill: $color-text-primary;
+        margin-left: 2rem;
+        float: right;
+        transition: all .2s ease;
+
+            &:hover {
+                fill: $color-text-light;
+            }
     }
 }

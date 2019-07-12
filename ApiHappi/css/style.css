@@ -224,6 +224,11 @@ p {
   z-index: 1;
   width: 15rem;
   height: 15rem; }
+  .tasks__bgicon--full {
+    bottom: 1rem;
+    left: 0;
+    width: 35rem;
+    height: 35rem; }
 
 .tasks__list {
   list-style: circle; }
@@ -232,6 +237,35 @@ p {
   font-size: 1.5rem;
   margin-bottom: .5rem;
   border-bottom: 1px solid #b0adaa; }
+
+.full-tasks__headline {
+  font-size: 3rem; }
+
+.full-tasks__list--complete li {
+  text-decoration: line-through;
+  text-decoration-color: #c78947; }
+
+.full-tasks__list-item {
+  font-size: 1.5rem;
+  margin-bottom: .5rem;
+  border-bottom: 1px solid #b0adaa;
+  transition: all .2s ease; }
+  .full-tasks__list-item:hover {
+    background-color: #f7f1b1; }
+
+.full-tasks__category {
+  font-size: 2rem;
+  margin: 1rem 0; }
+
+.full-tasks__trash {
+  height: 1.25rem;
+  width: 1.25rem;
+  fill: #3b3a39;
+  margin-left: 2rem;
+  float: right;
+  transition: all .2s ease; }
+  .full-tasks__trash:hover {
+    fill: #b0adaa; }
 
 .timezone__container {
   display: flex;
@@ -416,16 +450,24 @@ p {
 .section-calculator {
   grid-area: calculator; }
 
+.expandIcon, .condenseIcon {
+  position: absolute;
+  fill: #3b3a39;
+  transition: all .2s ease-in; }
+  .expandIcon:hover, .condenseIcon:hover {
+    fill: #b0adaa; }
+
 .expandIcon {
   height: 1rem;
   width: 1rem;
-  position: absolute;
   top: 2px;
-  right: 2px;
-  fill: #3b3a39;
-  transition: all .2s ease-in; }
-  .expandIcon:hover {
-    fill: #b0adaa; }
+  right: 2px; }
+
+.condenseIcon {
+  height: 2rem;
+  width: 2rem;
+  top: 1.2rem;
+  right: 1.2rem; }
 
 .full-screen {
   width: 100%;

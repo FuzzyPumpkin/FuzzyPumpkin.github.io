@@ -69,10 +69,8 @@
 .section-calculator { 
     grid-area: calculator;
 }
-.expandIcon {
-    height: 1rem; width: 1rem;
+.expandIcon, .condenseIcon {
     position: absolute;
-    top: 2px; right: 2px;
     fill: $color-text-primary;
     transition: all .2s ease-in;
 
@@ -80,6 +78,15 @@
         fill: $color-text-light;
     }
 }
+.expandIcon {
+    height: 1rem; width: 1rem;
+    top: 2px; right: 2px;
+}
+.condenseIcon {
+    height: 2rem; width: 2rem;
+    top: 1.2rem; right: 1.2rem;
+}
+
 
 //testing
 .full-screen {
