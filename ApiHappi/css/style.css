@@ -241,9 +241,16 @@ p {
 .full-tasks__headline {
   font-size: 3rem; }
 
+.full-tasks__list {
+  z-index: 20; }
+
 .full-tasks__list--complete li {
   text-decoration: line-through;
   text-decoration-color: #c78947; }
+
+.full-tasks__divider {
+  width: 80%;
+  border-bottom: 2px solid #fdad58; }
 
 .full-tasks__list-item {
   font-size: 1.5rem;

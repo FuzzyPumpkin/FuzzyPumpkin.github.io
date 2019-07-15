@@ -101,26 +101,18 @@ twentyBtn.addEventListener("click", function(){tipCalc(20);});
 
 //task list
     //temp for testing
-const delBtn = document.querySelectorAll(".full-tasks__trash");
-for(let i = 0; i < delBtn.length; i++){
-    delBtn[i].addEventListener("click", deleteTask);
-}
-
-
 const   newInput = document.querySelector(".full-tasks__taskEntry"),
         todoList = document.querySelector(".full-tasks__list--todo"),
         completeList = document.querySelector(".full-tasks__list--complete"),
         addBtn = document.querySelector(".full-tasks__addBtn");
 
 function deleteTask(){
-//need to prevent the bubbling
-    this.parentNode.parentNode.removeChild(this.parentNode);
+    this.parentNode.removeChild(this);
 }
 
 function addTask(newElement, taskFunct, listName){
     newElement.classList.add("full-tasks__list-item");
     newElement.addEventListener("click", taskFunct);
-    newElement.childNodes[1].addEventListener("click", deleteTask);
     listName.appendChild(newElement);
 }
 function toggleItem(){
@@ -132,8 +124,7 @@ function toggleItem(){
 
 function newTask(){
     let newElement = document.createElement("li");
-	let html = '<svg class="full-tasks__trash"><use xlink:href="images/symbol-defs.svg#icon-close"></use></svg>';
-    newElement.innerHTML = newInput.value + html; 
+    newElement.innerHTML = newInput.value; 
     addTask(newElement, completeTask, todoList);
 }
 
@@ -142,7 +133,6 @@ function completeTask(){
     newElement.innerHTML = this.innerHTML;
     this.parentNode.removeChild(this);
     addTask(newElement, deleteTask, completeList);
-    //something wrong...event listeners not assigning/firing
 }
 
 addBtn.addEventListener("click", newTask);

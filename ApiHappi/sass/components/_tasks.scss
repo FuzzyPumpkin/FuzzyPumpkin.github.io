@@ -30,11 +30,18 @@
     &__headline {
         font-size: 3rem;
     }
+    &__list {
+        z-index: 20;
+    }
     &__list--complete {
         & li {
             text-decoration: line-through;
             text-decoration-color: $color-main-dark;
         }
+    }
+    &__divider {
+        width: 80%;
+        border-bottom: 2px solid $color-main;
     }
     &__list-item {
         font-size: 1.5rem;
