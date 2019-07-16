@@ -428,7 +428,7 @@ p {
   display: grid;
   width: 100%;
   min-height: 75rem;
-  grid-template-areas: "news news news news weather weather" "news news news news weather weather" "news news news news budget budget" "news news news news tasks tasks" "notes notes notes notes tasks tasks" "notes notes notes notes tasks tasks" "recipe recipe hangman hangman hangman hangman" "recipe recipe calculator calculator calculator calculator" "flip flip calculator calculator calculator calculator" "timezone timezone timezone currency currency currency";
+  grid-template-areas: "news news news news weather weather" "news news news news weather weather" "news news news news budget budget" "news news news news tasks tasks" "notes notes notes notes tasks tasks" "notes notes notes notes tasks tasks" "recipe recipe word word word word" "recipe recipe calculator calculator calculator calculator" "flip flip calculator calculator calculator calculator" "timezone timezone timezone currency currency currency";
   grid-auto-columns: 1fr;
   grid-auto-rows: 1fr;
   gap: 2px;
@@ -436,8 +436,7 @@ p {
   overflow: hidden;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
   border-radius: 6px;
-  transition: all .5s ease;
-  display: none; }
+  transition: all .5s ease; }
 
 .app {
   border-radius: 6px;
@@ -451,8 +450,8 @@ p {
 .section-weather {
   grid-area: weather; }
 
-.section-hangman {
-  grid-area: hangman;
+.section-word {
+  grid-area: word;
   position: relative; }
 
 .section-tasks {

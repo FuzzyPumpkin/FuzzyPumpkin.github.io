@@ -11,7 +11,7 @@
                         "news news news news tasks tasks"
                         "notes notes notes notes tasks tasks"
                         "notes notes notes notes tasks tasks"
-                        "recipe recipe hangman hangman hangman hangman"
+                        "recipe recipe word word word word"
                         "recipe recipe calculator calculator calculator calculator"
                         "flip flip calculator calculator calculator calculator"
                         "timezone timezone timezone currency currency currency";
@@ -23,8 +23,6 @@
     box-shadow: 0px 4px 6px rgba(0,0,0,.5);
     border-radius: 6px;
     transition: all .5s ease;
-    //testing
-    display: none;
 }
 
 .app {
@@ -36,8 +34,8 @@
 
 .section-news { grid-area: news;}
 .section-weather { grid-area: weather;}
-.section-hangman { 
-    grid-area: hangman;
+.section-word { 
+    grid-area: word;
     position: relative;
 }
 .section-tasks { 
