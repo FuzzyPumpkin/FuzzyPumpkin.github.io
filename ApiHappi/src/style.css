@@ -111,15 +111,15 @@ p {
   height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center; }
+  align-items: center; }
 
 .flip__icon-box {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin: 0 auto; }
+  margin: 0 auto;
+  transition: all .2s ease-in; }
 
 .flip__icon-box > * {
   margin: 0 .25rem; }
@@ -139,17 +139,11 @@ p {
   border-radius: 6px;
   background-color: #fdad58;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+  outline: none;
   transition: all .4s ease-in; }
   .flip__button:hover {
     background-color: #c78947;
     transform: translateY(2px); }
-
-.flip__title {
-  margin: 0 0 .5rem 0; }
-
-.green {
-  background-color: rgba(111, 155, 111, 0.705);
-  border: 2px solid rgba(111, 155, 111, 0.705); }
 
 .nav__container {
   width: 100%;

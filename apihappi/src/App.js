@@ -1,5 +1,6 @@
 import React from 'react';
 import "./style.css"
+import Flip from "./Flip"
 import Nav from "./Nav"
 import Weather from "./Weather"
 
@@ -14,7 +15,7 @@ function App() {
         <section className="section-tasks app"></section>
         <section className="section-notes app"></section>
         <section className="section-recipe app"></section>
-        <section className="section-flip app"></section>
+        <Flip />
         <section className="section-budget app"></section>
         <section className="section-timezone app"></section>
         <section className="section-currency app"></section>
