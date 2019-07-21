@@ -27,73 +27,72 @@
     }
 }
 .full-tasks {
-    &__headline {
+    &__headline {//used
         font-size: 3rem;
     }
-    &__list {
+    &__list {//used
         z-index: 20;
     }
-    &__list--complete {
-        & li {
-            text-decoration: line-through;
-            text-decoration-color: $color-main-dark;
-        }
+    &__list--completed {
+        text-decoration: line-through;
+        text-decoration-color: $color-main-dark;
     }
-    &__divider {
-        width: 80%;
-        border-bottom: 2px solid $color-main;
-    }
-    &__list-item {
-        font-size: 1.5rem;
-        margin-bottom: .5rem;
-        border-bottom: 1px solid $color-text-light;
+    &__list-item {//used
+        font-size: 2rem;
         transition: all .2s ease;
+        margin-right: 1rem;
 
         &:hover {
             background-color: $color-two-light;
         }
     }
-    &__category {
-        font-size: 2rem;
-        margin: 1rem 0;
+    &__task-item {//used
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: .5rem;
+        border-bottom: 1px solid $color-text-light;
     }
-    &__trash, &__add {
+    &__icon {//used
         height: 1.25rem; width: 1.25rem;
         fill: $color-text-primary;
         transition: all .2s ease;
     }
-    &__trash {
-        margin-left: 2rem;
-        float: right;
-        &:hover {
-            fill: $color-text-light;
-        }
-    }
-    &__add:hover {
+    &__icon:hover {//used
         fill: white;
     }
-    &__new {
+    &__new {//used
         font-size: 1.5rem;
     }
-    &__addBtn {
+    &__btn {//used
         border: none;
         border-radius: 6px;
         background-color: $color-main;
         text-align: center;
+        color: $color-text-primary;
+        font-family: "Roboto", sans-serif;
+        font-weight: 300;
         box-shadow: 0px 4px 6px rgba(0,0,0,.5);
         transition: all .4s ease-in;
-        padding: 6px 2px 2px 2px;
+        padding: 4px 8px;
+        margin: 0px 4px;
+        outline: none;
 
         &:hover {
             background-color: $color-main-dark;
             transform: translateY(2px); 
         }
+        &--list-item {
+            padding: 2px 2px 0px 2px;
+            margin: 0px 2px;
+            line-height: 1.25rem;
+        }
     }
-    &__taskEntry {
+    &__taskEntry {//used
         border-radius: 6px;
         font-size: 1.2rem;
         padding: 2px;
         height: 2rem;
+        margin: 0px 0px 1.5rem .75rem;
 
         &:focus {
             outline: none;

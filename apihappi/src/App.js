@@ -3,11 +3,14 @@ import "./style.css"
 import Flip from "./Flip"
 import Nav from "./Nav"
 import Weather from "./Weather"
+import FullTasksList from "./FullTasksList"
 
 function App() {
   return (
     <div className="App page-container">
       <Nav />
+      {/* full page window needed temporarily */}
+      <FullTasksList />
       <main className="main-content">
         <section className="section-news app"></section>
         <Weather />
