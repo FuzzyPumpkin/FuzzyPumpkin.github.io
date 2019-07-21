@@ -40,7 +40,6 @@
 }
 .section-tasks { 
     grid-area: tasks;
-    position: relative;
     background-color: $color-accent-light;
 }
 .section-notes { 
@@ -78,20 +77,26 @@
 }
 .expandIcon {
     height: 1rem; width: 1rem;
-    top: 2px; right: 2px;
+    top: 8px; right: 2px;
 }
 .condenseIcon {
     height: 2rem; width: 2rem;
     top: 1.2rem; right: 1.2rem;
+    z-index: 20;
 }
 
 
 //testing
 .fullscreen {
     width: 100%; min-height: 75rem;
-    position: relative;
+    position: absolute;
+    top: 0; left: 0;
     overflow: hidden;
     box-shadow: 0px 4px 6px rgba(0,0,0,.5);
     border-radius: 6px;
     background-color: white;
+    z-index: 10;
+}
+.noscreen {
+    display: none;
 }

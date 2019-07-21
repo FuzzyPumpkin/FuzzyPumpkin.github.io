@@ -55,10 +55,7 @@ class FullTasksList extends Component {
             )
         })
         return (
-            <div className="fullscreen">
-                <svg className="condenseIcon">
-                    <use xlinkHref="symbol-defs.svg#icon-search-minus"></use>
-                </svg>
+            <div className={this.props.fullTask === true ? "fullscreen" : "noscreen"}>
                 <svg className="tasks__bgicon tasks__bgicon--full">
                     <use xlinkHref="symbol-defs.svg#icon-pencil"></use>
                 </svg>
