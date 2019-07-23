@@ -1,8 +1,38 @@
 import React, { Component } from 'react'
+import axios from "axios";
+
 
 class Weather extends Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            cityID: 3582383,
+            todayMin: "",
+            todayMax: "",
+            tomMin: "",
+            tomMax: "",
+            todaySky: "",
+            tomSky: ""
+        };
+    }
+    componentDidMount(){
+        const weatherAPI = `http://api.openweathermap.org/data/2.5/forecast?id=${this.state.cityID}&APPID=80a26f17e4473520b354e9b8cedcacbd`;
+        axios.get(weatherAPI).then(response => {
+            this.setState({
+                todayMin: response.data.list[0].main.temp_min,
+                todayMax: response.data.list[0].main.temp_max,
+                tomMin: response.data.list[0].weather[0].main,
+                tomMax: response.data.list[0].main.temp_min,
+                todaySky: response.data.list[1].main.temp_max,
+                tomSky: response.data.list[1].weather[0].main
+            });
+        });
+    }
+
     render(){
+        
         return(
+            
             <section className="section-weather app">
                 <div className="weather__container">
                     <h2 className="weather__title">Weather</h2>
