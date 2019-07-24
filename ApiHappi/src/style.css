@@ -372,7 +372,11 @@ p {
   justify-content: center; }
 
 .weather__today {
-  margin: 1.5rem 0; }
+  margin: .5rem 0;
+  border-top: 1px solid #3b3a39;
+  border-bottom: 1px solid #3b3a39;
+  background-color: rgba(255, 255, 255, 0.253);
+  padding: 1rem 0; }
 
 .weather__tomorrow .weather__icon {
   width: 2rem;
@@ -482,8 +486,7 @@ p {
 
 .expandIcon, .condenseIcon {
   position: absolute;
-  fill: #3b3a39;
-  transition: all .2s ease-in; }
+  fill: #3b3a39; }
   .expandIcon:hover, .condenseIcon:hover {
     fill: #b0adaa; }
 

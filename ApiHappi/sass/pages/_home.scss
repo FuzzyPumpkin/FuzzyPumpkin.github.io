@@ -69,7 +69,6 @@
 .expandIcon, .condenseIcon {
     position: absolute;
     fill: $color-text-primary;
-    transition: all .2s ease-in;
 
     &:hover {
         fill: $color-text-light;
