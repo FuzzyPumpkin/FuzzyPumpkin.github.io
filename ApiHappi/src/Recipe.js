@@ -1,10 +1,7 @@
 import React, { Component } from 'react'
 import axios from "axios";
 
-// https://www.food2fork.com/api/get?key=cf84275fc95108a351fb7c5035b53ba7&rId=35382
-// ID 700 - 5000 safe
-// do something with date to determine number
-
+//not actually updating state during render
 
 class Recipe extends Component {
     constructor(props){
@@ -19,17 +16,26 @@ class Recipe extends Component {
     }
     componentDidMount(){
         const recipeAPI = `https://www.food2fork.com/api/get?key=cf84275fc95108a351fb7c5035b53ba7&rId=${this.state.id}`;
+        const today = new Date();
+        const recipeID = today.getUTCDate() * (today.getUTCMonth() + 1) * (today.getUTCFullYear() - 2000);
+
         axios.get(recipeAPI).then(response => {
-            console.log(response.data);
             this.setState({
                 linkUrl: response.data.recipe.source_url,
                 imgURL: response.data.recipe.image_url,
                 name: response.data.recipe.title,
-                sourceName: response.data.recipe.publisher
+                sourceName: response.data.recipe.publisher,
+                id: recipeID
             });
         });
     }
-
+    getDailyId(){
+        const today = new Date();
+        const recipeID = today.getUTCDate() * (today.getUTCMonth() + 1) * (today.getUTCFullYear() - 2000);
+        this.setState({
+            id: recipeID
+        });
+    }
 
     render(){
         return (
