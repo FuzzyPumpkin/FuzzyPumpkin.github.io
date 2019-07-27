@@ -10,30 +10,18 @@ class Recipe extends Component {
             linkUrl: "",
             imgURL: "",
             name: "",
-            sourceName: "",
-            id: 35382
+            sourceName: ""
         };
     }
     componentDidMount(){
-        const recipeAPI = `https://www.food2fork.com/api/get?key=cf84275fc95108a351fb7c5035b53ba7&rId=${this.state.id}`;
-        const today = new Date();
-        const recipeID = today.getUTCDate() * (today.getUTCMonth() + 1) * (today.getUTCFullYear() - 2000);
-
+        const recipeAPI = `https://www.food2fork.com/api/get?key=cf84275fc95108a351fb7c5035b53ba7&rId=${this.props.recipeID}`;
         axios.get(recipeAPI).then(response => {
             this.setState({
                 linkUrl: response.data.recipe.source_url,
                 imgURL: response.data.recipe.image_url,
                 name: response.data.recipe.title,
-                sourceName: response.data.recipe.publisher,
-                id: recipeID
+                sourceName: response.data.recipe.publisher
             });
-        });
-    }
-    getDailyId(){
-        const today = new Date();
-        const recipeID = today.getUTCDate() * (today.getUTCMonth() + 1) * (today.getUTCFullYear() - 2000);
-        this.setState({
-            id: recipeID
         });
     }
 

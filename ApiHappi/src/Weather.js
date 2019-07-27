@@ -22,7 +22,6 @@ class Weather extends Component {
             this.setState({
                 todayMin: Math.floor(response.data.list[0].main.temp_min),
                 todayMax: Math.floor(response.data.list[0].main.temp_max),
-                tomMin: Math.floor(response.data.list[8].main.temp_min),
                 tomMax: Math.floor(response.data.list[8].main.temp_max),
                 todaySky: response.data.list[0].weather[0].main,
                 tomSky: response.data.list[8].weather[0].main,
@@ -91,11 +90,6 @@ class Weather extends Component {
                         </div>
                         <div className="weather__col2">
                             <p className="weather__high">{this.state.tomMax}  
-                                <svg className="weather__degree">
-                                    <use xlinkHref="symbol-defs.svg#icon-Fahrenheit"></use>
-                                </svg>
-                            </p>
-                            <p className="weather__high">{this.state.tomMin} 
                                 <svg className="weather__degree">
                                     <use xlinkHref="symbol-defs.svg#icon-Fahrenheit"></use>
                                 </svg>
