@@ -1,0 +1,19 @@
+.recipe {
+    &__container {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        height: 100%; width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+    &__image {
+        width: 10rem;
+        margin: .5rem;
+        box-shadow: 0px 2px 4px rgba(0,0,0,.5);
+        border-radius: 6px;
+    }
+    &__headline {
+        font-size: 1.2rem;
+    }
+}
