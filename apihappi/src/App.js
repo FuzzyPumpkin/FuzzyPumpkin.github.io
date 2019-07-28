@@ -3,6 +3,7 @@ import "./style.css"
 import Calculator from "./Calculator"
 import Flip from "./Flip"
 import Nav from "./Nav"
+import News from "./News"
 import Recipe from "./Recipe"
 import Weather from "./Weather"
 import Tasks from "./Tasks"
@@ -20,11 +21,10 @@ function App() {
     <div className="App page-container">
       <Nav />
       <main className="main-content">
-        <section className="section-news app"></section>
+        <News />
         <Weather />
         <section className="section-word app"></section>
         <Tasks />
-        <section className="section-notes app"></section>
         <Recipe recipeID = {randRecipeID()}/>
         <Flip />
         <section className="section-budget app"></section>

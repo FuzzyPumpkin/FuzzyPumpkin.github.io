@@ -10,7 +10,8 @@ class Recipe extends Component {
             linkUrl: "",
             imgURL: "",
             name: "",
-            sourceName: ""
+            sourceName: "",
+            notLoaded: true
         };
     }
     componentDidMount(){
@@ -20,7 +21,8 @@ class Recipe extends Component {
                 linkUrl: response.data.recipe.source_url,
                 imgURL: response.data.recipe.image_url,
                 name: response.data.recipe.title,
-                sourceName: response.data.recipe.publisher
+                sourceName: response.data.recipe.publisher,
+                notLoaded: false
             });
         });
     }
@@ -28,13 +30,13 @@ class Recipe extends Component {
     render(){
         return (
             <section className="section-recipe app">
-                <div className="recipe__container">
+                {this.state.notLoaded ? <div></div>
+                : <div className="recipe__container">
                     <h2 className="recipe__headline">Recipe of the Day</h2>
                     <p>{this.state.name}</p>
                     <img className="recipe__image" src={this.state.imgURL} alt={this.state.name}/>
                     <p>Source: <a href={this.state.linkUrl}>{this.state.sourceName}</a></p>
-                </div>
-
+                </div> }
             </section>
         )
     }

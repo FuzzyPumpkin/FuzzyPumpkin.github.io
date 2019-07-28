@@ -13,7 +13,8 @@ class Weather extends Component {
             tomMin: "",
             tomMax: "",
             todaySky: "",
-            tomSky: ""
+            tomSky: "",
+            notLoaded: true
         };
     }
     componentDidMount(){
@@ -25,7 +26,8 @@ class Weather extends Component {
                 tomMax: Math.floor(response.data.list[8].main.temp_max),
                 todaySky: response.data.list[0].weather[0].main,
                 tomSky: response.data.list[8].weather[0].main,
-                cityName: response.data.city.name
+                cityName: response.data.city.name,
+                notLoaded: false
             });
         });
     }
@@ -48,7 +50,8 @@ class Weather extends Component {
         const tomSkyIcon = this.weatherIcon(this.state.tomSky);
         return(
             <section className="section-weather app">
-                <div className="weather__container">
+                {this.state.notLoaded ? <div></div>
+                : <div className="weather__container">
                     <h2 className="weather__title">Weather</h2>
                     <h3 className="weather__location">
                         <svg className="weather__icon--map">
@@ -97,7 +100,7 @@ class Weather extends Component {
                         </div>
                     </div>
                 </div>
-                </div>
+            </div> }
             </section>
         )
     };
