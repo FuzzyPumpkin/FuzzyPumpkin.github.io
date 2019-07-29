@@ -1,0 +1,88 @@
+/* COLORS */
+.notrealtag {
+    color: rgb(245, 245, 241); /*white variant for text, bg*/
+    color: rgb(194, 169, 191);/*highlight*/
+    color: rgb(206, 101, 95);/*nav bg with white text*/
+    color: rgb(197, 143, 112);/*accent bg with white text*/
+    color: rgb(89, 110, 103);/*lighter text */
+    color: rgb(65, 80, 75);/*regular text */
+}
+/* page resets */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    background-color: rgb(245, 245, 241);
+    color: rgb(65, 80, 75);  
+    font-family: sans-serif;
+}
+html {
+    font-size: 10px;
+    min-height: 100vh;
+}
+h1 {
+    font-size: 8rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+p {
+    font-size: 1.75rem;
+    text-align: center;
+    line-height: 2.5rem;
+}
+/* utility classes */
+.u-flex-row {
+    display: flex;
+    flex-direction: row;
+    width: 100%; height: 100%;
+}
+
+
+/* navigation bar */
+.nav {
+    display: flex;
+    width: 10rem;
+    font-size: 2rem;
+    background-color: rgb(206, 101, 95);
+    justify-content: center;
+    padding-top: 8rem;
+    box-shadow: 0px 0px 6px rgba(0,0,0,.7);
+}
+.nav-ul {
+    list-style: none;
+}
+.nav-li {
+    margin-bottom: 1rem;
+    padding: 5px;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+    .nav-li:hover {
+        border: 1px solid rgb(245, 245, 241);
+    }
+.nav-active {
+    background-color: rgb(245, 245, 241);
+}
+.nav-item {
+    color: rgb(245, 245, 241);
+    text-decoration: none;
+}
+.nav-active .nav-item {
+    color: rgb(206, 101, 95);
+}
+/* main section */
+main {
+    flex: 1;
+    padding: 4rem;
+}
+.main-blurb {
+    background-color: rgb(194, 169, 191);
+    padding: 2rem;
+    color: white;
+    box-shadow: 0px 2px 8px rgba(0,0,0,.5);
+}
