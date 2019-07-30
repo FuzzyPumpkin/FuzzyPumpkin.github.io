@@ -22,11 +22,11 @@ function App() {
     <div className="App page-container">
       <Nav />
       <main className="main-content">
-        <News />
-        <Weather />
+        {/* <News />
+        <Weather /> */}
         <section className="section-word app"></section>
         <Tasks />
-        <Recipe recipeID = {randRecipeID()}/>
+        {/* <Recipe recipeID = {randRecipeID()}/> */}
         <Flip />
         <section className="section-budget app"></section>
         <section className="section-timezone app"></section>
