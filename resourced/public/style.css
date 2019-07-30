@@ -46,15 +46,21 @@ p {
 /* navigation bar */
 .nav {
     display: flex;
-    width: 10rem;
+    min-width: 10rem;
     font-size: 2rem;
     background-color: rgb(206, 101, 95);
     justify-content: center;
-    padding-top: 8rem;
+    padding: 8rem 2rem 0 2rem;
     box-shadow: 0px 0px 6px rgba(0,0,0,.7);
 }
 .nav-ul {
     list-style: none;
+}
+.nav-title {
+    color: rgb(245, 245, 241);
+    border-bottom: 2px dashed rgb(245, 245, 241);
+    margin-bottom: 2rem;
+    font-size: 2.25rem;
 }
 .nav-li {
     margin-bottom: 1rem;
@@ -64,6 +70,7 @@ p {
 }
     .nav-li:hover {
         border: 1px solid rgb(245, 245, 241);
+        padding: 4px;
     }
 .nav-active {
     background-color: rgb(245, 245, 241);
@@ -83,6 +90,66 @@ main {
 .main-blurb {
     background-color: rgb(194, 169, 191);
     padding: 2rem;
-    color: white;
+    color: rgb(245, 245, 241);
     box-shadow: 0px 2px 8px rgba(0,0,0,.5);
 }
+/* card grid */
+.cardgrid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+/* cards */
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 22.5rem; height: 35rem;
+    box-shadow: 0px 2px 8px rgba(0,0,0,.5);
+    margin: 4rem 4rem 4rem 0;
+    text-align: center;
+    padding: .5rem;
+}
+.card-imageContainer {
+    height: 16rem;
+}
+.card-image {
+    width: 18rem; height: 18rem;
+    box-shadow: 0px 2px 8px rgba(0,0,0,.5);
+    transform: translateY(-2.5rem);
+}
+.card-link {
+    font-size: 2rem;
+    text-decoration: none;
+    color: rgb(65, 80, 75);
+    background-color: rgba(197, 143, 112, .5);
+    display: block;
+}
+.card-tagContainer {
+    margin-top: auto;
+}
+.card-blurb {
+    padding: .5rem;
+}
+.card-tag {
+    background-color: rgb(206, 101, 95);
+    color: rgb(245, 245, 241);
+    border: none;
+    border-radius: 6px;
+    padding: 4px;
+    transition: all .4s ease;
+    font-size: 1rem;
+    margin: 2px;
+}
+    .card-tag:hover {
+        border: 1px solid rgb(206, 101, 95);
+        background-color: rgb(245, 245, 241);
+        color: rgb(206, 101, 95);
+        padding: 3px;
+    }
+/* card-imageContainer
+card-image
+card-info
+card-link
+card-blurb
+card-tagContainer
+card-tag  */

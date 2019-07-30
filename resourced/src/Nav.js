@@ -1,10 +1,11 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
 class Nav extends Component {
     render(){
         return (
             <nav className="nav">
                 <ul className="nav-ul">
+                    <p className="nav-title">Tag List</p>
                     <li className="nav-li">
                         <a href="www.google.com" className="nav-item">Item</a>
                     </li>
