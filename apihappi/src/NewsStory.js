@@ -5,7 +5,6 @@ class NewsStory extends Component {
         super(props);
     }
     render(){
-        console.log(this.props.article);
         return (
             <article className="news__story">
                 <h3 className="news__headline">{this.props.article.title.substring(0, 60)}...</h3>

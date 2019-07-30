@@ -1,6 +1,7 @@
 import React from 'react';
 import "./style.css"
 import Calculator from "./Calculator"
+import Currency from "./Currency"
 import Flip from "./Flip"
 import Nav from "./Nav"
 import News from "./News"
@@ -29,7 +30,7 @@ function App() {
         <Flip />
         <section className="section-budget app"></section>
         <section className="section-timezone app"></section>
-        <section className="section-currency app"></section>
+        <Currency />
         <Calculator />
       </main>
     </div>
