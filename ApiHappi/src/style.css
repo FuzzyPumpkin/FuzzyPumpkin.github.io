@@ -339,9 +339,14 @@ p {
   justify-content: center;
   z-index: 2; }
 
+.timezone__column {
+  display: flex;
+  flex-direction: column; }
+
 .timezone__local, .timezone__other {
   flex-direction: column;
-  width: 100%; }
+  width: 100%;
+  margin-top: 2rem; }
 
 .timezone__timezone, .timezone__local, .timezone__other {
   display: flex;
@@ -352,8 +357,8 @@ p {
 .timezone__bgicon {
   fill: rgba(176, 173, 170, 0.4);
   position: absolute;
-  bottom: -3rem;
-  right: -1rem;
+  bottom: -5rem;
+  left: -4rem;
   z-index: 1;
   width: 15rem;
   height: 15rem; }

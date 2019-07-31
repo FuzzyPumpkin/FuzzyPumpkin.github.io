@@ -8,6 +8,7 @@ import News from "./News"
 import Recipe from "./Recipe"
 import Weather from "./Weather"
 import Tasks from "./Tasks"
+import Timezone from "./Timezone"
 
 function randRecipeID(){
   const today = new Date();
@@ -29,8 +30,8 @@ function App() {
         {/* <Recipe recipeID = {randRecipeID()}/> */}
         <Flip />
         <section className="section-budget app"></section>
-        <section className="section-timezone app"></section>
-        <Currency />
+        <Timezone />
+        {/* <Currency /> */}
         <Calculator />
       </main>
     </div>

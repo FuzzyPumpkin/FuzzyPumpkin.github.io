@@ -19,9 +19,14 @@
         justify-content: center;
         z-index: 2;
     }
+    &__column {
+        display: flex;
+        flex-direction: column;
+    }
     &__local, &__other {
         flex-direction: column;
         width: 100%;
+        margin-top: 2rem;
     }
     &__timezone, &__local, &__other {
         display: flex;
@@ -32,8 +37,8 @@
     &__bgicon {
         fill: rgba($color-text-light, .4);
         position: absolute;
-        bottom: -3rem;
-        right: -1rem;
+        bottom: -5rem;
+        left: -4rem;
         z-index: 1;
         width: 15rem; height: 15rem;
     }
