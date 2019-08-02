@@ -9,6 +9,7 @@ import Recipe from "./Recipe"
 import Weather from "./Weather"
 import Tasks from "./Tasks"
 import Timezone from "./Timezone"
+import Word from "./Word"
 
 function randRecipeID(){
   const today = new Date();
@@ -25,7 +26,7 @@ function App() {
       <main className="main-content">
         {/* <News />
         <Weather /> */}
-        <section className="section-word app"></section>
+        {/* <Word /> */}
         <Tasks />
         {/* <Recipe recipeID = {randRecipeID()}/> */}
         <Flip />
