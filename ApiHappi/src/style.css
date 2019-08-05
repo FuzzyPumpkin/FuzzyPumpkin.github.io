@@ -368,6 +368,10 @@ p {
   font-style: "Roboto Condensed", sans-serif;
   color: #fdad58; }
 
+.timezone__btnIcon {
+  height: 1rem;
+  width: 1rem; }
+
 .weather__container {
   height: 100%;
   width: 100%;
