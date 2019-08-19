@@ -54,5 +54,51 @@ const resources = [
         "imgURL": "",
         "description": "Nav similar to hamburger that expands into concentric rings.",
         "tags": ["Codepen", "Inspiration"]
+    },
+    {   
+        "id": 7,
+        "name": "Photos For Class",
+        "siteURL": "https://photosforclass.com/",
+        "imgURL": "",
+        "description": "Creative Commons image resource",
+        "tags": ["Graphics"]
+    },
+    {   
+        "id": 8,
+        "name": "EMOJI CSS",
+        "siteURL": "https://afeld.github.io/emoji-css/",
+        "imgURL": "",
+        "description": "Icons of popular emojis.",
+        "tags": ["Library", "CSS", "Graphics"]
+    },
+    {   
+        "id": 9,
+        "name": "IcoMoon",
+        "siteURL": "https://icomoon.io/app/#/select/library",
+        "imgURL": "https://fuzzypumpkin.github.io/resourced/public/images/icomoon.jpg",
+        "description": "SVG icon sets, fully customizable to just those you want to use.",
+        "tags": ["SVG", "Graphics"]
+    },
+    {   
+        "id": 9,
+        "name": "CSS Tricks - Glyphs",
+        "siteURL": "https://css-tricks.com/snippets/html/glyphs/",
+        "imgURL": "",
+        "description": "HTML entities for symbols that will not display otherwise, such as Latin characters.",
+        "tags": ["HTML"]
     }
 ]
+// https://caniuse.com/
+// https://daneden.github.io/animate.css/
+// https://bennettfeely.com/clippy/
+// https://cubic-bezier.com/#.11,.11,1,.38
+// https://easings.net/en
+// http://keycodes.atjayjo.com/#unicode
+// https://fonts.google.com/
+// http://paletton.com/#uid=1000u0kllllaFw0g0qFqFg0w0aF
+// https://unsplash.com/
+// https://pixabay.com/
+// https://coverr.co/
+// https://fontawesome.com/?from=io
+// https://dribbble.com/
+// https://imagecompressor.com/
