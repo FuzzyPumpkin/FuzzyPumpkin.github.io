@@ -1,21 +1,27 @@
 import React, { Component } from 'react'
 
 class Card extends Component {
+    constructor(props){
+        super(props);
+    }
     render(){
         return (
             <article className="card">
                 <div className="card-imageContainer">
-                    <img src="../images/icomoon.jpg" alt="" className="card-image"/>
+                    {this.props.imgURL.length === 0 ? 
+                        <img src="./images/noimage.jpg" 
+                         alt={this.props.name} className="card-image"/> :
+                         <img src={this.props.imgURL} alt={this.props.name} className="card-image"/>
+                    }
                 </div>
                 <div className="card-info">
-                    <a href="www.google.com" className="card-link">Site Name</a>
-                    <p className="card-blurb">Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                        Assumenda nemo quas ea officiis dolore id. </p>
+                    <a href={this.props.siteURL} className="card-link">{this.props.name}</a>
+                    <p className="card-blurb">{this.props.description}</p>
                 </div>
                 <div className="card-tagContainer">
-                    <button className="card-tag">HTML</button>
-                    <button className="card-tag">CSS</button>
-                    <button className="card-tag">JavaScript</button>
+                    {this.props.tags.map(tag => (
+                        <button className="card-tag">{tag}</button>       
+                    ))}
                 </div>
             </article>
         )

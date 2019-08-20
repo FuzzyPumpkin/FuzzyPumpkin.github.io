@@ -3,7 +3,7 @@ const resources = [
         "id": 0,
         "name": "Photopea",
         "siteURL": "https://www.photopea.com/",
-        "imgURL": "https://fuzzypumpkin.github.io/resourced/public/images/Photopea.jpg",
+        "imgURL": "./images/Photopea.jpg",
         "description": "A free image editing tool with many of the same features as Photoshop.",
         "tags": ["Tools", "Graphics"]
     },
@@ -27,7 +27,7 @@ const resources = [
         "id": 3,
         "name": "Codewars",
         "siteURL": "https://www.codewars.com/",
-        "imgURL": "https://fuzzypumpkin.github.io/resourced/public/images/Codewars.jpg",
+        "imgURL": "./images/Codewars.jpg",
         "description": "Ranked practice problems in a myriad of languages.",
         "tags": ["JavaScript", "Ruby", "Practice"]
     },
@@ -75,7 +75,7 @@ const resources = [
         "id": 9,
         "name": "IcoMoon",
         "siteURL": "https://icomoon.io/app/#/select/library",
-        "imgURL": "https://fuzzypumpkin.github.io/resourced/public/images/icomoon.jpg",
+        "imgURL": "./images/icomoon.jpg",
         "description": "SVG icon sets, fully customizable to just those you want to use.",
         "tags": ["SVG", "Graphics"]
     },
@@ -102,3 +102,5 @@ const resources = [
 // https://fontawesome.com/?from=io
 // https://dribbble.com/
 // https://imagecompressor.com/
+
+export default resources;
