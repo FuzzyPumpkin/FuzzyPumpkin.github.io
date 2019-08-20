@@ -71,15 +71,17 @@ p {
         border: 1px solid rgb(245, 245, 241);
         padding: 4px;
     }
-.nav-active {
-    background-color: rgb(245, 245, 241);
-}
 .nav-item {
     color: rgb(245, 245, 241);
     text-decoration: none;
 }
-.nav-active .nav-item {
+
+.nav-active {
+    background-color: rgb(245, 245, 241);
     color: rgb(206, 101, 95);
+    display: block;
+    border-radius: 6px;
+    padding: 1px;
 }
 /* main section */
 main {
@@ -97,6 +99,7 @@ main {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
 }
 /* cards */
 .card {

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
 
 class Nav extends Component {
     render(){
@@ -7,20 +8,13 @@ class Nav extends Component {
                 <ul className="nav-ul">
                     <p className="nav-title">Tag List</p>
                     <li className="nav-li">
-                        <a href="www.google.com" className="nav-item">Item</a>
-                    </li>
-                    <li className="nav-li">
-                        <a href="www.google.com" className="nav-item">Item</a>
-                    </li>
-                    <li className="nav-li nav-active">
-                        <a href="www.google.com" className="nav-item">Item</a>
-                    </li>
-                    <li className="nav-li">
-                        <a href="www.google.com" className="nav-item">Item</a>
-                    </li>
-                    <li className="nav-li">
-                        <a href="www.google.com" className="nav-item">Item</a>
-                    </li>
+                        <NavLink exact to='/' className="nav-item" activeClassName="nav-active">All</NavLink>
+                    </li>   
+                    {this.props.tags.map(tag => (
+                        <li className="nav-li">
+                            <NavLink exact to={`/${tag}`} className="nav-item" activeClassName="nav-active">{tag}</NavLink>
+                        </li>       
+                    ))}
                 </ul>
             </nav>
         )
