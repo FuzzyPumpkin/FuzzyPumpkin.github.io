@@ -16,14 +16,13 @@
   box-sizing: border-box;
 }
 body {
-    height: 100vh;
+    min-height: 100vh;
     background-color: rgb(245, 245, 241);
     color: rgb(65, 80, 75);  
     font-family: sans-serif;
 }
 html {
     font-size: 10px;
-    min-height: 100vh;
 }
 h1 {
     font-size: 8rem;

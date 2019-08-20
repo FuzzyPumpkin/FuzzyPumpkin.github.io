@@ -80,7 +80,7 @@ const resources = [
         "tags": ["SVG", "Graphics"]
     },
     {   
-        "id": 9,
+        "id": 10,
         "name": "CSS Tricks - Glyphs",
         "siteURL": "https://css-tricks.com/snippets/html/glyphs/",
         "imgURL": "",

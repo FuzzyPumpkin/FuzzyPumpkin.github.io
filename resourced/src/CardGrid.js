@@ -3,10 +3,6 @@ import Card from "./Card";
 
 
 class CardGrid extends Component {
-    constructor(props){
-        super(props);
-    }
-
     render(){
         return (
             <section className="cardgrid">
@@ -18,6 +14,7 @@ class CardGrid extends Component {
                         imgURL={r.imgURL} 
                         description={r.description} 
                         tags={r.tags}
+                        key={r.id}
                     />        
                 ))}
             </section>

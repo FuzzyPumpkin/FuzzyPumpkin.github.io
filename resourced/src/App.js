@@ -1,10 +1,28 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Nav from "./Nav";
 import CardGrid from "./CardGrid";
 import resources from "./Resources";
 
-function App() {
-  return (
+class App extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+        tagList: []
+    };
+  }
+  componentDidMount(){
+    let freshTagList = [];
+    resources.map(r => (
+      r.tags.forEach(function(tag){
+        if(!freshTagList.includes(tag)){freshTagList.push(tag)};
+      })  
+    ));
+    this.setState({
+      tagList: freshTagList.sort()
+    });
+  }
+  render(){
+    return (
     <div className="u-flex-row">
       <Nav />
       <main>
@@ -16,6 +34,7 @@ function App() {
       </main>
     </div>
   );
+}
 }
 
 export default App;

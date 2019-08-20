@@ -1,9 +1,6 @@
 import React, { Component } from 'react'
 
 class Card extends Component {
-    constructor(props){
-        super(props);
-    }
     render(){
         return (
             <article className="card">
@@ -20,7 +17,7 @@ class Card extends Component {
                 </div>
                 <div className="card-tagContainer">
                     {this.props.tags.map(tag => (
-                        <button className="card-tag">{tag}</button>       
+                        <button className="card-tag" key={tag}>{tag}</button>       
                     ))}
                 </div>
             </article>
