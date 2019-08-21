@@ -27,7 +27,7 @@ class App extends Component {
   render(){
     const getTag = props => {
       let tag = props.match.params.tag;
-      return <CardGrid {...props} tag={tag} />;
+      return <CardGrid {...props} tag={tag} resources={resources} />;
     }
 
     return (
@@ -39,7 +39,7 @@ class App extends Component {
             focusing on front end and design. Created and shared by Kari Minger, aka FuzzyPumpkin, in hopes of bettering 
             the community.</p>
         <Switch>
-          <Route exact path="/" render={() => <CardGrid resources={resources}/>} />
+          <Route exact path="/" render={() => <CardGrid resources={resources} tag="all"/>} />
           <Route exact path='/:tag' render={getTag} />
         </Switch>
         </main>

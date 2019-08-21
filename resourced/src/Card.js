@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class Card extends Component {
     render(){
@@ -17,7 +18,7 @@ class Card extends Component {
                 </div>
                 <div className="card-tagContainer">
                     {this.props.tags.map(tag => (
-                        <button className="card-tag" key={tag}>{tag}</button>       
+                        <Link exact to={`/${tag}`} className="card-tag" key={tag}>{tag}</Link>       
                     ))}
                 </div>
             </article>

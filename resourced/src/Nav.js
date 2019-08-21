@@ -11,7 +11,7 @@ class Nav extends Component {
                         <NavLink exact to='/' className="nav-item" activeClassName="nav-active">All</NavLink>
                     </li>   
                     {this.props.tags.map(tag => (
-                        <li className="nav-li">
+                        <li className="nav-li" key={tag}>
                             <NavLink exact to={`/${tag}`} className="nav-item" activeClassName="nav-active">{tag}</NavLink>
                         </li>       
                     ))}
