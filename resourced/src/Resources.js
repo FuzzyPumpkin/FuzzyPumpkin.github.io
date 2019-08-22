@@ -86,6 +86,14 @@ const resources = [
         "imgURL": "",
         "description": "HTML entities for symbols that will not display otherwise, such as Latin characters.",
         "tags": ["HTML"]
+    },
+    {   
+        "id": 11,
+        "name": "Can I Use...",
+        "siteURL": "https://caniuse.com/",
+        "imgURL": "",
+        "description": "Searchable guide showing support by browser for CSS properties.",
+        "tags": ["CSS"]
     }
 ]
 // https://caniuse.com/
@@ -102,5 +110,18 @@ const resources = [
 // https://fontawesome.com/?from=io
 // https://dribbble.com/
 // https://imagecompressor.com/
+//https://www.codementor.io/blizzerand/building-forms-using-react-everything-you-need-to-know-iz3eyoq4y
+//https://regexcrossword.com/
+//http://html5doctor.com/downloads/h5d-sectioning-flowchart.png
+//https://javascript30.com/
+//https://dribbble.com/
+//https://www.behance.net/
+//https://github.com/kamranahmedse/developer-roadmap
+//http://medium.com/@gemarin/the-junior-developers-guide-to-optimizing-images-for-the-web-70701c524b63
+//https://codepen.io/John_mpf/pen/MzXNwr
+//https://www.punchkick.com/user-research/user-experience/2019/05/28/designing-for-accessibility
+//https://mozilla.github.io/pdf.js/
+//https://refactoringui.com
+//https://laracasts.com/series/php-for-beginners
 
 export default resources;
