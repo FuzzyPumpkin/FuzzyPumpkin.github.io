@@ -94,34 +94,303 @@ const resources = [
         "imgURL": "",
         "description": "Searchable guide showing support by browser for CSS properties.",
         "tags": ["CSS"]
-    }
+    },
+    {   
+        "id": 12,
+        "name": "Animate.css",
+        "siteURL": "https://daneden.github.io/animate.css/",
+        "imgURL": "",
+        "description": "Great CSS Animation library, with a preview page.",
+        "tags": ["CSS", "Library", "Animation"]
+    },
+    {   
+        "id": 13,
+        "name": "Clippy",
+        "siteURL": "https://bennettfeely.com/clippy/",
+        "imgURL": "",
+        "description": "CSS clip-path maker, both a repository of set shapes and the ability to create custom ones.",
+        "tags": ["CSS", "Tools"]
+    },
+    {   
+        "id": 14,
+        "name": "Cubic-Bezier",
+        "siteURL": "https://cubic-bezier.com/#.11,.11,1,.38",
+        "imgURL": "",
+        "description": "Great tool for testing how cubic-beziers will change animations.",
+        "tags": ["CSS", "Animation", "Tools"]
+    },
+    {   
+        "id": 15,
+        "name": "https://easings.net/en",
+        "siteURL": "",
+        "imgURL": "",
+        "description": "",
+        "tags": []
+    },
+    {   
+        "id": 16,
+        "name": "",
+        "siteURL": "http://keycodes.atjayjo.com/#unicode",
+        "imgURL": "",
+        "description": "",
+        "tags": []
+    },
+    {   
+        "id": 17,
+        "name": "",
+        "siteURL": "https://fonts.google.com/",
+        "imgURL": "",
+        "description": "",
+        "tags": []
+    },
+    {   
+        "id": 18,
+        "name": "",
+        "siteURL": "http://paletton.com/#uid=1000u0kllllaFw0g0qFqFg0w0aF",
+        "imgURL": "",
+        "description": "",
+        "tags": []
+    },
+    {   
+        "id": 19,
+        "name": "",
+        "siteURL": "https://unsplash.com/",
+        "imgURL": "",
+        "description": "",
+        "tags": []
+    },
+    {   
+        "id": 20,
+        "name": "",
+        "siteURL": "https://pixabay.com/",
+        "imgURL": "",
+        "description": "",
+        "tags": []
+    },
+    {   
+        "id": 21,
+        "name": "",
+        "siteURL": "https://coverr.co/",
+        "imgURL": "",
+        "description": "",
+        "tags": []
+    },
+    {   
+        "id": 22,
+        "name": "",
+        "siteURL": "https://fontawesome.com/?from=io",
+        "imgURL": "",
+        "description": "",
+        "tags": []
+    },
+    {   
+        "id": 23,
+        "name": "",
+        "siteURL": "https://dribbble.com/",
+        "imgURL": "",
+        "description": "",
+        "tags": []
+    },
+    {   
+        "id": 24,
+        "name": "",
+        "siteURL": "https://imagecompressor.com/",
+        "imgURL": "",
+        "description": "",
+        "tags": []
+    },
+    {   
+        "id": 25,
+        "name": "",
+        "siteURL": "https://www.codementor.io/blizzerand/building-forms-using-react-everything-you-need-to-know-iz3eyoq4y",
+        "imgURL": "",
+        "description": "",
+        "tags": []
+    },
+    {   
+        "id": 26,
+        "name": "",
+        "siteURL": "https://regexcrossword.com/",
+        "imgURL": "",
+        "description": "",
+        "tags": []
+    },
+    {   
+        "id": 27,
+        "name": "",
+        "siteURL": "http://html5doctor.com/downloads/h5d-sectioning-flowchart.png",
+        "imgURL": "",
+        "description": "",
+        "tags": []
+    },
+    {   
+        "id": 28,
+        "name": "",
+        "siteURL": "https://javascript30.com/",
+        "imgURL": "",
+        "description": "",
+        "tags": []
+    },
+    {   
+        "id": 29,
+        "name": "Dribbble",
+        "siteURL": "https://dribbble.com/",
+        "imgURL": "",
+        "description": "",
+        "tags": ["Inspiration"]
+    },
+    {   
+        "id": 30,
+        "name": "BeHance",
+        "siteURL": "https://www.behance.net/",
+        "imgURL": "",
+        "description": "",
+        "tags": ["Inspiration"]
+    },
+    {   
+        "id": 31,
+        "name": "",
+        "siteURL": "https://github.com/kamranahmedse/developer-roadmap",
+        "imgURL": "",
+        "description": "",
+        "tags": []
+    },
+    {   
+        "id": 32,
+        "name": "",
+        "siteURL": "http://medium.com/@gemarin/the-junior-developers-guide-to-optimizing-images-for-the-web-70701c524b63",
+        "imgURL": "",
+        "description": "",
+        "tags": []
+    },
+    {   
+        "id": 33,
+        "name": "",
+        "siteURL": "https://codepen.io/John_mpf/pen/MzXNwr",
+        "imgURL": "",
+        "description": "",
+        "tags": []
+    },
+    {   
+        "id": 34,
+        "name": "",
+        "siteURL": "https://www.punchkick.com/user-research/user-experience/2019/05/28/designing-for-accessibility",
+        "imgURL": "",
+        "description": "",
+        "tags": []
+    },
+    {   
+        "id": 35,
+        "name": "",
+        "siteURL": "https://mozilla.github.io/pdf.js/",
+        "imgURL": "",
+        "description": "",
+        "tags": []
+    },
+    {   
+        "id": 36,
+        "name": "",
+        "siteURL": "https://refactoringui.com",
+        "imgURL": "",
+        "description": "",
+        "tags": []
+    },
+    {   
+        "id": 37,
+        "name": "",
+        "siteURL": "https://laracasts.com/series/php-for-beginners",
+        "imgURL": "",
+        "description": "",
+        "tags": []
+    },
+    {   
+        "id": 38,
+        "name": "CSSBattle",
+        "siteURL": "https://cssbattle.dev",
+        "imgURL": "",
+        "description": "",
+        "tags": ["CSS", "Practice"]
+    },
+    {   
+        "id": 39,
+        "name": "",
+        "siteURL": "https://www.udemy.com/the-web-developer-bootcamp/",
+        "imgURL": "",
+        "description": "",
+        "tags": []
+    },
+    {   
+        "id": 40,
+        "name": "",
+        "siteURL": "https://www.udemy.com/understand-javascript/",
+        "imgURL": "",
+        "description": "",
+        "tags": []
+    },
+    {   
+        "id": 41,
+        "name": "",
+        "siteURL": "https://www.udemy.com/advanced-css-and-sass/",
+        "imgURL": "",
+        "description": "",
+        "tags": []
+    },
+    {   
+        "id": 42,
+        "name": "",
+        "siteURL": "https://www.udemy.com/modern-react-front-to-back/",
+        "imgURL": "",
+        "description": "",
+        "tags": []
+    },
+    {   
+        "id": 43,
+        "name": "",
+        "siteURL": "https://www.udemy.com/modern-react-bootcamp/",
+        "imgURL": "",
+        "description": "",
+        "tags": []
+    },
+    {   
+        "id": 44,
+        "name": "",
+        "siteURL": "https://www.coursera.org/learn/computational-thinking-problem-solving?",
+        "imgURL": "",
+        "description": "",
+        "tags": []
+    },
+    {   
+        "id": 45,
+        "name": "",
+        "siteURL": "https://www.coursera.org/learn/website-coding?",
+        "imgURL": "",
+        "description": "",
+        "tags": []
+    },
+    {   
+        "id": 46,
+        "name": "Contrast Ratio",
+        "siteURL": "https://contrast-ratio.com/",
+        "imgURL": "",
+        "description": "Checks the contrast ratio for text and background colors against WCAG standards.",
+        "tags": ["Accessibility", "Tools"]
+    },
+    {   
+        "id": 47,
+        "name": "Animatable",
+        "siteURL": "http://leaverou.github.io/animatable/#",
+        "imgURL": "",
+        "description": "Simulates many simple animations.",
+        "tags": ["CSS", "Animation", "Tools", "Inspiration"]
+    },
+    {   
+        "id": 48,
+        "name": "CSS3 Patterns Gallery",
+        "siteURL": "https://leaverou.github.io/css3patterns/#",
+        "imgURL": "",
+        "description": "Infinitely useful patterns created with CSS, typically creative manipulation of gradients.",
+        "tags": ["CSS", "Graphics"]
+    },
 ]
-// https://caniuse.com/
-// https://daneden.github.io/animate.css/
-// https://bennettfeely.com/clippy/
-// https://cubic-bezier.com/#.11,.11,1,.38
-// https://easings.net/en
-// http://keycodes.atjayjo.com/#unicode
-// https://fonts.google.com/
-// http://paletton.com/#uid=1000u0kllllaFw0g0qFqFg0w0aF
-// https://unsplash.com/
-// https://pixabay.com/
-// https://coverr.co/
-// https://fontawesome.com/?from=io
-// https://dribbble.com/
-// https://imagecompressor.com/
-//https://www.codementor.io/blizzerand/building-forms-using-react-everything-you-need-to-know-iz3eyoq4y
-//https://regexcrossword.com/
-//http://html5doctor.com/downloads/h5d-sectioning-flowchart.png
-//https://javascript30.com/
-//https://dribbble.com/
-//https://www.behance.net/
-//https://github.com/kamranahmedse/developer-roadmap
-//http://medium.com/@gemarin/the-junior-developers-guide-to-optimizing-images-for-the-web-70701c524b63
-//https://codepen.io/John_mpf/pen/MzXNwr
-//https://www.punchkick.com/user-research/user-experience/2019/05/28/designing-for-accessibility
-//https://mozilla.github.io/pdf.js/
-//https://refactoringui.com
-//https://laracasts.com/series/php-for-beginners
 
 export default resources;
