@@ -1,12 +1,3 @@
-/* COLORS */
-.notrealtag {
-    color: rgb(245, 245, 241); /*white variant for text, bg*/
-    color: rgb(194, 169, 191);/*highlight*/
-    color: rgb(206, 101, 95);/*nav bg with white text*/
-    color: rgb(197, 143, 112);/*accent bg with white text*/
-    color: rgb(89, 110, 103);/*lighter text */
-    color: rgb(65, 80, 75);/*regular text */
-}
 /* page resets */
 *,
 *::after,
@@ -129,6 +120,9 @@ main {
 }
 .card-tagContainer {
     margin-top: auto;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
 }
 .card-blurb {
     padding: .5rem;
