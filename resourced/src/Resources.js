@@ -121,99 +121,99 @@ const resources = [
     },
     {   
         "id": 15,
-        "name": "https://easings.net/en",
-        "siteURL": "",
+        "name": "Easing Functions Cheat Sheet",
+        "siteURL": "https://easings.net/en",
         "imgURL": "",
-        "description": "",
-        "tags": []
+        "description": "Visualizations of ease types for transitions and such.",
+        "tags": ["CSS", "Tools"]
     },
     {   
         "id": 16,
-        "name": "",
+        "name": "Keycodes",
         "siteURL": "http://keycodes.atjayjo.com/#unicode",
         "imgURL": "",
-        "description": "",
-        "tags": []
+        "description": "Keycodes, Unicodes, and URL Encoded references for keyboard keys.",
+        "tags": ["HTML", "JavaScript"]
     },
     {   
         "id": 17,
-        "name": "",
+        "name": "Google Fonts",
         "siteURL": "https://fonts.google.com/",
         "imgURL": "",
-        "description": "",
-        "tags": []
+        "description": "Incredibly large free font repository.",
+        "tags": ["Library", "CSS"]
     },
     {   
         "id": 18,
-        "name": "",
+        "name": "Paletton",
         "siteURL": "http://paletton.com/#uid=1000u0kllllaFw0g0qFqFg0w0aF",
         "imgURL": "",
-        "description": "",
-        "tags": []
+        "description": "Incredibly detailed color picker complete with visualizations for color-blindness.",
+        "tags": ["Accessibility", "Tools"]
     },
     {   
         "id": 19,
-        "name": "",
+        "name": "Unsplash",
         "siteURL": "https://unsplash.com/",
         "imgURL": "",
-        "description": "",
-        "tags": []
+        "description": "Creative Commons image resource.",
+        "tags": ["Graphics"]
     },
     {   
         "id": 20,
-        "name": "",
+        "name": "Pixabay",
         "siteURL": "https://pixabay.com/",
         "imgURL": "",
-        "description": "",
-        "tags": []
+        "description": "Creative Commons image resource.",
+        "tags": ["Graphics"]
     },
     {   
         "id": 21,
-        "name": "",
+        "name": "Coverr",
         "siteURL": "https://coverr.co/",
         "imgURL": "",
-        "description": "",
-        "tags": []
+        "description": "Creative Commons video resource, free and paid options.",
+        "tags": ["Graphics"]
     },
     {   
         "id": 22,
-        "name": "",
+        "name": "Font Awesome",
         "siteURL": "https://fontawesome.com/?from=io",
         "imgURL": "",
-        "description": "",
-        "tags": []
+        "description": "Popular vector icons source (consider IcoMoon instead for SVG).",
+        "tags": ["Graphics"]
     },
     {   
         "id": 23,
-        "name": "",
+        "name": "Dribbble",
         "siteURL": "https://dribbble.com/",
         "imgURL": "",
-        "description": "",
-        "tags": []
+        "description": "Examples of design work.",
+        "tags": ["Inspiration"]
     },
     {   
         "id": 24,
-        "name": "",
+        "name": "Optimizilla",
         "siteURL": "https://imagecompressor.com/",
         "imgURL": "",
-        "description": "",
-        "tags": []
+        "description": "Online image compressor for JPG and PNGs, 20 at a time.",
+        "tags": ["Tools", "Graphics"]
     },
     {   
         "id": 25,
-        "name": "",
+        "name": "Building Forms Using React",
         "siteURL": "https://www.codementor.io/blizzerand/building-forms-using-react-everything-you-need-to-know-iz3eyoq4y",
         "imgURL": "",
-        "description": "",
-        "tags": []
+        "description": "Blog post with tips and tricks for effective form building.",
+        "tags": ["React", "Tutorial"]
     },
     {   
         "id": 26,
-        "name": "",
+        "name": "Regex Crossword",
         "siteURL": "https://regexcrossword.com/",
         "imgURL": "",
-        "description": "",
-        "tags": []
+        "description": "Puzzle games to aid in learning how to construct effective regex expressions.",
+        "tags": ["Javascript", "Practice"]
     },
     {   
         "id": 27,
@@ -233,18 +233,18 @@ const resources = [
     },
     {   
         "id": 29,
-        "name": "Dribbble",
-        "siteURL": "https://dribbble.com/",
+        "name": "CSS3 Patterns Gallery",
+        "siteURL": "https://leaverou.github.io/css3patterns/#",
         "imgURL": "",
-        "description": "",
-        "tags": ["Inspiration"]
+        "description": "Infinitely useful patterns created with CSS, typically creative manipulation of gradients.",
+        "tags": ["CSS", "Graphics"]
     },
     {   
         "id": 30,
         "name": "BeHance",
         "siteURL": "https://www.behance.net/",
         "imgURL": "",
-        "description": "",
+        "description": "Examples of design work.",
         "tags": ["Inspiration"]
     },
     {   
@@ -382,15 +382,7 @@ const resources = [
         "imgURL": "",
         "description": "Simulates many simple animations.",
         "tags": ["CSS", "Animation", "Tools", "Inspiration"]
-    },
-    {   
-        "id": 48,
-        "name": "CSS3 Patterns Gallery",
-        "siteURL": "https://leaverou.github.io/css3patterns/#",
-        "imgURL": "",
-        "description": "Infinitely useful patterns created with CSS, typically creative manipulation of gradients.",
-        "tags": ["CSS", "Graphics"]
-    },
+    }
 ]
 
 export default resources;

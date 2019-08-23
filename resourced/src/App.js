@@ -8,8 +8,23 @@ class App extends Component {
   constructor(props){
     super(props);
     this.state = {
-        tagList: []
+        tagList: [],
+        sortedResources: []
     };
+    this.compare = this.compare.bind(this);
+  }
+
+  compare(a, b) {
+    const nameA = a.name.toLowerCase();
+    const nameB = b.name.toLowerCase();
+    let comparison = 0;
+
+    if (nameA > nameB) {
+      comparison = 1;
+    } else if (nameA < nameB) {
+      comparison = -1;
+    }
+    return comparison;
   }
 
   componentDidMount(){
@@ -21,13 +36,16 @@ class App extends Component {
     ));
     this.setState({
       tagList: freshTagList.sort()
+    });  
+    this.setState({
+      sortedResources: resources.sort(this.compare) 
     });
   }
 
   render(){
     const getTag = props => {
       let tag = props.match.params.tag;
-      return <CardGrid {...props} tag={tag} resources={resources} />;
+      return <CardGrid {...props} tag={tag} resources={this.state.sortedResources} />;
     }
 
     return (
@@ -39,7 +57,7 @@ class App extends Component {
             focusing on front end and design. Created and shared by Kari Minger, aka FuzzyPumpkin, in hopes of bettering 
             the community.</p>
         <Switch>
-          <Route exact path="/" render={() => <CardGrid resources={resources} tag="all"/>} />
+          <Route exact path="/" render={() => <CardGrid resources={this.state.sortedResources} tag="all"/>} />
           <Route exact path='/:tag' render={getTag} />
         </Switch>
         </main>

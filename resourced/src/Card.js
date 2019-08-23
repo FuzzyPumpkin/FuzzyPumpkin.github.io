@@ -17,7 +17,7 @@ class Card extends Component {
                     <p className="card-blurb">{this.props.description}</p>
                 </div>
                 <div className="card-tagContainer">
-                    {this.props.tags.map(tag => (
+                    {this.props.tags.sort().map(tag => (
                         <Link exact to={`/${tag}`} className="card-tag" key={tag}>{tag}</Link>       
                     ))}
                 </div>
