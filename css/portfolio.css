@@ -1,0 +1,126 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  background: #dadada;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: #3b3a39; }
+
+.bgpattern {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 245px;
+  min-height: 100vh;
+  background: linear-gradient(-33deg, rgba(255, 255, 255, 0.001) 30.5%, #dadada 31.5%, #dadada 32.5%, rgba(255, 255, 255, 0.001) 33.5%), linear-gradient(-33deg, rgba(255, 255, 255, 0.001) 30.5%, #dadada 31.5%, #dadada 32.5%, rgba(255, 255, 255, 0.001) 33.5%) 0 8px, linear-gradient(33deg, rgba(255, 255, 255, 0.001) 30.5%, #dadada 31.5%, #dadada 32.5%, rgba(255, 255, 255, 0.001) 33.5%), linear-gradient(33deg, rgba(255, 255, 255, 0.001) 30.5%, #dadada 31.5%, #dadada 32.5%, rgba(255, 255, 255, 0.001) 33.5%) 0 8px;
+  background-size: 245px 90px;
+  background-color: rgba(56, 51, 90, 0.3);
+  z-index: 1; }
+
+.bgpattern_alt {
+  background-color: rgba(56, 51, 90, 0.3); }
+
+.page_container {
+  position: relative;
+  right: 0;
+  top: 0;
+  z-index: 2;
+  width: 90%;
+  margin: auto; }
+
+.horizontal-rule {
+  background-color: #204969;
+  width: 95%;
+  height: .75rem;
+  margin: auto;
+  border-radius: 1rem;
+  border: 1px solid #fff7f7; }
+
+h1 {
+  font-size: 5rem;
+  letter-spacing: .5rem;
+  color: #204969;
+  font-weight: 600; }
+
+h2 {
+  font-size: 3rem;
+  letter-spacing: .5rem;
+  color: #204969;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 1rem; }
+
+.resheader {
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+  .resheader__monogrambg {
+    background-color: #38335a;
+    width: 14rem;
+    height: 12rem;
+    border-radius: 45% 10% 70% 10%;
+    border: 1px solid #fff7f7;
+    margin-right: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -11px 28px 30px -20px rgba(0, 0, 0, 0.75); }
+  .resheader__monogram {
+    font-size: 5rem;
+    font-family: "Macondo Swash Caps", cursive;
+    color: #fff7f7; }
+  .resheader__contact {
+    display: flex;
+    flex-direction: column; }
+  .resheader__icon {
+    margin: .5rem 1rem;
+    height: 2rem;
+    width: 2rem;
+    fill: #3b3a39; }
+  .resheader__method {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1.75rem; }
+
+.objective {
+  width: 50%;
+  margin: 2rem auto; }
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  background-color: #204969;
+  border: 1px solid #fff7f7;
+  padding: .5rem;
+  border-radius: 1rem; }
+  .skills__skillbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly; }
+  .skills__skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .skills__headline {
+    color: #fff7f7; }
+  .skills__iconbg {
+    background-color: #fff7f7;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 45% 10% 70% 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .skills__skillname {
+    color: #fff7f7;
+    margin-top: .5rem; }

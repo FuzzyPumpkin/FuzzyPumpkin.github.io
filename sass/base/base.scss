@@ -1,0 +1,54 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+// font size equiv to 10px, but allows for accessibility devices to change font size
+html {
+    font-size: 62.5%;
+}
+body {
+    background: $color-background;
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: $color-text;
+}
+
+// background image
+.bgpattern {
+    position: absolute;
+    right: 0; top: 0;
+    width: 245px;
+    min-height: 100vh;
+    background:
+        linear-gradient(-33deg, rgba(255,255,255,0.001) 30.5%, $color-background 31.5%, $color-background 32.5%, rgba(255,255,255,0.001) 33.5%),
+        linear-gradient(-33deg, rgba(255,255,255,0.001) 30.5%, $color-background 31.5%, $color-background 32.5%, rgba(255,255,255,0.001) 33.5%) 0 8px,
+        linear-gradient(33deg, rgba(255,255,255,0.001) 30.5%, $color-background 31.5%, $color-background 32.5%, rgba(255,255,255,0.001) 33.5%),
+        linear-gradient(33deg, rgba(255,255,255,0.001) 30.5%, $color-background 31.5%, $color-background 32.5%, rgba(255,255,255,0.001) 33.5%) 0 8px;
+	background-size: 245px 90px;
+    background-color: rgba($color-brand,.3);
+    z-index: 1;
+}
+.bgpattern_alt {
+    background-color: rgba($color-brand,.3);
+}
+//end background image
+
+.page_container{
+    position: relative;
+    right: 0; top: 0;
+    z-index: 2;
+    width: 90%;
+    margin: auto;
+}
+.horizontal-rule {
+    background-color: $color-text-headline;
+    width: 95%;
+    height: .75rem;
+    margin: auto;
+    border-radius: 1rem;
+    border: 1px solid $color-background-accent;
+}
