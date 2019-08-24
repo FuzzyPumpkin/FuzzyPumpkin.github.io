@@ -213,7 +213,7 @@ const resources = [
         "siteURL": "https://regexcrossword.com/",
         "imgURL": "./images/regex-min.jpg",
         "description": "Puzzle games to aid in learning how to construct effective regex expressions.",
-        "tags": ["Javascript", "Practice"]
+        "tags": ["JavaScript", "Practice"]
     },
     {   
         "id": 27,
