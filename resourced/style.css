@@ -120,8 +120,8 @@ main {
 }
 .card-tagContainer {
     margin-top: auto;
-    flex-wrap: wrap;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 }
 .card-blurb {

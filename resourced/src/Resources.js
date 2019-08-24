@@ -11,7 +11,7 @@ const resources = [
         "id": 1,
         "name": "Moving Head (me)",
         "siteURL": "https://codepen.io/maaarj/full/vmYPqm",
-        "imgURL": "",
+        "imgURL": "./images/movinghead.jpg",
         "description": "Animation that moves according to mouse position.",
         "tags": ["Codepen", "Inspiration"]
     },
@@ -19,7 +19,7 @@ const resources = [
         "id": 2,
         "name": "Bootstrap",
         "siteURL": "https://getbootstrap.com/",
-        "imgURL": "",
+        "imgURL": "./images/bootstrap.jpg",
         "description": "Ubiquitous CSS library.",
         "tags": ["CSS", "Library"]
     },
@@ -35,7 +35,7 @@ const resources = [
         "id": 4,
         "name": "FreeCodeCamp",
         "siteURL": "https://learn.freecodecamp.org/",
-        "imgURL": "",
+        "imgURL": "./images/freecodecamp.jpg",
         "description": "Comprehesive online bootcamp with six different certification programs.",
         "tags": ["CSS", "JavaScript", "HTML", "Course"]
     },
@@ -43,7 +43,7 @@ const resources = [
         "id": 5,
         "name": "CodeAnalogies",
         "siteURL": "https://www.codeanalogies.com/",
-        "imgURL": "",
+        "imgURL": "./images/codeanalogies.jpg",
         "description": "Myriad tutorials over many specific topics.",
         "tags": ["CSS", "JavaScript", "HTML", "API", "Tutorial", "React"]
     },
@@ -51,7 +51,7 @@ const resources = [
         "id": 6,
         "name": "Rings Navigation Concept",
         "siteURL": "https://codepen.io/bennettfeely/full/qRJOZJ",
-        "imgURL": "",
+        "imgURL": "./images/rings.jpg",
         "description": "Nav similar to hamburger that expands into concentric rings.",
         "tags": ["Codepen", "Inspiration"]
     },
@@ -59,7 +59,7 @@ const resources = [
         "id": 7,
         "name": "Photos For Class",
         "siteURL": "https://photosforclass.com/",
-        "imgURL": "",
+        "imgURL": "./images/class.jpg",
         "description": "Creative Commons image resource",
         "tags": ["Graphics"]
     },
@@ -67,7 +67,7 @@ const resources = [
         "id": 8,
         "name": "EMOJI CSS",
         "siteURL": "https://afeld.github.io/emoji-css/",
-        "imgURL": "",
+        "imgURL": "./images/emoji.jpg",
         "description": "Icons of popular emojis.",
         "tags": ["Library", "CSS", "Graphics"]
     },
@@ -83,7 +83,7 @@ const resources = [
         "id": 10,
         "name": "CSS Tricks - Glyphs",
         "siteURL": "https://css-tricks.com/snippets/html/glyphs/",
-        "imgURL": "",
+        "imgURL": "./images/glyphs.jpg",
         "description": "HTML entities for symbols that will not display otherwise, such as Latin characters.",
         "tags": ["HTML"]
     },
@@ -91,7 +91,7 @@ const resources = [
         "id": 11,
         "name": "Can I Use...",
         "siteURL": "https://caniuse.com/",
-        "imgURL": "",
+        "imgURL": "./images/caniuse.jpg",
         "description": "Searchable guide showing support by browser for CSS properties.",
         "tags": ["CSS"]
     },
@@ -99,7 +99,7 @@ const resources = [
         "id": 12,
         "name": "Animate.css",
         "siteURL": "https://daneden.github.io/animate.css/",
-        "imgURL": "",
+        "imgURL": "./images/animate.jpg",
         "description": "Great CSS Animation library, with a preview page.",
         "tags": ["CSS", "Library", "Animation"]
     },
@@ -107,7 +107,7 @@ const resources = [
         "id": 13,
         "name": "Clippy",
         "siteURL": "https://bennettfeely.com/clippy/",
-        "imgURL": "",
+        "imgURL": "./images/clippy.jpg",
         "description": "CSS clip-path maker, both a repository of set shapes and the ability to create custom ones.",
         "tags": ["CSS", "Tools"]
     },
@@ -115,7 +115,7 @@ const resources = [
         "id": 14,
         "name": "Cubic-Bezier",
         "siteURL": "https://cubic-bezier.com/#.11,.11,1,.38",
-        "imgURL": "",
+        "imgURL": "./images/cubic.jpg",
         "description": "Great tool for testing how cubic-beziers will change animations.",
         "tags": ["CSS", "Animation", "Tools"]
     },
@@ -123,7 +123,7 @@ const resources = [
         "id": 15,
         "name": "Easing Functions Cheat Sheet",
         "siteURL": "https://easings.net/en",
-        "imgURL": "",
+        "imgURL": "./images/easings.jpg",
         "description": "Visualizations of ease types for transitions and such.",
         "tags": ["CSS", "Tools"]
     },
@@ -131,7 +131,7 @@ const resources = [
         "id": 16,
         "name": "Keycodes",
         "siteURL": "http://keycodes.atjayjo.com/#unicode",
-        "imgURL": "",
+        "imgURL": "./images/keycodes.jpg",
         "description": "Keycodes, Unicodes, and URL Encoded references for keyboard keys.",
         "tags": ["HTML", "JavaScript"]
     },
@@ -139,7 +139,7 @@ const resources = [
         "id": 17,
         "name": "Google Fonts",
         "siteURL": "https://fonts.google.com/",
-        "imgURL": "",
+        "imgURL": "./images/gfonts.jpg",
         "description": "Incredibly large free font repository.",
         "tags": ["Library", "CSS"]
     },
@@ -147,7 +147,7 @@ const resources = [
         "id": 18,
         "name": "Paletton",
         "siteURL": "http://paletton.com/#uid=1000u0kllllaFw0g0qFqFg0w0aF",
-        "imgURL": "",
+        "imgURL": "./images/palleton.jpg",
         "description": "Incredibly detailed color picker complete with visualizations for color-blindness.",
         "tags": ["Accessibility", "Tools"]
     },
@@ -155,7 +155,7 @@ const resources = [
         "id": 19,
         "name": "Unsplash",
         "siteURL": "https://unsplash.com/",
-        "imgURL": "",
+        "imgURL": "./images/unsplash.jpg",
         "description": "Creative Commons image resource.",
         "tags": ["Graphics"]
     },
@@ -163,7 +163,7 @@ const resources = [
         "id": 20,
         "name": "Pixabay",
         "siteURL": "https://pixabay.com/",
-        "imgURL": "",
+        "imgURL": "./images/pixabay.jpg",
         "description": "Creative Commons image resource.",
         "tags": ["Graphics"]
     },
@@ -171,7 +171,7 @@ const resources = [
         "id": 21,
         "name": "Coverr",
         "siteURL": "https://coverr.co/",
-        "imgURL": "",
+        "imgURL": "./images/coverr.jpg",
         "description": "Creative Commons video resource, free and paid options.",
         "tags": ["Graphics"]
     },
@@ -179,7 +179,7 @@ const resources = [
         "id": 22,
         "name": "Font Awesome",
         "siteURL": "https://fontawesome.com/?from=io",
-        "imgURL": "",
+        "imgURL": "./images/awesome.jpg",
         "description": "Popular vector icons source (consider IcoMoon instead for SVG).",
         "tags": ["Graphics"]
     },
@@ -187,7 +187,7 @@ const resources = [
         "id": 23,
         "name": "Dribbble",
         "siteURL": "https://dribbble.com/",
-        "imgURL": "",
+        "imgURL": "./images/dribbble.jpg",
         "description": "Examples of design work.",
         "tags": ["Inspiration"]
     },
@@ -195,7 +195,7 @@ const resources = [
         "id": 24,
         "name": "Optimizilla",
         "siteURL": "https://imagecompressor.com/",
-        "imgURL": "",
+        "imgURL": "./images/optimizilla.jpg",
         "description": "Online image compressor for JPG and PNGs, 20 at a time.",
         "tags": ["Tools", "Graphics"]
     },
@@ -203,7 +203,7 @@ const resources = [
         "id": 25,
         "name": "Building Forms Using React",
         "siteURL": "https://www.codementor.io/blizzerand/building-forms-using-react-everything-you-need-to-know-iz3eyoq4y",
-        "imgURL": "",
+        "imgURL": "./images/building.jpg",
         "description": "Blog post with tips and tricks for effective form building.",
         "tags": ["React", "Tutorial"]
     },
@@ -211,31 +211,31 @@ const resources = [
         "id": 26,
         "name": "Regex Crossword",
         "siteURL": "https://regexcrossword.com/",
-        "imgURL": "",
+        "imgURL": "./images/regex.jpg",
         "description": "Puzzle games to aid in learning how to construct effective regex expressions.",
         "tags": ["Javascript", "Practice"]
     },
     {   
         "id": 27,
-        "name": "",
+        "name": "HTML5 Element Flowchart",
         "siteURL": "http://html5doctor.com/downloads/h5d-sectioning-flowchart.png",
-        "imgURL": "",
-        "description": "",
-        "tags": []
+        "imgURL": "./images/doctor.jpg",
+        "description": "Great flowchart that aides in deciding what semantic tags to use.",
+        "tags": ["HTML", "Accessibility"]
     },
     {   
         "id": 28,
-        "name": "",
+        "name": "JavaScript30",
         "siteURL": "https://javascript30.com/",
-        "imgURL": "",
-        "description": "",
-        "tags": []
+        "imgURL": "./images/wesbos.jpg",
+        "description": "30 Days of JavaScript code-a-long covering many topics.",
+        "tags": ["JavaScript", "Tutorial"]
     },
     {   
         "id": 29,
         "name": "CSS3 Patterns Gallery",
         "siteURL": "https://leaverou.github.io/css3patterns/#",
-        "imgURL": "",
+        "imgURL": "./images/patterns.jpg",
         "description": "Infinitely useful patterns created with CSS, typically creative manipulation of gradients.",
         "tags": ["CSS", "Graphics"]
     },
@@ -243,135 +243,135 @@ const resources = [
         "id": 30,
         "name": "BeHance",
         "siteURL": "https://www.behance.net/",
-        "imgURL": "",
+        "imgURL": "./images/behance.jpg",
         "description": "Examples of design work.",
         "tags": ["Inspiration"]
     },
     {   
         "id": 31,
-        "name": "",
+        "name": "Web Developer Roadmap",
         "siteURL": "https://github.com/kamranahmedse/developer-roadmap",
-        "imgURL": "",
-        "description": "",
-        "tags": []
+        "imgURL": "./images/roadmap.jpg",
+        "description": "Flowchart showing one guide to covering the tech needed for three developer paths.",
+        "tags": ["Tutorial"]
     },
     {   
         "id": 32,
-        "name": "",
+        "name": "Junior Developers Guide to Optimizing Images",
         "siteURL": "http://medium.com/@gemarin/the-junior-developers-guide-to-optimizing-images-for-the-web-70701c524b63",
-        "imgURL": "",
-        "description": "",
-        "tags": []
+        "imgURL": "./images/webimage.jpg",
+        "description": "Two-part guide to optimizing images, choosing the right format, and compressing.",
+        "tags": ["Graphics", "Tutorial"]
     },
     {   
         "id": 33,
-        "name": "",
+        "name": "Water Ripple Animation",
         "siteURL": "https://codepen.io/John_mpf/pen/MzXNwr",
-        "imgURL": "",
+        "imgURL": "./images/ripple.jpg",
         "description": "",
-        "tags": []
+        "tags": ["Animation", "Inspiration"]
     },
     {   
         "id": 34,
-        "name": "",
+        "name": "Beginner's Guide to Designing for Accessibility",
         "siteURL": "https://www.punchkick.com/user-research/user-experience/2019/05/28/designing-for-accessibility",
-        "imgURL": "",
-        "description": "",
-        "tags": []
+        "imgURL": "./images/begaccess.jpg",
+        "description": "An high-level overview of accessibility concerns and how to address them.",
+        "tags": ["Accessibility"]
     },
     {   
         "id": 35,
-        "name": "",
+        "name": "PDF.js",
         "siteURL": "https://mozilla.github.io/pdf.js/",
-        "imgURL": "",
-        "description": "",
-        "tags": []
+        "imgURL": "./images/pdf.jpg",
+        "description": "A JavaScript Library that parses and renders PDFs.",
+        "tags": ["Library", "JavaScript"]
     },
     {   
         "id": 36,
-        "name": "",
+        "name": "Refactoring UI",
         "siteURL": "https://refactoringui.com",
-        "imgURL": "",
-        "description": "",
-        "tags": []
+        "imgURL": "./images/refactoring.jpg",
+        "description": "UI design tips.",
+        "tags": ["Design", "CSS"]
     },
     {   
         "id": 37,
-        "name": "",
+        "name": "PHP Practitioner",
         "siteURL": "https://laracasts.com/series/php-for-beginners",
-        "imgURL": "",
-        "description": "",
-        "tags": []
+        "imgURL": "./images/php.jpg",
+        "description": "Comprehensive course to PHP and Laravel.",
+        "tags": ["PHP", "Course"]
     },
     {   
         "id": 38,
         "name": "CSSBattle",
         "siteURL": "https://cssbattle.dev",
-        "imgURL": "",
-        "description": "",
+        "imgURL": "./images/cssbattle.jpg",
+        "description": "Competitive site for practice creating images with CSS.",
         "tags": ["CSS", "Practice"]
     },
     {   
         "id": 39,
-        "name": "",
+        "name": "The Web Developer Bootcamp",
         "siteURL": "https://www.udemy.com/the-web-developer-bootcamp/",
-        "imgURL": "",
-        "description": "",
-        "tags": []
+        "imgURL": "./images/csweb.jpg",
+        "description": "Expansive online course from Colt Steele covering front-end and some back-end topics.",
+        "tags": ["Course", "HTML", "JavaScript", "Node"]
     },
     {   
         "id": 40,
-        "name": "",
+        "name": "JavaScript - the Weird Parts",
         "siteURL": "https://www.udemy.com/understand-javascript/",
-        "imgURL": "",
-        "description": "",
-        "tags": []
+        "imgURL": "./images/weird.jpg",
+        "description": "Course that covers tricky topics in JavaScript, like closures and this.",
+        "tags": ["JavaScript", "Course"]
     },
     {   
         "id": 41,
-        "name": "",
+        "name": "Advanced CSS and SASS",
         "siteURL": "https://www.udemy.com/advanced-css-and-sass/",
-        "imgURL": "",
-        "description": "",
-        "tags": []
+        "imgURL": "./images/csssass.jpg",
+        "description": "Advanced CSS course from Jonas Schmedtmann, focused on SASS, flexbox, and grid.",
+        "tags": ["CSS", "Course", "SASS"]
     },
     {   
         "id": 42,
-        "name": "",
+        "name": "React Front to Back",
         "siteURL": "https://www.udemy.com/modern-react-front-to-back/",
-        "imgURL": "",
-        "description": "",
-        "tags": []
+        "imgURL": "./images/frontback.jpg",
+        "description": "React course from Brad Traversy, also covering interactions with a Node back-end.",
+        "tags": ["React", "Course", "Node"]
     },
     {   
         "id": 43,
-        "name": "",
+        "name": "Modern React Bootcamp",
         "siteURL": "https://www.udemy.com/modern-react-bootcamp/",
-        "imgURL": "",
-        "description": "",
-        "tags": []
+        "imgURL": "./images/modreact.jpg",
+        "description": "React course from Colt Steele with many practice projects.",
+        "tags": ["React", "Course"]
     },
     {   
         "id": 44,
-        "name": "",
+        "name": "Computational Thinking for Problem Solving",
         "siteURL": "https://www.coursera.org/learn/computational-thinking-problem-solving?",
-        "imgURL": "",
-        "description": "",
-        "tags": []
+        "imgURL": "./images/thinking.jpg",
+        "description": "Help for how to think like a programmer.",
+        "tags": ["Course"]
     },
     {   
         "id": 45,
-        "name": "",
+        "name": "Responsive Website Basics",
         "siteURL": "https://www.coursera.org/learn/website-coding?",
-        "imgURL": "",
-        "description": "",
-        "tags": []
+        "imgURL": "./images/ulondon.jpg",
+        "description": "Very introductory short course regarding basic site building.",
+        "tags": ["HTML", "CSS", "Course"]
     },
     {   
         "id": 46,
         "name": "Contrast Ratio",
         "siteURL": "https://contrast-ratio.com/",
-        "imgURL": "",
+        "imgURL": "./images/contrast.jpg",
         "description": "Checks the contrast ratio for text and background colors against WCAG standards.",
         "tags": ["Accessibility", "Tools"]
     },
@@ -379,7 +379,7 @@ const resources = [
         "id": 47,
         "name": "Animatable",
         "siteURL": "http://leaverou.github.io/animatable/#",
-        "imgURL": "",
+        "imgURL": "./images/animatable.jpg",
         "description": "Simulates many simple animations.",
         "tags": ["CSS", "Animation", "Tools", "Inspiration"]
     }
