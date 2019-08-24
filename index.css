@@ -1,3 +1,25 @@
+/* Chevron bg code */
+
+/* <div class="pattern">
+</div>
+<div class="pattern pattern_alt">
+</div> */
+.pattern {
+    width: 300px;
+    height: 600px;
+    background:
+        linear-gradient(-33deg, rgba(255,255,255,0.001) 30.5%, #DADADA 31.5%, #DADADA 32.5%, rgba(255,255,255,0.001) 33.5%),
+        linear-gradient(-33deg, rgba(255,255,255,0.001) 30.5%, #DADADA 31.5%, #DADADA 32.5%, rgba(255,255,255,0.001) 33.5%) 0 8px,
+        linear-gradient(33deg, rgba(255,255,255,0.001) 30.5%, #DADADA 31.5%, #DADADA 32.5%, rgba(255,255,255,0.001) 33.5%),
+        linear-gradient(33deg, rgba(255,255,255,0.001) 30.5%, #DADADA 31.5%, #DADADA 32.5%, rgba(255,255,255,0.001) 33.5%) 0 8px;
+		background-size: 245px 90px;
+		background-color: rgba(56, 51, 90,.7);
+}
+
+.pattern_alt {
+    background-color: #fff7e5;
+}
+/* end option 1 */
 body {
 	background-color: #DEE1DC;
 	font-family: Ubuntu, sans-serif;
