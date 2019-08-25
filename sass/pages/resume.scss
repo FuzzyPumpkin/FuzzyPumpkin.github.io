@@ -1,6 +1,4 @@
 .resheader {
-    display: flex;
-    flex-direction: row;
     align-items: center;
 
     &__monogrambg {
@@ -9,7 +7,6 @@
         border-radius: 45% 10% 70% 10%;
         border: 1px solid $color-background-accent;
         margin-right: 4rem;
-        display: flex;
         justify-content: center;
         align-items: center;
         box-shadow: -11px 28px 30px -20px rgba(0,0,0,0.75);
@@ -19,18 +16,12 @@
         font-family: "Macondo Swash Caps", cursive;
         color: $color-background-accent;
     }
-    &__contact {
-        display: flex;
-        flex-direction: column;
-    }
     &__icon {
         margin: .5rem 1rem;
         height: 2rem; width: 2rem;
         fill: $color-text;
     }
     &__method {
-        display: flex;
-        flex-direction: row;
         align-items: center;
         font-size: 1.75rem;
     }
@@ -40,21 +31,15 @@
     margin: 2rem auto;
 }
 .skills {
-    display: flex;
-    flex-direction: column;
     background-color: $color-text-headline;
     border: 1px solid $color-background-accent;
     padding: .5rem;
-    border-radius: 1rem;
+    border-radius: 2rem;
 
     &__skillbox {
-        display: flex;
-        flex-direction: row;
         justify-content: space-evenly;
     }
     &__skill {
-        display: flex;
-        flex-direction: column;
         align-items: center;
     }
     &__headline {
@@ -62,9 +47,8 @@
     }
     &__iconbg {
         background-color: $color-background-accent;
-        width: 4rem; height: 4rem;
+        width: 4.5rem; height: 4rem;
         border-radius: 45% 10% 70% 10%;
-        display: flex;
         justify-content: center;
         align-items: center;
     }
@@ -73,3 +57,38 @@
         margin-top: .5rem;
     }
 }
+.experience {
+    flex: 60%;
+
+    &__position {
+        margin: 2rem;
+    }
+    &__company {
+        margin-left: auto;
+    }
+    &__points {
+        list-style: none;
+        & li {
+            display: flex;
+            align-items: start;
+
+            &::before {
+                margin-top: .25rem;
+                background-color: $color_brand;
+                mask-image: url(../images/SVG/circle-right.svg);
+                mask-size: contain;
+                mask-repeat: no-repeat;
+                -webkit-mask-image: url(../images/SVG/circle-right.svg);
+                -webkit-mask-size: contain;
+                -webkit-mask-repeat: no-repeat;
+                color: transparent;
+                font-size: 1rem;
+                content: "vvv";
+            }
+        }
+    }
+}
+.proj-ed {
+    flex: 40%;
+}
+

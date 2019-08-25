@@ -13,120 +13,201 @@
 <div class="bgpattern bgpattern_alt"></div>
 
 <div class="page_container">
-<!-- header -->
-<header class="resheader">
-    <div class="resheader__monogrambg">
-        <p class="resheader__monogram">KLM</p>
-    </div>
-    <div class="resheader__contact">
-        <h1 class="resheader__name">Kari Minger</h1>
-        <p class="resheader__method">
-            <svg class="resheader__icon">
-                <use xlink:href="images/symbol-defs.svg#icon-envelop"></use>
-            </svg>
-            kariminger@gmail.com
+    <!-- header -->
+    <header class="resheader u-row-container">
+        <div class="resheader__monogrambg u-row-container">
+            <p class="resheader__monogram">KLM</p>
+        </div>
+        <div class="u-col-container">
+            <h1 class="resheader__name">Kari Minger</h1>
+            <p class="resheader__method u-row-container">
+                <svg class="resheader__icon">
+                    <use xlink:href="images/symbol-defs.svg#icon-envelop"></use>
+                </svg>
+                kariminger@gmail.com
+            </p>
+            <p class="resheader__method u-row-container">
+                <svg class="resheader__icon">
+                <use xlink:href="images/symbol-defs.svg#icon-linkedin"></use>
+                </svg>
+                https://www.linkedin.com/in/kari-minger
+            </p>
+            <p class="resheader__method u-row-container">
+                <svg class="resheader__icon">
+                    <use xlink:href="images/symbol-defs.svg#icon-sphere"></use>
+                </svg>
+                https://github.com/FuzzyPumpkin
+            </p>
+        </div>
+    </header>
+
+    <div class="horizontal-rule"></div>
+    <!-- objective -->
+    <section class="about">
+        <h2>About Me</h2>
+        <p class="about__blurb">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat esse laudantium reiciendis eum, 
+            aperiam, voluptatibus aut ipsa molestiae, fugit rem tempora laboriosam autem. Non incidunt velit 
+            beatae esse explicabo optio.
         </p>
-        <p class="resheader__method">
-            <svg class="resheader__icon">
-               <use xlink:href="images/symbol-defs.svg#icon-linkedin"></use>
-            </svg>
-            https://www.linkedin.com/in/kari-minger
-        </p>
-        <p class="resheader__method">
-            <svg class="resheader__icon">
-                <use xlink:href="images/symbol-defs.svg#icon-sphere"></use>
-            </svg>
-            https://github.com/FuzzyPumpkin
-        </p>
+    </section>
+
+    <!-- skills -->
+    <section class="skills u-col-container">
+        <h2 class="skills__headline">Skills</h2>
+        <div class="skills__skillbox u-row-container">
+            <div class="skills__skill u-col-container">
+                <div class="skills__iconbg u-row-container">
+                    <svg class="resheader__icon">
+                        <use xlink:href="images/symbol-defs.svg#icon-html5"></use>
+                    </svg>
+                </div>
+                <p class="skills__skillname">HTML</p>
+            </div>
+            <div class="skills__skill u-col-container">
+                <div class="skills__iconbg u-row-container">
+                    <svg class="resheader__icon">
+                        <use xlink:href="images/symbol-defs.svg#icon-csswizardry"></use>
+                    </svg>
+                </div>
+                <p class="skills__skillname">CSS</p>
+            </div>
+            <div class="skills__skill u-col-container">
+                <div class="skills__iconbg u-row-container">
+                    <svg class="resheader__icon">
+                        <use xlink:href="images/symbol-defs.svg#icon-javascript"></use>
+                    </svg>
+                </div>
+                <p class="skills__skillname">JavaScript</p>
+            </div>
+            <div class="skills__skill u-col-container">
+                <div class="skills__iconbg u-row-container">
+                    <svg class="resheader__icon">
+                        <use xlink:href="images/symbol-defs.svg#icon-react"></use>
+                    </svg>
+                </div>
+                <p class="skills__skillname">React</p>
+            </div>
+            <div class="skills__skill u-col-container">
+                <div class="skills__iconbg u-row-container">
+                    <svg class="resheader__icon">
+                        <use xlink:href="images/symbol-defs.svg#icon-sass"></use>
+                    </svg>
+                </div>
+                <p class="skills__skillname">SASS</p>
+            </div>
+            <div class="skills__skill u-col-container">
+                <div class="skills__iconbg u-row-container">
+                    <svg class="resheader__icon">
+                        <use xlink:href="images/symbol-defs.svg#icon-node-dot-js"></use>
+                    </svg>
+                </div>
+                <p class="skills__skillname">Node.js</p>
+            </div>
+            <div class="skills__skill u-col-container">
+                <div class="skills__iconbg u-row-container">
+                    <svg class="resheader__icon">
+                        <use xlink:href="images/symbol-defs.svg#icon-mongodb"></use>
+                    </svg>
+                </div>
+                <p class="skills__skillname">MongoDB</p>
+            </div>
+            <div class="skills__skill u-col-container">
+                <div class="skills__iconbg u-row-container">
+                    <svg class="resheader__icon">
+                        <use xlink:href="images/symbol-defs.svg#icon-github"></use>
+                    </svg>
+                </div>
+                <p class="skills__skillname">Github</p>
+            </div>
+        </div>
+        
+    </section>
+
+    <div class="u-row-container">
+        <!-- experience -->
+        <section class="experience u-section-box">
+            <h2>Experience</h2>
+            <div class="horizontal-rule"></div>
+            <div class="experience__position">
+                <h3 class="u-row-container">
+                    <span class="experience__years">2015-Present</span>
+                    <span class="experience__company">Uniform Law Commission</span>
+                </h3>
+                <h4 class="experience__title">Accounting Assistant</h4>
+                <ul class="experience__points">
+                    <li>Worked closely with product support through two CRM migrations</li>
+                    <li>Used JavaScript to automate features on PDF forms</li>
+                    <li>Programmed macros in Visual Basic</li>
+                    <li>Wrote documentation for processes and procedures</li>
+                </ul>
+            </div>
+            <div class="experience__position">
+                <h3 class="u-row-container">
+                    <span class="experience__years">2012-2015</span>
+                    <span class="experience__company">Fifield Companies</span>
+                </h3>
+                <h4 class="experience__title">Accounting Assistant</h4>
+                <ul class="experience__points">
+                    <li>No idea what to put here</li>
+                </ul>
+            </div>
+            <div class="experience__position">
+                <h3 class="u-row-container">
+                    <span class="experience__years">2010-2012</span>
+                    <span class="experience__company">Harris & Harris</span>
+                </h3>
+                <h4 class="experience__title">Payment Processor</h4>
+                <ul class="experience__points">
+                    <li>Created heavily-customized utility to aid in analyzing data from City of Chicago website</li>
+                    <li>Wrote 63 page procedural documentation</li>
+                </ul>
+            </div>
+            <div class="experience__position">
+                <h3 class="u-row-container">
+                    <span class="experience__years">2005-2009</span>
+                    <span class="experience__company">CCIM Institute</span>
+                </h3>
+                <h4 class="experience__title">Course Coordinator</h4>
+                <ul class="experience__points">
+                    <li>something about self-learning presentation</li>
+                </ul>
+            </div>
+            <div class="experience__position">
+                <h3 class="u-row-container">
+                    <span class="experience__years">2002-2004</span>
+                    <span class="experience__company">Alick's Home Medical</span>
+                </h3>
+                <h4 class="experience__title">Billing Specialist</h4>
+                <ul class="experience__points">
+                    <li>Spearheaded move to electronic claims filing</li>
+                </ul>
+            </div>
+            <div class="experience__position">
+                <h3 class="u-row-container">
+                    <span class="experience__years">1999-2002</span>
+                    <span class="experience__company">Association Concepts</span>
+                </h3>
+                <h4 class="experience__title">Administrative Assistant</h4>
+                <ul class="experience__points">
+                    <li>Helped design and handled updates to client website</li>
+                    <li>Learned how to create events in Alpha4 with no documentation available</li>
+                </ul>
+            </div>
+        </section>
+        <div class="proj-ed u-col-container">
+            <!-- projects -->
+            <section class="projects u-section-box">
+                <h2>Projects</h2>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure nostrum corrupti laudantium iste voluptatem adipisci dolorum. Accusamus aut reiciendis expedita libero, inventore reprehenderit ipsum molestiae omnis temporibus deserunt magnam! Culpa?
+            </section>
+            <!-- education -->
+            <section class="education u-section-box">
+                <h2>Education</h2>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur sit, architecto eaque laborum ex quae, expedita officiis laboriosam magni voluptas sint corporis! Eos exercitationem quibusdam deleniti ipsa? Commodi, iste. Quos.
+            </section>
+        </div>
     </div>
-</header>
-
-<div class="horizontal-rule"></div>
-<!-- objective -->
-<section class="about">
-    <h2>About Me</h2>
-    <p class="about__blurb">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat esse laudantium reiciendis eum, 
-        aperiam, voluptatibus aut ipsa molestiae, fugit rem tempora laboriosam autem. Non incidunt velit 
-        beatae esse explicabo optio.
-    </p>
-</section>
-
-<!-- skills -->
-<section class="skills">
-    <h2 class="skills__headline">Skills</h2>
-    <div class="skills__skillbox">
-        <div class="skills__skill">
-            <div class="skills__iconbg">
-                <svg class="resheader__icon">
-                    <use xlink:href="images/symbol-defs.svg#icon-html5"></use>
-                </svg>
-            </div>
-            <p class="skills__skillname">HTML</p>
-        </div>
-        <div class="skills__skill">
-            <div class="skills__iconbg">
-                <svg class="resheader__icon">
-                    <use xlink:href="images/symbol-defs.svg#icon-csswizardry"></use>
-                </svg>
-            </div>
-            <p class="skills__skillname">CSS</p>
-        </div>
-        <div class="skills__skill">
-            <div class="skills__iconbg">
-                <svg class="resheader__icon">
-                    <use xlink:href="images/symbol-defs.svg#icon-javascript"></use>
-                </svg>
-            </div>
-            <p class="skills__skillname">JavaScript</p>
-        </div>
-        <div class="skills__skill">
-            <div class="skills__iconbg">
-                <svg class="resheader__icon">
-                    <use xlink:href="images/symbol-defs.svg#icon-react"></use>
-                </svg>
-            </div>
-            <p class="skills__skillname">React</p>
-        </div>
-        <div class="skills__skill">
-            <div class="skills__iconbg">
-                <svg class="resheader__icon">
-                    <use xlink:href="images/symbol-defs.svg#icon-sass"></use>
-                </svg>
-            </div>
-            <p class="skills__skillname">SASS</p>
-        </div>
-        <div class="skills__skill">
-            <div class="skills__iconbg">
-                <svg class="resheader__icon">
-                    <use xlink:href="images/symbol-defs.svg#icon-node-dot-js"></use>
-                </svg>
-            </div>
-            <p class="skills__skillname">Node.js</p>
-        </div>
-        <div class="skills__skill">
-            <div class="skills__iconbg">
-                <svg class="resheader__icon">
-                    <use xlink:href="images/symbol-defs.svg#icon-mongodb"></use>
-                </svg>
-            </div>
-            <p class="skills__skillname">MongoDB</p>
-        </div>
-        <div class="skills__skill">
-            <div class="skills__iconbg">
-                <svg class="resheader__icon">
-                    <use xlink:href="images/symbol-defs.svg#icon-github"></use>
-                </svg>
-            </div>
-            <p class="skills__skillname">Github</p>
-        </div>
-    </div>
-    
-</section>
-<!-- experience -->
-
-
-
 </div>
 
 <script type="text/javascript" src="index.js"></script>
