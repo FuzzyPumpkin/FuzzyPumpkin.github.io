@@ -53,6 +53,13 @@
         @include flex-column;
     }
 }
+.projects {
+    padding: 3rem;
+
+    &__project {
+        margin-bottom: 2rem;
+    }
+}
 .proj-ed {
     flex: 45%;
     @include flex-column;

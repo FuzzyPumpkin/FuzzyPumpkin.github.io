@@ -1,0 +1,29 @@
+.profile-skills {
+    width: 80%;
+    @include flex-row;
+    justify-content: space-evenly;
+
+    &__icon {
+        height: 3rem; width: 3rem;
+        margin: .5rem 1rem;
+        fill: $color-text;
+    }
+    &__iconbg {
+        width: 7rem; height: 6rem;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid $color-brand;
+        border-radius: 45% 10% 70% 10%;
+        background-color: $color-background-accent;
+        @include flex-row;
+    }
+    &__skill {
+        align-items: center;
+        @include flex-column;
+    }
+    &__skillname {
+        margin-top: .5rem;
+        font-weight: 600;
+        font-size: 1.75rem;
+    }
+}
