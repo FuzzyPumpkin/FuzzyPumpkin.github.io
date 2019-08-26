@@ -1,15 +1,7 @@
-.u-row-container {
-    display: flex;
-    flex-direction: row;
-}
-.u-col-container {
-    display: flex;
-    flex-direction: column;
-}
 .u-section-box {
+    padding: 1.5rem;
+    margin: 1rem;
     background-color: $color-background-accent;
     border: 2px solid $color-text-headline;
     border-radius: 2rem;
-    padding: 1.5rem;
-    margin: 1rem;
 }

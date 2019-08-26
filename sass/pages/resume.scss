@@ -1,78 +1,32 @@
-.resheader {
-    align-items: center;
+.about {
+    width: 60%;
+    margin: 2rem auto;
 
-    &__monogrambg {
-        background-color: $color-brand;
-        width: 14rem; height: 12rem;
-        border-radius: 45% 10% 70% 10%;
-        border: 1px solid $color-background-accent;
-        margin-right: 4rem;
-        justify-content: center;
-        align-items: center;
-        box-shadow: -11px 28px 30px -20px rgba(0,0,0,0.75);
-    }
-    &__monogram {
-        font-size: 5rem;
-        font-family: "Macondo Swash Caps", cursive;
-        color: $color-background-accent;
-    }
-    &__icon {
-        margin: .5rem 1rem;
-        height: 2rem; width: 2rem;
-        fill: $color-text;
-    }
-    &__method {
-        align-items: center;
+    &__blurb {
         font-size: 1.75rem;
     }
 }
-.about {
-    width: 50%;
-    margin: 2rem auto;
-}
-.skills {
-    background-color: $color-text-headline;
-    border: 1px solid $color-background-accent;
-    padding: .5rem;
-    border-radius: 2rem;
-
-    &__skillbox {
-        justify-content: space-evenly;
-    }
-    &__skill {
-        align-items: center;
-    }
-    &__headline {
-        color: $color-background-accent;
-    }
-    &__iconbg {
-        background-color: $color-background-accent;
-        width: 4.5rem; height: 4rem;
-        border-radius: 45% 10% 70% 10%;
-        justify-content: center;
-        align-items: center;
-    }
-    &__skillname {
-        color: $color-background-accent;
-        margin-top: .5rem;
+.education {
+    &__span {
+        font-size: 1.5rem;
+        @include flex-row;
     }
 }
 .experience {
-    flex: 60%;
+    flex: 55%;
 
-    &__position {
-        margin: 2rem;
-    }
     &__company {
         margin-left: auto;
     }
     &__points {
         list-style: none;
+
         & li {
             display: flex;
             align-items: start;
 
             &::before {
+                content: "vvv"; //usually empty content works, for this usage the psuedo-element would not display, so I used transparent text as a workaround.
                 margin-top: .25rem;
                 background-color: $color_brand;
                 mask-image: url(../images/SVG/circle-right.svg);
@@ -81,14 +35,93 @@
                 -webkit-mask-image: url(../images/SVG/circle-right.svg);
                 -webkit-mask-size: contain;
                 -webkit-mask-repeat: no-repeat;
-                color: transparent;
                 font-size: 1rem;
-                content: "vvv";
+                color: transparent;
             }
         }
     }
+    &__position {
+        margin: 2rem;
+    }
+    &__span {
+        @include flex-row;
+    }
+}
+.flexible-content {
+    @include flex-row;
+    @include respond(tablet){
+        @include flex-column;
+    }
 }
 .proj-ed {
-    flex: 40%;
+    flex: 45%;
+    @include flex-column;
 }
+.resheader {
+    align-items: center;
+    @include flex-row;
 
+    &__contact {
+        @include flex-column;
+    }
+    &__icon {
+        height: 2rem; width: 2rem;
+        margin: .5rem 1rem;
+        fill: $color-text;
+    }
+    &__method {
+        align-items: center;
+        font-size: 1.75rem;
+        @include flex-row;
+    }
+    &__monogram {
+        font-size: 5rem;
+        font-family: "Macondo Swash Caps", cursive;
+        color: $color-background-accent;
+    }
+    &__monogrambg {
+        width: 14rem; height: 12rem;
+        margin-right: 4rem;
+        justify-content: center;
+        align-items: center;
+        border-radius: 45% 10% 70% 10%;
+        border: 1px solid $color-background-accent;
+        background-color: $color-brand;
+        box-shadow: -11px 28px 30px -20px rgba(0,0,0,0.75);
+        @include flex-row;
+        @include respond(phone){
+            margin-right: 1rem;;
+        }
+    }
+}
+.skills {
+    background-color: $color-text-headline;
+    border: 1px solid $color-background-accent;
+    padding: .5rem;
+    border-radius: 2rem;
+    @include flex-column;
+
+    &__headline {
+        color: $color-background-accent;
+    }
+    &__iconbg {
+        width: 4.5rem; height: 4rem;
+        justify-content: center;
+        align-items: center;
+        border-radius: 45% 10% 70% 10%;
+        background-color: $color-background-accent;
+        @include flex-row;
+    }
+    &__skill {
+        align-items: center;
+        @include flex-column;
+    }
+    &__skillbox {
+        justify-content: space-evenly;
+        @include flex-row;
+    }
+    &__skillname {
+        margin-top: .5rem;
+        color: $color-background-accent;
+    }
+}
