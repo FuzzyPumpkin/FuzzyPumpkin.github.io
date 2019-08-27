@@ -2,6 +2,7 @@
     width: 80%;
     @include flex-row;
     justify-content: space-evenly;
+    margin-top: 200px;
 
     &__icon {
         height: 3rem; width: 3rem;
