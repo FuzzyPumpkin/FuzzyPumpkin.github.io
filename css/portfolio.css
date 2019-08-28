@@ -88,7 +88,8 @@ h4 {
   border-radius: 2rem; }
 
 .u-double-border {
-  box-shadow: 0 0 0 2px #08ffc8, 0 0 0 3px #38335a, 0 1rem 2rem rgba(0, 0, 0, 0.4); }
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+  border: 1px solid #204969; }
 
 .u-white-border {
   border: 1px solid #fff7f7;
@@ -170,6 +171,7 @@ h4 {
     font-size: 1.7rem;
     font-family: Raleway, sans-serif;
     color: #fff7f7;
+    text-decoration: none;
     transition: all .4s ease; }
     .nav__link:hover {
       color: #08ffc8; }
@@ -197,12 +199,32 @@ input[name="choice"] {
 #nav-4:checked ~ #nav-container {
   --x: 3; }
 
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.5rem;
+  background-color: #38335a;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  z-index: 3; }
+  .footer__icon {
+    height: 3rem;
+    width: 3rem;
+    margin: .5rem 1rem;
+    fill: #fff7f7; }
+  .footer__title {
+    margin: 0 3rem;
+    color: #fff7f7; }
+
 .profile-skills {
   width: 80%;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  margin-top: 1rem; }
+  margin: 1rem auto; }
   .profile-skills__icon {
     height: 3rem;
     width: 3rem;
@@ -232,17 +254,26 @@ input[name="choice"] {
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4); }
   .welcome__marquee {
     height: 50px;
-    padding-left: 5px;
+    margin: 2rem 0;
     overflow: hidden; }
+  .welcome__name {
+    font-size: 10rem;
+    letter-spacing: 2rem; }
   .welcome__scrolltext {
     display: block;
     height: 50px;
     margin-bottom: 50px;
     padding: 2px 5px;
-    text-align: center;
+    font-size: 3rem;
     box-sizing: border-box; }
     .welcome__scrolltext--first {
-      animation: slide 25s linear infinite; }
+      animation: slide 35s ease infinite; }
+  .welcome__title {
+    display: block;
+    background-color: rgba(8, 255, 200, 0.4);
+    background-image: radial-gradient(circle at 100% 150%, rgba(8, 255, 200, 0.4) 24%, white 25%, white 28%, rgba(8, 255, 200, 0.4) 29%, rgba(8, 255, 200, 0.4) 36%, white 36%, white 40%, transparent 40%, transparent), radial-gradient(circle at 0 150%, rgba(8, 255, 200, 0.4) 24%, white 25%, white 28%, rgba(8, 255, 200, 0.4) 29%, rgba(8, 255, 200, 0.4) 36%, white 36%, white 40%, transparent 40%, transparent), radial-gradient(circle at 50% 100%, white 10%, rgba(8, 255, 200, 0.4) 11%, rgba(8, 255, 200, 0.4) 23%, white 24%, white 30%, rgba(8, 255, 200, 0.4) 31%, rgba(8, 255, 200, 0.4) 43%, white 44%, white 50%, rgba(8, 255, 200, 0.4) 51%, rgba(8, 255, 200, 0.4) 63%, white 64%, white 71%, transparent 71%, transparent), radial-gradient(circle at 100% 50%, white 5%, rgba(8, 255, 200, 0.4) 6%, rgba(8, 255, 200, 0.4) 15%, white 16%, white 20%, rgba(8, 255, 200, 0.4) 21%, rgba(8, 255, 200, 0.4) 30%, white 31%, white 35%, rgba(8, 255, 200, 0.4) 36%, rgba(8, 255, 200, 0.4) 45%, white 46%, white 49%, transparent 50%, transparent), radial-gradient(circle at 0 50%, white 5%, rgba(8, 255, 200, 0.4) 6%, rgba(8, 255, 200, 0.4) 15%, white 16%, white 20%, rgba(8, 255, 200, 0.4) 21%, rgba(8, 255, 200, 0.4) 30%, white 31%, white 35%, rgba(8, 255, 200, 0.4) 36%, rgba(8, 255, 200, 0.4) 45%, white 46%, white 49%, transparent 50%, transparent);
+    background-size: 100px 50px;
+    font-size: 6rem; }
 
 @keyframes slide {
   0% {
@@ -271,10 +302,15 @@ input[name="choice"] {
     margin-top: -100px; }
   84% {
     margin-top: 0px; }
+  97% {
+    margin-top: 0px;
+    opacity: 1; }
   98% {
-    margin-top: 0px; }
+    margin-top: 0px;
+    opacity: 0; }
   100% {
-    margin-top: -600px; } }
+    margin-top: -600px;
+    opacity: 1; } }
 
 .about {
   width: 60%;

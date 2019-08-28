@@ -35,7 +35,7 @@
 		  <a class="nav__link">Resum&eacute;</a>
 		</label>
 		<label for="nav-4" class="nav__label">
-		  <span class="nav__link">Contact Me</span>
+		  <a href="mailto: kariminger@gmail.com" class="nav__link">Contact Me</a>
 		</label>
   <div class="nav__filler"></div>
 </nav>
@@ -43,7 +43,7 @@
 
 <div class="page_container">
 <!-- welcome box -->
-<div class="u-section-box welcome">
+<div class="u-double-border u-section-box welcome" id="welcome">
 	<h1 class="welcome__name">Kari Minger</h1>
 	<p class="welcome__title">Junior Frontend Developer</p>
 	<div class="welcome__marquee">
@@ -57,7 +57,7 @@
 	</div>
 </div>
 <!--skills section -->
-	<section class="profile-skills">
+	<section class="profile-skills" id="skills">
 		<div class="profile-skills__skill">
 			<div class="profile-skills__iconbg">
 				<svg class="profile-skills__icon">
@@ -125,7 +125,19 @@
 	</section>
 <!-- project display -->
 <!-- contact me -->
-
+<footer class="footer" id="contact">
+	<a href="mailto: kariminger@gmail.com" class="footer__link">
+		<svg class="footer__icon">
+			<use xlink:href="images/symbol-defs.svg#icon-envelop"></use>
+		</svg>
+	</a>
+	<h2 class="footer__title">Contact Me</h2>
+	<a href="https://www.linkedin.com/in/kari-minger" class="footer__link">
+		<svg class="footer__icon">
+			<use xlink:href="images/symbol-defs.svg#icon-linkedin"></use>
+		</svg>
+	</a>
+</footer>
 
 
 
