@@ -1,112 +1,115 @@
+
 #nav-container {
-    position: fixed;
-    width: 100%;
-    top: 0; left:0;
-    z-index: 3;
-  }
-  
-  .nav { //container for 
-    flex: 1;
-    overflow: hidden;
+  position: fixed;
+  width: 100%;
+  top: 0; left: 0;
+  z-index: 3;
+}
+
+.nav {
+  flex: 1;
+  position: absolute;
+  top: -3.5rem;
+  left: 0;
+  right: 0;
+  height: 9.3rem;
+  display: flex;
+  align-items: stretch;
+  text-align: center;
+  z-index: 4;
+  transition: all .3s cubic-bezier(.5, 0, .5, 1);
+
+  &__bg {
     position: absolute;
-    top: 1rem;
+    top: 0;
     left: 0;
-    right: 0;
-    height: 9.3rem;
-    display: flex;
-    align-items: stretch;
-    text-align: center;
-    z-index: 4;
-  
-    &__bg {//background
+    width: 50%;
+    height: 100%;
+    //movement of dot
+    transform: translateX(calc(var(--x) * 25%)); 
+    transition: all .3s cubic-bezier(.5, 0, .5, 1);
+  }
+  &__dot {
+    $size: 120px;
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+    background-color: $color-brand;
+    position: absolute;
+    left: calc((25% - #{$size}) / 2);//placement of dot
+    top: 0%;
+    z-index: 3;
+    transform: scale(.85);
+    box-shadow: 0 0 0 1px $color-highlight, 0 0 0 4px $color-brand, 0 1rem 2rem rgba(0,0,0,.3);
+  }
+  &__cutout {
+    $size: $cutout-size;
+    width: $size;
+    height: $size;
+    top: 0px;
+    left: calc((25% - #{$size}) / 2);//calculated placement of cutout
+    z-index: 2;
+    border-radius: 50%;
+
+    &:before, &:after {
+      content: '';
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 50%;
-      height: 100%;
-      //movement of dot
-      transform: translateX(calc(var(--x) * 25%)); 
-    }
-    &__dot {
-      $size: $cutout-size;
-      width: $size;
-      height: $size;
-      border-radius: 50%;
+      width: 1000%;
+      height: 130%;
+      top: -30%;
       background-color: $color-brand;
-      border: solid 2px $color-highlight;
-      position: absolute;
-      left: calc((25% - #{$size}) / 2);//placement of dot
-      top: 0%;
-      z-index: 3;
-      transform: scale(.85);
-      box-shadow: 0px 0.5vh 1vh rgba(0,0,0,.3);
+      border-top: solid 2px #FFF;
     }
-    &__cutout {
-      $size: $cutout-size;
-      width: $size;
-      height: $size;
-      top: 0px;
-      left: calc((25% - #{$size}) / 2);//calculated placement of cutout
-      z-index: 1;
-      border-radius: 50%;
-      box-shadow:
-        $size / 2 $size / 2 0 $color-brand,
-        -$size / 2 $size / 2 0 $color-brand,
-        0 $size 0 $color-brand;
-        transition: all .3s cubic-bezier(.5, 0, .5, 1);
-  
-      &:before, &:after {
-        content: '';
-        position: absolute;
-        width: 1000%;
-        height: 130%;
-        top: 30%;
-        background-color: $color-brand;
-        border-top: solid 2px #FFF;
-      }
-      &:before {
-        right: 100%;
-        border-bottom-right-radius: 40%;
-      }
-      &:after {
-        left: 100%;
-        border-bottom-left-radius: 40%;
-      }
+    &:before {
+      right: 95%;
+      border-bottom-right-radius: 1vh;
+      box-shadow: 0 0 0 1px $color-highlight, 0 0 0 4px $color-brand, 0 1rem 2rem rgba(0,0,0,.3);
     }
-    &__label {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      z-index: 3;
-      top: 20%;
+    &:after {
+      left: 20%;
+      border-bottom-left-radius: 1vh;
+      box-shadow: 0 0 0 1px $color-highlight, 0 0 0 4px $color-brand, 0 1rem 2rem rgba(0,0,0,.3);
     }
-    &__filler {
-      flex: 4;
-    }
-    &__link {
-      margin-top: 1rem;
-      font-size: 1.8rem;
-      font-family: Raleway, sans-serif;
+  }
+  &__label {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 3;
+    margin-top: 3.5rem;
+  }
+  &__filler {
+    flex: 4;
+  }
+  &__link {
+    margin-top: 1rem;
+    font-size: 1.7rem;
+    font-family: Raleway, sans-serif;
+    color: $color-background-accent;
+    transition: all .4s ease;
+
+    &:hover {
       color: $color-highlight;
     }
   }
+}
+
+input[name="choice"] { 
+  position: absolute; 
+  top: 0; 
+  opacity: 0;
+}
   
-  input[name="choice"] { 
-    position: absolute; 
-    top: 0; 
-    opacity: 0;
-  }
-    
-  #nav-1:checked ~ * label[for="nav-1"],
-  #nav-2:checked ~ * label[for="nav-2"],
-  #nav-3:checked ~ * label[for="nav-3"],
-  #nav-4:checked ~ * label[for="nav-4"] {transform: translateY(-10%);}
-    
-   //movement code for dot
-    @for $i from 1 through 4 {
-      #nav-#{$i}:checked ~ #nav-container {
-        --x: #{$i - 1};
-      }
+#nav-1:checked ~ * label[for="nav-1"],
+#nav-2:checked ~ * label[for="nav-2"],
+#nav-3:checked ~ * label[for="nav-3"],
+#nav-4:checked ~ * label[for="nav-4"] {transform: translateY(-10%);}
+  
+ //movement code for dot
+  @for $i from 1 through 4 {
+    #nav-#{$i}:checked ~ #nav-container {
+      --x: #{$i - 1};
     }
+  }
