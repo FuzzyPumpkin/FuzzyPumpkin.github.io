@@ -2,7 +2,7 @@
     width: 80%;
     @include flex-row;
     justify-content: space-evenly;
-    margin-top: 200px;
+    margin-top: 1rem;
 
     &__icon {
         height: 3rem; width: 3rem;
@@ -27,4 +27,45 @@
         font-weight: 600;
         font-size: 1.75rem;
     }
+}
+.welcome {
+    margin-top: 10rem;
+    @include shadow;
+
+    &__marquee {
+        height: 50px;
+        padding-left: 5px;
+        overflow: hidden;
+    }
+    &__scrolltext {
+        display: block;
+        height: 50px;
+        margin-bottom: 50px;
+        padding: 2px 5px;
+        text-align: center;
+        box-sizing: border-box;
+
+        &--first {
+            animation: slide 25s linear infinite;
+        }
+    }
+}
+
+
+@keyframes slide {
+    0% {margin-top:-600px;}
+    12% {margin-top:-600px;}
+    14% {margin-top:-500px;}
+    26% {margin-top:-500px;}
+    28% {margin-top:-400px;}
+    40% {margin-top:-400px;}
+    42% {margin-top:-300px;}
+    54% {margin-top:-300px;}
+    56% {margin-top:-200px;}
+    68% {margin-top:-200px;}
+    70% {margin-top:-100px;}
+    82% {margin-top:-100px;}
+    84% {margin-top: 0px;}
+    98% {margin-top: 0px;}
+    100% {margin-top:-600px;}
 }

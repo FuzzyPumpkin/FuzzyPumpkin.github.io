@@ -85,8 +85,14 @@ h4 {
   padding: 1.5rem;
   margin: 1rem;
   background-color: #fff7f7;
-  border: 2px solid #204969;
   border-radius: 2rem; }
+
+.u-double-border {
+  box-shadow: 0 0 0 2px #08ffc8, 0 0 0 3px #38335a, 0 1rem 2rem rgba(0, 0, 0, 0.4); }
+
+.u-white-border {
+  border: 1px solid #fff7f7;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4); }
 
 #nav-container {
   position: fixed;
@@ -196,7 +202,7 @@ input[name="choice"] {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  margin-top: 200px; }
+  margin-top: 1rem; }
   .profile-skills__icon {
     height: 3rem;
     width: 3rem;
@@ -220,6 +226,55 @@ input[name="choice"] {
     margin-top: .5rem;
     font-weight: 600;
     font-size: 1.75rem; }
+
+.welcome {
+  margin-top: 10rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4); }
+  .welcome__marquee {
+    height: 50px;
+    padding-left: 5px;
+    overflow: hidden; }
+  .welcome__scrolltext {
+    display: block;
+    height: 50px;
+    margin-bottom: 50px;
+    padding: 2px 5px;
+    text-align: center;
+    box-sizing: border-box; }
+    .welcome__scrolltext--first {
+      animation: slide 25s linear infinite; }
+
+@keyframes slide {
+  0% {
+    margin-top: -600px; }
+  12% {
+    margin-top: -600px; }
+  14% {
+    margin-top: -500px; }
+  26% {
+    margin-top: -500px; }
+  28% {
+    margin-top: -400px; }
+  40% {
+    margin-top: -400px; }
+  42% {
+    margin-top: -300px; }
+  54% {
+    margin-top: -300px; }
+  56% {
+    margin-top: -200px; }
+  68% {
+    margin-top: -200px; }
+  70% {
+    margin-top: -100px; }
+  82% {
+    margin-top: -100px; }
+  84% {
+    margin-top: 0px; }
+  98% {
+    margin-top: 0px; }
+  100% {
+    margin-top: -600px; } }
 
 .about {
   width: 60%;
@@ -316,7 +371,6 @@ input[name="choice"] {
 
 .skills {
   background-color: #204969;
-  border: 1px solid #fff7f7;
   padding: .5rem;
   border-radius: 2rem;
   display: flex;

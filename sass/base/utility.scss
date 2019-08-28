@@ -2,6 +2,12 @@
     padding: 1.5rem;
     margin: 1rem;
     background-color: $color-background-accent;
-    border: 2px solid $color-text-headline;
     border-radius: 2rem;
+}
+.u-double-border {
+    box-shadow: 0 0 0 2px $color-highlight, 0 0 0 3px $color-brand, 0 1rem 2rem rgba(0,0,0,.4); 
+}
+.u-white-border {
+    border: 1px solid $color-background-accent;
+    @include shadow;
 }
