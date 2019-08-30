@@ -40,7 +40,7 @@
     top: 0%;
     z-index: 3;
     transform: scale(.85);
-    box-shadow: 0 0 0 1px $color-highlight, 0 0 0 4px $color-brand, 0 1rem 2rem rgba(0,0,0,.3);
+    @include double-border;
   }
   &__cutout {
     $size: $cutout-size;
@@ -63,12 +63,12 @@
     &:before {
       right: 95%;
       border-bottom-right-radius: 1vh;
-      box-shadow: 0 0 0 1px $color-highlight, 0 0 0 4px $color-brand, 0 1rem 2rem rgba(0,0,0,.3);
+      @include double-border;
     }
     &:after {
       left: 20%;
       border-bottom-left-radius: 1vh;
-      box-shadow: 0 0 0 1px $color-highlight, 0 0 0 4px $color-brand, 0 1rem 2rem rgba(0,0,0,.3);
+      @include double-border;
     }
   }
   &__label {

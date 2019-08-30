@@ -9,6 +9,9 @@
 @mixin shadow{
     box-shadow: 0 1rem 2rem rgba(0,0,0,.4);
 }
+@mixin double-border{
+    box-shadow: 0 0 0 1px $color-highlight, 0 0 0 4px $color-brand, 0 1rem 2rem rgba(0,0,0,.3);
+}
 
 @mixin respond($breakpoint){
     @if $breakpoint == tablet {

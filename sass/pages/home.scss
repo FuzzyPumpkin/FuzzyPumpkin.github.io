@@ -5,8 +5,9 @@
     padding: 1.5rem;
     background-color: $color-brand;
     @include flex-row;
+    @include double-border;
     justify-content: center;
-    z-index: 3;
+    z-index: 4;
 
     &__icon {
         height: 3rem; width: 3rem;
@@ -50,6 +51,47 @@
         font-size: 1.75rem;
     }
 }
+.projects {
+    @include flex-row;
+    width: 100%;
+    margin: 3rem 0 20rem 0;
+    align-items: center;
+
+    &__bookend {
+        @include flex-column;
+        min-height: 530px;
+        background-size: cover;
+        background-position: center;
+        border-radius: 1rem;
+        // box shadow needs work
+        box-shadow: 0 1rem 2rem rgba(0,0,0,.4), 
+            inset -10px -4px 32px -1px rgba(0,0,0,0.75), 
+            inset 10px -4px 32px -1px rgba(0,0,0,0.75);
+        flex: 1;
+
+        &--one {
+            background-image: url(../images/colbyBg.jpg);
+        }
+        &--two {
+            background-image: url(../images/barmanBg.jpg);
+        }
+        &--three {
+            background-image: url(../images/citrouilleBg.jpg);
+        }
+        &--four {
+            background-image: url(../images/realtorBg.jpg);
+        }
+    }
+    &__infopanel {
+        flex: 4;
+        min-height: 50rem;
+        border: 2px solid $color-brand;
+        border-left: none;
+        border-radius: 0 6px 6px 0;
+        background-color: $color-background-accent;
+    }
+}
+
 .welcome {
     margin-top: 10rem;
     @include shadow;

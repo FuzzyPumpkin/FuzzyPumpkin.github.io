@@ -87,7 +87,7 @@ h4 {
   background-color: #fff7f7;
   border-radius: 2rem; }
 
-.u-double-border {
+.u-blue-border {
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
   border: 1px solid #204969; }
 
@@ -208,8 +208,9 @@ input[name="choice"] {
   background-color: #38335a;
   display: flex;
   flex-direction: row;
+  box-shadow: 0 0 0 1px #08ffc8, 0 0 0 4px #38335a, 0 1rem 2rem rgba(0, 0, 0, 0.3);
   justify-content: center;
-  z-index: 3; }
+  z-index: 4; }
   .footer__icon {
     height: 3rem;
     width: 3rem;
@@ -248,6 +249,37 @@ input[name="choice"] {
     margin-top: .5rem;
     font-weight: 600;
     font-size: 1.75rem; }
+
+.projects {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: 3rem 0 20rem 0;
+  align-items: center; }
+  .projects__bookend {
+    display: flex;
+    flex-direction: column;
+    min-height: 530px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 1rem;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4), inset -10px -4px 32px -1px rgba(0, 0, 0, 0.75), inset 10px -4px 32px -1px rgba(0, 0, 0, 0.75);
+    flex: 1; }
+    .projects__bookend--one {
+      background-image: url(../images/colbyBg.jpg); }
+    .projects__bookend--two {
+      background-image: url(../images/barmanBg.jpg); }
+    .projects__bookend--three {
+      background-image: url(../images/citrouilleBg.jpg); }
+    .projects__bookend--four {
+      background-image: url(../images/realtorBg.jpg); }
+  .projects__infopanel {
+    flex: 4;
+    min-height: 50rem;
+    border: 2px solid #38335a;
+    border-left: none;
+    border-radius: 0 6px 6px 0;
+    background-color: #fff7f7; }
 
 .welcome {
   margin-top: 10rem;
