@@ -260,26 +260,78 @@ input[name="choice"] {
     display: flex;
     flex-direction: column;
     min-height: 530px;
+    flex: 1;
+    max-width: 12%;
+    position: relative;
+    overflow: visible;
+    background: linear-gradient(90deg, rgba(228, 225, 222, 0.3) 0%, rgba(216, 212, 208, 0.3) 0%, rgba(203, 198, 193, 0.3) 0%, rgba(188, 184, 179, 0.3) 6.79%, rgba(166, 162, 159, 0.3) 14.61%, rgba(216, 217, 217, 0.3) 48.07%, rgba(223, 224, 225, 0.3) 52.25%, rgba(210, 210, 210, 0.3) 62.52%, rgba(176, 173, 171, 0.3) 82.19%, rgba(166, 162, 159, 0.3) 87.64%, rgba(208, 210, 211, 0.3) 100%, rgba(166, 168, 171, 0.3) 100%); }
+    .projects__bookend:before, .projects__bookend-film {
+      box-shadow: inset 0 0.5rem 1rem rgba(0, 0, 0, 0.8);
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      content: '';
+      background: linear-gradient(90deg, transparent 0%, rgba(247, 250, 252, 0.3) 50%, transparent 100%); }
+    .projects__bookend-band {
+      position: absolute;
+      top: 12px;
+      left: 3px;
+      height: 18px;
+      width: calc(100% - 6px);
+      background-color: #38335a;
+      z-index: 2; }
+    .projects__bookend-title {
+      position: relative;
+      bottom: -35rem;
+      font-size: 4rem;
+      transform: rotate(270deg);
+      transform-origin: center center;
+      white-space: nowrap;
+      z-index: 2; }
+  .projects__bookend-ridge {
+    background: linear-gradient(to bottom, #797776 50%, #3b3a39 51%, #3b3a39 100%);
+    position: absolute;
+    height: 5px;
+    width: 100%;
+    z-index: 3; }
+    .projects__bookend-ridge--top {
+      top: -5px;
+      left: 0; }
+    .projects__bookend-ridge--bottom {
+      bottom: 0px;
+      left: 0; }
+    .projects__bookend-ridge--tb1 {
+      top: 12px;
+      left: 0; }
+    .projects__bookend-ridge--tb2 {
+      top: 30px;
+      left: 0; }
+  .projects__background {
+    width: calc(100% - 6px);
+    height: 100%;
+    left: 3px;
+    position: absolute;
+    bottom: 3px;
     background-size: cover;
-    background-position: center;
-    border-radius: 1rem;
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4), inset -10px -4px 32px -1px rgba(0, 0, 0, 0.75), inset 10px -4px 32px -1px rgba(0, 0, 0, 0.75);
-    flex: 1; }
-    .projects__bookend--one {
+    background-position: center; }
+    .projects__background--one {
       background-image: url(../images/colbyBg.jpg); }
-    .projects__bookend--two {
+    .projects__background--two {
       background-image: url(../images/barmanBg.jpg); }
-    .projects__bookend--three {
+    .projects__background--three {
       background-image: url(../images/citrouilleBg.jpg); }
-    .projects__bookend--four {
+    .projects__background--four {
       background-image: url(../images/realtorBg.jpg); }
   .projects__infopanel {
     flex: 4;
     min-height: 50rem;
+    padding: 1rem;
     border: 2px solid #38335a;
     border-left: none;
     border-radius: 0 6px 6px 0;
     background-color: #fff7f7; }
+    .projects__infopanel-instructions {
+      color: #797776; }
 
 .welcome {
   margin-top: 10rem;
@@ -390,9 +442,9 @@ input[name="choice"] {
       display: flex;
       flex-direction: column; } }
 
-.projects {
+.resprojects {
   padding: 3rem; }
-  .projects__project {
+  .resprojects__project {
     margin-bottom: 2rem; }
 
 .proj-ed {
