@@ -151,15 +151,34 @@
     
     &__infopanel {
         flex: 4;
+        display: flex;
+        flex-direction: column;
         min-height: 50rem;
         padding: 1rem;
         border: 2px solid $color-brand;
         border-left: none;
         border-radius: 0 6px 6px 0;
         background-color: $color-background-accent;
-
+        &-blurb {
+            margin: 1rem 0;
+            font-size: 1.6rem;
+        }
         &-instructions {
             color: $color-text-light;
+        }
+        &-list {padding: 0 3rem;}
+        &-listitem:not(:last-of-type) {
+            margin-bottom: .75rem;
+        }
+        &-projectname {
+            color: $color-text-headline;
+            font-weight: 600;
+        }
+        &-ghbutton {
+            margin: 3rem auto 0 auto;
+        }
+        &-ghbuttonlink {
+            display: flex;
         }
     }
 }
