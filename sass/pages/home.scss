@@ -148,7 +148,6 @@
             background-image: url(../images/realtorBg.jpg);
         }
     }
-    
     &__infopanel {
         flex: 4;
         display: flex;
@@ -180,6 +179,9 @@
         &-ghbuttonlink {
             display: flex;
         }
+    }
+    &__projectinfo {
+        display: none;
     }
 }
 

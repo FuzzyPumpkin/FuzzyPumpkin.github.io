@@ -1,23 +1,22 @@
-const panels = document.querySelectorAll(".panel");
+//PROJECT FLEX PANELS
+const bookends = document.querySelectorAll('.projects__bookend');
+const projectinfos = document.querySelectorAll('.projects__projectinfo');
+const infopanel = document.querySelector('.projects__infopanel');
 
-panels.forEach(panel => panel.addEventListener("click", toggleOpen));
+bookends.forEach(bookend => bookend.addEventListener("click", () => toggleOpen(bookend.id)));
 
-function toggleOpen(){
-    if(!this.classList.contains("open")){
-        panels.forEach(panel=> panel.classList.add("closed"));
-        panels.forEach(panel=> panel.classList.remove("open"));
-        this.classList.remove("closed");
-        this.classList.toggle("open");
-    }
-    else {
-        this.classList.remove("open");
-        panels.forEach(panel=> panel.classList.remove("closed"));
+function toggleOpen(id){
+  projectinfos.forEach(function(info){
+    if(info.dataset.key === id){
+      console.log(info.dataset.key);
+      //if projinfo has display class, remove from all and give to infopanel
+      //if projinfo does not have display class, remove from all and give to projinfo
     };
+  });
 };
 
 
-
-
+//SPARKLY BUTTONS
 const animateButton = function(e) {
     e.preventDefault;
     e.target.classList.remove('animate');

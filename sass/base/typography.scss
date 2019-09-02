@@ -53,7 +53,6 @@ button {
     &:hover, &:focus {
         color: $color-highlight;
         transform: translateY(-2px);
-        // transform: scale(0.9);
         background-color: darken($color-brand, 5%);
         box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
     }
