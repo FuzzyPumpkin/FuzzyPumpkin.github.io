@@ -9,11 +9,28 @@ function toggleOpen(id){
   projectinfos.forEach(function(info){
     if(info.dataset.key === id){
       console.log(info.dataset.key);
-      //if projinfo has display class, remove from all and give to infopanel
-      //if projinfo does not have display class, remove from all and give to projinfo
+      //if projinfo does not have u-hidden, give to all and remove from infopanel
+      if(!info.classList.contains("u-hidden")){
+        addHidden();
+        infopanel.classList.remove("u-hidden");
+      } else {
+      //if projinfo has u-hidden, add to all and infopanel and remove from projinfo
+        addHidden();
+        infopanel.classList.add("u-hidden");
+        info.classList.remove("u-hidden");
+      };
+      
     };
   });
 };
+
+function addHidden(){
+  projectinfos.forEach(function(info){
+    if(!info.classList.contains("u-hidden")){
+      info.classList.add("u-hidden");
+    };
+  });
+}
 
 
 //SPARKLY BUTTONS

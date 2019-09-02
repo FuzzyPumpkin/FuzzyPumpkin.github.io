@@ -1,0 +1,104 @@
+.projects {
+    @include flex-row;
+    width: 100%;
+    margin: 3rem 0 20rem 0;
+    align-items: center;
+
+    &__bookend {
+        @include flex-column;
+        @include shadow;
+        min-height: 530px;
+        flex: 1;
+        max-width: 12%;
+        position: relative;
+        overflow: hidden;
+        background-size: cover;
+        background-position: center;
+
+        &:before,
+        &-film {
+            box-shadow: inset 0 .5rem 1rem rgba(0,0,0,.3);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            content: '';
+            background: linear-gradient(90deg, transparent 0%, 
+                    rgba(247, 250, 252, 0.3) 70%, 
+                    transparent 100%);
+        }
+        &-title {
+            position: relative;
+            bottom: -35rem;
+            font-size: 4rem;
+            transform: rotate(270deg);
+            transform-origin: center center;
+            white-space: nowrap;
+            z-index: 2; 
+        }
+        &--one {
+            background-image: url(../images/colbyBg.jpg);
+        }
+        &--two {
+            background-image: url(../images/barmanBg.jpg);
+        }
+        &--three {
+            background-image: url(../images/citrouilleBg.jpg);
+        }
+        &--four {
+            background-image: url(../images/realtorBg.jpg);
+        }
+    }
+    &__infopanel {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        min-height: 50rem;
+        padding: 0;
+        border: 2px solid $color-brand;
+        border-left: none;
+        border-radius: 0 6px 6px 0;
+        background-color: $color-background-accent;
+
+        &-blurb {
+            margin: 1rem 0;
+            font-size: 1.6rem;
+        }
+        &-contents {
+            padding: 1rem 2.5rem;
+        }
+        &-instructions {
+            color: $color-text-light;
+        }
+        &-list {padding: 0 3rem;}
+        &-listitem:not(:last-of-type) {
+            margin-bottom: .75rem;
+        }
+        &-projectname {
+            color: $color-text-headline;
+            font-weight: 600;
+        }
+        &-ghbutton {
+            margin: 3rem auto 0 auto;
+        }
+        &-ghbuttonlink {
+            display: flex;
+        }
+        &.u-hidden .projects__infopanel-contents {
+            display: none;
+        }
+    }
+    &__projectinfo {
+        &-contents {
+            padding: 1rem 2.5rem;
+        }
+        &.u-hidden .projects__projectinfo-contents {
+            display: none;
+        }
+    }
+}
+.u-hidden {
+    width: 0;
+    flex: none;
+    border: none;
+}

@@ -51,143 +51,12 @@
         font-size: 1.75rem;
     }
 }
-.projects {
-    @include flex-row;
-    width: 100%;
-    margin: 3rem 0 20rem 0;
-    align-items: center;
 
-    &__bookend {
-        @include flex-column;
-        min-height: 530px;
-        flex: 1;
-        max-width: 12%;
-        position: relative;
-        overflow: visible;
-        background: linear-gradient(90deg, rgba(228, 225, 222, 0.3) 0%, 
-                rgba(216, 212, 208, 0.3) 0%, 
-                rgba(203, 198, 193, 0.3) 0%, 
-                rgba(188, 184, 179, 0.3) 6.79%, 
-                rgba(166, 162, 159, 0.3) 14.61%, 
-                rgba(216, 217, 217, 0.3) 48.07%,
-                rgba(223, 224, 225, 0.3) 52.25%, 
-                rgba(210, 210, 210, 0.3) 62.52%, 
-                rgba(176, 173, 171, 0.3) 82.19%, 
-                rgba(166, 162, 159, 0.3) 87.64%, 
-                rgba(208, 210, 211, 0.3) 100%, 
-                rgba(166, 168, 171, 0.3) 100%);
-
-        &:before,
-        &-film {
-            box-shadow: inset 0 .5rem 1rem rgba(0,0,0,.8);
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            content: '';
-            background: linear-gradient(90deg, transparent 0%, 
-                    rgba(247, 250, 252, 0.3) 50%, 
-                    transparent 100%);
-        }
-        &-band {
-            position: absolute;
-            top: 12px; left: 3px;
-            height: 18px;
-            width: calc(100% - 6px);
-            background-color: $color-brand;
-            z-index: 2;
-        }
-        &-title {
-            position: relative;
-            bottom: -35rem;
-            font-size: 4rem;
-            transform: rotate(270deg);
-            transform-origin: center center;
-            white-space: nowrap;
-            z-index: 2; 
-        }
-    }
-    &__bookend-ridge {
-        background: linear-gradient(to bottom, $color-text-light 50%, $color-text 51%, $color-text 100%);
-        position: absolute;
-        height: 5px;
-        width: 100%;
-        z-index: 3;
-
-        &--top {
-            top: -5px; left: 0;
-        }
-        &--bottom {
-            bottom: 0px; left: 0;
-        }
-        &--tb1 {
-           top: 12px; left: 0;
-        }
-        &--tb2 {
-            top: 30px; left: 0;
-        }
-    }
-    &__background {
-        width: calc(100% - 6px);
-        height: 100%;
-        left: 3px;
-        position: absolute;
-        bottom: 3px;
-        background-size: cover;
-        background-position: center;
-
-        &--one {
-            background-image: url(../images/colbyBg.jpg);
-        }
-        &--two {
-            background-image: url(../images/barmanBg.jpg);
-        }
-        &--three {
-            background-image: url(../images/citrouilleBg.jpg);
-        }
-        &--four {
-            background-image: url(../images/realtorBg.jpg);
-        }
-    }
-    &__infopanel {
-        flex: 4;
-        display: flex;
-        flex-direction: column;
-        min-height: 50rem;
-        padding: 1rem;
-        border: 2px solid $color-brand;
-        border-left: none;
-        border-radius: 0 6px 6px 0;
-        background-color: $color-background-accent;
-        &-blurb {
-            margin: 1rem 0;
-            font-size: 1.6rem;
-        }
-        &-instructions {
-            color: $color-text-light;
-        }
-        &-list {padding: 0 3rem;}
-        &-listitem:not(:last-of-type) {
-            margin-bottom: .75rem;
-        }
-        &-projectname {
-            color: $color-text-headline;
-            font-weight: 600;
-        }
-        &-ghbutton {
-            margin: 3rem auto 0 auto;
-        }
-        &-ghbuttonlink {
-            display: flex;
-        }
-    }
-    &__projectinfo {
-        display: none;
-    }
-}
 
 .welcome {
     margin-top: 10rem;
     @include shadow;
+    padding: 3rem 1.5rem;
 
     &__marquee {
         height: 50px;
@@ -195,7 +64,7 @@
         overflow: hidden;
     }
     &__name {
-        font-size: 10rem;
+        font-size: 12rem;
         letter-spacing: 2rem;
     }
     &__scrolltext {
@@ -220,7 +89,7 @@
             radial-gradient(circle at 100% 50%, white 5%, rgba(8, 255, 200, .4) 6%, rgba(8, 255, 200, .4) 15%, white 16%, white 20%, rgba(8, 255, 200, .4) 21%, rgba(8, 255, 200, .4) 30%, white 31%, white 35%, rgba(8, 255, 200, .4) 36%, rgba(8, 255, 200, .4) 45%, white 46%, white 49%, transparent 50%, transparent),
             radial-gradient(circle at 0    50%, white 5%, rgba(8, 255, 200, .4) 6%, rgba(8, 255, 200, .4) 15%, white 16%, white 20%, rgba(8, 255, 200, .4) 21%, rgba(8, 255, 200, .4) 30%, white 31%, white 35%, rgba(8, 255, 200, .4) 36%, rgba(8, 255, 200, .4) 45%, white 46%, white 49%, transparent 50%, transparent);
         background-size: 100px 50px;
-        font-size: 6rem;
+        font-size: 4.5rem;
     }
 }
 
