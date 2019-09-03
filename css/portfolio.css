@@ -558,14 +558,48 @@ input[name="choice"] {
   .projects__infopanel.u-hidden .projects__infopanel-contents {
     display: none; }
   .projects__projectinfo-contents {
+    position: relative;
     height: 95%;
     width: 90%;
     padding: 1rem 2.5rem;
     background-color: rgba(32, 73, 105, 0.8);
     color: #fff7f7;
-    border-radius: 6px; }
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column; }
   .projects__projectinfo.u-hidden .projects__projectinfo-contents {
     display: none; }
+  .projects__projectinfo-close {
+    position: absolute;
+    top: -1rem;
+    right: 1.5rem;
+    background-color: #fff7f7;
+    color: #38335a;
+    font-size: 2rem;
+    border: 2px solid #38335a;
+    padding: 1rem;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4); }
+    .projects__projectinfo-close:hover {
+      color: #08ffc8; }
+  .projects__projectinfo-container {
+    display: flex;
+    flex-direction: row; }
+  .projects__projectinfo-quicksumm {
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+    align-items: center;
+    justify-content: space-between; }
+  .projects__projectinfo-blurb {
+    flex: 7;
+    padding-right: 2rem; }
+  .projects__projectinfo-image {
+    width: 100%; }
+  .projects__projectinfo-ghlink, .projects__projectinfo-livelink {
+    width: 55%; }
+  .projects__projectinfo-ghlink {
+    margin-top: auto; }
 
 .projects__infopanel, .projects__projectinfo {
   flex: 1;

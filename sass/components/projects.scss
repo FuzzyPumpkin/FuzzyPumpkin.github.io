@@ -84,14 +84,53 @@
     &__projectinfo {
 
         &-contents {
+            position: relative;
             height: 95%; width: 90%;
             padding: 1rem 2.5rem;
             background-color: rgba($color-text-headline, .8);
             color: $color-background-accent;
             border-radius: 6px;
+            @include flex-column;
         }
         &.u-hidden .projects__projectinfo-contents {
             display: none;
+        }
+        &-close {
+            position: absolute;
+            top: -1rem; right: 1.5rem;
+            background-color: $color-background-accent;
+            color: $color-brand;
+            font-size: 2rem;
+            border: 2px solid $color-brand;
+            padding: 1rem;
+            border-radius: 0 0 10px 10px;
+            @include shadow;
+
+            &:hover {
+                color: $color-highlight;
+            }
+        }
+        &-container {
+            @include flex-row;
+        }
+        &-quicksumm {
+            @include flex-column;
+            flex: 3;
+            align-items: center;
+            justify-content: space-between;
+        }
+        &-blurb {
+            flex: 7;
+            padding-right: 2rem;
+        }
+        &-image {
+            width: 100%;
+        }
+        &-ghlink, &-livelink {
+            width: 55%;
+        }
+        &-ghlink {
+            margin-top: auto;
         }
     }
 }

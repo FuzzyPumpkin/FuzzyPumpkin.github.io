@@ -130,9 +130,36 @@
 		<div class="projects__bookend-film"></div>
 	</div>
 	<div class="projects__projectinfo u-hidden" data-key="one">
-		<article class="projects__projectinfo-contents">
-			One
-		</article>
+		<div class="projects__projectinfo-contents">
+			<div class="projects__projectinfo-close">X</div>
+			<h2 class="projects__projectinfo-title">reSOURCEd</h2>
+			<div class="projects__projectinfo-container">
+				<article class="projects__projectinfo-blurb">
+						<p>This is a site created to track resources I have found helpful in my journey to learn how to be a web developer. It includes courses I 
+						have taken as well as tools and lexicons I regularly refer to. While my main reason for creating the project was to gain more practice in 
+						using React, specifically routing in React, it also was to address the fact that I use three computers to learn and code on, as well as 
+						multiple browsers on those computers, and my repository of useful links were scattered throughout those browsers. This site keeps all of my 
+						links together and accessible from anywhere. Could I have just used a browser extension that someone else has created? Of course! This, 
+						however, was more difficult.</p>
+
+						<p>Content is managed through a JSON. I contemplated setting up a backend and using MongoDB instead, but considering the simplicity of the 
+						overall project structure, it did not seem to make sense and would have increased the possibility of having an issue if the backend server 
+						or MongoAtlas were to experience downtime. The navigation bar and routes automatically update when new tags are used in the JSON, managed 
+						through state.</p>
+				</article>
+				<div class="projects__projectinfo-quicksumm">
+					<img src="images/resourced.jpg" class="projects__projectinfo-image" alt="reSOURCED screenshot"></img>
+					<button class="projects__projectinfo-livelink">View Live</button>
+					<ul class="projects__projectinfo-tech">
+						<li class="projects__projectinfo-technology">React</li>
+						<li class="projects__projectinfo-technology">JavaScript</li>
+						<li class="projects__projectinfo-technology">CSS</li>
+						<li class="projects__projectinfo-technology">HTML</li>
+					</ul>
+					<button class="projects__projectinfo-ghlink">View on Github</button>
+				</div>
+			</div>
+		</div>
 	</div>
 	<div class="projects__bookend projects__bookend--two" id="two">
 		<h3 class="projects__bookend-title">Barman</h3>
