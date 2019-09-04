@@ -498,7 +498,7 @@ input[name="choice"] {
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: 60rem;
+  height: 50rem;
   margin: 3rem 0 20rem 0;
   align-items: center;
   position: relative; }
@@ -506,7 +506,7 @@ input[name="choice"] {
     display: flex;
     flex-direction: column;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
-    height: 100%;
+    align-self: stretch;
     flex: 1;
     max-width: 10%;
     position: relative;
@@ -515,6 +515,8 @@ input[name="choice"] {
     background-position: center;
     justify-content: center;
     align-items: center; }
+    .projects__bookend:hover {
+      cursor: pointer; }
     .projects__bookend:before, .projects__bookend-film {
       box-shadow: inset 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
       position: absolute;
@@ -537,6 +539,11 @@ input[name="choice"] {
       background-image: url(../images/citrouilleBg.jpg); }
     .projects__bookend--four {
       background-image: url(../images/realtorBg.jpg); }
+  .projects__buttonlink {
+    display: flex;
+    text-decoration: none; }
+    .projects__buttonlink--ghlink {
+      margin-top: auto; }
   .projects__infopanel-blurb {
     margin: 1rem 0;
     font-size: 1.6rem; }
@@ -553,8 +560,6 @@ input[name="choice"] {
     font-weight: 600; }
   .projects__infopanel-ghbutton {
     margin: 3rem auto 0 auto; }
-  .projects__infopanel-ghbuttonlink {
-    display: flex; }
   .projects__infopanel.u-hidden .projects__infopanel-contents {
     display: none; }
   .projects__projectinfo-contents {
@@ -581,7 +586,8 @@ input[name="choice"] {
     border-radius: 0 0 10px 10px;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4); }
     .projects__projectinfo-close:hover {
-      color: #08ffc8; }
+      color: #08ffc8;
+      cursor: pointer; }
   .projects__projectinfo-container {
     display: flex;
     flex-direction: row; }
@@ -596,10 +602,11 @@ input[name="choice"] {
     padding-right: 2rem; }
   .projects__projectinfo-image {
     width: 100%; }
-  .projects__projectinfo-ghlink, .projects__projectinfo-livelink {
-    width: 55%; }
-  .projects__projectinfo-ghlink {
-    margin-top: auto; }
+  .projects__projectinfo-paragraph {
+    padding-bottom: 2rem;
+    text-align: justify; }
+  .projects__projectinfo-title {
+    color: #38335a; }
 
 .projects__infopanel, .projects__projectinfo {
   flex: 1;
