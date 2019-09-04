@@ -1,3 +1,17 @@
+<!-- to do:
+Close button functionality
+Fix nav bar...widen area where clicks verify both for the linking and for the movement of the active focuse
+Animations for project display
+Sizing adjustment to welcome box. Fonts too big, need better use of white space
+Add location...somewhere...especially on resume
+Print resume to PDF
+Semantic map
+Media queries
+Accessibility check
+CSS refactor -->
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -168,27 +182,116 @@
 		<div class="projects__bookend-film"></div>
 	</div>
 	<div class="projects__projectinfo u-hidden" data-key="two">
-		<article class="projects__projectinfo-contents">
-			Two
-		</article>
+		<div class="projects__projectinfo-contents">
+			<div class="projects__projectinfo-close">X</div>
+			<h2 class="projects__projectinfo-title">Barman</h2>
+			<div class="projects__projectinfo-container">
+				<article class="projects__projectinfo-blurb">
+						<p class="projects__projectinfo-paragraph">This is a site created for a fictious delivery service, similar to HelloFresh, but for cocktails. 
+							Annoyed with designers that follow the trend of 100vh hero images without giving any indication 
+							that there's page content below it, I decided to make a site where all the content was contained 
+							in one view height/width. This is a lot harder than it seems because one view height/width is 
+							different not only on desktop and mobile and widescreen, but even on individual devices. It's 
+							probably impossible for me to get all of them to the look I want, but I tried to cater to a variety 
+							of modern devices and some legacy ones. I myself use a MotoX4, which isn't the greatest phone but 
+							gets it done.</p>
+
+						<p class="projects__projectinfo-paragraph">This was my first time using SVG clip paths for background images. I'm really amazed by the versatility of SVG.</p>
+				</article>
+				<div class="projects__projectinfo-quicksumm">
+					<img src="images/barman.jpg" class="projects__projectinfo-image" alt="Barman screenshot"></img>
+					<a href="https://fuzzypumpkin.github.io/Barman/index.html" target="blank" class="projects__buttonlink">
+						<button class="projects__projectinfo-livelink">View Live</button>
+					</a>
+					<h3 class="projects__project-info-theadline">Tech Used:</h3>
+					<ul class="projects__projectinfo-tech">
+						<li class="projects__projectinfo-technology">JavaScript</li>
+						<li class="projects__projectinfo-technology">CSS</li>
+						<li class="projects__projectinfo-technology">HTML</li>
+					</ul>
+					<a href="https://github.com/FuzzyPumpkin/FuzzyPumpkin.github.io/tree/master/Barman" target="blank" class="projects__buttonlink--ghlink">
+						<button class="projects__projectinfo-ghlink">View on Github</button>
+					</a>
+				</div>
+			</div>
+		</div>
 	</div>
 	<div class="projects__bookend projects__bookend--three" id="three">
 		<h3 class="projects__bookend-title">Citrouille Floue</h3>
 		<div class="projects__bookend-film"></div>
 	</div>
 	<div class="projects__projectinfo u-hidden" data-key="three">
-		<article class="projects__projectinfo-contents">
-			Three
-		</article>
+		<div class="projects__projectinfo-contents">
+			<div class="projects__projectinfo-close">X</div>
+			<h2 class="projects__projectinfo-title">Citrouille Floue</h2>
+			<div class="projects__projectinfo-container">
+				<article class="projects__projectinfo-blurb">
+						<p class="projects__projectinfo-paragraph">This is a site created for a fictious restaurant. There are a few subtle CSS and 
+							JavaScript animations on the site, as well as custom JavaScript form validation. I'm especially proud of the form and 
+							open/closed status programming since it evaluates the input or the current time to see how it relates to the business 
+							hours.</p>
+
+						<p class="projects__projectinfo-paragraph">"Citrouille Floue" is a bit of a riff on my internet persona, Fuzzy Pumpkin. 
+							It's the translation of "Fuzzy Pumpkin" in French, and my 'net name was born of a forum post where I expressed that my poor 
+								grasp of French, despite taking it for four years, would result in me doing something stupid like 
+								calling someone a fuzzy pumpkin. The forum administrator then changed my title to "Fuzzy Pumpkin". 
+								The 'net name I'd been using up to then was problematic, so I took on the moniker.</p>
+
+						<p class="projects__projectinfo-paragraph">Also, I really like pumpkin.</p>
+				</article>
+				<div class="projects__projectinfo-quicksumm">
+					<img src="images/citrouille.jpg" class="projects__projectinfo-image" alt="Citrouille screenshot"></img>
+					<a href="https://fuzzypumpkin.github.io/Citrouille/index.html" target="blank" class="projects__buttonlink">
+						<button class="projects__projectinfo-livelink">View Live</button>
+					</a>
+					<h3 class="projects__project-info-theadline">Tech Used:</h3>
+					<ul class="projects__projectinfo-tech">
+						<li class="projects__projectinfo-technology">JavaScript</li>
+						<li class="projects__projectinfo-technology">CSS</li>
+						<li class="projects__projectinfo-technology">HTML</li>
+					</ul>
+					<a href="https://github.com/FuzzyPumpkin/FuzzyPumpkin.github.io/tree/master/Citrouille" target="blank" class="projects__buttonlink--ghlink">
+						<button class="projects__projectinfo-ghlink">View on Github</button>
+					</a>
+				</div>
+			</div>
+		</div>
 	</div>
 	<div class="projects__bookend projects__bookend--four" id="four">
 		<h3 class="projects__bookend-title">Stacey Evy: Realtor</h3>
 		<div class="projects__bookend-film"></div>
 	</div>
 	<div class="projects__projectinfo projects__projectinfo--last u-hidden" data-key="four">
-		<article class="projects__projectinfo-contents">
-			Four
-		</article>
+		<div class="projects__projectinfo-contents">
+			<div class="projects__projectinfo-close">X</div>
+			<h2 class="projects__projectinfo-title">Stacey Evy: Realtor</h2>
+			<div class="projects__projectinfo-container">
+				<article class="projects__projectinfo-blurb">
+					<p class="projects__projectinfo-paragraph">This is a site created for a fictious realtor. I gave myself a challenge 
+								of creating a fully-functional static site that could be used on a professional level within five days 
+								(approximately 8.5 working hours) as my first focused complete-site project. I was able to achieve that goal. 
+								There are a few subtle CSS and JavaScript animations on the site, as well as custom JavaScript form validation.</p>
+		
+					<p class="projects__projectinfo-paragraph">Site is fully mobile-friendly and tested on such, though it displays well 
+								on standard desktop and wide-screen monitors.</p>
+				</article>
+				<div class="projects__projectinfo-quicksumm">
+					<img src="images/realtor.jpg" class="projects__projectinfo-image" alt="Stacey Evy screenshot"></img>
+					<a href="https://fuzzypumpkin.github.io/RealEstate/index.html" target="blank" class="projects__buttonlink">
+						<button class="projects__projectinfo-livelink">View Live</button>
+					</a>
+					<h3 class="projects__project-info-theadline">Tech Used:</h3>
+					<ul class="projects__projectinfo-tech">
+						<li class="projects__projectinfo-technology">JavaScript</li>
+						<li class="projects__projectinfo-technology">CSS</li>
+						<li class="projects__projectinfo-technology">HTML</li>
+					</ul>
+					<a href="https://github.com/FuzzyPumpkin/FuzzyPumpkin.github.io/tree/master/RealEstate" target="blank" class="projects__buttonlink--ghlink">
+						<button class="projects__projectinfo-ghlink">View on Github</button>
+					</a>
+				</div>
+			</div>
+		</div>
 	</div>
 	<div class="projects__infopanel">
 		<article class="projects__infopanel-contents">
@@ -242,154 +345,7 @@
 
 
 
-</div>
-<!-- keeping for the moment as a starting point for new project display -->
-<!-- <div class="panels" id="examples">
-	<div class="panel panel1 closed">
-		<div class="panelInner">
-			<div class="projSumm">
-				<div class="projNameDiv">
-					<h3>Colby Critiques</h3>
-				</div>
-				<a href="https://mighty-taiga-15829.herokuapp.com/"><img src="images/colbyIcon.jpg"></a>
-				<div class="tech">
-					<p>Tools used:</p>
-					<ul>
-						<li>HTML/CSS/Javascript</li>
-						<li>Node.js</li>
-						<li>MongoDB</li>
-						<li>Bootstrap 4.0</li>
-					</ul>
-					<a href="https://github.com/FuzzyPumpkin/colby" target="blank">
-						<i class="fab fa-github fa-1x"></i></a>
-						View on GitHub
-				</div>
-			</div>
-			<div class="projReadme">
-				<p>This is a small, very specialized review/blog site created with Node.js, 
-				MongoDB, and various packages, using Bootstrap 4.0 as a CSS framework. The site features user 
-				authentication and permissions relating to the edit/create/delete routes. Bootstrap 4.0 was used 
-				to show familiarity with the framework and styles were kept mostly to those available with the 
-				framework. I tried to keep manual CSS to a minimum since manual CSS is my preference, as a challenge.</p>
-				<p>Future plans:
-					<ul>
-						<li>Design overhaul. Right now the site look is very basic.</li>
-						<li>Adding subtle animations.</li>
-						<li>Splash/landing page. It would add to the experience to have a small intro to Colby and 
-							his world.</li>
-					</ul>
-				<p>As an added bonus, there is an easter egg you can find on the site. You must be logged in. Happy 
-					clicking!</p>
-			</div>
-		</div>
-	</div>
-	<div class="panel panel2 closed">
-		<div class="panelInner">
-			<div class="projSumm">
-				<div class="projNameDiv">
-					<h3>Barman</h3>
-				</div>
-				<a href="Barman/index.html"><img src="images/barman.jpg"></a>
-				<div class="tech">
-					<p>Tools used:</p>
-						<ul>
-							<li>HTML/CSS/Javascript</li>
-							<br />
-							<br />
-							<br />
-						</ul>
-					<a href="https://github.com/FuzzyPumpkin/FuzzyPumpkin.github.io/tree/master/Barman" target="blank">
-						<i class="fab fa-github fa-1x"></i></a>
-						View on GitHub
-				</div>
-			</div>
-			<div class="projReadme">
-				<p>This is a site created for a fictious delivery service, similar to HelloFresh, but for cocktails. 
-					Annoyed with designers that follow the trend of 100vh hero images without giving any indication 
-					that there's page content below it, I decided to make a site where all the content was contained 
-					in one view height/width. This is a lot harder than it seems because one view height/width is 
-					different not only on desktop and mobile and widescreen, but even on individual devices. It's 
-					probably impossible for me to get all of them to the look I want, but I tried to cater to a variety 
-					of modern devices and some legacy ones. I myself use a MotoX4, which isn't the greatest phone but 
-					gets it done.
-				</p>
-				<p>
-					This was my first time using SVG clip paths for background images. 
-				</p>
-			</div>
-		</div>
-	</div>
-	<div class="panel panel3 closed">
-		<div class="panelInner">
-			<div class="projSumm">
-			<div class="projNameDiv">
-				<h3>Citrouille Floue</h3>
-			</div>
-			<a href="Citrouille/index.html"><img src="images/citrouille.jpg"></a>
-			<div class="tech">
-				<p>Tools used:</p>
-				<ul>
-					<li>HTML/CSS/Javascript</li>
-					<br />
-					<br />
-					<br />
-				</ul>
-				<a href="https://github.com/FuzzyPumpkin/FuzzyPumpkin.github.io/tree/master/Citrouille" target="blank">
-					<i class="fab fa-github fa-1x"></i></a>
-					View on GitHub
-			</div>
-			</div>
-			<div class="projReadme">
-				<p>This is a site created for a fictious restaurant. There are a few subtle CSS and JavaScript animations on the site, as well as custom JavaScript 
-				form validation. I'm especially proud of the form and open/closed status programming since it evaluates 
-				the input or the current time to see how it relates to the business hours.</p>
 
-				<p>"Citrouille Floue" is a bit of a riff on my internet persona, Fuzzy Pumpkin. It's the translation of 
-					"Fuzzy Pumpkin" in French, and my 'net name was born of a forum post where I expressed that my poor 
-					grasp of French, despite taking it for four years, would result in me doing something stupid like 
-					calling someone a fuzzy pumpkin. The forum administrator then changed my title to "Fuzzy Pumpkin". 
-					The 'net name I'd been using up to then was problematic, so I took on the moniker.</p>
-
-				<p>Also, I really like pumpkin.</p>
-			</div>
-		</div>
-	</div>
-	<div class="panel panel4 open">
-		<div class="panelInner">
-			<div class="projSumm">
-				<div class="projNameDiv">
-					<h3>Stacey Evy: Realtor</h3>
-				</div>
-				<a href="RealEstate/index.html"><img src="images/realtor.jpg"></a>
-				<div class="tech">
-					<p>Tools used:</p>
-						<ul>
-							<li>HTML/CSS/Javascript</li>
-							<br />
-							<br />
-							<br />
-						</ul>
-					<a href="https://github.com/FuzzyPumpkin/FuzzyPumpkin.github.io/tree/master/RealEstate" target="blank">
-						<i class="fab fa-github fa-1x"></i></a>
-						View on GitHub
-				</div>
-			</div>
-			<div class="projReadme">
-				<p>This is a site created for a fictious realtor. I gave myself a challenge of creating a fully-functional 
-					static site that could be used on a professional level within five days (approximately 8.5 working hours) 
-					as my first focused complete-site project. I was able to achieve that goal. There are a few subtle CSS and 
-					JavaScript animations on the site, as well as custom JavaScript form validation.
-				</p>
-				<p>Site passes all Lighthouse audits with 90% or above. The sticking point is on the index page's accessibility 
-					test, as for some reason that particular page's test incorrectly marks the text on the parallax footer as 
-					being on a white background. Without that error, it should be at 100% accessibility similar to the other 
-					two pages. Site is fully mobile-friendly and tested on such, though it displays well on standard desktop and 
-					wide-screen monitors.
-				</p>
-			</div>
-		</div>
-	</div>
-</div> -->
 
 <script type="text/javascript" src="index.js"></script>
 </body>

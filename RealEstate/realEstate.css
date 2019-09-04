@@ -234,6 +234,9 @@ q {font-style: italic;}
 
 /* end slideshow */
 .experience {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
   width: 100%;
   min-height: 350px;
@@ -244,10 +247,14 @@ q {font-style: italic;}
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  text-align: justify;
 }
   .exp-backdrop {
+    display: flex;
+    flex-direction: row;
     width: 70%;
-    margin: auto;
+    align-items: center;
+    justify-content: center;
     background-color: rgba(255, 255, 255, 0.8);
     color: black;
     border: 1px solid white;
@@ -257,8 +264,7 @@ q {font-style: italic;}
   .experience img {
     border: 2px solid rgb(76, 75, 68);
     border-radius: 50%;
-    float: left;
-    margin: -10px 25px 25px 0px;
+    margin-right: 25px;
   }
 .floater {
   position: relative;
@@ -313,9 +319,8 @@ footer li a {
   .slider-wrapper {
     font-size: 30px;
   }
-  .experience img {
-    float: none;
-  }
+  .exp-backdrop {flex-direction: column;}
+  .experience img {margin-right: 0;}
   footer ul {
     -webkit-padding-start: 0px;
             padding-inline-start: 0px;
