@@ -1,14 +1,16 @@
 //PROJECT FLEX PANELS
+
 const bookends = document.querySelectorAll('.projects__bookend');
 const projectinfos = document.querySelectorAll('.projects__projectinfo');
 const infopanel = document.querySelector('.projects__infopanel');
+const closebtns = document.querySelectorAll('.projects__projectinfo-close');
 
 bookends.forEach(bookend => bookend.addEventListener("click", () => toggleOpen(bookend.id)));
+closebtns.forEach(btn => btn.addEventListener("click", () => closePanel(btn)));
 
 function toggleOpen(id){
   projectinfos.forEach(function(info){
     if(info.dataset.key === id){
-      console.log(info.dataset.key);
       //if projinfo does not have u-hidden, give to all and remove from infopanel
       if(!info.classList.contains("u-hidden")){
         addHidden();
@@ -30,6 +32,11 @@ function addHidden(){
       info.classList.add("u-hidden");
     };
   });
+}
+
+function closePanel(btn){
+    btn.parentNode.parentNode.classList.add("u-hidden");
+    infopanel.classList.remove("u-hidden");
 }
 
 

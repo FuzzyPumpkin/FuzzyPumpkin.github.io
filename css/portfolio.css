@@ -498,10 +498,11 @@ input[name="choice"] {
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: 50rem;
+  height: 55rem;
   margin: 3rem 0 20rem 0;
   align-items: center;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
   .projects__bookend {
     display: flex;
     flex-direction: column;
@@ -514,16 +515,10 @@ input[name="choice"] {
     background-size: cover;
     background-position: center;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    z-index: 4; }
     .projects__bookend:hover {
       cursor: pointer; }
-    .projects__bookend:before, .projects__bookend-film {
-      box-shadow: inset 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      content: '';
-      background: linear-gradient(90deg, transparent 0%, rgba(247, 250, 252, 0.3) 70%, transparent 100%); }
     .projects__bookend-title {
       position: relative;
       font-size: 4rem;
@@ -620,9 +615,13 @@ input[name="choice"] {
   border-radius: 0 6px 6px 0;
   background-color: #fff7f7;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  transform: scaleX(1);
+  transform-origin: 0% 50% 0;
+  transition: transform 1s cubic-bezier(0, 0.94, 0.69, 0.4); }
 
 .u-hidden {
   width: 0;
   flex: none;
-  border: none; }
+  border: none;
+  transform: scaleX(0); }
