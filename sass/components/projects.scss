@@ -19,6 +19,7 @@
         background-position: center;
         justify-content: center;
         align-items: center;
+        border: 1px solid $color-brand;
         z-index: 4;
 
         &:hover {
@@ -30,19 +31,26 @@
             writing-mode: vertical-rl;
             text-orientation: sideways-right;
             white-space: nowrap;
+            color: $color-background-accent;
             z-index: 2; 
         }
-        &--one {
-            background-image: url(../images/resourcedBg.jpg);
+        &--one, &--three {
+            background:
+                radial-gradient($color-brand 15%, transparent 16%) 0 0,
+                radial-gradient($color-brand 15%, transparent 16%) 8px 8px,
+                radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+                radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+            background-color:rgb(89, 83, 131);
+            background-size:16px 16px;
+
         }
-        &--two {
-            background-image: url(../images/barmanBg.jpg);
-        }
-        &--three {
-            background-image: url(../images/citrouilleBg.jpg);
-        }
-        &--four {
-            background-image: url(../images/realtorBg.jpg);
+        &--two, &--four {
+            background-color: rgb(90, 85, 122);
+            background-image: linear-gradient(90deg, rgba(255,255,255,.07) 50%, transparent 50%),
+                            linear-gradient(90deg, rgba(255,255,255,.13) 50%, transparent 50%),
+                            linear-gradient(90deg, transparent 50%, rgba(255,255,255,.17) 50%),
+                            linear-gradient(90deg, transparent 50%, rgba(255,255,255,.19) 50%);
+            background-size: 13px, 29px, 37px, 53px;
         }
     }
     &__buttonlink {
@@ -146,9 +154,6 @@
     background-color: $color-background-accent;    
     justify-content: center;
     align-items: center;
-    transform: scaleX(1);
-    transform-origin: 0% 50% 0;
-    transition: transform 1s cubic-bezier(0,.94,.69,.4);
 }
 .u-hidden {
     width: 0;
