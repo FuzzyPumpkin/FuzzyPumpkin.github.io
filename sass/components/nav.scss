@@ -30,7 +30,7 @@
     transition: all .3s cubic-bezier(.5, 0, .5, 1);
   }
   &__dot {
-    $size: 120px;
+    $size: 12rem;
     width: $size;
     height: $size;
     border-radius: 50%;
@@ -41,6 +41,12 @@
     z-index: 3;
     transform: scale(.85);
     @include double-border;
+    @include respond(phone){
+      width: 10rem;
+      height: 10rem;
+      left: calc((25% - 10rem) / 2);
+      top: 10%;
+    }
   }
   &__cutout {
     $size: $cutout-size;

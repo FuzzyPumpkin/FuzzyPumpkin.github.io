@@ -23,6 +23,11 @@ body {
     background: $color-background;
     position: relative;
 }
+button {
+    @include respond(phone){
+        font-size: 1.5rem;
+    }
+}
 
 // background image
 .bgpattern {

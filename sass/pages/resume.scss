@@ -1,6 +1,9 @@
 .about {
     width: 60%;
     margin: 2rem auto;
+    @include respond(tablet){
+        width: 80%;
+    }
 
     &__blurb {
         font-size: 1.75rem;
@@ -52,6 +55,12 @@
 
         &:nth-child(2) {
             margin-left: 4rem;
+            @include respond(tablet){
+                margin-left: 1rem;
+            }
+            @include respond(phone){
+                margin-left: 0;
+            }
         }
     }
     &__contact {
@@ -66,6 +75,12 @@
         align-items: center;
         font-size: 1.75rem;
         @include flex-row;
+        @include respond(tablet){
+            font-size: 1.25rem;
+        }
+        @include respond(tablet){
+            font-size: 1.75rem;
+        }
     }
     &__monogram {
         font-size: 5rem;
@@ -82,12 +97,21 @@
         background-color: $color-brand;
         box-shadow: -11px 28px 30px -20px rgba(0,0,0,0.75);
         @include flex-row;
+        @include respond(tablet){
+            margin-right: 1rem;
+        }
         @include respond(phone){
+            margin-right: 3rem;
+        }
+        @include respond(tinyphone){
             margin-right: 1rem;
         }
     }
     &__row {
         @include flex-row;
+        @include respond(phone){
+            @include flex-column;
+        }
     }
 }
 .skills {

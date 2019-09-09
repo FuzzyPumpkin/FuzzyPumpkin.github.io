@@ -6,8 +6,9 @@
     align-items: center;
     position: relative;
     overflow: hidden;
-    @include respond(phone){
+    @include respond(tablet){
         @include flex-column;
+        overflow: visible;
     }
 
 
@@ -26,6 +27,11 @@
         border: 1px solid $color-brand;
         z-index: 4;
 
+        @include respond(tablet){
+            max-width: 100%;
+            overflow: visible;
+        }
+    
         &:hover {
             cursor: pointer;
         }
@@ -37,6 +43,11 @@
             white-space: nowrap;
             color: $color-background-accent;
             z-index: 2; 
+
+            @include respond(tablet){
+                text-orientation: upright;
+                writing-mode: horizontal-tb;
+            }
         }
         &--one, &--three {
             background:
@@ -166,6 +177,14 @@
     background-color: $color-background-accent;    
     justify-content: center;
     align-items: center;
+
+    @include respond(tablet){
+        height: auto;
+        border: 2px solid $color-brand;
+        border-top: none;
+        border-radius: 0 0 6px 6px;
+        box-sizing: border-box;
+    }
 }
 .u-hidden {
     width: 0;

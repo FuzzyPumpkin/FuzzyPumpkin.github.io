@@ -23,4 +23,7 @@
     @if $breakpoint == phone {
         @media (max-width: 450px){@content};
     }
+    @if $breakpoint == tinyphone {
+        @media (max-width: 390px){@content};
+    }
 }

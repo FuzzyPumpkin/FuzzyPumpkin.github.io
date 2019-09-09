@@ -31,6 +31,9 @@
         height: 3rem; width: 3rem;
         margin: .5rem 1rem;
         fill: $color-text;
+        @include respond(tinyphone){
+            height: 2rem; width: 2rem;
+        }
     }
     &__iconbg {
         width: 7rem; height: 6rem;
@@ -40,15 +43,24 @@
         border-radius: 45% 10% 70% 10%;
         background-color: $color-background-accent;
         @include flex-row;
+        @include respond(tinyphone){
+            height: 4rem; width: 4rem;
+        }
     }
     &__skill {
         align-items: center;
         @include flex-column;
+        @include respond(tinyphone){
+            margin: 0 .5rem;
+        }
     }
     &__skillname {
         margin-top: .5rem;
         font-weight: 600;
         font-size: 1.75rem;
+        @include respond(tinyphone){
+            font-size: 1.5rem;
+        }
     }
 }
 
@@ -59,14 +71,24 @@
     padding: 5rem 1.5rem;
     text-align: center;
 
+    @include respond(tablet){
+        padding: 2rem 1.5rem;
+    }
+
     &__marquee {
         height: 50px;
         margin: 2rem 0;
         overflow: hidden;
+        @include respond(tablet){
+            font-size: 2rem;
+        }
     }
     &__name {
         font-size: 12rem;
         letter-spacing: 2rem;
+        @include respond(tablet){
+            font-size: 5.5rem;
+        }
     }
     &__scrolltext {
         display: block;
@@ -91,6 +113,9 @@
             radial-gradient(circle at 0    50%, white 5%, rgba(8, 255, 200, .4) 6%, rgba(8, 255, 200, .4) 15%, white 16%, white 20%, rgba(8, 255, 200, .4) 21%, rgba(8, 255, 200, .4) 30%, white 31%, white 35%, rgba(8, 255, 200, .4) 36%, rgba(8, 255, 200, .4) 45%, white 46%, white 49%, transparent 50%, transparent);
         background-size: 100px 50px;
         font-size: 4.5rem;
+        @include respond(tablet){
+            font-size: 3rem;
+        }
     }
 }
 
