@@ -1,0 +1,29 @@
+@mixin flex-row{
+    display: flex;
+    flex-direction: row;
+}
+@mixin flex-column{
+    display: flex;
+    flex-direction: column;
+}
+@mixin shadow{
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.4);
+}
+@mixin double-border{
+    box-shadow: 0 0 0 1px $color-highlight, 0 0 0 4px $color-brand, 0 1rem 2rem rgba(0,0,0,.3);
+}
+
+@mixin respond($breakpoint){
+    @if $breakpoint == lowres {
+        @media (max-width: 1050px){@content};
+    }
+    @if $breakpoint == tablet {
+        @media (max-width: 770px){@content};
+    }
+    @if $breakpoint == phone {
+        @media (max-width: 450px){@content};
+    }
+    @if $breakpoint == tinyphone {
+        @media (max-width: 390px){@content};
+    }
+}

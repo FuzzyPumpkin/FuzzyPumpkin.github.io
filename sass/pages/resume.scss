@@ -1,0 +1,146 @@
+.about {
+    width: 60%;
+    margin: 2rem auto;
+    @include respond(tablet){
+        width: 80%;
+    }
+
+    &__blurb {
+        font-size: 1.75rem;
+    }
+}
+.education {
+    &__span {
+        font-size: 1.5rem;
+        @include flex-row;
+    }
+}
+.experience {
+    flex: 55%;
+
+    &__company {
+        margin-left: auto;
+    }
+    &__position {
+        margin: 2rem;
+    }
+    &__span {
+        @include flex-row;
+    }
+}
+.flexible-content {
+    @include flex-row;
+    @include respond(tablet){
+        @include flex-column;
+    }
+}
+.resprojects {
+    padding: 3rem;
+
+    &__project {
+        margin-bottom: 2rem;
+    }
+}
+.proj-ed {
+    flex: 45%;
+    @include flex-column;
+}
+.resheader {
+    align-items: center;
+    @include flex-row;
+    margin-bottom: 2rem;
+
+    &__column {
+        @include flex-column;
+
+        &:nth-child(2) {
+            margin-left: 4rem;
+            @include respond(tablet){
+                margin-left: 1rem;
+            }
+            @include respond(phone){
+                margin-left: 0;
+            }
+        }
+    }
+    &__contact {
+        @include flex-column;
+    }
+    &__icon {
+        height: 2rem; width: 2rem;
+        margin: .5rem 1rem;
+        fill: $color-text;
+    }
+    &__method {
+        align-items: center;
+        font-size: 1.75rem;
+        @include flex-row;
+        @include respond(tablet){
+            font-size: 1.25rem;
+        }
+        @include respond(tablet){
+            font-size: 1.75rem;
+        }
+    }
+    &__monogram {
+        font-size: 5rem;
+        font-family: "Macondo Swash Caps", cursive;
+        color: $color-background-accent;
+    }
+    &__monogrambg {
+        width: 14rem; height: 12rem;
+        margin-right: 4rem;
+        justify-content: center;
+        align-items: center;
+        border-radius: 45% 10% 70% 10%;
+        border: 1px solid $color-background-accent;
+        background-color: $color-brand;
+        box-shadow: -11px 28px 30px -20px rgba(0,0,0,0.75);
+        @include flex-row;
+        @include respond(tablet){
+            margin-right: 1rem;
+        }
+        @include respond(phone){
+            margin-right: 3rem;
+        }
+        @include respond(tinyphone){
+            margin-right: 1rem;
+        }
+    }
+    &__row {
+        @include flex-row;
+        @include respond(phone){
+            @include flex-column;
+        }
+    }
+}
+.skills {
+    background-color: $color-text-headline;
+    padding: .5rem;
+    border-radius: 2rem;
+    @include flex-column;
+
+    &__headline {
+        color: $color-background-accent;
+    }
+    &__iconbg {
+        width: 4.5rem; height: 4rem;
+        justify-content: center;
+        align-items: center;
+        border-radius: 45% 10% 70% 10%;
+        background-color: $color-background-accent;
+        @include flex-row;
+    }
+    &__skill {
+        align-items: center;
+        @include flex-column;
+    }
+    &__skillbox {
+        justify-content: space-evenly;
+        @include flex-row;
+    }
+    &__skillname {
+        margin-top: .5rem;
+        color: $color-background-accent;
+    }
+}

@@ -1,0 +1,151 @@
+.footer {
+    position: fixed;
+    bottom: 0; left: 0;
+    width: 100%;
+    padding: 1.5rem;
+    background-color: $color-brand;
+    @include flex-row;
+    @include double-border;
+    justify-content: center;
+    z-index: 4;
+
+    &__icon {
+        height: 3rem; width: 3rem;
+        margin: .5rem 1rem;
+        fill: $color-background-accent;
+    }
+    &__title {
+        margin: 0 3rem;
+        color: $color-background-accent;
+    }
+}
+
+
+.profile-skills {
+    width: 80%;
+    @include flex-row;
+    justify-content: space-evenly;
+    margin: 1rem auto;
+
+    &__icon {
+        height: 3rem; width: 3rem;
+        margin: .5rem 1rem;
+        fill: $color-text;
+        @include respond(tinyphone){
+            height: 2rem; width: 2rem;
+        }
+    }
+    &__iconbg {
+        width: 7rem; height: 6rem;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid $color-brand;
+        border-radius: 45% 10% 70% 10%;
+        background-color: $color-background-accent;
+        @include flex-row;
+        @include respond(tinyphone){
+            height: 4rem; width: 4rem;
+        }
+    }
+    &__skill {
+        align-items: center;
+        @include flex-column;
+        @include respond(tinyphone){
+            margin: 0 .5rem;
+        }
+    }
+    &__skillname {
+        margin-top: .5rem;
+        font-weight: 600;
+        font-size: 1.75rem;
+        @include respond(tinyphone){
+            font-size: 1.5rem;
+        }
+    }
+}
+
+
+.welcome {
+    margin-top: 10rem;
+    @include shadow;
+    padding: 5rem 1.5rem;
+    text-align: center;
+
+    @include respond(tablet){
+        padding: 2rem 1.5rem;
+    }
+
+    &__marquee {
+        height: 50px;
+        margin: 2rem 0;
+        overflow: hidden;
+        @include respond(tablet){
+            font-size: 2rem;
+        }
+    }
+    &__name {
+        font-size: 12rem;
+        letter-spacing: 2rem;
+        @include respond(tablet){
+            font-size: 5.5rem;
+        }
+    }
+    &__scrolltext {
+        display: block;
+        height: 50px;
+        margin-bottom: 50px;
+        padding: 2px 5px;
+        font-size: 3rem;
+        box-sizing: border-box;
+
+        &--first {
+            animation: slide 35s ease infinite;
+        }
+    }
+    &__title {
+        display: block;
+        background-color: rgba(8, 255, 200, .4);
+        background-image:
+            radial-gradient(circle at 100% 150%, rgba(8, 255, 200, .4) 24%, white 25%, white 28%, rgba(8, 255, 200, .4) 29%, rgba(8, 255, 200, .4) 36%, white 36%, white 40%, transparent 40%, transparent),
+            radial-gradient(circle at 0    150%, rgba(8, 255, 200, .4) 24%, white 25%, white 28%, rgba(8, 255, 200, .4) 29%, rgba(8, 255, 200, .4) 36%, white 36%, white 40%, transparent 40%, transparent),
+            radial-gradient(circle at 50%  100%, white 10%, rgba(8, 255, 200, .4) 11%, rgba(8, 255, 200, .4) 23%, white 24%, white 30%, rgba(8, 255, 200, .4) 31%, rgba(8, 255, 200, .4) 43%, white 44%, white 50%, rgba(8, 255, 200, .4) 51%, rgba(8, 255, 200, .4) 63%, white 64%, white 71%, transparent 71%, transparent),
+            radial-gradient(circle at 100% 50%, white 5%, rgba(8, 255, 200, .4) 6%, rgba(8, 255, 200, .4) 15%, white 16%, white 20%, rgba(8, 255, 200, .4) 21%, rgba(8, 255, 200, .4) 30%, white 31%, white 35%, rgba(8, 255, 200, .4) 36%, rgba(8, 255, 200, .4) 45%, white 46%, white 49%, transparent 50%, transparent),
+            radial-gradient(circle at 0    50%, white 5%, rgba(8, 255, 200, .4) 6%, rgba(8, 255, 200, .4) 15%, white 16%, white 20%, rgba(8, 255, 200, .4) 21%, rgba(8, 255, 200, .4) 30%, white 31%, white 35%, rgba(8, 255, 200, .4) 36%, rgba(8, 255, 200, .4) 45%, white 46%, white 49%, transparent 50%, transparent);
+        background-size: 100px 50px;
+        font-size: 4.5rem;
+        @include respond(tablet){
+            font-size: 3rem;
+        }
+    }
+}
+
+
+@keyframes slide {
+    0% {margin-top:-600px;}
+    12% {margin-top:-600px;}
+    14% {margin-top:-500px;}
+    26% {margin-top:-500px;}
+    28% {margin-top:-400px;}
+    40% {margin-top:-400px;}
+    42% {margin-top:-300px;}
+    54% {margin-top:-300px;}
+    56% {margin-top:-200px;}
+    68% {margin-top:-200px;}
+    70% {margin-top:-100px;}
+    82% {margin-top:-100px;}
+    84% {margin-top: 0px;}
+    97% {
+        margin-top: 0px;
+        opacity: 1;
+        }
+    98% {
+        margin-top: 0px;
+        opacity: 0;
+        }
+    100% {
+        margin-top:-600px;
+        opacity: 1;
+    }
+}
+
+
