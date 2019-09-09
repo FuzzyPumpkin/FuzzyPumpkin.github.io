@@ -45,7 +45,15 @@
 .resheader {
     align-items: center;
     @include flex-row;
+    margin-bottom: 2rem;
 
+    &__column {
+        @include flex-column;
+
+        &:nth-child(2) {
+            margin-left: 4rem;
+        }
+    }
     &__contact {
         @include flex-column;
     }
@@ -77,6 +85,9 @@
         @include respond(phone){
             margin-right: 1rem;;
         }
+    }
+    &__row {
+        @include flex-row;
     }
 }
 .skills {

@@ -327,7 +327,13 @@ button {
 .resheader {
   align-items: center;
   display: flex;
-  flex-direction: row; }
+  flex-direction: row;
+  margin-bottom: 2rem; }
+  .resheader__column {
+    display: flex;
+    flex-direction: column; }
+    .resheader__column:nth-child(2) {
+      margin-left: 4rem; }
   .resheader__contact {
     display: flex;
     flex-direction: column; }
@@ -360,6 +366,9 @@ button {
     @media (max-width: 450px) {
       .resheader__monogrambg {
         margin-right: 1rem; } }
+  .resheader__row {
+    display: flex;
+    flex-direction: row; }
 
 .skills {
   background-color: #204969;
