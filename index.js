@@ -2,7 +2,7 @@
 
 const bookends = document.querySelectorAll('.projects__bookend');
 const projectinfos = document.querySelectorAll('.projects__projectinfo');
-const infopanel = document.querySelector('.projects__infopanel');
+const instructions = document.querySelector('.projects__infopanel');
 const closebtns = document.querySelectorAll('.projects__projectinfo-close');
 
 bookends.forEach(bookend => bookend.addEventListener("click", () => toggleOpen(bookend.id)));
@@ -14,11 +14,11 @@ function toggleOpen(id){
       //if projinfo does not have u-hidden, give to all and remove from infopanel
       if(!info.classList.contains("u-hidden")){
         addHidden();
-        infopanel.classList.remove("u-hidden");
+        instructions.classList.remove("u-hidden");
       } else {
       //if projinfo has u-hidden, add to all and infopanel and remove from projinfo
         addHidden();
-        infopanel.classList.add("u-hidden");
+        instructions.classList.add("u-hidden");
         info.classList.remove("u-hidden");
       };
       
@@ -36,7 +36,7 @@ function addHidden(){
 
 function closePanel(btn){
     btn.parentNode.parentNode.classList.add("u-hidden");
-    infopanel.classList.remove("u-hidden");
+    instructions.classList.remove("u-hidden");
 }
 
 

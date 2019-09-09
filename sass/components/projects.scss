@@ -6,6 +6,10 @@
     align-items: center;
     position: relative;
     overflow: hidden;
+    @include respond(phone){
+        @include flex-column;
+    }
+
 
     &__bookend {
         @include flex-column;
@@ -64,7 +68,6 @@
 
         &-blurb {
             margin: 1rem 0;
-            font-size: 1.6rem;
         }
         &-contents {
             padding: 1rem 2.5rem;
@@ -72,7 +75,12 @@
         &-instructions {
             color: $color-text-light;
         }
-        &-list {padding: 0 3rem;}
+        &-list {
+            padding: 0 3rem;
+            @include respond(lowres){
+                padding: 0 1rem;
+            }
+        }
         &-listitem:not(:last-of-type) {
             margin-bottom: .75rem;
         }
@@ -82,6 +90,10 @@
         }
         &-ghbutton {
             margin: 3rem auto 0 auto;
+
+            @include respond(lowres){
+                margin: 1rem auto 0 auto;
+            }
         }
         &.u-hidden .projects__infopanel-contents {
             display: none;
@@ -161,3 +173,4 @@
     border: none;
     transform: scaleX(0);
 }
+

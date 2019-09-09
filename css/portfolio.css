@@ -7,6 +7,9 @@
 
 html {
   font-size: 62.5%; }
+  @media (max-width: 1050px) {
+    html {
+      font-size: 58%; } }
   @media (max-width: 450px) {
     html {
       font-size: 40%; } }
@@ -224,7 +227,8 @@ button {
 .welcome {
   margin-top: 10rem;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
-  padding: 3rem 1.5rem; }
+  padding: 5rem 1.5rem;
+  text-align: center; }
   .welcome__marquee {
     height: 50px;
     margin: 2rem 0;
@@ -512,6 +516,10 @@ input[name="choice"] {
   align-items: center;
   position: relative;
   overflow: hidden; }
+  @media (max-width: 450px) {
+    .projects {
+      display: flex;
+      flex-direction: column; } }
   .projects__bookend {
     display: flex;
     flex-direction: column;
@@ -551,14 +559,16 @@ input[name="choice"] {
     .projects__buttonlink--ghlink {
       margin-top: auto; }
   .projects__infopanel-blurb {
-    margin: 1rem 0;
-    font-size: 1.6rem; }
+    margin: 1rem 0; }
   .projects__infopanel-contents {
     padding: 1rem 2.5rem; }
   .projects__infopanel-instructions {
     color: #797776; }
   .projects__infopanel-list {
     padding: 0 3rem; }
+    @media (max-width: 1050px) {
+      .projects__infopanel-list {
+        padding: 0 1rem; } }
   .projects__infopanel-listitem:not(:last-of-type) {
     margin-bottom: .75rem; }
   .projects__infopanel-projectname {
@@ -566,6 +576,9 @@ input[name="choice"] {
     font-weight: 600; }
   .projects__infopanel-ghbutton {
     margin: 3rem auto 0 auto; }
+    @media (max-width: 1050px) {
+      .projects__infopanel-ghbutton {
+        margin: 1rem auto 0 auto; } }
   .projects__infopanel.u-hidden .projects__infopanel-contents {
     display: none; }
   .projects__projectinfo-contents {

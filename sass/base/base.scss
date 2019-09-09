@@ -8,6 +8,9 @@
 // font size equiv to 10px, but allows for accessibility devices to change font size
 html {
     font-size: 62.5%;
+    @include respond(lowres){
+        font-size: 58%;
+    }
     @include respond(phone){
         font-size: 40%;
     }

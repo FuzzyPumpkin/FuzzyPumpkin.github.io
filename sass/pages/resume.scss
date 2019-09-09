@@ -83,7 +83,7 @@
         box-shadow: -11px 28px 30px -20px rgba(0,0,0,0.75);
         @include flex-row;
         @include respond(phone){
-            margin-right: 1rem;;
+            margin-right: 1rem;
         }
     }
     &__row {
