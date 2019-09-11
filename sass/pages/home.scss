@@ -2,7 +2,7 @@
     position: fixed;
     bottom: 0; left: 0;
     width: 100%;
-    padding: 1.5rem;
+    padding: 1rem;
     background-color: $color-brand;
     @include flex-row;
     @include double-border;
@@ -10,12 +10,13 @@
     z-index: 4;
 
     &__icon {
-        height: 3rem; width: 3rem;
+        height: 2rem; width: 2rem;
         margin: .5rem 1rem;
         fill: $color-background-accent;
     }
     &__title {
-        margin: 0 3rem;
+        font-size: 2rem;
+        margin: .5rem 3rem 0 3rem;
         color: $color-background-accent;
     }
 }
@@ -104,13 +105,13 @@
     }
     &__title {
         display: block;
-        background-color: rgba(8, 255, 200, .4);
+        background-color: rgba(8, 255, 200, .25);
         background-image:
-            radial-gradient(circle at 100% 150%, rgba(8, 255, 200, .4) 24%, white 25%, white 28%, rgba(8, 255, 200, .4) 29%, rgba(8, 255, 200, .4) 36%, white 36%, white 40%, transparent 40%, transparent),
-            radial-gradient(circle at 0    150%, rgba(8, 255, 200, .4) 24%, white 25%, white 28%, rgba(8, 255, 200, .4) 29%, rgba(8, 255, 200, .4) 36%, white 36%, white 40%, transparent 40%, transparent),
-            radial-gradient(circle at 50%  100%, white 10%, rgba(8, 255, 200, .4) 11%, rgba(8, 255, 200, .4) 23%, white 24%, white 30%, rgba(8, 255, 200, .4) 31%, rgba(8, 255, 200, .4) 43%, white 44%, white 50%, rgba(8, 255, 200, .4) 51%, rgba(8, 255, 200, .4) 63%, white 64%, white 71%, transparent 71%, transparent),
-            radial-gradient(circle at 100% 50%, white 5%, rgba(8, 255, 200, .4) 6%, rgba(8, 255, 200, .4) 15%, white 16%, white 20%, rgba(8, 255, 200, .4) 21%, rgba(8, 255, 200, .4) 30%, white 31%, white 35%, rgba(8, 255, 200, .4) 36%, rgba(8, 255, 200, .4) 45%, white 46%, white 49%, transparent 50%, transparent),
-            radial-gradient(circle at 0    50%, white 5%, rgba(8, 255, 200, .4) 6%, rgba(8, 255, 200, .4) 15%, white 16%, white 20%, rgba(8, 255, 200, .4) 21%, rgba(8, 255, 200, .4) 30%, white 31%, white 35%, rgba(8, 255, 200, .4) 36%, rgba(8, 255, 200, .4) 45%, white 46%, white 49%, transparent 50%, transparent);
+            radial-gradient(circle at 100% 150%, rgba(8, 255, 200, .25) 24%, white 25%, white 28%, rgba(8, 255, 200, .25) 29%, rgba(8, 255, 200, .25) 36%, white 36%, white 40%, transparent 40%, transparent),
+            radial-gradient(circle at 0    150%, rgba(8, 255, 200, .25) 24%, white 25%, white 28%, rgba(8, 255, 200, .25) 29%, rgba(8, 255, 200, .25) 36%, white 36%, white 40%, transparent 40%, transparent),
+            radial-gradient(circle at 50%  100%, white 10%, rgba(8, 255, 200, .25) 11%, rgba(8, 255, 200, .25) 23%, white 24%, white 30%, rgba(8, 255, 200, .25) 31%, rgba(8, 255, 200, .25) 43%, white 44%, white 50%, rgba(8, 255, 200, .25) 51%, rgba(8, 255, 200, .25) 63%, white 64%, white 71%, transparent 71%, transparent),
+            radial-gradient(circle at 100% 50%, white 5%, rgba(8, 255, 200, .25) 6%, rgba(8, 255, 200, .25) 15%, white 16%, white 20%, rgba(8, 255, 200, .25) 21%, rgba(8, 255, 200, .25) 30%, white 31%, white 35%, rgba(8, 255, 200, .25) 36%, rgba(8, 255, 200, .25) 45%, white 46%, white 49%, transparent 50%, transparent),
+            radial-gradient(circle at 0    50%, white 5%, rgba(8, 255, 200, .25) 6%, rgba(8, 255, 200, .25) 15%, white 16%, white 20%, rgba(8, 255, 200, .25) 21%, rgba(8, 255, 200, .25) 30%, white 31%, white 35%, rgba(8, 255, 200, .25) 36%, rgba(8, 255, 200, .25) 45%, white 46%, white 49%, transparent 50%, transparent);
         background-size: 100px 50px;
         font-size: 4.5rem;
         @include respond(tablet){

@@ -13,6 +13,9 @@ html {
   @media (max-width: 450px) {
     html {
       font-size: 40%; } }
+  @media print {
+    html {
+      font-size: 50%; } }
 
 body {
   font-family: "Raleway", sans-serif;
@@ -78,6 +81,10 @@ h2 {
   font-weight: 600;
   text-align: center;
   margin-bottom: 1rem; }
+  @media print {
+    h2 {
+      margin-bottom: .25rem;
+      font-size: 2.5rem; } }
 
 h3 {
   font-size: 1.75rem;
@@ -168,6 +175,10 @@ button {
   margin: 1rem;
   background-color: #fff7f7;
   border-radius: 2rem; }
+  @media print {
+    .u-section-box {
+      padding: .75rem;
+      margin: .5rem; } }
 
 .u-blue-border {
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
@@ -182,7 +193,7 @@ button {
   bottom: 0;
   left: 0;
   width: 100%;
-  padding: 1.5rem;
+  padding: 1rem;
   background-color: #38335a;
   display: flex;
   flex-direction: row;
@@ -190,12 +201,13 @@ button {
   justify-content: center;
   z-index: 4; }
   .footer__icon {
-    height: 3rem;
-    width: 3rem;
+    height: 2rem;
+    width: 2rem;
     margin: .5rem 1rem;
     fill: #fff7f7; }
   .footer__title {
-    margin: 0 3rem;
+    font-size: 2rem;
+    margin: .5rem 3rem 0 3rem;
     color: #fff7f7; }
 
 .profile-skills {
@@ -274,8 +286,8 @@ button {
       animation: slide 35s ease infinite; }
   .welcome__title {
     display: block;
-    background-color: rgba(8, 255, 200, 0.4);
-    background-image: radial-gradient(circle at 100% 150%, rgba(8, 255, 200, 0.4) 24%, white 25%, white 28%, rgba(8, 255, 200, 0.4) 29%, rgba(8, 255, 200, 0.4) 36%, white 36%, white 40%, transparent 40%, transparent), radial-gradient(circle at 0 150%, rgba(8, 255, 200, 0.4) 24%, white 25%, white 28%, rgba(8, 255, 200, 0.4) 29%, rgba(8, 255, 200, 0.4) 36%, white 36%, white 40%, transparent 40%, transparent), radial-gradient(circle at 50% 100%, white 10%, rgba(8, 255, 200, 0.4) 11%, rgba(8, 255, 200, 0.4) 23%, white 24%, white 30%, rgba(8, 255, 200, 0.4) 31%, rgba(8, 255, 200, 0.4) 43%, white 44%, white 50%, rgba(8, 255, 200, 0.4) 51%, rgba(8, 255, 200, 0.4) 63%, white 64%, white 71%, transparent 71%, transparent), radial-gradient(circle at 100% 50%, white 5%, rgba(8, 255, 200, 0.4) 6%, rgba(8, 255, 200, 0.4) 15%, white 16%, white 20%, rgba(8, 255, 200, 0.4) 21%, rgba(8, 255, 200, 0.4) 30%, white 31%, white 35%, rgba(8, 255, 200, 0.4) 36%, rgba(8, 255, 200, 0.4) 45%, white 46%, white 49%, transparent 50%, transparent), radial-gradient(circle at 0 50%, white 5%, rgba(8, 255, 200, 0.4) 6%, rgba(8, 255, 200, 0.4) 15%, white 16%, white 20%, rgba(8, 255, 200, 0.4) 21%, rgba(8, 255, 200, 0.4) 30%, white 31%, white 35%, rgba(8, 255, 200, 0.4) 36%, rgba(8, 255, 200, 0.4) 45%, white 46%, white 49%, transparent 50%, transparent);
+    background-color: rgba(8, 255, 200, 0.25);
+    background-image: radial-gradient(circle at 100% 150%, rgba(8, 255, 200, 0.25) 24%, white 25%, white 28%, rgba(8, 255, 200, 0.25) 29%, rgba(8, 255, 200, 0.25) 36%, white 36%, white 40%, transparent 40%, transparent), radial-gradient(circle at 0 150%, rgba(8, 255, 200, 0.25) 24%, white 25%, white 28%, rgba(8, 255, 200, 0.25) 29%, rgba(8, 255, 200, 0.25) 36%, white 36%, white 40%, transparent 40%, transparent), radial-gradient(circle at 50% 100%, white 10%, rgba(8, 255, 200, 0.25) 11%, rgba(8, 255, 200, 0.25) 23%, white 24%, white 30%, rgba(8, 255, 200, 0.25) 31%, rgba(8, 255, 200, 0.25) 43%, white 44%, white 50%, rgba(8, 255, 200, 0.25) 51%, rgba(8, 255, 200, 0.25) 63%, white 64%, white 71%, transparent 71%, transparent), radial-gradient(circle at 100% 50%, white 5%, rgba(8, 255, 200, 0.25) 6%, rgba(8, 255, 200, 0.25) 15%, white 16%, white 20%, rgba(8, 255, 200, 0.25) 21%, rgba(8, 255, 200, 0.25) 30%, white 31%, white 35%, rgba(8, 255, 200, 0.25) 36%, rgba(8, 255, 200, 0.25) 45%, white 46%, white 49%, transparent 50%, transparent), radial-gradient(circle at 0 50%, white 5%, rgba(8, 255, 200, 0.25) 6%, rgba(8, 255, 200, 0.25) 15%, white 16%, white 20%, rgba(8, 255, 200, 0.25) 21%, rgba(8, 255, 200, 0.25) 30%, white 31%, white 35%, rgba(8, 255, 200, 0.25) 36%, rgba(8, 255, 200, 0.25) 45%, white 46%, white 49%, transparent 50%, transparent);
     background-size: 100px 50px;
     font-size: 4.5rem; }
     @media (max-width: 770px) {
@@ -325,8 +337,14 @@ button {
   @media (max-width: 770px) {
     .about {
       width: 80%; } }
+  @media print {
+    .about {
+      margin: .5rem auto; } }
   .about__blurb {
     font-size: 1.75rem; }
+  @media print {
+    .about__headline {
+      display: none; } }
 
 .education__span {
   font-size: 1.5rem;
@@ -338,7 +356,7 @@ button {
   .experience__company {
     margin-left: auto; }
   .experience__position {
-    margin: 2rem; }
+    margin: 2rem 2rem 0 2rem; }
   .experience__span {
     display: flex;
     flex-direction: row; }
@@ -350,11 +368,29 @@ button {
     .flexible-content {
       display: flex;
       flex-direction: column; } }
+  @media print {
+    .flexible-content {
+      display: flex;
+      flex-direction: column; } }
 
 .resprojects {
-  padding: 3rem; }
+  padding: 1.5rem 3rem; }
+  @media print {
+    .resprojects {
+      padding: .75rem 2rem; } }
+  .resprojects__link {
+    text-decoration: none;
+    cursor: pointer;
+    color: #38335a; }
+    .resprojects__link:visited {
+      color: #38335a; }
+    .resprojects__link:hover {
+      color: #08ffc8; }
   .resprojects__project {
     margin-bottom: 2rem; }
+    @media print {
+      .resprojects__project {
+        margin-bottom: 1rem; } }
 
 .proj-ed {
   flex: 45%;
@@ -365,7 +401,10 @@ button {
   align-items: center;
   display: flex;
   flex-direction: row;
-  margin-bottom: 2rem; }
+  margin: 2rem 0; }
+  @media print {
+    .resheader {
+      margin: 1rem 0 .5rem 0; } }
   .resheader__column {
     display: flex;
     flex-direction: column; }
@@ -377,6 +416,9 @@ button {
       @media (max-width: 450px) {
         .resheader__column:nth-child(2) {
           margin-left: 0; } }
+      @media print {
+        .resheader__column:nth-child(2) {
+          margin-left: 1rem; } }
   .resheader__contact {
     display: flex;
     flex-direction: column; }
@@ -396,10 +438,16 @@ button {
     @media (max-width: 770px) {
       .resheader__method {
         font-size: 1.75rem; } }
+    @media print {
+      .resheader__method {
+        font-size: 1.5rem; } }
   .resheader__monogram {
     font-size: 5rem;
     font-family: "Macondo Swash Caps", cursive;
     color: #fff7f7; }
+    @media print {
+      .resheader__monogram {
+        font-size: 4rem; } }
   .resheader__monogrambg {
     width: 14rem;
     height: 12rem;
@@ -421,6 +469,15 @@ button {
     @media (max-width: 390px) {
       .resheader__monogrambg {
         margin-right: 1rem; } }
+    @media print {
+      .resheader__monogrambg {
+        margin-right: 2rem;
+        width: 12rem;
+        height: 10rem; } }
+  @media print {
+    .resheader__name {
+      text-align: center;
+      font-size: 4rem; } }
   .resheader__row {
     display: flex;
     flex-direction: row; }
@@ -428,6 +485,9 @@ button {
       .resheader__row {
         display: flex;
         flex-direction: column; } }
+    @media print {
+      .resheader__row {
+        margin-left: -2rem; } }
 
 .skills {
   background-color: #204969;

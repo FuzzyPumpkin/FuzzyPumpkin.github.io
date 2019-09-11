@@ -4,9 +4,17 @@
     @include respond(tablet){
         width: 80%;
     }
+    @media print {
+        margin: .5rem auto;
+    }
 
     &__blurb {
         font-size: 1.75rem;
+    }
+    &__headline {
+        @media print {
+            display: none;
+        }
     }
 }
 .education {
@@ -22,7 +30,7 @@
         margin-left: auto;
     }
     &__position {
-        margin: 2rem;
+        margin: 2rem 2rem 0 2rem;
     }
     &__span {
         @include flex-row;
@@ -33,12 +41,31 @@
     @include respond(tablet){
         @include flex-column;
     }
+    @media print {
+        @include flex-column;
+    }
 }
 .resprojects {
-    padding: 3rem;
-
+    padding: 1.5rem 3rem;
+    @media print {
+        padding: .75rem 2rem;
+    }
+    &__link {
+        text-decoration: none;
+        cursor: pointer;
+        color: $color-brand;
+        &:visited {
+            color: $color-brand;
+        }
+        &:hover {
+            color: $color-highlight;
+        }
+    }
     &__project {
         margin-bottom: 2rem;
+        @media print {
+            margin-bottom: 1rem;
+        }
     }
 }
 .proj-ed {
@@ -48,7 +75,10 @@
 .resheader {
     align-items: center;
     @include flex-row;
-    margin-bottom: 2rem;
+    margin: 2rem 0;
+    @media print {
+        margin: 1rem 0 .5rem 0;
+    }
 
     &__column {
         @include flex-column;
@@ -60,6 +90,9 @@
             }
             @include respond(phone){
                 margin-left: 0;
+            }
+            @media print {
+                margin-left: 1rem;
             }
         }
     }
@@ -81,11 +114,15 @@
         @include respond(tablet){
             font-size: 1.75rem;
         }
+        @media print  {
+            font-size: 1.5rem;
+        }
     }
     &__monogram {
         font-size: 5rem;
         font-family: "Macondo Swash Caps", cursive;
         color: $color-background-accent;
+        @media print { font-size: 4rem;}
     }
     &__monogrambg {
         width: 14rem; height: 12rem;
@@ -106,12 +143,23 @@
         @include respond(tinyphone){
             margin-right: 1rem;
         }
+        @media print {
+            margin-right: 2rem;
+            width: 12rem; height: 10rem;
+        }
+    }
+    &__name {
+        @media print {
+            text-align: center;
+            font-size: 4rem;
+        }
     }
     &__row {
         @include flex-row;
         @include respond(phone){
             @include flex-column;
         }
+        @media print { margin-left: -2rem;}
     }
 }
 .skills {
