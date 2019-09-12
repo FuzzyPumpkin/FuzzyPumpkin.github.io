@@ -81,10 +81,6 @@ h2 {
   font-weight: 600;
   text-align: center;
   margin-bottom: 1rem; }
-  @media print {
-    h2 {
-      margin-bottom: .25rem;
-      font-size: 2.5rem; } }
 
 h3 {
   font-size: 1.75rem;
@@ -175,10 +171,6 @@ button {
   margin: 1rem;
   background-color: #fff7f7;
   border-radius: 2rem; }
-  @media print {
-    .u-section-box {
-      padding: .75rem;
-      margin: .5rem; } }
 
 .u-blue-border {
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
@@ -337,14 +329,8 @@ button {
   @media (max-width: 770px) {
     .about {
       width: 80%; } }
-  @media print {
-    .about {
-      margin: .5rem auto; } }
   .about__blurb {
     font-size: 1.75rem; }
-  @media print {
-    .about__headline {
-      display: none; } }
 
 .education__span {
   font-size: 1.5rem;
@@ -371,13 +357,10 @@ button {
   @media print {
     .flexible-content {
       display: flex;
-      flex-direction: column; } }
+      flex-direction: row; } }
 
 .resprojects {
   padding: 1.5rem 3rem; }
-  @media print {
-    .resprojects {
-      padding: .75rem 2rem; } }
   .resprojects__link {
     text-decoration: none;
     cursor: pointer;
@@ -388,9 +371,6 @@ button {
       color: #08ffc8; }
   .resprojects__project {
     margin-bottom: 2rem; }
-    @media print {
-      .resprojects__project {
-        margin-bottom: 1rem; } }
 
 .proj-ed {
   flex: 45%;
@@ -404,7 +384,7 @@ button {
   margin: 2rem 0; }
   @media print {
     .resheader {
-      margin: 1rem 0 .5rem 0; } }
+      margin: 4rem 0 2rem 0; } }
   .resheader__column {
     display: flex;
     flex-direction: column; }
@@ -418,7 +398,7 @@ button {
           margin-left: 0; } }
       @media print {
         .resheader__column:nth-child(2) {
-          margin-left: 1rem; } }
+          margin-left: .5rem; } }
   .resheader__contact {
     display: flex;
     flex-direction: column; }
@@ -438,9 +418,6 @@ button {
     @media (max-width: 770px) {
       .resheader__method {
         font-size: 1.75rem; } }
-    @media print {
-      .resheader__method {
-        font-size: 1.5rem; } }
   .resheader__monogram {
     font-size: 5rem;
     font-family: "Macondo Swash Caps", cursive;
@@ -474,10 +451,8 @@ button {
         margin-right: 2rem;
         width: 12rem;
         height: 10rem; } }
-  @media print {
-    .resheader__name {
-      text-align: center;
-      font-size: 4rem; } }
+  .resheader__name {
+    text-align: center; }
   .resheader__row {
     display: flex;
     flex-direction: row; }
@@ -487,7 +462,7 @@ button {
         flex-direction: column; } }
     @media print {
       .resheader__row {
-        margin-left: -2rem; } }
+        margin-left: -2.5rem; } }
 
 .skills {
   background-color: #204969;
