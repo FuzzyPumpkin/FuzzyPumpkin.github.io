@@ -132,7 +132,9 @@
             width: 12rem; height: 10rem;
         }
     }
-    &__name {text-align: center;}
+    &__name {
+        @media print {text-align: center;}
+    }
     &__row {
         @include flex-row;
         @include respond(phone){
