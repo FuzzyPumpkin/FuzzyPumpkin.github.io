@@ -1,0 +1,63 @@
+.hero {
+    display: flex;
+    flex-direction: column;
+
+    &__branding {
+        display: flex;
+        height: 60vh; width: 100%;
+        position: relative;
+        background-image: url(/images/flower.jpg);
+        background-position: 75% 0%;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        height: 40vh; width: 100%;
+    }
+    &__companyMission {
+        flex: 1;
+        background-color: $color-brand;
+        color: $color-white;
+        text-align: justify;
+        padding: 4rem 3rem;
+
+        &--emphasis {
+            color: $color-highlight;
+        }
+    }
+    &__purchase {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__button {
+        font-weight: 600;
+        font-size: 1.8rem;
+        text-align: center;
+        background-color: $color-highlight;
+        border-radius: 8px;
+        box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+        padding: 1rem;
+    }
+    &__logo {
+        position: absolute;
+        bottom: 4rem;
+        right: 3rem;
+        z-index: 4;
+
+        &--top {
+            position: relative;
+            top: 5rem;
+            left: -1rem;
+            font-family: "Zeyada", sans-serif;
+            color: $color-text-light;
+            z-index: -1;
+        }
+        &--bottom {
+            z-index: 4;
+        }
+    }
+}

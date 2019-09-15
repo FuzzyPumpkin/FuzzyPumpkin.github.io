@@ -1,0 +1,19 @@
+{
+  "name": "byebyebuggy",
+  "version": "1.0.0",
+  "description": "This is a site created in order to practice using Figma to plan layouts as well as to include a few nice CSS effects I hadn't been able to utilize yet. While reading a forum post, I followed a link to the website of a particular product. That product's website was extremely dated. It had dead links. The contact information was supposed to be links but was just plain text, and the menu coding was such that only one of four menu items ever showed. The console was rife more than 15 errors. It needed a redesign, badly.",
+  "main": "index.js",
+  "scripts": {
+    "watch": "node-sass sass/main.scss css/style.css -w",
+    "devserver": "live-server",
+    "start": "npm-run-all --parallel devserver watch"
+  },
+  "author": "Kari Minger",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^9.6.1",
+    "live-server": "^1.2.1",
+    "node-sass": "^4.12.0",
+    "npm-run-all": "^4.1.5"
+  }
+}
