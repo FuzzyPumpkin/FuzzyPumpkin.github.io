@@ -60,4 +60,34 @@
             z-index: 4;
         }
     }
+    &__swoosh {
+        fill: $color-highlight;
+        width: 100%;
+        position: absolute;
+        bottom: -12px; right: 0;
+    }
+    &__honeycomb {
+        position: absolute;
+        top: -1.5rem; left: -4rem;
+        display: flex;
+        flex-direction: column;
+        &--row {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin-top: -.5rem;
+        }
+        &--piece {
+            width: 6rem; height: 6rem;
+            margin: 0 .5rem;
+            background-color: $color-highlight;
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        }
+    }
+    &__motto {
+        width: 26.5rem;
+        margin: 6rem 0 0 3rem;
+        font-size: 2.4rem;
+        z-index: 2;
+    }
 }

@@ -26,6 +26,7 @@ h1 {
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 100;
   /*link background scale/link show to checkbox being checked (or rather label being clicked)*/
   /*icon*/ }
   .navigation__checkbox {
@@ -154,3 +155,31 @@ h1 {
       z-index: -1; }
     .hero__logo--bottom {
       z-index: 4; }
+  .hero__swoosh {
+    fill: #d6d02c;
+    width: 100%;
+    position: absolute;
+    bottom: -12px;
+    right: 0; }
+  .hero__honeycomb {
+    position: absolute;
+    top: -1.5rem;
+    left: -4rem;
+    display: flex;
+    flex-direction: column; }
+    .hero__honeycomb--row {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin-top: -.5rem; }
+    .hero__honeycomb--piece {
+      width: 6rem;
+      height: 6rem;
+      margin: 0 .5rem;
+      background-color: #d6d02c;
+      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); }
+  .hero__motto {
+    width: 26.5rem;
+    margin: 6rem 0 0 3rem;
+    font-size: 2.4rem;
+    z-index: 2; }
