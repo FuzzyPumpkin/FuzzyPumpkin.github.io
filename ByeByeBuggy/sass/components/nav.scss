@@ -13,21 +13,21 @@
         text-align: center;
         cursor: pointer;    
     }
-    &__background {
-        height: 2rem; width: 2rem;
+    &__background, &__nav, &__film {
+        height: 2rem; width: 1rem;
         position: fixed;
         top: 3rem; right: 3rem;
-        z-index: 99;
-        /*for animation*/
         -webkit-transition: -webkit-transform .8s cubic-bezier(.86, 0, .05, 1.18);
         transition: -webkit-transform .8s cubic-bezier(.86, 0, .05, 1.18);
         transition: transform .8s cubic-bezier(.86, 0, .05, 1.18);
         transition: transform .8s cubic-bezier(.86, 0, .05, 1.18), -webkit-transform .8s cubic-bezier(.86, 0, .05, 1.18);
     }
+    &__background {
+        background-color: $color-white;
+        z-index: 99;
+    }
     &__nav {
-        height: 100vh;
-        position: fixed;
-        top: 0; left: 0;
+        margin-top: 2rem;
         z-index: 100;
         /*hide by default*/
         opacity: 0;
@@ -36,20 +36,22 @@
         -webkit-transition: all .8s cubic-bezier(.86, 0, .05, 1.18);
         transition: all .8s cubic-bezier(.86, 0, .05, 1.18);
     }
+    &__film {
+        background: #828365;
+        mix-blend-mode: screen;
+        opacity: 0;
+        -webkit-transition: all .2s cubic-bezier(.86, 0, .05, 1.18);
+        transition: all .2s cubic-bezier(.86, 0, .05, 1.18);
+    }
     &__list {
         position: absolute;
-        top: 50%; left: 50%;
         width: 100%;
-        -webkit-transform: translate(-50%, -50%);
-                transform: translate(-50%, -50%);
         list-style: none;
-        text-align: center;
     }
-    &__item {margin: 1rem;}
     &__link {
         &:link, &:visited {
             display: inline-block;
-            font-size: 5rem;
+            font-size: 2.4rem;
             font-weight: 300;
             padding: 1rem 2rem;
             color: black;
@@ -65,10 +67,23 @@
         }
     }
 /*link background scale/link show to checkbox being checked (or rather label being clicked)*/
-    &__checkbox:checked ~ .navigation__background {-webkit-transform: scale(90);transform: scale(90);}
+    &__checkbox:checked ~ .navigation__background {
+        -webkit-transform: scale(40);
+        transform: scale(40);
+    }
+    &__checkbox:checked ~ .navigation__film {
+        opacity: .6;
+        width: 100%; height: 100%;
+        visibility: visible;
+        left: 0%;
+        right: 0%;
+        top: 0%;
+        bottom: 0%;
+    }
     &__checkbox:checked ~ .navigation__nav {
         opacity: 1;
-        width: 100%;
+        width: 60%;
+        margin-right: -2rem;
         visibility: visible;
     }
 /*icon*/
