@@ -22,93 +22,64 @@ h1 {
   color: #3f402e; }
 
 .navigation {
+  display: flex;
+  align-content: center;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 100;
-  /*link background scale/link show to checkbox being checked (or rather label being clicked)*/
-  /*icon*/ }
-  .navigation__checkbox {
-    display: none; }
-  .navigation__button {
-    height: 6rem;
-    width: 6rem;
+  z-index: 100; }
+  .navigation__inner {
+    display: flex;
+    flex-direction: column;
+    background: transparent;
     position: fixed;
-    right: 2rem;
-    top: 2rem;
-    z-index: 101;
-    text-align: center;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    width: 18rem;
+    clip-path: circle(2.5rem at 17rem 3rem);
+    transition: all .8s ease-out;
+    margin-left: auto;
     cursor: pointer; }
-  .navigation__background, .navigation__nav, .navigation__film {
-    height: 2rem;
-    width: 1rem;
-    position: fixed;
-    top: 3rem;
-    right: 3rem;
-    -webkit-transition: -webkit-transform 0.8s cubic-bezier(0.86, 0, 0.05, 1.18);
-    transition: -webkit-transform 0.8s cubic-bezier(0.86, 0, 0.05, 1.18);
-    transition: transform 0.8s cubic-bezier(0.86, 0, 0.05, 1.18);
-    transition: transform 0.8s cubic-bezier(0.86, 0, 0.05, 1.18), -webkit-transform 0.8s cubic-bezier(0.86, 0, 0.05, 1.18); }
-  .navigation__background {
-    background-color: #f8f5f1;
-    z-index: 99; }
-  .navigation__nav {
-    margin-top: 2rem;
-    z-index: 100;
-    /*hide by default*/
-    opacity: 0;
-    width: 0;
-    visibility: hidden;
-    -webkit-transition: all 0.8s cubic-bezier(0.86, 0, 0.05, 1.18);
-    transition: all 0.8s cubic-bezier(0.86, 0, 0.05, 1.18); }
-  .navigation__film {
-    background: #828365;
-    mix-blend-mode: screen;
-    opacity: 0;
-    -webkit-transition: all 0.2s cubic-bezier(0.86, 0, 0.05, 1.18);
-    transition: all 0.2s cubic-bezier(0.86, 0, 0.05, 1.18); }
-  .navigation__list {
-    position: absolute;
-    width: 100%;
-    list-style: none; }
-  .navigation__link:link, .navigation__link:visited {
-    display: inline-block;
-    font-size: 2.4rem;
-    font-weight: 300;
-    padding: 1rem 2rem;
-    color: black;
-    text-decoration: none;
-    text-transform: uppercase;
-    -webkit-transition: all 1s;
-    transition: all 1s; }
-  .navigation__link:hover, .navigation__link:active {
-    color: white;
-    -webkit-transform: translateY(1rem);
-    transform: translateY(1rem); }
-  .navigation__checkbox:checked ~ .navigation__background {
-    -webkit-transform: scale(40);
-    transform: scale(40); }
-  .navigation__checkbox:checked ~ .navigation__film {
-    opacity: .6;
-    width: 100%;
-    height: 100%;
-    visibility: visible;
-    left: 0%;
-    right: 0%;
-    top: 0%;
-    bottom: 0%; }
-  .navigation__checkbox:checked ~ .navigation__nav {
-    opacity: 1;
-    width: 60%;
-    margin-right: -2rem;
-    visibility: visible; }
+    .navigation__inner:hover {
+      clip-path: none;
+      width: 18rem;
+      height: 60vh;
+      background-color: #f8f5f1;
+      box-shadow: -8px 0px 10px rgba(0, 0, 0, 0.45), -8px 0px 10px 2000px rgba(0, 0, 0, 0.25); }
   .navigation__icon {
-    position: relative;
     width: 4rem;
     height: 4rem;
-    display: inline-block;
-    fill: #3f402e; }
+    fill: #3f402e;
+    z-index: 101; }
+  .navigation__button {
+    margin-left: auto; }
+  .navigation__item {
+    margin: 3rem 0;
+    display: block;
+    position: relative; }
+    .navigation__item:before {
+      content: "";
+      position: absolute;
+      top: -.5rem;
+      left: -4rem;
+      width: 5rem;
+      height: 5rem;
+      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%);
+      background-color: #d6d02c;
+      z-index: -1; }
+  .navigation__link {
+    position: relative;
+    text-decoration: none;
+    color: #3f402e;
+    font-size: 2.4rem;
+    font-weight: 600; }
+    .navigation__link:hover {
+      color: #828365; }
+  .navigation__list {
+    list-style: none;
+    margin-left: .5rem; }
 
 .hero {
   display: flex;
