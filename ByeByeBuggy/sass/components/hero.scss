@@ -2,6 +2,10 @@
     display: flex;
     flex-direction: column;
 
+    @include respond(desktop){
+        flex-direction: row-reverse;
+    }
+
     &__branding {
         display: flex;
         height: 60vh; width: 100%;
@@ -10,11 +14,22 @@
         background-position: 75% 0%;
         background-repeat: no-repeat;
         background-size: cover;
+        overflow: hidden;
+
+        @include respond(desktop){
+            height: 100vh;
+            flex: 60%;
+        }
+        
     }
     &__content {
         display: flex;
         flex-direction: column;
         height: 40vh; width: 100%;
+        @include respond(desktop){
+            height: 100vh;
+            flex: 40%;
+        }
     }
     &__companyMission {
         flex: 1;
@@ -26,12 +41,22 @@
         &--emphasis {
             color: $color-highlight;
         }
+        @include respond(desktop){
+            font-size: 3.4rem;
+            padding: 6rem 9.5rem;
+        }
+        @include respond(smDesktop){
+            padding: 4rem 6rem;
+        }
     }
     &__purchase {
         flex: 1;
         display: flex;
         justify-content: center;
         align-items: center;
+        @include respond(desktop){
+            background-color: $color-brand;
+        }
     }
     &__button {
         font-weight: 600;
@@ -47,6 +72,10 @@
         bottom: 4rem;
         right: 3rem;
         z-index: 4;
+        @include respond(desktop){
+            bottom: 8rem;
+            right: 6rem;
+        }
 
         &--top {
             position: relative;
@@ -55,33 +84,60 @@
             font-family: "Zeyada", sans-serif;
             color: $color-text-light;
             z-index: -1;
+            @include respond(desktop){
+                top: 8rem;
+            }
         }
         &--bottom {
             z-index: 4;
         }
     }
     &__swoosh {
-        fill: $color-highlight;
-        width: 100%;
+        background: url(/images/yellowSwoosh1.svg) no-repeat;
+        background-size: cover;
+        width: 100%; height: 100%;
         position: absolute;
-        bottom: -12px; right: 0;
+        bottom: 0; right: 0;
+        @include respond(iphoneX){
+            bottom: -1.4rem;
+        }
+        @include respond(ipadMini){
+            background: url(/images/yellowSwoosh1m.svg) no-repeat;
+            bottom: -8rem;
+        }
+        @include respond(desktop){
+            background: url(/images/yellowSwoosh1l.svg) no-repeat;
+            width: 110%;
+            background-size: cover;
+        }
     }
     &__honeycomb {
         position: absolute;
         top: -1.5rem; left: -4rem;
         display: flex;
         flex-direction: column;
+        @include respond(desktop){
+            top: -3.5rem;
+            left: -8rem;
+        }
+
         &--row {
             display: flex;
             flex-direction: row;
             justify-content: center;
             margin-top: -.5rem;
+            @include respond(desktop){
+                margin-top: -2.5rem;
+            }
         }
         &--piece {
             width: 6rem; height: 6rem;
             margin: 0 .5rem;
-            background-color: $color-highlight;
+            background-color: rgba($color-highlight, .8);
             clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            @include respond(desktop){
+                width: 14rem; height: 14rem;
+            }
         }
     }
     &__motto {
@@ -89,5 +145,16 @@
         margin: 6rem 0 0 3rem;
         font-size: 2.4rem;
         z-index: 2;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        @include respond(ipadMini){
+            font-weight: 600;
+            width: 50rem;
+            font-size: 3rem;
+        }
+        @include respond(desktop){
+            font-size: 4.8rem;
+            width: 60rem;
+            margin: 10rem 0 0 8rem;
+        }
     }
 }

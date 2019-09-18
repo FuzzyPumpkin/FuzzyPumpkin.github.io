@@ -1,0 +1,14 @@
+@mixin respond($breakpoint){
+    @if $breakpoint == iphoneX {
+        @media (max-width: 411px) and (min-height: 800px){@content};
+    }
+    @if $breakpoint == ipadMini {
+        @media (max-width: 780px){@content};
+    }
+    @if $breakpoint == smDesktop {
+        @media (max-width: 1300px){@content};
+    }
+    @if $breakpoint == desktop {
+        @media (min-width: 1301px){@content};
+    }
+}
