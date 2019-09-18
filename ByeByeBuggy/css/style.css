@@ -20,7 +20,10 @@ h1 {
   font-size: 6.4rem;
   font-family: "Sedgwick Ave", sans-serif;
   color: #3f402e; }
-  @media (min-width: 1301px) {
+  @media (min-width: 415px) {
+    h1 {
+      font-size: 8rem; } }
+  @media (min-width: 781px) {
     h1 {
       font-size: 11rem; } }
 
@@ -87,7 +90,7 @@ h1 {
 .hero {
   display: flex;
   flex-direction: column; }
-  @media (min-width: 1301px) {
+  @media (min-width: 1270px) {
     .hero {
       flex-direction: row-reverse; } }
   .hero__branding {
@@ -95,12 +98,12 @@ h1 {
     height: 60vh;
     width: 100%;
     position: relative;
-    background-image: url(https://FuzzyPumpkin.github.io/ByeByeBuggy/images/flower.jpg);
+    background-image: url(/images/flower.jpg);
     background-position: 75% 0%;
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden; }
-    @media (min-width: 1301px) {
+    @media (min-width: 1270px) {
       .hero__branding {
         height: 100vh;
         flex: 60%; } }
@@ -109,7 +112,7 @@ h1 {
     flex-direction: column;
     height: 40vh;
     width: 100%; }
-    @media (min-width: 1301px) {
+    @media (min-width: 1270px) {
       .hero__content {
         height: 100vh;
         flex: 40%; } }
@@ -121,19 +124,23 @@ h1 {
     padding: 4rem 3rem; }
     .hero__companyMission--emphasis {
       color: #d6d02c; }
-    @media (min-width: 1301px) {
+    @media (min-width: 415px) {
       .hero__companyMission {
-        font-size: 3.4rem;
-        padding: 6rem 9.5rem; } }
-    @media (max-width: 1300px) {
+        font-size: 2.25rem;
+        padding: 4rem 8rem; } }
+    @media (min-width: 781px) {
       .hero__companyMission {
+        font-size: 3rem;
         padding: 4rem 6rem; } }
+    @media (min-width: 1270px) {
+      .hero__companyMission {
+        padding: 5rem 9.5rem; } }
   .hero__purchase {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center; }
-    @media (min-width: 1301px) {
+    @media (min-width: 1270px) {
       .hero__purchase {
         background-color: #314d4f; } }
   .hero__button {
@@ -144,12 +151,16 @@ h1 {
     border-radius: 8px;
     box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
     padding: 1rem; }
+    @media (min-width: 781px) {
+      .hero__button {
+        font-size: 2.5rem;
+        padding: 2rem; } }
   .hero__logo {
     position: absolute;
     bottom: 4rem;
     right: 3rem;
     z-index: 4; }
-    @media (min-width: 1301px) {
+    @media (min-width: 781px) {
       .hero__logo {
         bottom: 8rem;
         right: 6rem; } }
@@ -160,30 +171,43 @@ h1 {
       font-family: "Zeyada", sans-serif;
       color: #828365;
       z-index: -1; }
-      @media (min-width: 1301px) {
+      @media (min-width: 415px) {
+        .hero__logo--top {
+          top: 6.5rem; } }
+      @media (min-width: 781px) {
         .hero__logo--top {
           top: 8rem; } }
     .hero__logo--bottom {
       z-index: 4; }
   .hero__swoosh {
-    background: url(https://FuzzyPumpkin.github.io/ByeByeBuggy/images/yellowSwoosh1.svg) no-repeat;
+    background: url(/images/yellowSwoosh1.svg) no-repeat;
     background-size: cover;
     width: 100%;
     height: 100%;
     position: absolute;
     bottom: 0;
     right: 0; }
-    @media (max-width: 411px) and (min-height: 800px) {
+    @media (min-width: 360px) and (min-height: 800px) {
       .hero__swoosh {
         bottom: -1.4rem; } }
-    @media (max-width: 780px) {
+    @media (min-width: 415px) {
       .hero__swoosh {
-        background: url(https://FuzzyPumpkin.github.io/ByeByeBuggy/images/yellowSwoosh1m.svg) no-repeat;
+        background: url(/images/yellowSwoosh1m.svg) no-repeat;
         bottom: -8rem; } }
-    @media (min-width: 1301px) {
+    @media (min-width: 781px) {
       .hero__swoosh {
-        background: url(https://FuzzyPumpkin.github.io/ByeByeBuggy/images/yellowSwoosh1l.svg) no-repeat;
-        width: 110%;
+        background-size: cover;
+        bottom: -2rem; } }
+    @media (min-width: 1270px) {
+      .hero__swoosh {
+        background: url(/images/yellowSwoosh1l.svg) no-repeat;
+        width: 105%;
+        background-size: cover;
+        bottom: 0; } }
+    @media (min-width: 415px) {
+      .hero__swoosh {
+        background: url(/images/yellowSwoosh1xl.svg) no-repeat;
+        width: 100%;
         background-size: cover; } }
   .hero__honeycomb {
     position: absolute;
@@ -191,7 +215,7 @@ h1 {
     left: -4rem;
     display: flex;
     flex-direction: column; }
-    @media (min-width: 1301px) {
+    @media (min-width: 781px) {
       .hero__honeycomb {
         top: -3.5rem;
         left: -8rem; } }
@@ -200,7 +224,7 @@ h1 {
       flex-direction: row;
       justify-content: center;
       margin-top: -.5rem; }
-      @media (min-width: 1301px) {
+      @media (min-width: 781px) {
         .hero__honeycomb--row {
           margin-top: -2.5rem; } }
     .hero__honeycomb--piece {
@@ -209,7 +233,7 @@ h1 {
       margin: 0 .5rem;
       background-color: rgba(214, 208, 44, 0.8);
       clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); }
-      @media (min-width: 1301px) {
+      @media (min-width: 781px) {
         .hero__honeycomb--piece {
           width: 14rem;
           height: 14rem; } }
@@ -219,12 +243,12 @@ h1 {
     font-size: 2.4rem;
     z-index: 2;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); }
-    @media (max-width: 780px) {
+    @media (min-width: 415px) {
       .hero__motto {
         font-weight: 600;
         width: 50rem;
         font-size: 3rem; } }
-    @media (min-width: 1301px) {
+    @media (min-width: 781px) {
       .hero__motto {
         font-size: 4.8rem;
         width: 60rem;

@@ -41,12 +41,16 @@
         &--emphasis {
             color: $color-highlight;
         }
-        @include respond(desktop){
-            font-size: 3.4rem;
-            padding: 6rem 9.5rem;
+        @include respond(ipadMini){
+            font-size: 2.25rem;
+            padding: 4rem 8rem;
         }
         @include respond(smDesktop){
+            font-size: 3rem;
             padding: 4rem 6rem;
+        }
+        @include respond(desktop){
+            padding: 5rem 9.5rem;
         }
     }
     &__purchase {
@@ -66,13 +70,17 @@
         border-radius: 8px;
         box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
         padding: 1rem;
+        @include respond(smDesktop){
+            font-size: 2.5rem;
+            padding: 2rem;
+        }
     }
     &__logo {
         position: absolute;
         bottom: 4rem;
         right: 3rem;
         z-index: 4;
-        @include respond(desktop){
+        @include respond(smDesktop){
             bottom: 8rem;
             right: 6rem;
         }
@@ -84,7 +92,10 @@
             font-family: "Zeyada", sans-serif;
             color: $color-text-light;
             z-index: -1;
-            @include respond(desktop){
+            @include respond(ipadMini){
+                top: 6.5rem;
+            }
+            @include respond(smDesktop){
                 top: 8rem;
             }
         }
@@ -105,9 +116,19 @@
             background: url(/images/yellowSwoosh1m.svg) no-repeat;
             bottom: -8rem;
         }
+        @include respond(smDesktop){
+            background-size: cover;
+            bottom: -2rem;
+        }
         @include respond(desktop){
             background: url(/images/yellowSwoosh1l.svg) no-repeat;
-            width: 110%;
+            width: 105%;
+            background-size: cover;
+            bottom: 0;
+        }
+        @include respond(ipadMini){
+            background: url(/images/yellowSwoosh1xl.svg) no-repeat;
+            width: 100%;
             background-size: cover;
         }
     }
@@ -116,7 +137,7 @@
         top: -1.5rem; left: -4rem;
         display: flex;
         flex-direction: column;
-        @include respond(desktop){
+        @include respond(smDesktop){
             top: -3.5rem;
             left: -8rem;
         }
@@ -126,7 +147,7 @@
             flex-direction: row;
             justify-content: center;
             margin-top: -.5rem;
-            @include respond(desktop){
+            @include respond(smDesktop){
                 margin-top: -2.5rem;
             }
         }
@@ -135,7 +156,7 @@
             margin: 0 .5rem;
             background-color: rgba($color-highlight, .8);
             clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-            @include respond(desktop){
+            @include respond(smDesktop){
                 width: 14rem; height: 14rem;
             }
         }
@@ -151,7 +172,7 @@
             width: 50rem;
             font-size: 3rem;
         }
-        @include respond(desktop){
+        @include respond(smDesktop){
             font-size: 4.8rem;
             width: 60rem;
             margin: 10rem 0 0 8rem;
