@@ -95,7 +95,7 @@ h1 {
     height: 60vh;
     width: 100%;
     position: relative;
-    background-image: url(/images/flower.jpg);
+    background-image: url(https://FuzzyPumpkin.github.io/ByeByeBuggy/images/flower.jpg);
     background-position: 75% 0%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -166,7 +166,7 @@ h1 {
     .hero__logo--bottom {
       z-index: 4; }
   .hero__swoosh {
-    background: url(/images/yellowSwoosh1.svg) no-repeat;
+    background: url(https://FuzzyPumpkin.github.io/ByeByeBuggy/images/yellowSwoosh1.svg) no-repeat;
     background-size: cover;
     width: 100%;
     height: 100%;
@@ -178,11 +178,11 @@ h1 {
         bottom: -1.4rem; } }
     @media (max-width: 780px) {
       .hero__swoosh {
-        background: url(/images/yellowSwoosh1m.svg) no-repeat;
+        background: url(https://FuzzyPumpkin.github.io/ByeByeBuggy/images/yellowSwoosh1m.svg) no-repeat;
         bottom: -8rem; } }
     @media (min-width: 1301px) {
       .hero__swoosh {
-        background: url(/images/yellowSwoosh1l.svg) no-repeat;
+        background: url(https://FuzzyPumpkin.github.io/ByeByeBuggy/images/yellowSwoosh1l.svg) no-repeat;
         width: 110%;
         background-size: cover; } }
   .hero__honeycomb {
