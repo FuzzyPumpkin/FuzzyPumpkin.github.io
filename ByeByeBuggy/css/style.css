@@ -144,17 +144,33 @@ h1 {
       .hero__purchase {
         background-color: #314d4f; } }
   .hero__button {
+    position: relative;
     font-weight: 600;
     font-size: 1.8rem;
     text-align: center;
     background-color: #d6d02c;
     border-radius: 8px;
     box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
-    padding: 1rem; }
+    padding: 1rem;
+    overflow: hidden; }
     @media (min-width: 781px) {
       .hero__button {
         font-size: 2.5rem;
         padding: 2rem; } }
+    .hero__button::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(to top right, transparent 0%, #f8f5f1 100%);
+      transform: translate(-100%, 0);
+      transition: all .8s ease; }
+    .hero__button:hover::after {
+      transform: translate(0, 0); }
   .hero__logo {
     position: absolute;
     bottom: 4rem;
