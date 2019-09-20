@@ -1,0 +1,29 @@
+.honeycomb {
+    position: absolute;
+    top: -1.5rem; left: -4rem;
+    display: flex;
+    flex-direction: column;
+    @include respond(smDesktop){
+        top: -3.5rem;
+        left: -8rem;
+    }
+
+    &__row {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: -.5rem;
+        @include respond(smDesktop){
+            margin-top: -2.5rem;
+        }
+    }
+    &__piece {
+        width: 6rem; height: 6rem;
+        margin: 0 .5rem;
+        background-color: rgba($color-highlight, .8);
+        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        @include respond(smDesktop){
+            width: 14rem; height: 14rem;
+        }
+    }
+}
