@@ -100,7 +100,9 @@
         position: absolute;
         bottom: 4rem;
         right: 3rem;
+        font-size: 6.4rem;
         z-index: 4;
+        
         @include respond(smDesktop){
             bottom: 8rem;
             right: 6rem;

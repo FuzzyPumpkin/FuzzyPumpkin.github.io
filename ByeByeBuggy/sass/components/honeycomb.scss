@@ -3,6 +3,10 @@
     top: -1.5rem; left: -4rem;
     display: flex;
     flex-direction: column;
+    &--footer {
+        position: relative;
+        top: .5rem; left: 0rem;
+    }
     @include respond(smDesktop){
         top: -3.5rem;
         left: -8rem;
@@ -18,10 +22,17 @@
         }
     }
     &__piece {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 6rem; height: 6rem;
         margin: 0 .5rem;
         background-color: rgba($color-highlight, .8);
         clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+
+        &--footer {
+            width: 3.8rem; height: 3.8rem;
+        }
         @include respond(smDesktop){
             width: 14rem; height: 14rem;
         }

@@ -1,8 +1,8 @@
 .testimonials {
     display: flex;
-    height: 60vh; width: 100%;
+    height: calc(60vh - 6rem); width: 100%;
     position: relative;
-    margin-top: 5rem;
+    margin: 6rem 0 -5rem 0;
     overflow: hidden;
 
     &:before {
