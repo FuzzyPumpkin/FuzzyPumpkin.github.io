@@ -24,6 +24,9 @@ body {
   color: #3b3a39;
   background: #dadada;
   position: relative; }
+  @media print {
+    body {
+      background: white; } }
 
 @media (max-width: 450px) {
   button {
@@ -255,12 +258,16 @@ button {
     .welcome {
       padding: 2rem 1.5rem; } }
   .welcome__marquee {
-    height: 50px;
+    height: 5rem;
     margin: 2rem 0;
     overflow: hidden; }
     @media (max-width: 770px) {
       .welcome__marquee {
         font-size: 2rem; } }
+    .welcome__marquee--list {
+      position: relative;
+      height: 700%;
+      animation: slide 35s ease infinite; }
   .welcome__name {
     font-size: 12rem;
     letter-spacing: 2rem; }
@@ -269,13 +276,12 @@ button {
         font-size: 5.5rem; } }
   .welcome__scrolltext {
     display: block;
-    height: 50px;
-    margin-bottom: 50px;
+    position: relative;
+    height: 14.2857%;
     padding: 2px 5px;
     font-size: 3rem;
+    top: 0;
     box-sizing: border-box; }
-    .welcome__scrolltext--first {
-      animation: slide 35s ease infinite; }
   .welcome__title {
     display: block;
     background-color: rgba(8, 255, 200, 0.25);
@@ -288,40 +294,35 @@ button {
 
 @keyframes slide {
   0% {
-    margin-top: -600px; }
+    top: 0%; }
   12% {
-    margin-top: -600px; }
+    top: 0%; }
   14% {
-    margin-top: -500px; }
+    top: -100%; }
   26% {
-    margin-top: -500px; }
+    top: -100%; }
   28% {
-    margin-top: -400px; }
+    top: -200%; }
   40% {
-    margin-top: -400px; }
+    top: -200%; }
   42% {
-    margin-top: -300px; }
+    top: -300%; }
   54% {
-    margin-top: -300px; }
+    top: -300%; }
   56% {
-    margin-top: -200px; }
+    top: -400%; }
   68% {
-    margin-top: -200px; }
+    top: -400%; }
   70% {
-    margin-top: -100px; }
+    top: -500%; }
   82% {
-    margin-top: -100px; }
+    top: -500%; }
   84% {
-    margin-top: 0px; }
-  97% {
-    margin-top: 0px;
-    opacity: 1; }
-  98% {
-    margin-top: 0px;
-    opacity: 0; }
+    top: -600%; }
+  96% {
+    top: -600%; }
   100% {
-    margin-top: -600px;
-    opacity: 1; } }
+    top: -700%; } }
 
 .about {
   width: 60%;
@@ -451,8 +452,9 @@ button {
         margin-right: 2rem;
         width: 12rem;
         height: 10rem; } }
-  .resheader__name {
-    text-align: center; }
+  @media print {
+    .resheader__name {
+      text-align: center; } }
   .resheader__row {
     display: flex;
     flex-direction: row; }

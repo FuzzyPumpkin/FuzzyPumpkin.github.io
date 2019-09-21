@@ -77,11 +77,17 @@
     }
 
     &__marquee {
-        height: 50px;
+        height: 5rem;
         margin: 2rem 0;
         overflow: hidden;
         @include respond(tablet){
             font-size: 2rem;
+        }
+
+        &--list {
+            position: relative;
+            height: 700%;
+            animation: slide 35s ease infinite;
         }
     }
     &__name {
@@ -93,15 +99,13 @@
     }
     &__scrolltext {
         display: block;
-        height: 50px;
-        margin-bottom: 50px;
+        position: relative;
+        height: 14.2857%;
         padding: 2px 5px;
         font-size: 3rem;
+        top: 0;
         box-sizing: border-box;
-
-        &--first {
-            animation: slide 35s ease infinite;
-        }
+        
     }
     &__title {
         display: block;
@@ -122,31 +126,21 @@
 
 
 @keyframes slide {
-    0% {margin-top:-600px;}
-    12% {margin-top:-600px;}
-    14% {margin-top:-500px;}
-    26% {margin-top:-500px;}
-    28% {margin-top:-400px;}
-    40% {margin-top:-400px;}
-    42% {margin-top:-300px;}
-    54% {margin-top:-300px;}
-    56% {margin-top:-200px;}
-    68% {margin-top:-200px;}
-    70% {margin-top:-100px;}
-    82% {margin-top:-100px;}
-    84% {margin-top: 0px;}
-    97% {
-        margin-top: 0px;
-        opacity: 1;
-        }
-    98% {
-        margin-top: 0px;
-        opacity: 0;
-        }
-    100% {
-        margin-top:-600px;
-        opacity: 1;
-    }
+    0% {top: 0%;}
+    12% {top: 0%;}
+    14% {top: -100%;}
+    26% {top: -100%;}
+    28% {top: -200%;}
+    40% {top: -200%;}
+    42% {top: -300%;}
+    54% {top: -300%;}
+    56% {top: -400%;}
+    68% {top: -400%;}
+    70% {top: -500%;}
+    82% {top: -500%;}
+    84% {top: -600%;}
+    96% {top: -600%;}
+    100% {top: -700%;}
 }
 
 

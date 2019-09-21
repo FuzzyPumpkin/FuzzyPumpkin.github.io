@@ -25,6 +25,9 @@ body {
     color: $color-text;
     background: $color-background;
     position: relative;
+    @media print {
+        background: white;
+    }
 }
 button {
     @include respond(phone){
