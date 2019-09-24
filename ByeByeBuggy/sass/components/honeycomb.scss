@@ -32,6 +32,7 @@
 
         &--footer {
             width: 3.8rem; height: 3.8rem;
+            margin: 0 .15rem;
         }
         @include respond(smDesktop){
             width: 14rem; height: 14rem;
