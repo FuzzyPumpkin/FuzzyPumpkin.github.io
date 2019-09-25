@@ -14,8 +14,12 @@
         position: absolute;
         bottom: 0; left: 0;
         width: 100%; height: 100%;
-        background-image: url(/images/footerSwoosh.svg);
+        background-image: url(/images/footerSwooshS.svg);
         background-repeat: no-repeat;
+
+        @include respond(ipadMini){
+            background-image: url(/images/footerSwooshM.svg);
+        }
     }
     &__content {
         display: flex;
@@ -30,6 +34,9 @@
     }
     &__address--street, &__contact {
         font-size: 1.1rem;
+        @include respond(ipadMini){
+            font-size: 1.6rem;
+        }
     }
     &__logo {
         position: relative;

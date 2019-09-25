@@ -1,10 +1,10 @@
 .testimonials {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
     height: calc(60vh - 6rem); width: 100%;
     position: relative;
-    margin: 0 0 -5rem 0;
+    margin: 0rem 0 -5rem 0;
     overflow: hidden;
 
     &:before {
@@ -31,14 +31,22 @@
         box-sizing: border-box;
     }
     &__row {
-        // display: none;
-        display: flex;
+        display: none;
         justify-content: space-evenly;
         margin-top: 10rem;
         overflow: hidden;
-        &:nth-of-type(2){
-            margin: 0 0 0 4rem;
+        @include respond(ipadMini){
             display: flex;
+            font-size: 2.5rem;
+            margin-top: 6rem;
+        }
+
+        &:nth-of-type(2){
+            margin: 10rem 0 0 4rem;
+            display: flex;
+            @include respond(ipadMini){
+                margin: 6rem 0 0 4rem;
+            }
             & .testimonials__quote {
                 width: 60%;
             }
@@ -52,7 +60,7 @@
         overflow: hidden;
         height: 500%;
         position: relative;
-        animation: slide 10s ease infinite;
+        animation: slide 20s ease infinite;
     }
     &__name {
         font-weight: 600;

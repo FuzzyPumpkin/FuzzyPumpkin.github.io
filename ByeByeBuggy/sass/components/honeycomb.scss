@@ -6,6 +6,9 @@
     &--footer {
         position: relative;
         top: .5rem; left: 0rem;
+        @include respond(ipadMini){
+            margin: 0 3rem;
+        }        
     }
     @include respond(smDesktop){
         top: -3.5rem;
