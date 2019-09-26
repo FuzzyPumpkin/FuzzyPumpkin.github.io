@@ -302,7 +302,7 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  height: calc(60vh - 6rem);
+  height: calc(100vh - 6rem);
   width: 100%;
   position: relative;
   margin: 0rem 0 -5rem 0;
@@ -327,22 +327,24 @@ h1 {
     height: 20%;
     top: 0;
     padding: 0 2rem;
-    box-sizing: border-box; }
+    box-sizing: border-box;
+    font-size: 3rem; }
+    @media (min-width: 415px) {
+      .testimonials__quote {
+        font-size: 2.5rem; } }
     @media (min-width: 1270px) {
       .testimonials__quote {
         padding: 0 10rem; } }
   .testimonials__row {
     display: none;
     justify-content: space-evenly;
-    margin-top: 10rem;
+    margin-top: 20rem;
     overflow: hidden; }
     @media (min-width: 415px) {
       .testimonials__row {
-        display: flex;
-        font-size: 2.5rem;
-        margin-top: 6rem; } }
+        display: flex; } }
     .testimonials__row:nth-of-type(2) {
-      margin: 10rem 0 0 4rem;
+      margin: 20rem 0 0 4rem;
       display: flex; }
       @media (min-width: 415px) {
         .testimonials__row:nth-of-type(2) {
@@ -351,7 +353,7 @@ h1 {
         .testimonials__row:nth-of-type(2) {
           margin: 2rem 0 0 4rem; } }
       .testimonials__row:nth-of-type(2) .testimonials__quote {
-        width: 60%; }
+        width: 80%; }
   .testimonials__slider {
     display: flex;
     flex-direction: column;
