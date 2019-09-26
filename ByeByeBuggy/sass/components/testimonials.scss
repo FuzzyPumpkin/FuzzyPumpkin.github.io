@@ -29,6 +29,9 @@
         top: 0;
         padding: 0 2rem;
         box-sizing: border-box;
+        @include respond(desktop){
+            padding: 0 10rem;
+        }
     }
     &__row {
         display: none;
@@ -46,6 +49,9 @@
             display: flex;
             @include respond(ipadMini){
                 margin: 6rem 0 0 4rem;
+            }
+            @include respond(wideScreen){
+                margin: 2rem 0 0 4rem;
             }
             & .testimonials__quote {
                 width: 60%;

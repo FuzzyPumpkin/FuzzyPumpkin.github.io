@@ -249,6 +249,10 @@ h1 {
   left: -4rem;
   display: flex;
   flex-direction: column; }
+  @media (min-width: 781px) {
+    .honeycomb {
+      top: -3.5rem;
+      left: -8rem; } }
   .honeycomb--footer {
     position: relative;
     top: .5rem;
@@ -256,10 +260,11 @@ h1 {
     @media (min-width: 415px) {
       .honeycomb--footer {
         margin: 0 3rem; } }
-  @media (min-width: 781px) {
-    .honeycomb {
-      top: -3.5rem;
-      left: -8rem; } }
+    @media (min-width: 781px) {
+      .honeycomb--footer {
+        top: .5rem;
+        left: 0rem;
+        margin: 0 5rem; } }
   .honeycomb__row {
     display: flex;
     flex-direction: row;
@@ -268,6 +273,9 @@ h1 {
     @media (min-width: 781px) {
       .honeycomb__row {
         margin-top: -2.5rem; } }
+    @media (min-width: 781px) {
+      .honeycomb__row--footer {
+        margin-top: -.5rem; } }
   .honeycomb__piece {
     display: flex;
     justify-content: center;
@@ -277,14 +285,18 @@ h1 {
     margin: 0 .5rem;
     background-color: rgba(214, 208, 44, 0.8);
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); }
-    .honeycomb__piece--footer {
-      width: 3.8rem;
-      height: 3.8rem;
-      margin: 0 .15rem; }
     @media (min-width: 781px) {
       .honeycomb__piece {
         width: 14rem;
         height: 14rem; } }
+    .honeycomb__piece--footer {
+      width: 3.8rem;
+      height: 3.8rem;
+      margin: 0 .15rem; }
+      @media (min-width: 781px) {
+        .honeycomb__piece--footer {
+          width: 3.8rem;
+          height: 3.8rem; } }
 
 .testimonials {
   display: flex;
@@ -316,6 +328,9 @@ h1 {
     top: 0;
     padding: 0 2rem;
     box-sizing: border-box; }
+    @media (min-width: 1270px) {
+      .testimonials__quote {
+        padding: 0 10rem; } }
   .testimonials__row {
     display: none;
     justify-content: space-evenly;
@@ -332,6 +347,9 @@ h1 {
       @media (min-width: 415px) {
         .testimonials__row:nth-of-type(2) {
           margin: 6rem 0 0 4rem; } }
+      @media (min-width: 1600px) {
+        .testimonials__row:nth-of-type(2) {
+          margin: 2rem 0 0 4rem; } }
       .testimonials__row:nth-of-type(2) .testimonials__quote {
         width: 60%; }
   .testimonials__slider {
@@ -393,6 +411,15 @@ h1 {
     @media (min-width: 415px) {
       .footer__swoosh {
         background-image: url(/images/footerSwooshM.svg); } }
+    @media (min-width: 781px) {
+      .footer__swoosh {
+        background-image: url(/images/footerSwooshMM.svg); } }
+    @media (min-width: 1270px) {
+      .footer__swoosh {
+        background-image: url(/images/footerSwooshL.svg); } }
+    @media (min-width: 1600px) {
+      .footer__swoosh {
+        background-image: url(/images/footerSwooshXL.svg); } }
   .footer__content {
     display: flex;
     justify-content: center;

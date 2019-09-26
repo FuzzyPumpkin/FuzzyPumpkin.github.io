@@ -20,6 +20,15 @@
         @include respond(ipadMini){
             background-image: url(/images/footerSwooshM.svg);
         }
+        @include respond(smDesktop){
+            background-image: url(/images/footerSwooshMM.svg);
+        }
+        @include respond(desktop){
+            background-image: url(/images/footerSwooshL.svg);
+        }
+        @include respond(wideScreen){
+            background-image: url(/images/footerSwooshXL.svg);
+        }
     }
     &__content {
         display: flex;
