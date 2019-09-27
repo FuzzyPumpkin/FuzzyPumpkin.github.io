@@ -1,11 +1,13 @@
 .blob {
+    &__filter {display: none;}
     &__container {
         position: absolute;
-        bottom: 0;
-        right: 0;
-        width: 60%;
-        height: 60%;
+        bottom: 2rem;
+        right: -5rem;
+        width: 80%;
+        height: 90%;
         filter: url('#filter');
+        overflow: hidden;
     }
     &__ball {
         width: $blob-radius;
@@ -45,24 +47,21 @@
             }
         }
     }
+    
 }
 
 @keyframes x-axis {
     0% { transform: translate(-$blob-radius*1.6); }
     100% { transform: translate($blob-radius*1.6); }
 }
-  
 @keyframes y-axis {
     0% { transform: translateY($blob-radius*0.7); }
     100% { transform: translateY(-$blob-radius*1.1) scale(.8);}
 }
-  
-  
 @keyframes x-axis-lateral {
     0% { transform: translate(-$blob-radius*.6); }
     100% { transform: translate($blob-radius*.6); }
 }
-  
 @keyframes y-axis-lateral {
     0% { transform: translateY($blob-radius/5); }
     100% { transform: translateY(-$blob-radius); }

@@ -1,0 +1,74 @@
+.projects {
+    @include flex-column;
+    position: relative;
+    align-items: center;
+    margin-bottom: -23rem;
+ 
+    &__buttonlink {
+        display: flex;
+        text-decoration: none;
+        &--ghlink {
+            margin-top: auto;
+        }
+    }
+    &__card {
+        @include flex-column;
+        align-items: center;
+        background: $color-background-accent;
+        padding: 4rem;
+        border-radius: 6px;
+        @include shadow;
+        z-index: 3; 
+    }
+    &__cardContainer {
+        @include flex-row;
+        justify-content: space-evenly;
+        width: 100%;
+        margin: 5rem 0;
+    }
+    &__headline {z-index: 3;}
+    &__info {
+        background: $color-background-accent;
+        width: 60%;
+        padding: 4rem;
+        border-radius: 6px;
+        @include shadow;
+        font-size: 1.8rem;
+        line-height: 2.4rem;
+        z-index: 3; 
+
+        &-blurb {
+            margin: 1rem 0;
+        }
+        &-contents {
+            padding: 1rem 2.5rem;
+        }
+        &-instructions {
+            font-weight: 600;
+        }
+        &-list {
+            padding: 0 3rem;
+            @include respond(lowres){
+                padding: 0 1rem;
+            }
+        }
+        &-listitem:not(:last-of-type) {
+            margin-bottom: .75rem;
+        }
+        &-projectname {
+            color: $color-text-headline;
+            font-weight: 600;
+        }
+        &-ghbutton {
+            margin: 3rem auto 0 auto;
+
+            @include respond(lowres){
+                margin: 1rem auto 0 auto;
+            }
+        }
+    }
+    &__projectImage {
+        width: 17.5rem;
+        border-radius: 6px;
+    }
+}

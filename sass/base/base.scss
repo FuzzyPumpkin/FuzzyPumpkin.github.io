@@ -48,6 +48,11 @@ button {
 	background-size: 245px 90px;
     background-color: rgba($color-brand,.3);
     z-index: 1;
+
+    &--portfolio {
+        position: absolute;
+        width: 100%;
+    }
     @include respond(tablet){
         width: 122px;
     }

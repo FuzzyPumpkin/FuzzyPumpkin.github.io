@@ -119,14 +119,86 @@
 	</section>
 <!-- project display -->
 <section class="projects" id="projects">
+	<div class="bgpattern bgpattern--portfolio"></div>
+	<h2 class="projects__headline">My Development Projects</h2>
+	<article class="projects__cardContainer">
+		<div class="projects__card">
+			<img src="images/resourced.jpg" alt="ReSOURCEd screenshot" class="projects__projectImage">
+			<h3 class="projects__projectName">ReSOURCEd</h3>
+			<ul class="projects__techList">
+				<li class="projects__techItem">React</li>
+				<li class="projects__techItem">JavaScript</li>
+				<li class="projects__techItem">HTML</li>
+				<li class="projects__techItem">CSS</li>
+			</ul>
+		</div>
+		<div class="projects__card">
+			<img src="images/barman.jpg" alt="Barman screenshot" class="projects__projectImage">
+			<h3 class="projects__projectName">Barman</h3>
+			<ul class="projects__techList">
+				<li class="projects__techItem">JavaScript</li>
+				<li class="projects__techItem">HTML</li>
+				<li class="projects__techItem">CSS</li>
+			</ul>
+		</div>
+		<div class="projects__card">
+			<img src="images/citrouille.jpg" alt="Citrouille screenshot" class="projects__projectImage">
+			<h3 class="projects__projectName">Citrouille Floue</h3>
+			<ul class="projects__techList">
+				<li class="projects__techItem">JavaScript</li>
+				<li class="projects__techItem">HTML</li>
+				<li class="projects__techItem">CSS</li>
+			</ul>
+		</div>
+		<div class="projects__card">
+			<img src="images/realtor.jpg" alt="Stacey Evy screenshot" class="projects__projectImage">
+			<h3 class="projects__projectName">Stacey Evy: Realtor</h3>
+			<ul class="projects__techList">
+				<li class="projects__techItem">JavaScript</li>
+				<li class="projects__techItem">HTML</li>
+				<li class="projects__techItem">CSS</li>
+			</ul>
+		</div>
+	</article>
 
+	<article class="projects__info">
+		<p class="projects__info-instructions">Click on a card above to see details about my fully deployed projects, 
+			including a link to each project and its Github repository.
+		</p>
+		<p class="projects__info-blurb">Please view my complete Github profile for the full extent of my original projects. 
+			Most of my projects are very small in nature, built to explore specific skills like using the HTML canvas or coupling 
+			a JavaScript library that only works with ES5 code with other functions that require datakeys from ES6 code. I also have 
+			these rather large projects in progress:
+		</p>
+			<ul class="projects__info-list">
+				<li class="projects__info-listitem">
+					<span class="projects__info-projectname">ByeByeBuggy</span>
+						- a product information site based on a real product site that badly needs a redesign/recode. 
+						Built from wireframes to Figma to VSCode using SASS and multiple layouts for responsiveness.
+				</li>
+				<li class="projects__info-listitem">
+					<span class="projects__info-projectname">Build My Bento</span>
+						- a multi-stage React project that allows users to plan a balanced lunch box.
+				</li>
+				<li class="projects__info-listitem">
+					<span class="projects__info-projectname">API Happi</span>
+						- a 10-app React dashboard that contains apps for currency conversion, task tracking, budget tracking, 
+						and news headlines, along with other useful tools.
+				</li>
+			</ul>
+		<a href="https://github.com/FuzzyPumpkin" target="blank" class="projects__buttonlink">
+			<button class="projects__info-ghbutton">View my Github!</button>
+		</a>
+	</article>	
 </section>
 
 
 <!-- footer -->
+<footer class="contact">
+	<div class="contact__background"></div>
+</footer>
 
-
-<svg>
+<svg class="blob__filter">
     <defs>
       <filter id="filter">
         <feGaussianBlur in="SourceGraphic" stdDeviation="18" result="blur" />

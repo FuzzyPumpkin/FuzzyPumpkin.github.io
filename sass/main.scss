@@ -4,10 +4,12 @@
 @import "base/base";
 @import "base/typography";
 @import "base/utility";
-
+    
 @import "components/blobs";
-@import "components/welcome";
+@import "components/contact";
 @import "components/nav";
+@import "components/projects";
+@import "components/welcome";
 
 @import "pages/resume";
 @import "pages/portfolio";
