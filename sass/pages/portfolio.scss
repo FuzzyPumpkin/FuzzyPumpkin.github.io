@@ -1,0 +1,50 @@
+.profile-skills {
+    width: 80%;
+    @include flex-row;
+    justify-content: space-evenly;
+    margin: 1rem auto;
+
+    &__icon {
+        height: 3rem; width: 3rem;
+        margin: .5rem 1rem;
+        fill: $color-text;
+        @include respond(tinyphone){
+            height: 2rem; width: 2rem;
+        }
+    }
+    &__iconbg {
+        width: 7rem; height: 6rem;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid $color-brand;
+        border-radius: 45% 10% 70% 10%;
+        background-color: $color-background-accent;
+        @include flex-row;
+        @include respond(tinyphone){
+            height: 4rem; width: 4rem;
+        }
+    }
+    &__skill {
+        align-items: center;
+        @include flex-column;
+        @include respond(tinyphone){
+            margin: 0 .5rem;
+        }
+    }
+    &__skillname {
+        margin-top: .5rem;
+        font-weight: 600;
+        font-size: 1.75rem;
+        @include respond(tinyphone){
+            font-size: 1.5rem;
+        }
+    }
+}
+
+.portfolio {
+    position: relative;
+    right: 0; top: 0;
+    width: 100%;
+    background-color: $color-background-accent;
+    overflow: hidden;
+}

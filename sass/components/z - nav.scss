@@ -1,0 +1,122 @@
+
+#nav-container {
+  position: fixed;
+  width: 100%;
+  top: 0; left: 0;
+  z-index: 3;
+}
+
+.nav {
+  flex: 1;
+  position: absolute;
+  top: -3.5rem;
+  left: 0;
+  right: 0;
+  height: 9.3rem;
+  display: flex;
+  align-items: stretch;
+  text-align: center;
+  z-index: 4;
+  transition: all .3s cubic-bezier(.5, 0, .5, 1);
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    //movement of dot
+    transform: translateX(calc(var(--x) * 25%)); 
+    transition: all .3s cubic-bezier(.5, 0, .5, 1);
+  }
+  &__dot {
+    $size: 12rem;
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+    background-color: $color-brand;
+    position: absolute;
+    left: calc((25% - #{$size}) / 2);//placement of dot
+    top: 0%;
+    z-index: 3;
+    transform: scale(.85);
+    @include double-border;
+    @include respond(phone){
+      width: 10rem;
+      height: 10rem;
+      left: calc((25% - 10rem) / 2);
+      top: 10%;
+    }
+  }
+  &__cutout {
+    $size: $cutout-size;
+    width: $size;
+    height: $size;
+    top: 0px;
+    left: calc((25% - #{$size}) / 2);//calculated placement of cutout
+    z-index: 2;
+    border-radius: 50%;
+
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      width: 1000%;
+      height: 130%;
+      top: -30%;
+      background-color: $color-brand;
+      border-top: solid 2px #FFF;
+    }
+    &:before {
+      right: 95%;
+      border-bottom-right-radius: 1vh;
+      @include double-border;
+    }
+    &:after {
+      left: 20%;
+      border-bottom-left-radius: 1vh;
+      @include double-border;
+    }
+  }
+  &__label {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 3;
+    margin-top: 3.5rem;
+  }
+  &__filler {
+    flex: 4;
+  }
+  &__link {
+    margin-top: 1rem;
+    font-size: 1.7rem;
+    font-family: Raleway, sans-serif;
+    color: $color-background-accent;
+    text-decoration: none;
+    transition: all .4s ease;
+
+    &:hover {
+      color: $color-highlight;
+    }
+  }
+}
+
+input[name="choice"] { 
+  position: absolute; 
+  top: 0; 
+  opacity: 0;
+}
+  
+#nav-1:checked ~ * label[for="nav-1"],
+#nav-2:checked ~ * label[for="nav-2"],
+#nav-3:checked ~ * label[for="nav-3"],
+#nav-4:checked ~ * label[for="nav-4"] {transform: translateY(-10%);}
+  
+ //movement code for dot
+  @for $i from 1 through 4 {
+    #nav-#{$i}:checked ~ #nav-container {
+      --x: #{$i - 1};
+    }
+  }

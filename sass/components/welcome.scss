@@ -1,0 +1,62 @@
+.welcome {
+    position: relative;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 10rem;
+
+    &__name {
+        font-size: 15rem;
+        font-weight: 400;
+        z-index: 2;
+
+        &--initial {
+            font-family: "Macondo Swash Caps", sans-serif;
+        }
+    }
+    &__marquee {
+        height: 5rem;
+        margin: 2rem 0;
+        z-index: 2;
+        overflow: hidden;
+        @include respond(tablet){
+            font-size: 2rem;
+        }
+
+        &--list {
+            position: relative;
+            height: 700%;
+            animation: slide 35s ease infinite;
+        }
+    }
+    &__scrolltext {
+        display: block;
+        position: relative;
+        height: 14.2857%;
+        padding: 2px 5px;
+        font-size: 3rem;
+        top: 0;
+        box-sizing: border-box;
+        
+    }
+}
+
+
+@keyframes slide {
+    0% {top: 0%;}
+    12% {top: 0%;}
+    14% {top: -100%;}
+    26% {top: -100%;}
+    28% {top: -200%;}
+    40% {top: -200%;}
+    42% {top: -300%;}
+    54% {top: -300%;}
+    56% {top: -400%;}
+    68% {top: -400%;}
+    70% {top: -500%;}
+    82% {top: -500%;}
+    84% {top: -600%;}
+    96% {top: -600%;}
+    100% {top: -700%;}
+}

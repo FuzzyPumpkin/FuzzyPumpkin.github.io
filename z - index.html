@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Portfolio for Kari Minger</title>
+	<link rel="stylesheet" type="text/css" href="css/portfolio.css">
+	<link href="https://fonts.googleapis.com/css?family=Macondo+Swash+Caps&text:KLM|Raleway:400,600&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Web developer portfolio for Kari Minger.">
+</head>
+<body>
+	
+<!-- bg chevron -->
+<div class="bgpattern"></div>
+<div class="bgpattern bgpattern_alt"></div>
+
+
+<!-- nav -->
+<input type="radio" name="choice" id="nav-1" checked>
+<input type="radio" name="choice" id="nav-2">
+<input type="radio" name="choice" id="nav-3">
+<input type="radio" name="choice" id="nav-4">
+<div class="nav__container" id="nav-container">
+<nav class="nav">
+		<div class="nav__bg">
+		  <div class="nav__cutout"></div>
+		  <div class="nav__dot"></div>
+		</div>
+		<label for="nav-1" class="nav__label">
+		  <a href="#nav-container" class="nav__link">Top</a>
+		</label>
+		<label for="nav-2" class="nav__label">
+		  <a class="nav__link" href="#projects">Projects</a>
+		</label>
+		<label for="nav-3" class="nav__label">
+		  <a href="/resume.html" class="nav__link">Resum&eacute;</a>
+		</label>
+		<label for="nav-4" class="nav__label">
+		  <a href="https://github.com/FuzzyPumpkin" target="blank" class="nav__link">Github</a>
+		</label>
+  <div class="nav__filler"></div>
+</nav>
+</div>
+
+<div class="page_container">
+<!-- welcome box -->
+<div class="u-blue-border u-section-box welcome" id="welcome">
+	<h1 class="welcome__name">Kari Minger</h1>
+	<p class="welcome__title">Web Developer</p>
+	<div class="welcome__marquee">
+		<figure class="welcome__marquee--list">
+			<span class="welcome__scrolltext welcome__scrolltext--first">remembers when everything was in tables</span>
+			<span class="welcome__scrolltext">not a fan of scroll hijacks</span>
+			<span class="welcome__scrolltext">chaotic good in games; lawful good in life</span>
+			<span class="welcome__scrolltext">knitter/crocheter and pattern designer</span>
+			<span class="welcome__scrolltext">thinks 100vh hero images are so 2018</span>
+			<span class="welcome__scrolltext">once pet a TSA security dog</span>
+			<span class="welcome__scrolltext">first program: a bouncy ball in BASIC</span>
+		</figure>
+	</div>
+</div>
+<!--skills section -->
+	<section class="profile-skills" id="skills">
+		<div class="profile-skills__skill">
+			<div class="profile-skills__iconbg">
+				<svg class="profile-skills__icon">
+					<use xlink:href="images/symbol-defs.svg#icon-html5"></use>
+				</svg>
+			</div>
+			<p class="profile-skills__skillname">HTML</p>
+		</div>
+		<div class="profile-skills__skill">
+			<div class="profile-skills__iconbg">
+				<svg class="profile-skills__icon">
+					<use xlink:href="images/symbol-defs.svg#icon-csswizardry"></use>
+				</svg>
+			</div>
+			<p class="profile-skills__skillname">CSS</p>
+		</div>
+		<div class="profile-skills__skill">
+			<div class="profile-skills__iconbg">
+				<svg class="profile-skills__icon">
+					<use xlink:href="images/symbol-defs.svg#icon-javascript"></use>
+				</svg>
+			</div>
+			<p class="profile-skills__skillname">JavaScript</p>
+		</div>
+		<div class="profile-skills__skill">
+			<div class="profile-skills__iconbg">
+				<svg class="profile-skills__icon">
+					<use xlink:href="images/symbol-defs.svg#icon-react"></use>
+				</svg>
+			</div>
+			<p class="profile-skills__skillname">React</p>
+		</div>
+		<div class="profile-skills__skill">
+			<div class="profile-skills__iconbg">
+				<svg class="profile-skills__icon">
+					<use xlink:href="images/symbol-defs.svg#icon-sass"></use>
+				</svg>
+			</div>
+			<p class="profile-skills__skillname">SASS</p>
+		</div>
+		<div class="profile-skills__skill">
+			<div class="profile-skills__iconbg">
+				<svg class="profile-skills__icon">
+					<use xlink:href="images/symbol-defs.svg#icon-node-dot-js"></use>
+				</svg>
+			</div>
+			<p class="profile-skills__skillname">Node.js</p>
+		</div>
+		<div class="profile-skills__skill">
+			<div class="profile-skills__iconbg">
+				<svg class="profile-skills__icon">
+					<use xlink:href="images/symbol-defs.svg#icon-mongodb"></use>
+				</svg>
+			</div>
+			<p class="profile-skills__skillname">MongoDB</p>
+		</div>
+		<div class="profile-skills__skill">
+			<div class="profile-skills__iconbg">
+				<svg class="profile-skills__icon">
+					<use xlink:href="images/symbol-defs.svg#icon-github"></use>
+				</svg>
+			</div>
+			<p class="profile-skills__skillname">Github</p>
+		</div>
+	</section>
+<!-- project display -->
+<section class="projects" id="projects">
+	<div class="projects__bookend projects__bookend--one" id="one">
+		<h3 class="projects__bookend-title">reSOURCEd</h3>
+	</div>
+	<div class="projects__projectinfo u-hidden" data-key="one">
+		<div class="projects__projectinfo-contents">
+			<div class="projects__projectinfo-close">X</div>
+			<h2 class="projects__projectinfo-title">reSOURCEd</h2>
+			<div class="projects__projectinfo-container">
+				<article class="projects__projectinfo-blurb">
+						<p class="projects__projectinfo-paragraph">This is a site created to track resources I have found helpful in my journey. It includes courses I 
+						have taken as well as tools and lexicons I regularly refer to. While my main reason for creating the project was to gain more practice in 
+						using React, specifically routing in React, it also was to address the fact that I use three computers to learn and code on, as well as 
+						multiple browsers on those computers, and my repository of useful links were scattered throughout those browsers. This site keeps all of my 
+						links together and accessible from anywhere.</p>
+
+						<p class="projects__projectinfo-paragraph">Content is managed through a JSON. The navigation bar and routes automatically update when new tags are used in the JSON, managed 
+						through state.</p>
+				</article>
+				<div class="projects__projectinfo-quicksumm">
+					<img src="images/resourced.jpg" class="projects__projectinfo-image" alt="reSOURCED screenshot"></img>
+					<a href="https://fuzzypumpkin.github.io/resourced/" target="blank" class="projects__buttonlink">
+						<button class="projects__projectinfo-livelink">View Live</button>
+					</a>
+					<h3 class="projects__project-info-theadline">Tech Used:</h3>
+					<ul class="projects__projectinfo-tech">
+						<li class="projects__projectinfo-technology">React</li>
+						<li class="projects__projectinfo-technology">JavaScript</li>
+						<li class="projects__projectinfo-technology">CSS</li>
+						<li class="projects__projectinfo-technology">HTML</li>
+					</ul>
+					<a href="https://github.com/FuzzyPumpkin/FuzzyPumpkin.github.io/tree/master/resourced" target="blank" class="projects__buttonlink--ghlink">
+						<button class="projects__projectinfo-ghlink">View on Github</button>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="projects__bookend projects__bookend--two" id="two">
+		<h3 class="projects__bookend-title">Barman</h3>
+	</div>
+	<div class="projects__projectinfo u-hidden" data-key="two">
+		<div class="projects__projectinfo-contents">
+			<div class="projects__projectinfo-close">X</div>
+			<h2 class="projects__projectinfo-title">Barman</h2>
+			<div class="projects__projectinfo-container">
+				<article class="projects__projectinfo-blurb">
+						<p class="projects__projectinfo-paragraph">This is a site created for a fictious delivery service, similar to HelloFresh, but for cocktails. 
+							Annoyed with designers that follow the trend of 100vh hero images without giving any indication 
+							that there's page content below it, I decided to make a site where all the content was contained 
+							in one view height/width. This is a lot harder than it seems because one view height/width is 
+							different not only on desktop and mobile and widescreen, but even on individual devices. It's 
+							probably impossible for me to get all of them to the look I want, but I tried to cater to a variety 
+							of modern devices and some legacy ones. I myself use a MotoX4, which isn't the greatest phone but 
+							gets it done.</p>
+
+						<p class="projects__projectinfo-paragraph">This was my first time using SVG clip paths for background images. I'm really amazed by the versatility of SVG.</p>
+				</article>
+				<div class="projects__projectinfo-quicksumm">
+					<img src="images/barman.jpg" class="projects__projectinfo-image" alt="Barman screenshot"></img>
+					<a href="https://fuzzypumpkin.github.io/Barman/index.html" target="blank" class="projects__buttonlink">
+						<button class="projects__projectinfo-livelink">View Live</button>
+					</a>
+					<h3 class="projects__project-info-theadline">Tech Used:</h3>
+					<ul class="projects__projectinfo-tech">
+						<li class="projects__projectinfo-technology">JavaScript</li>
+						<li class="projects__projectinfo-technology">CSS</li>
+						<li class="projects__projectinfo-technology">HTML</li>
+					</ul>
+					<a href="https://github.com/FuzzyPumpkin/FuzzyPumpkin.github.io/tree/master/Barman" target="blank" class="projects__buttonlink--ghlink">
+						<button class="projects__projectinfo-ghlink">View on Github</button>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="projects__bookend projects__bookend--three" id="three">
+		<h3 class="projects__bookend-title">Citrouille Floue</h3>
+	</div>
+	<div class="projects__projectinfo u-hidden" data-key="three">
+		<div class="projects__projectinfo-contents">
+			<div class="projects__projectinfo-close">X</div>
+			<h2 class="projects__projectinfo-title">Citrouille Floue</h2>
+			<div class="projects__projectinfo-container">
+				<article class="projects__projectinfo-blurb">
+						<p class="projects__projectinfo-paragraph">This is a site created for a fictious restaurant. There are a few subtle CSS and 
+							JavaScript animations on the site, as well as custom JavaScript form validation. I'm especially proud of the form and 
+							open/closed status programming since it evaluates the input or the current time to see how it relates to the business 
+							hours.</p>
+
+						<p class="projects__projectinfo-paragraph">"Citrouille Floue" is a bit of a riff on my internet persona, Fuzzy Pumpkin. 
+							It's the translation of "Fuzzy Pumpkin" in French, and my 'net name was born of a forum post where I expressed that my poor 
+								grasp of French, despite taking it for four years, would result in me doing something stupid like 
+								calling someone a fuzzy pumpkin. The forum administrator then changed my title to "Fuzzy Pumpkin". 
+								The 'net name I'd been using up to then was problematic, so I took on the moniker.</p>
+
+						<p class="projects__projectinfo-paragraph">Also, I really like pumpkin.</p>
+				</article>
+				<div class="projects__projectinfo-quicksumm">
+					<img src="images/citrouille.jpg" class="projects__projectinfo-image" alt="Citrouille screenshot"></img>
+					<a href="https://fuzzypumpkin.github.io/Citrouille/index.html" target="blank" class="projects__buttonlink">
+						<button class="projects__projectinfo-livelink">View Live</button>
+					</a>
+					<h3 class="projects__project-info-theadline">Tech Used:</h3>
+					<ul class="projects__projectinfo-tech">
+						<li class="projects__projectinfo-technology">JavaScript</li>
+						<li class="projects__projectinfo-technology">CSS</li>
+						<li class="projects__projectinfo-technology">HTML</li>
+					</ul>
+					<a href="https://github.com/FuzzyPumpkin/FuzzyPumpkin.github.io/tree/master/Citrouille" target="blank" class="projects__buttonlink--ghlink">
+						<button class="projects__projectinfo-ghlink">View on Github</button>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="projects__bookend projects__bookend--four" id="four">
+		<h3 class="projects__bookend-title">Stacey Evy: Realtor</h3>
+	</div>
+	<div class="projects__projectinfo projects__projectinfo--last u-hidden" data-key="four">
+		<div class="projects__projectinfo-contents">
+			<div class="projects__projectinfo-close">X</div>
+			<h2 class="projects__projectinfo-title">Stacey Evy: Realtor</h2>
+			<div class="projects__projectinfo-container">
+				<article class="projects__projectinfo-blurb">
+					<p class="projects__projectinfo-paragraph">This is a site created for a fictious realtor. I gave myself a challenge 
+								of creating a fully-functional static site that could be used on a professional level within five days 
+								(approximately 8.5 working hours) as my first focused complete-site project. I was able to achieve that goal. 
+								There are a few subtle CSS and JavaScript animations on the site, as well as custom JavaScript form validation.</p>
+		
+					<p class="projects__projectinfo-paragraph">Site is fully mobile-friendly and tested on such, though it displays well 
+								on standard desktop and wide-screen monitors.</p>
+				</article>
+				<div class="projects__projectinfo-quicksumm">
+					<img src="images/realtor.jpg" class="projects__projectinfo-image" alt="Stacey Evy screenshot"></img>
+					<a href="https://fuzzypumpkin.github.io/RealEstate/index.html" target="blank" class="projects__buttonlink">
+						<button class="projects__projectinfo-livelink">View Live</button>
+					</a>
+					<h3 class="projects__project-info-theadline">Tech Used:</h3>
+					<ul class="projects__projectinfo-tech">
+						<li class="projects__projectinfo-technology">JavaScript</li>
+						<li class="projects__projectinfo-technology">CSS</li>
+						<li class="projects__projectinfo-technology">HTML</li>
+					</ul>
+					<a href="https://github.com/FuzzyPumpkin/FuzzyPumpkin.github.io/tree/master/RealEstate" target="blank" class="projects__buttonlink--ghlink">
+						<button class="projects__projectinfo-ghlink">View on Github</button>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="projects__infopanel">
+		<article class="projects__infopanel-contents">
+			<h2 class="projects__infopanel-headline">My Development Projects</h2>
+			<p class="projects__infopanel-instructions">Click on a panel on the left to see details about my fully deployed projects, 
+			including a link to each project and its Github repository.
+			</p>
+			<p class="projects__infopanel-blurb">Please view my complete Github profile for the full extent of my original projects. 
+			Most of my projects are very small in nature, built to explore specific skills like using the HTML canvas or coupling 
+			a JavaScript library that only works with ES5 code with other functions that require datakeys from ES6 code. I also have 
+			these rather large projects in progress:
+			</p>
+				<ul class="projects__infopanel-list">
+					<li class="projects__infopanel-listitem">
+						<span class="projects__infopanel-projectname">ByeByeBuggy</span>
+						- a product information site based on a real product site that badly needs a redesign/recode. 
+						Built from wireframes to Figma to VSCode using SASS and multiple layouts for responsiveness.
+					</li>
+					<li class="projects__infopanel-listitem">
+						<span class="projects__infopanel-projectname">Build My Bento</span>
+						- a multi-stage React project that allows users to plan a balanced lunch box.
+					</li>
+					<li class="projects__infopanel-listitem">
+						<span class="projects__infopanel-projectname">API Happi</span>
+						- a 10-app React dashboard that contains apps for currency conversion, task tracking, budget tracking, 
+						and news headlines, along with other useful tools.
+					</li>
+				</ul>
+			<a href="https://github.com/FuzzyPumpkin" target="blank" class="projects__buttonlink">
+				<button class="projects__infopanel-ghbutton">View my Github!</button>
+			</a>
+		</article>
+	</div>
+</section>
+
+
+<!-- contact me -->
+<footer class="footer" id="contact">
+	<a href="mailto: kariminger@gmail.com" class="footer__link" title="email">
+		<svg class="footer__icon">
+			<use xlink:href="images/symbol-defs.svg#icon-envelop"></use>
+		</svg>
+	</a>
+	<h2 class="footer__title">Contact Me</h2>
+	<a href="https://www.linkedin.com/in/kari-minger" class="footer__link" title="LinkedIn">
+		<svg class="footer__icon">
+			<use xlink:href="images/symbol-defs.svg#icon-linkedin"></use>
+		</svg>
+	</a>
+</footer>
+
+
+
+
+
+<script type="text/javascript" src="index.js"></script>
+</body>
+</html>
