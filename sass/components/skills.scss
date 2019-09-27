@@ -1,0 +1,63 @@
+.skills {
+    background-color: $color-text-headline;
+    padding: .5rem;
+    border-radius: 2rem;
+    @include flex-column;
+
+    &--portfolio {
+        position: relative;
+        width: 100%;
+        height: 46rem;
+        padding: 0;
+        border-radius: 0;
+        @include flex-column;
+    }
+    &__background {
+        background: url(/images/contactDesk.svg) no-repeat;
+        background-size: cover;
+        width: 100%; height: 100%;
+        position: absolute;
+        bottom: 0; right: 0;
+        z-index: 2;
+    }
+    &__headline {
+        color: $color-background-accent;
+    }   
+    &__hidden {
+        opacity: 0;
+        // transition: all 5s;
+    }
+    &__icon--portfolio {
+        width: 4rem; 
+    }
+    &__iconbg {
+        width: 4.5rem; height: 4rem;
+        justify-content: center;
+        align-items: center;
+        border-radius: 45% 10% 70% 10%;
+        background-color: $color-background-accent;
+        @include flex-row;
+        &--portfolio {
+            width: 8rem; height: 7rem;
+        }
+    }
+    &__skill {
+        align-items: center;
+        @include flex-column;
+        z-index: 4;
+        transition: all 1.5s;
+        &--group2 {transition-delay: 1s;}
+    }
+    &__skillbox {
+        justify-content: space-evenly;
+        @include flex-row;
+        &--portfolio {
+            margin-top: auto;
+            margin-bottom: 8rem;
+        }
+    }
+    &__skillname {
+        margin-top: .5rem;
+        color: $color-background-accent;
+    }
+}

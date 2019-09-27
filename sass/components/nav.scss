@@ -12,14 +12,36 @@
     &__monogram {
         font-family: "Macondo Swash Caps", sans-serif;
         font-size: 3rem;
+        text-decoration: none;
+        color: $color-brand;
     }
     &__links {
         margin-left: auto;
+        position: relative;
+        @include flex-row;
+        align-items: center;
 
         &--link{
+            position: relative;
             text-decoration: none;
             padding: 0 2rem;
             color: $color-brand;
+            z-index: 12;
+            &:hover {color: $color-background-accent;}
+            &::before {
+                content: "";
+                height: 100%; width: 100%;
+                transition: all .4s ease-in;
+                position: absolute;
+                top: 0;left: 0;
+                background: $color-brand;
+                clip-path: polygon(10% 0, 100% 0%, 90% 100%, 0% 100%);
+                z-index: -1;
+                opacity: 0;
+            }
+            &:hover::before {
+                opacity: .3;
+            }
         }
     }
 }

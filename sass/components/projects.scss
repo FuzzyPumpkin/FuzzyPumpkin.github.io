@@ -19,6 +19,16 @@
         border-radius: 6px;
         @include shadow;
         z-index: 3; 
+        transition: transform .3s ease;
+        cursor: pointer;
+        
+        &:hover {
+            transform: scale(1.1);
+        }
+        &-projectName {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
     }
     &__cardContainer {
         @include flex-row;
@@ -26,7 +36,20 @@
         width: 100%;
         margin: 5rem 0;
     }
-    &__headline {z-index: 3;}
+    &__headline {   
+        background-color: $color-background-accent;
+        padding: 2rem;
+        border-radius: 6px;
+        margin-bottom: 0;
+    }
+    &__headlineTab {
+        margin-top: -4.5rem;
+        border-radius: 6px;
+        padding: 1rem;
+        @include shadow;
+        z-index: 3;
+        background: linear-gradient(to bottom, $color-brand 0%,$color-brand 50%,$color-background-accent 51%,$color-background-accent 100%);
+    }
     &__info {
         background: $color-background-accent;
         width: 60%;
@@ -55,9 +78,11 @@
         &-listitem:not(:last-of-type) {
             margin-bottom: .75rem;
         }
-        &-projectname {
+        &-projectName {
             color: $color-text-headline;
             font-weight: 600;
+            font-size: 2rem;
+            margin-bottom: 2rem;
         }
         &-ghbutton {
             margin: 3rem auto 0 auto;
