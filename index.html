@@ -51,7 +51,8 @@
 		<h2 class="projects__headline">My Development Projects</h2>
 	</div>
 	<article class="projects__cardContainer">
-		<div class="projects__card">
+		<!-- project 1 -->
+		<a href="#projOne" class="projects__card">
 			<img src="images/resourced.jpg" alt="ReSOURCEd screenshot" class="projects__projectImage">
 			<h3 class="projects__card-projectName">ReSOURCEd</h3>
 			<ul class="projects__techList">
@@ -60,8 +61,9 @@
 				<li class="projects__techItem">HTML</li>
 				<li class="projects__techItem">CSS</li>
 			</ul>
-		</div>
-		<div class="projects__card">
+		</a>
+		<!-- project 2 -->
+		<a href="#projTwo" class="projects__card">
 			<img src="images/barman.jpg" alt="Barman screenshot" class="projects__projectImage">
 			<h3 class="projects__card-projectName">Barman</h3>
 			<ul class="projects__techList">
@@ -69,8 +71,9 @@
 				<li class="projects__techItem">HTML</li>
 				<li class="projects__techItem">CSS</li>
 			</ul>
-		</div>
-		<div class="projects__card">
+		</a>
+		<!-- project 3 -->
+		<a href="#projThree" class="projects__card">
 			<img src="images/citrouille.jpg" alt="Citrouille screenshot" class="projects__projectImage">
 			<h3 class="projects__card-projectName">Citrouille Floue</h3>
 			<ul class="projects__techList">
@@ -78,8 +81,9 @@
 				<li class="projects__techItem">HTML</li>
 				<li class="projects__techItem">CSS</li>
 			</ul>
-		</div>
-		<div class="projects__card">
+		</a>
+		<!-- project 4 -->
+		<a href="#projFour" class="projects__card">
 			<img src="images/realtor.jpg" alt="Stacey Evy screenshot" class="projects__projectImage">
 			<h3 class="projects__card-projectName">Stacey Evy: Realtor</h3>
 			<ul class="projects__techList">
@@ -87,9 +91,143 @@
 				<li class="projects__techItem">HTML</li>
 				<li class="projects__techItem">CSS</li>
 			</ul>
-		</div>
+		</a>
 	</article>
-
+	<!-- popups -->
+	<div class="projects__popup" id="projOne">
+        <div class="projects__popup-content">
+            <div class="projects__popup-left">
+				<img src="images/resourced.jpg" class="projects__popup-image" alt="reSOURCED screenshot"></img>
+				<a href="https://fuzzypumpkin.github.io/resourced/" target="blank" class="projects__buttonlink--ghlink">
+					<button class="projects__projectinfo-livelink">View Live</button>
+				</a>
+				<a href="https://github.com/FuzzyPumpkin/FuzzyPumpkin.github.io/tree/master/resourced" target="blank" class="projects__buttonlink">
+					<button class="projects__projectinfo-ghlink">View on Github</button>
+				</a>
+			</div>
+            <div class="projects__popup-right">
+				<a href="#projects" class="projects__popup-close">&times;</a>
+				<h2 class="projects__popup-title">reSOURCEd</h2>
+				<article class="projects__popup-blurb">
+					<p class="projects__popup-paragraph">This is a site created to track resources I have found helpful in my journey. It includes courses I 
+						have taken as well as tools and lexicons I regularly refer to. While my main reason for creating the project was to gain more practice in 
+						using React, specifically routing in React, it also was to address the fact that I use three computers to learn and code on, as well as 
+						multiple browsers on those computers, and my repository of useful links were scattered throughout those browsers. This site keeps all of my 
+						links together and accessible from anywhere.</p>
+			
+					<p class="projects__popup-paragraph">Content is managed through a JSON. The navigation bar and routes automatically update when new tags are used in the JSON, managed 
+						through state.</p>
+				</article>
+				<ul class="projects__popup-list">
+					<li class="projects__techItem">React</li>
+					<li class="projects__techItem">JavaScript</li>
+					<li class="projects__techItem">CSS</li>
+					<li class="projects__techItem">HTML</li>
+				</ul>			
+			</div>
+        </div>
+	</div>
+	<div class="projects__popup" id="projTwo">
+			<div class="projects__popup-content">
+				<div class="projects__popup-left projects__popup-left--two">
+					<img src="images/barman.jpg" class="projects__popup-image" alt="Barman screenshot"></img>
+					<a href="https://fuzzypumpkin.github.io/Barman/" target="blank" class="projects__buttonlink--ghlink">
+						<button class="projects__projectinfo-livelink">View Live</button>
+					</a>
+					<a href="https://github.com/FuzzyPumpkin/FuzzyPumpkin.github.io/tree/master/Barman" target="blank" class="projects__buttonlink">
+						<button class="projects__projectinfo-ghlink">View on Github</button>
+					</a>
+				</div>
+				<div class="projects__popup-right">
+					<a href="#projects" class="projects__popup-close">&times;</a>
+					<h2 class="projects__popup-title">Barman</h2>
+					<article class="projects__popup-blurb">
+						<p class="projects__popup-paragraph">This is a site created for a fictious delivery service, similar to HelloFresh, but for cocktails. 
+								Annoyed with designers that follow the trend of 100vh hero images without giving any indication 
+								that there's page content below it, I decided to make a site where all the content was contained 
+								in one view height/width. This is a lot harder than it seems because one view height/width is 
+								different not only on desktop and mobile and widescreen, but even on individual devices. It's 
+								probably impossible for me to get all of them to the look I want, but I tried to cater to a variety 
+								of modern devices and some legacy ones. I myself use a MotoX4, which isn't the greatest phone but 
+								gets it done.</p>
+				
+						<p class="projects__popup-paragraph">This was my first time using SVG clip paths for background images. I'm really 
+							amazed by the versatility of SVG.</p>
+					</article>
+					<ul class="projects__popup-list">
+						<li class="projects__techItem">JavaScript</li>
+						<li class="projects__techItem">CSS</li>
+						<li class="projects__techItem">HTML</li>
+					</ul>			
+				</div>
+			</div>
+		</div>
+		<div class="projects__popup" id="projThree">
+			<div class="projects__popup-content">
+				<div class="projects__popup-left projects__popup-left--three">
+					<img src="images/citrouille.jpg" class="projects__popup-image" alt="Citrouille screenshot"></img>
+					<a href="https://fuzzypumpkin.github.io/Citrouille/" target="blank" class="projects__buttonlink--ghlink">
+						<button class="projects__projectinfo-livelink">View Live</button>
+					</a>
+					<a href="https://github.com/FuzzyPumpkin/FuzzyPumpkin.github.io/tree/master/Citrouille" target="blank" class="projects__buttonlink">
+						<button class="projects__projectinfo-ghlink">View on Github</button>
+					</a>
+				</div>
+				<div class="projects__popup-right">
+					<a href="#projects" class="projects__popup-close">&times;</a>
+					<h2 class="projects__popup-title">Citrouille Floue</h2>
+					<article class="projects__popup-blurb">
+						<p class="projects__popup-paragraph">This is a site created for a fictious restaurant. There are a few subtle CSS and 
+								JavaScript animations on the site, as well as custom JavaScript form validation. I'm especially proud of the form and 
+								open/closed status programming since it evaluates the input or the current time to see how it relates to the business 
+								hours.</p>
+				
+						<p class="projects__popup-paragraph">"Citrouille Floue" is a bit of a riff on my internet persona, Fuzzy Pumpkin. 
+								It's the translation of "Fuzzy Pumpkin" in French, and my 'net name was born of a forum post where I expressed that my poor 
+									grasp of French, despite taking it for four years, would result in me doing something stupid like 
+									calling someone a fuzzy pumpkin. The forum administrator then changed my title to "Fuzzy Pumpkin". 
+									The 'net name I'd been using up to then was problematic, so I took on the moniker.</p>
+						<p class="projects__popup-paragraph">Also, I really like pumpkin.</p>
+					</article>
+					<ul class="projects__popup-list">
+						<li class="projects__techItem">JavaScript</li>
+						<li class="projects__techItem">CSS</li>
+						<li class="projects__techItem">HTML</li>
+					</ul>			
+				</div>
+			</div>
+		</div>
+		<div class="projects__popup" id="projFour">
+			<div class="projects__popup-content">
+				<div class="projects__popup-left projects__popup-left--three">
+					<img src="images/realtor.jpg" class="projects__popup-image" alt="Stacey Evy screenshot"></img>
+					<a href="https://fuzzypumpkin.github.io/RealEstate/" target="blank" class="projects__buttonlink--ghlink">
+						<button class="projects__projectinfo-livelink">View Live</button>
+					</a>
+					<a href="https://github.com/FuzzyPumpkin/FuzzyPumpkin.github.io/tree/master/RealEstate" target="blank" class="projects__buttonlink">
+						<button class="projects__projectinfo-ghlink">View on Github</button>
+					</a>
+				</div>
+				<div class="projects__popup-right">
+					<a href="#projects" class="projects__popup-close">&times;</a>
+					<h2 class="projects__popup-title">Stacey Evy: Realtor</h2>
+					<article class="projects__popup-blurb">
+						<p class="projects__popup-paragraph">This is a site created for a fictious realtor. I gave myself a challenge 
+								of creating a fully-functional static site that could be used on a professional level within five days 
+								(approximately 8.5 working hours) as my first focused complete-site project. I was able to achieve that goal. 
+								There are a few subtle CSS and JavaScript animations on the site, as well as custom JavaScript form validation.</p>
+				
+						<p class="projects__popup-paragraph">Site is fully mobile-friendly and tested on such, though it displays well 
+								on standard desktop and wide-screen monitors.</p>
+					</article>
+					<ul class="projects__popup-list">
+						<li class="projects__techItem">JavaScript</li>
+						<li class="projects__techItem">CSS</li>
+						<li class="projects__techItem">HTML</li>
+					</ul>			
+				</div>
+			</div>
+		</div>
 	<article class="projects__info">
 		<p class="projects__info-instructions">Click on a card above to see details about my fully deployed projects, 
 			including a link to each project and its Github repository.

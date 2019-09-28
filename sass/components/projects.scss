@@ -2,7 +2,8 @@
     @include flex-column;
     position: relative;
     align-items: center;
-    margin-bottom: -23rem;
+    margin-bottom: -26rem;
+    padding-bottom: 10rem;
  
     &__buttonlink {
         display: flex;
@@ -18,6 +19,7 @@
         padding: 4rem;
         border-radius: 6px;
         @include shadow;
+        text-decoration: none;
         z-index: 3; 
         transition: transform .3s ease;
         cursor: pointer;
@@ -95,5 +97,89 @@
     &__projectImage {
         width: 17.5rem;
         border-radius: 6px;
+    }
+    &__techItem {
+        color: $color-text;
+    }
+    &__popup {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 50;
+        opacity: 0;
+        visibility: hidden;
+        transition: all .3s ease;
+
+        &:target {
+            opacity: 1;
+            visibility: visible; }
+        &-content {
+            display: flex;
+            width: 60%;
+            background-color: $color-brand;
+            color: $color-background-accent;
+            border-radius: 6px;
+        }
+        &-left {
+            @include flex-column;
+            align-items: center;
+            width: 30%;
+            background: url(/images/resourcedBG.jpg) no-repeat;
+            background-size: cover;
+            &--two {
+                background: url(/images/barmanBg.jpg) no-repeat;
+                background-size: cover;
+            }
+            &--three {
+                background: url(/images/citrouilleBg.jpg) no-repeat;
+                background-size: cover;
+            }
+            &--four {
+                background: url(/images/realtorBg.jpg) no-repeat;
+                background-size: cover;
+            }
+        }
+        &-right {
+            width: 70%;
+            padding: 3rem 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+        &-list {
+            @include flex-row;
+            justify-content: space-evenly;
+            background-color: white;
+            border-radius: 6px;
+            padding: .5rem;
+        }
+        &-image {
+            @include shadow;
+            margin: -3rem 0 0 -6rem;
+            border-radius: 6px;
+        }
+        &-title {color: $color-background-accent;}
+        &-blurb {
+            line-height: 3rem;
+            font-size: 2rem;
+        }
+        &-paragraph {margin: 2rem 0;}
+        &-close:link, &-close:visited {
+            color: $color-text-headline;
+            background: white;
+            padding: 2rem 3rem;
+            border-radius: 0 0 0 50%;
+            position: absolute;
+            top: -1.5rem;
+            right: -1.5rem;
+            font-size: 5rem;
+            text-decoration: none;
+            display: inline-block; }
+          &-close:hover {color: $color-highlight;}
     }
 }

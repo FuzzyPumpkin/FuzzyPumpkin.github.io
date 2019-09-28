@@ -102,7 +102,6 @@ ul {
 
 li::before {
   content: "vvv";
-  margin-top: .25rem;
   background-color: #38335b;
   mask-image: url(../images/SVG/circle-right.svg);
   mask-size: contain;
@@ -111,7 +110,13 @@ li::before {
   -webkit-mask-size: contain;
   -webkit-mask-repeat: no-repeat;
   font-size: 1rem;
-  color: transparent; }
+  color: transparent;
+  position: absolute;
+  top: 25%;
+  left: -2rem; }
+
+li {
+  position: relative; }
 
 button {
   background-color: #38335b;
@@ -302,7 +307,8 @@ button {
   flex-direction: column;
   position: relative;
   align-items: center;
-  margin-bottom: -23rem; }
+  margin-bottom: -26rem;
+  padding-bottom: 10rem; }
   .projects__buttonlink {
     display: flex;
     text-decoration: none; }
@@ -316,6 +322,7 @@ button {
     padding: 4rem;
     border-radius: 6px;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+    text-decoration: none;
     z-index: 3;
     transition: transform .3s ease;
     cursor: pointer; }
@@ -377,6 +384,83 @@ button {
   .projects__projectImage {
     width: 17.5rem;
     border-radius: 6px; }
+  .projects__techItem {
+    color: #3b3a39; }
+  .projects__popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 50;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s ease; }
+    .projects__popup:target {
+      opacity: 1;
+      visibility: visible; }
+    .projects__popup-content {
+      display: flex;
+      width: 60%;
+      background-color: #38335b;
+      color: #fff7f7;
+      border-radius: 6px; }
+    .projects__popup-left {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 30%;
+      background: url(/images/resourcedBG.jpg) no-repeat;
+      background-size: cover; }
+      .projects__popup-left--two {
+        background: url(/images/barmanBg.jpg) no-repeat;
+        background-size: cover; }
+      .projects__popup-left--three {
+        background: url(/images/citrouilleBg.jpg) no-repeat;
+        background-size: cover; }
+      .projects__popup-left--four {
+        background: url(/images/realtorBg.jpg) no-repeat;
+        background-size: cover; }
+    .projects__popup-right {
+      width: 70%;
+      padding: 3rem 4rem;
+      position: relative;
+      overflow: hidden; }
+    .projects__popup-list {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      background-color: white;
+      border-radius: 6px;
+      padding: .5rem; }
+    .projects__popup-image {
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+      margin: -3rem 0 0 -6rem;
+      border-radius: 6px; }
+    .projects__popup-title {
+      color: #fff7f7; }
+    .projects__popup-blurb {
+      line-height: 3rem;
+      font-size: 2rem; }
+    .projects__popup-paragraph {
+      margin: 2rem 0; }
+    .projects__popup-close:link, .projects__popup-close:visited {
+      color: #204969;
+      background: white;
+      padding: 2rem 3rem;
+      border-radius: 0 0 0 50%;
+      position: absolute;
+      top: -1.5rem;
+      right: -1.5rem;
+      font-size: 5rem;
+      text-decoration: none;
+      display: inline-block; }
+    .projects__popup-close:hover {
+      color: #08ffc8; }
 
 .skills {
   background-color: #204969;
