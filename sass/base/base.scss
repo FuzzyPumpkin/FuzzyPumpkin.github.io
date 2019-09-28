@@ -3,7 +3,7 @@
 *::before {
     margin: 0;
     padding: 0;
-    box-sizing: inherit;
+    box-sizing: border-box;
 }
 // font size equiv to 10px, but allows for accessibility devices to change font size
 html {
@@ -54,6 +54,14 @@ button {
     @include respond(phone){
         width: 61px;
     }
+    &--portfolio {
+        position: absolute;
+        width: 100%;
+        @include respond(tablet){
+            width: 100%;
+        }
+    }
+    
 }
 .bgpattern_alt {
     background-color: rgba($color-brand,.3);

@@ -1,45 +1,3 @@
-//PROJECT FLEX PANELS
-
-const bookends = document.querySelectorAll('.projects__bookend');
-const projectinfos = document.querySelectorAll('.projects__projectinfo');
-const instructions = document.querySelector('.projects__infopanel');
-const closebtns = document.querySelectorAll('.projects__projectinfo-close');
-
-bookends.forEach(bookend => bookend.addEventListener("click", () => toggleOpen(bookend.id)));
-closebtns.forEach(btn => btn.addEventListener("click", () => closePanel(btn)));
-
-function toggleOpen(id){
-  projectinfos.forEach(function(info){
-    if(info.dataset.key === id){
-      //if projinfo does not have u-hidden, give to all and remove from infopanel
-      if(!info.classList.contains("u-hidden")){
-        addHidden();
-        instructions.classList.remove("u-hidden");
-      } else {
-      //if projinfo has u-hidden, add to all and infopanel and remove from projinfo
-        addHidden();
-        instructions.classList.add("u-hidden");
-        info.classList.remove("u-hidden");
-      };
-      
-    };
-  });
-};
-
-function addHidden(){
-  projectinfos.forEach(function(info){
-    if(!info.classList.contains("u-hidden")){
-      info.classList.add("u-hidden");
-    };
-  });
-}
-
-function closePanel(btn){
-    btn.parentNode.parentNode.classList.add("u-hidden");
-    instructions.classList.remove("u-hidden");
-}
-
-
 //SPARKLY BUTTONS
 const animateButton = function(e) {
     e.preventDefault;
@@ -55,3 +13,33 @@ const animateButton = function(e) {
   for (let i = 0; i < bubblyButtons.length; i++) {
     bubblyButtons[i].addEventListener('mouseover', animateButton, false);
   }
+
+//SKILLS FADE-IN
+function isVisible(element) {
+  let elementBox = element.getBoundingClientRect();
+  let distanceFromBottom = 50; 
+  if(elementBox.bottom - window.innerHeight < distanceFromBottom) {
+      return true;
+  } else {
+      return false;
+  };
+};
+function scanDocument() {
+  let skills = document.querySelectorAll(".skills__skill");
+  skills.forEach(function(skill) {
+      if(isVisible(skill)) {
+        skill.classList.remove("skills__hidden");
+      };
+  });
+}
+function throttle(functIn, waitTime) {
+let time = Date.now();
+return function() {
+  if ((time + waitTime - Date.now()) < 0) {
+    functIn();
+    time = Date.now();
+    }
+  }
+}
+
+document.addEventListener("scroll", throttle(scanDocument, 200));

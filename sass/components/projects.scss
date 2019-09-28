@@ -1,73 +1,13 @@
 .projects {
-    @include flex-row;
-    width: 100%;
-    height: 55rem;
-    margin: 3rem 0 20rem 0;
-    align-items: center;
+    @include flex-column;
     position: relative;
-    overflow: hidden;
-    @include respond(tablet){
-        @include flex-column;
-        overflow: visible;
+    align-items: center;
+    margin-bottom: -26rem;
+    padding-bottom: 10rem;
+    @include respond(highres){
+        margin-bottom: -29rem;
     }
-
-
-    &__bookend {
-        @include flex-column;
-        @include shadow;
-        align-self: stretch;
-        flex: 1;
-        max-width: 10%;
-        position: relative;
-        overflow: hidden;
-        background-size: cover;
-        background-position: center;
-        justify-content: center;
-        align-items: center;
-        border: 1px solid $color-brand;
-        z-index: 4;
-
-        @include respond(tablet){
-            max-width: 100%;
-            overflow: visible;
-        }
-    
-        &:hover {
-            cursor: pointer;
-        }
-        &-title {
-            position: relative;
-            font-size: 4rem;
-            writing-mode: vertical-rl;
-            text-orientation: sideways-right;
-            white-space: nowrap;
-            color: $color-background-accent;
-            z-index: 2; 
-
-            @include respond(tablet){
-                text-orientation: upright;
-                writing-mode: horizontal-tb;
-            }
-        }
-        &--one, &--three {
-            background:
-                radial-gradient($color-brand 15%, transparent 16%) 0 0,
-                radial-gradient($color-brand 15%, transparent 16%) 8px 8px,
-                radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
-                radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
-            background-color:rgb(89, 83, 131);
-            background-size:16px 16px;
-
-        }
-        &--two, &--four {
-            background-color: rgb(90, 85, 122);
-            background-image: linear-gradient(90deg, rgba(255,255,255,.07) 50%, transparent 50%),
-                            linear-gradient(90deg, rgba(255,255,255,.13) 50%, transparent 50%),
-                            linear-gradient(90deg, transparent 50%, rgba(255,255,255,.17) 50%),
-                            linear-gradient(90deg, transparent 50%, rgba(255,255,255,.19) 50%);
-            background-size: 13px, 29px, 37px, 53px;
-        }
-    }
+ 
     &__buttonlink {
         display: flex;
         text-decoration: none;
@@ -75,7 +15,59 @@
             margin-top: auto;
         }
     }
-    &__infopanel {
+    &__card {
+        @include flex-column;
+        align-items: center;
+        background: $color-background-accent;
+        padding: 4rem;
+        border-radius: 6px;
+        margin: 5rem 2rem;
+        @include shadow;
+        text-decoration: none;
+        z-index: 3; 
+        transition: transform .3s ease;
+        cursor: pointer;
+        
+        &:hover {
+            transform: scale(1.1);
+        }
+        &-projectName {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+    }
+    &__cardContainer {
+        @include flex-row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+    &__headline {   
+        background-color: $color-background-accent;
+        padding: 2rem;
+        border-radius: 6px;
+        margin-bottom: 0;
+    }
+    &__headlineTab {
+        margin-top: -4.5rem;
+        border-radius: 6px;
+        padding: 1rem;
+        @include shadow;
+        z-index: 3;
+        background: linear-gradient(to bottom, $color-brand 0%,$color-brand 50%,$color-background-accent 51%,$color-background-accent 100%);
+    }
+    &__info {
+        background: $color-background-accent;
+        width: 60%;
+        padding: 4rem;
+        border-radius: 6px;
+        @include shadow;
+        font-size: 1.8rem;
+        line-height: 2.4rem;
+        z-index: 3; 
+        @include respond(tablet){
+            width: 80%;
+        }
 
         &-blurb {
             margin: 1rem 0;
@@ -84,7 +76,7 @@
             padding: 1rem 2.5rem;
         }
         &-instructions {
-            color: $color-text-light;
+            font-weight: 600;
         }
         &-list {
             padding: 0 3rem;
@@ -95,9 +87,11 @@
         &-listitem:not(:last-of-type) {
             margin-bottom: .75rem;
         }
-        &-projectname {
+        &-projectName {
             color: $color-text-headline;
             font-weight: 600;
+            font-size: 2rem;
+            margin-bottom: 2rem;
         }
         &-ghbutton {
             margin: 3rem auto 0 auto;
@@ -106,90 +100,115 @@
                 margin: 1rem auto 0 auto;
             }
         }
-        &.u-hidden .projects__infopanel-contents {
-            display: none;
-        }
     }
-    &__projectinfo {
+    &__projectImage {
+        width: 17.5rem;
+        border-radius: 6px;
+    }
+    &__techItem {
+        color: $color-text;
+    }
+    &__popup {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 50;
+        opacity: 0;
+        visibility: hidden;
+        transition: all .3s ease;
 
-        &-contents {
-            position: relative;
-            height: 95%; width: 90%;
-            padding: 1rem 2.5rem;
-            background-color: rgba($color-text-headline, .8);
+        &:target {
+            opacity: 1;
+            visibility: visible; }
+        &-content {
+            display: flex;
+            width: 60%;
+            background-color: $color-brand;
             color: $color-background-accent;
             border-radius: 6px;
-            @include flex-column;
-        }
-        &.u-hidden .projects__projectinfo-contents {
-            display: none;
-        }
-        &-close {
-            position: absolute;
-            top: -1rem; right: 1.5rem;
-            background-color: $color-background-accent;
-            color: $color-brand;
-            font-size: 2rem;
-            border: 2px solid $color-brand;
-            padding: 1rem;
-            border-radius: 0 0 10px 10px;
-            @include shadow;
-
-            &:hover {
-                color: $color-highlight;
-                cursor: pointer;
+            @include respond(tablet){
+                width: 80%;
             }
         }
-        &-container {
-            @include flex-row;
-        }
-        &-quicksumm {
+        &-left {
             @include flex-column;
-            flex: 3;
             align-items: center;
-            justify-content: space-between;
+            width: 30%;
+            background: url(/images/resourcedBG.jpg) no-repeat;
+            background-size: cover;
+            &--two {
+                background: url(/images/barmanBg.jpg) no-repeat;
+                background-size: cover;
+            }
+            &--three {
+                background: url(/images/citrouilleBg.jpg) no-repeat;
+                background-size: cover;
+            }
+            &--four {
+                background: url(/images/realtorBg.jpg) no-repeat;
+                background-size: cover;
+            }
         }
-        &-blurb {
-            flex: 7;
-            padding-right: 2rem;
+        &-right {
+            width: 70%;
+            padding: 3rem 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+        &-list {
+            @include flex-row;
+            justify-content: space-evenly;
+            background-color: white;
+            border-radius: 6px;
+            padding: .5rem;
+            @include respond(tablet){
+                font-size: 1.5rem;
+                margin: 0 -2.5rem;
+            }
         }
         &-image {
-            width: 100%;
+            @include shadow;
+            margin: -3rem 0 0 -6rem;
+            border-radius: 6px;
+            @include respond(tablet){
+                width: 20rem;
+            }
+            @include respond(tinyphone){
+                margin: -3rem 0 0 -2rem;
+            }
         }
-        &-paragraph {
-            padding-bottom: 2rem;
-            text-align: justify;
+        &-title {color: $color-background-accent;}
+        &-blurb {
+            line-height: 3rem;
+            font-size: 2rem;
+            @include respond(phone){
+                line-height: 2rem;
+                font-size: 1.5rem;
+            } 
         }
-        &-title {
-            color: $color-brand;
+        &-paragraph {margin: 2rem 0;}
+        &-close:link, &-close:visited {
+            color: $color-text-headline;
+            background: white;
+            padding: 2rem 3rem;
+            border-radius: 0 0 0 50%;
+            position: absolute;
+            top: -1.5rem;
+            right: -1.5rem;
+            font-size: 5rem;
+            text-decoration: none;
+            display: inline-block; 
+            @include respond(tablet){
+                padding: 1rem 1rem;
+                right: -1rem;
+            }
         }
+        &-close:hover {color: $color-highlight;}
     }
 }
-.projects__infopanel, .projects__projectinfo {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    width: 100%; height: 90%;
-    padding: 0;
-    border: 2px solid $color-brand;
-    border-left: none;
-    border-radius: 0 6px 6px 0;
-    background-color: $color-background-accent;    
-    justify-content: center;
-    align-items: center;
-
-    @include respond(tablet){
-        height: auto;
-        border: 2px solid $color-brand;
-        border-top: none;
-        border-radius: 0 0 6px 6px;
-        box-sizing: border-box;
-    }
-}
-.u-hidden {
-    width: 0;
-    flex: none;
-    border: none;
-    transform: scaleX(0);
-}
-

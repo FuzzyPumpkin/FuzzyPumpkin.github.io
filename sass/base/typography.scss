@@ -28,7 +28,6 @@ ul {
 li {
     &::before {
         content: "vvv"; //usually empty content works, for this usage the psuedo-element would not display, so I used transparent text as a workaround.
-        margin-top: .25rem;
         background-color: $color_brand;
         mask-image: url(../images/SVG/circle-right.svg);
         mask-size: contain;
@@ -38,8 +37,15 @@ li {
         -webkit-mask-repeat: no-repeat;
         font-size: 1rem;
         color: transparent;
+        position: absolute;
+        top: 15%;
+        left: -2rem;
+        @include respond(tinyphone){
+            display: none;
+        } 
     }
 }
+li {position: relative;}
 button {
     background-color: $color-brand;
     @include double-border;

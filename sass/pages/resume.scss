@@ -143,33 +143,4 @@
         @media print { margin-left: -2.5rem;}
     }
 }
-.skills {
-    background-color: $color-text-headline;
-    padding: .5rem;
-    border-radius: 2rem;
-    @include flex-column;
 
-    &__headline {
-        color: $color-background-accent;
-    }
-    &__iconbg {
-        width: 4.5rem; height: 4rem;
-        justify-content: center;
-        align-items: center;
-        border-radius: 45% 10% 70% 10%;
-        background-color: $color-background-accent;
-        @include flex-row;
-    }
-    &__skill {
-        align-items: center;
-        @include flex-column;
-    }
-    &__skillbox {
-        justify-content: space-evenly;
-        @include flex-row;
-    }
-    &__skillname {
-        margin-top: .5rem;
-        color: $color-background-accent;
-    }
-}
