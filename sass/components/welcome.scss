@@ -5,7 +5,10 @@
     flex-direction: column;
     justify-content: center;
     padding: 0 10rem;
-
+    @include respond(phone){
+        padding: 0 4rem
+    }
+    
     &__name {
         font-size: 15rem;
         font-weight: 400;
@@ -20,9 +23,6 @@
         margin: 2rem 0;
         z-index: 2;
         overflow: hidden;
-        @include respond(tablet){
-            font-size: 2rem;
-        }
 
         &--list {
             position: relative;
@@ -34,11 +34,12 @@
         display: block;
         position: relative;
         height: 14.2857%;
-        padding: 2px 5px;
         font-size: 3rem;
         top: 0;
         box-sizing: border-box;
-        
+        @include respond(tablet){
+            font-size: 2.5rem;
+        }
     }
 }
 

@@ -8,6 +8,9 @@
         height: 90%;
         filter: url('#filter');
         overflow: hidden;
+        @include respond(tablet){
+            width: 100%;
+        }
     }
     &__ball {
         width: $blob-radius;

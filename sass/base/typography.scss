@@ -38,8 +38,11 @@ li {
         font-size: 1rem;
         color: transparent;
         position: absolute;
-        top: 25%;
+        top: 15%;
         left: -2rem;
+        @include respond(tinyphone){
+            display: none;
+        } 
     }
 }
 li {position: relative;}

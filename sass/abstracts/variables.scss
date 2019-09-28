@@ -9,4 +9,7 @@ $color-highlight: rgb(8, 255, 200);
 $color-brand: rgb(56, 51, 91);
 
 $blob-radius: 270px;
+@include respond(tablet){
+    $blob-radius: 150px;
+}
 $color-blob: rgb(146, 138, 199);

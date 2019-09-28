@@ -4,6 +4,9 @@
     align-items: center;
     margin-bottom: -26rem;
     padding-bottom: 10rem;
+    @include respond(highres){
+        margin-bottom: -29rem;
+    }
  
     &__buttonlink {
         display: flex;
@@ -18,6 +21,7 @@
         background: $color-background-accent;
         padding: 4rem;
         border-radius: 6px;
+        margin: 5rem 2rem;
         @include shadow;
         text-decoration: none;
         z-index: 3; 
@@ -34,9 +38,9 @@
     }
     &__cardContainer {
         @include flex-row;
+        flex-wrap: wrap;
         justify-content: space-evenly;
         width: 100%;
-        margin: 5rem 0;
     }
     &__headline {   
         background-color: $color-background-accent;
@@ -61,6 +65,9 @@
         font-size: 1.8rem;
         line-height: 2.4rem;
         z-index: 3; 
+        @include respond(tablet){
+            width: 80%;
+        }
 
         &-blurb {
             margin: 1rem 0;
@@ -125,6 +132,9 @@
             background-color: $color-brand;
             color: $color-background-accent;
             border-radius: 6px;
+            @include respond(tablet){
+                width: 80%;
+            }
         }
         &-left {
             @include flex-column;
@@ -157,16 +167,30 @@
             background-color: white;
             border-radius: 6px;
             padding: .5rem;
+            @include respond(tablet){
+                font-size: 1.5rem;
+                margin: 0 -2.5rem;
+            }
         }
         &-image {
             @include shadow;
             margin: -3rem 0 0 -6rem;
             border-radius: 6px;
+            @include respond(tablet){
+                width: 20rem;
+            }
+            @include respond(tinyphone){
+                margin: -3rem 0 0 -2rem;
+            }
         }
         &-title {color: $color-background-accent;}
         &-blurb {
             line-height: 3rem;
             font-size: 2rem;
+            @include respond(phone){
+                line-height: 2rem;
+                font-size: 1.5rem;
+            } 
         }
         &-paragraph {margin: 2rem 0;}
         &-close:link, &-close:visited {
@@ -179,7 +203,12 @@
             right: -1.5rem;
             font-size: 5rem;
             text-decoration: none;
-            display: inline-block; }
-          &-close:hover {color: $color-highlight;}
+            display: inline-block; 
+            @include respond(tablet){
+                padding: 1rem 1rem;
+                right: -1rem;
+            }
+        }
+        &-close:hover {color: $color-highlight;}
     }
 }
