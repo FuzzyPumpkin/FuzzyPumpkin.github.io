@@ -7,6 +7,9 @@
     @include respond(highres){
         margin-bottom: -29rem;
     }
+    @include respond(mega){
+        margin-bottom: -32rem;
+    }
  
     &__buttonlink {
         display: flex;

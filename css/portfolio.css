@@ -321,6 +321,9 @@ button {
   @media (min-width: 1420px) {
     .projects {
       margin-bottom: -29rem; } }
+  @media (min-width: 1760px) {
+    .projects {
+      margin-bottom: -32rem; } }
   .projects__buttonlink {
     display: flex;
     text-decoration: none; }
@@ -566,6 +569,9 @@ button {
       @media (min-width: 1420px) {
         .skills__skillbox--portfolio {
           margin-bottom: 4rem; } }
+      @media (min-width: 1760px) {
+        .skills__skillbox--portfolio {
+          margin-bottom: 2rem; } }
   .skills__skillname {
     margin-top: .5rem;
     color: #fff7f7; }

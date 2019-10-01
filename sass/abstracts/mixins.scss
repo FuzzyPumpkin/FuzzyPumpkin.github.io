@@ -14,6 +14,9 @@
 }
 
 @mixin respond($breakpoint){
+    @if $breakpoint == mega {
+        @media (min-width: 1760px){@content};
+    }
     @if $breakpoint == highres {
         @media (min-width: 1420px){@content};
     }

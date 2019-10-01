@@ -63,6 +63,9 @@
             @include respond(highres){
                 margin-bottom: 4rem;
             }
+            @include respond(mega){
+                margin-bottom: 2rem;
+            }
         }
     }
     &__skillname {
