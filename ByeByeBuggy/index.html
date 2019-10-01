@@ -59,12 +59,8 @@
 	<!-- placeholder for product info -->
 	<section class="product">
 		<h2 class="product__headline">How it Works</h2>
+		<div class="product__swoosh"></div>
 		<div class="product__display">
-			<p class="product__instructions">
-				<span class="product__instructions--desktop">Click on</span>
-				<span class="product__instructions--mobile">Tap</span>
-				 each bug to see details.
-			</p>
 			<div class="product__image-container">
 				<img src="images/device.png" alt="ByeByeBuggy product" class="product__image">
 				<svg class="product__icon product__icon--one">
@@ -79,6 +75,13 @@
 				<svg class="product__icon product__icon--four">
 					<use xlink:href="images/symbol-defs.svg#icon-bug"></use>
 				</svg>
+				<div class="product__instructions">
+					<p class="product__instructions--text">
+						<span class="product__instructions--desktop">Click on</span>
+						<span class="product__instructions--mobile">Tap</span>
+						each bug to see details.
+					 </p>
+				</div>
 			</div>
 		</div>
 		<ul class="product__features">
