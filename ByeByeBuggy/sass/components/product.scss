@@ -4,31 +4,55 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     position: relative;
 
+    &__headline {
+        @include respond(ipadMini){margin-top: 9rem;}
+    }
     &__icon {
         fill: $color-text;
         height: 2.8rem; width: 2.6rem;
         position: absolute;
+        @include respond(ipadMini){
+            height: 4rem;
+            width: 4rem;
+        }
+        
         &:hover {
             stroke: #F8F5F1;
         }
         &--one {
             top: 5rem;
             left: 6rem;
+            @include respond(ipadMini){
+                top: 7rem;
+                left: 15rem;
+            } 
         }
         &--two {
             top: 22rem;
             left: 17rem;
+            @include respond(ipadMini){
+                top: 43rem;
+                left: 36rem;
+            } 
         }
         &--three {
             bottom: 14rem;
             right: 10rem;
+            @include respond(ipadMini){
+                bottom: 25rem;
+                right: 20rem;
+            } 
         }
         &--four {
             bottom: 10rem;
             right: 14rem;
+            @include respond(ipadMini){
+                bottom: 18rem;
+                right: 31rem;
+            } 
         }
     }
     &__image {
@@ -49,10 +73,21 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        @include respond(ipadMini){
+            background: url(/images/infoL.svg) no-repeat;
+            height: 26.3rem;
+            width: 47rem;
+            right: -10rem;
+        }
+        
 
         &--text {
             padding: 0 3rem 2rem 7rem;
             color: $color-white;
+            @include respond(ipadMini){
+                font-size: 3rem;
+                padding: 0 12rem 2rem 14rem;
+            }
         }
         &--desktop {
             display: none;
@@ -74,6 +109,8 @@
         font-size: 1.8rem;
         list-style-type: square;
         line-height: 3rem;
+        padding-bottom: 4rem;
+        @include respond(ipadMini){font-size: 2.8rem;}
     }
     &__part {
         position: absolute;
@@ -88,6 +125,7 @@
         left: 5%;
         padding: 1.5rem;
         text-align: center;
+        @include respond(ipadMini){width: 30%;}
 
         &:before {
             content: "";
@@ -100,6 +138,12 @@
         }
         &.hidden {
             display: none;
+        }
+        &-blurb {
+            @include respond(ipadMini){font-size: 2rem;}
+        }
+        &-title {
+            @include respond(ipadMini){font-size: 2.5rem;}
         }
     }
     &__swoosh {

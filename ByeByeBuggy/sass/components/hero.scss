@@ -25,7 +25,7 @@
     &__content {
         display: flex;
         flex-direction: column;
-        height: 40vh; width: 100%;
+        min-height: 40vh; width: 100%;
         @include respond(desktop){
             height: 100vh;
             flex: 40%;
@@ -58,6 +58,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        padding: 5rem;
         @include respond(desktop){
             background-color: $color-brand;
         }
