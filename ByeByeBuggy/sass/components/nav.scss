@@ -5,6 +5,8 @@
     top: 0; left: 0;
     width: 100%;
     z-index: 100;
+    background-color: $color-white;
+    box-shadow: -8px 0px 10px rgba(0, 0, 0, 0.45);
 
     &__inner {
         display: flex;
@@ -65,5 +67,26 @@
     &__list {
         list-style: none;
         margin-left: .5rem;
+    }
+    &__logo {
+        position: relative;
+        margin: -1.5rem 0 1rem 2rem;
+        display: none;
+
+        &--top, &--bottom {font-size: 2.4rem;}
+        &--top {
+            position: relative;
+            top: 2rem;
+            left: -1rem;
+            font-family: "Zeyada", sans-serif;
+            color: $color-text-light;
+            z-index: -1;
+        }
+        &--bottom {
+            z-index: 4;
+        }
+        &.shown {
+            display: block;
+        }
     }
 }

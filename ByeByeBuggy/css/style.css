@@ -40,7 +40,9 @@ h2 {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 100; }
+  z-index: 100;
+  background-color: #f8f5f1;
+  box-shadow: -8px 0px 10px rgba(0, 0, 0, 0.45); }
   .navigation__inner {
     display: flex;
     flex-direction: column;
@@ -92,6 +94,23 @@ h2 {
   .navigation__list {
     list-style: none;
     margin-left: .5rem; }
+  .navigation__logo {
+    position: relative;
+    margin: -1.5rem 0 1rem 2rem;
+    display: none; }
+    .navigation__logo--top, .navigation__logo--bottom {
+      font-size: 2.4rem; }
+    .navigation__logo--top {
+      position: relative;
+      top: 2rem;
+      left: -1rem;
+      font-family: "Zeyada", sans-serif;
+      color: #828365;
+      z-index: -1; }
+    .navigation__logo--bottom {
+      z-index: 4; }
+    .navigation__logo.shown {
+      display: block; }
 
 .hero {
   display: flex;
