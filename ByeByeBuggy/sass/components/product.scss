@@ -6,9 +6,11 @@
     width: 100%;
     min-height: 100vh;
     position: relative;
+    overflow: hidden;
 
     &__headline {
         @include respond(ipadMini){margin-top: 9rem;}
+        @include respond(desktop){margin-top: 0;}
     }
     &__icon {
         fill: $color-text;
@@ -29,6 +31,22 @@
                 top: 7rem;
                 left: 15rem;
             } 
+            @include respond(smDesktop){
+                top: 5rem;
+                left: 25rem;
+            } 
+            @include respond(desktop){
+                top: 1rem;
+                left: 13rem;
+            } 
+            @include respond(lgDesktop){
+                top: 2rem;
+                left: 15rem;
+            } 
+            @include respond(wideScreen){
+                top: 4rem;
+                left: 18rem;
+            } 
         }
         &--two {
             top: 22rem;
@@ -36,6 +54,22 @@
             @include respond(ipadMini){
                 top: 43rem;
                 left: 36rem;
+            } 
+            @include respond(smDesktop){
+                top: 52rem;
+                left: 50rem;
+            } 
+            @include respond(desktop){
+                top: 30rem;
+                left: 30rem;
+            } 
+            @include respond(lgDesktop){
+                top: 35rem;
+                left: 35rem;
+            } 
+            @include respond(wideScreen){
+                top: 39rem;
+                left: 39rem;
             } 
         }
         &--three {
@@ -45,6 +79,22 @@
                 bottom: 25rem;
                 right: 20rem;
             } 
+            @include respond(smDesktop){
+                bottom: 32rem;
+                right: 25rem;
+            } 
+            @include respond(desktop){
+                bottom: 20rem;
+                left: 45rem;
+            } 
+            @include respond(lgDesktop){
+                bottom: 22rem;
+                left: 52rem;
+            } 
+            @include respond(wideScreen){
+                bottom: 25rem;
+                left: 55rem;
+            } 
         }
         &--four {
             bottom: 10rem;
@@ -53,11 +103,29 @@
                 bottom: 18rem;
                 right: 31rem;
             } 
+            @include respond(desktop){
+                bottom: 14rem;
+                left: 37rem;
+            }
+            @include respond(lgDesktop){
+                bottom: 16rem;
+                left: 43rem;
+            } 
+            @include respond(wideScreen){
+                bottom: 16rem;
+                left: 47rem;
+            } 
         }
     }
     &__image {
         width: 100%;
         margin: 4rem 0 5rem -2rem;
+        @include respond(smDesktop){
+            margin: 0 0 5rem 0;
+        } 
+        @include respond(desktop){
+            width: 50%;
+        } 
     }
     &__image-container {
         position: relative;
@@ -69,7 +137,7 @@
         height: 15.2rem;
         width: 20.35rem;
         position: absolute;
-        top: 3rem; right: 0;
+        top: 10rem; right: 0;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -78,9 +146,8 @@
             height: 26.3rem;
             width: 47rem;
             right: -10rem;
+            top: 15rem;
         }
-        
-
         &--text {
             padding: 0 3rem 2rem 7rem;
             color: $color-white;
@@ -109,8 +176,17 @@
         font-size: 1.8rem;
         list-style-type: square;
         line-height: 3rem;
-        padding-bottom: 4rem;
+        padding-bottom: 3rem;
         @include respond(ipadMini){font-size: 2.8rem;}
+        @include respond(smDesktop){
+            font-size: 3.5rem;
+            line-height: 4.5rem;
+            margin-top: -10rem;
+        }
+        @include respond(desktop){
+            left: -20rem;
+            position: relative;
+        }  
     }
     &__part {
         position: absolute;
@@ -126,7 +202,16 @@
         padding: 1.5rem;
         text-align: center;
         @include respond(ipadMini){width: 30%;}
-
+        @include respond(smDesktop){
+            width: 35%;
+            padding: 2rem;
+            top: 50%;
+            left: 2%;
+        }
+        @include respond(desktop){
+            top: 15%;
+            left: 35%;
+        }
         &:before {
             content: "";
             background: inherit; 
@@ -141,9 +226,21 @@
         }
         &-blurb {
             @include respond(ipadMini){font-size: 2rem;}
+            @include respond(smDesktop){font-size: 3.5rem;}
         }
         &-title {
             @include respond(ipadMini){font-size: 2.5rem;}
+            @include respond(smDesktop){font-size: 4rem;}
+        }
+    }
+    &__responsive {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include respond(desktop){
+            flex-direction: row;
+            align-items: flex-end;
         }
     }
     &__swoosh {
@@ -153,5 +250,9 @@
         position: absolute;
         bottom: 0; right: 0;
         z-index: -1;
+        @include respond(desktop){
+            background: url(/images/S2SwooshL.svg) no-repeat;
+            background-size: cover;
+        }
     }
 }

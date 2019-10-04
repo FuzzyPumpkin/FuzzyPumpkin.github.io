@@ -21,6 +21,7 @@
         transition: all .8s ease-out;
         margin-left: auto;
         cursor: pointer;
+        @include respond(smDesktop){clip-path: circle(8rem at 17rem 3rem);}
 
         &:hover {
             clip-path: none;
@@ -35,6 +36,10 @@
         height: 4rem;
         fill: $color-text;
         z-index: 101;
+        @include respond(smDesktop){
+            width: 6rem;
+            height: 6rem;
+        }
     }
     &__button {
         margin-left: auto;
@@ -73,7 +78,10 @@
         margin: -1.5rem 0 1rem 2rem;
         display: none;
 
-        &--top, &--bottom {font-size: 2.4rem;}
+        &--top, &--bottom {
+            font-size: 2.4rem;
+            @include respond(smDesktop){font-size: 4.8rem;}
+        }
         &--top {
             position: relative;
             top: 2rem;
@@ -83,7 +91,9 @@
             z-index: -1;
         }
         &--bottom {
+            position: relative;
             z-index: 4;
+            @include respond(smDesktop){top: -2rem;}
         }
         &.shown {
             display: block;

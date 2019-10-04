@@ -11,6 +11,9 @@
     @if $breakpoint == desktop {
         @media (min-width: 1270px){@content};
     }
+    @if $breakpoint == lgDesktop {
+        @media (min-width: 1400px){@content};
+    }
     @if $breakpoint == wideScreen {
         @media (min-width: 1600px){@content};
     }

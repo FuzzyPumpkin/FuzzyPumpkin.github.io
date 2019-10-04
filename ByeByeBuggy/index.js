@@ -4,7 +4,6 @@ const logo = document.querySelector(".navigation__logo");
 
 function isVisible() {
     let displayHeight = secondScreen.getBoundingClientRect().top;
-    console.log(displayHeight);
     if(displayHeight < 100) {
         logo.classList.add("shown");
     };
@@ -28,6 +27,9 @@ const messages = document.querySelectorAll(".product__part");
 for (let i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener('mouseover', () => messageDisplay(i));
 }
+// for (let i = 0; i < buttons.length; i++) {
+//     buttons[i].addEventListener('mouseleave', () => messageHide(i));
+// }
 
 function messageDisplay(i){
     messages.forEach(function(message){
@@ -37,3 +39,8 @@ function messageDisplay(i){
     });
     messages[i].classList.remove("hidden");
 }
+// function messageHide(i){
+//     if(!messages[i].classList.contains("hidden")){
+//         messages[i].classList.add("hidden");
+//     }
+// }
