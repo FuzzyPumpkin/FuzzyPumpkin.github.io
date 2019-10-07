@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    height: calc(100vh - 6rem); width: 100%;
+    height: 80vh; width: 100%;
     position: relative;
     margin: 0rem 0 -5rem 0;
     overflow: hidden;
@@ -33,6 +33,9 @@
         @include respond(ipadMini){
             font-size: 2.5rem;
         }
+        @include respond(smDesktop){
+            padding: 0 6rem;
+        }
         @include respond(desktop){
             padding: 0 10rem;
         }
@@ -47,7 +50,7 @@
         }
 
         &:nth-of-type(2){
-            margin: 20rem 0 0 4rem;
+            margin: 10rem 0 0 4rem;
             display: flex;
             @include respond(ipadMini){
                 margin: 6rem 0 0 4rem;
@@ -72,6 +75,9 @@
     }
     &__name {
         font-weight: 600;
+    }
+    &__title {
+        margin-top: 5rem;
     }
 }
 
