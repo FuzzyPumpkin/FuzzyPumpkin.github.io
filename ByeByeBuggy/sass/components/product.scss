@@ -25,96 +25,84 @@
             stroke: #F8F5F1;
         }
         &--one {
-            top: 5rem;
-            left: 6rem;
-            @include respond(ipadMini){
-                top: 7rem;
-                left: 15rem;
-            } 
+            top: 10%;
+            left: 16%;
             @include respond(smDesktop){
-                top: 5rem;
-                left: 25rem;
+                top: 5%;
+                left: 24%;
             } 
             @include respond(desktop){
-                top: 1rem;
-                left: 13rem;
+                top: 3%;
+                left: 11%;
             } 
-            @include respond(lgDesktop){
-                top: 2rem;
-                left: 15rem;
-            } 
-            @include respond(wideScreen){
-                top: 4rem;
-                left: 18rem;
-            } 
+            // @include respond(lgDesktop){
+            //     top: 2rem;
+            //     left: 15rem;
+            // } 
+            // @include respond(wideScreen){
+            //     top: 4rem;
+            //     left: 18rem;
+            // } 
         }
         &--two {
-            top: 22rem;
-            left: 17rem;
-            @include respond(ipadMini){
-                top: 43rem;
-                left: 36rem;
-            } 
+            top: 46%;
+            left: 43%;
             @include respond(smDesktop){
-                top: 52rem;
-                left: 50rem;
+                top: 48%;
+                left: 50%;
             } 
             @include respond(desktop){
-                top: 30rem;
-                left: 30rem;
+                top: 44%;
+                left: 24%;
             } 
-            @include respond(lgDesktop){
-                top: 35rem;
-                left: 35rem;
-            } 
-            @include respond(wideScreen){
-                top: 39rem;
-                left: 39rem;
-            } 
+            // @include respond(lgDesktop){
+            //     top: 35rem;
+            //     left: 35rem;
+            // } 
+            // @include respond(wideScreen){
+            //     top: 39rem;
+            //     left: 39rem;
+            // } 
         }
         &--three {
-            bottom: 14rem;
-            right: 10rem;
-            @include respond(ipadMini){
-                bottom: 25rem;
-                right: 20rem;
-            } 
+            top: 65%;
+            left: 65%;
             @include respond(smDesktop){
-                bottom: 32rem;
-                right: 25rem;
+                top: 68%;
+                left: 73%;
             } 
             @include respond(desktop){
-                bottom: 20rem;
-                left: 45rem;
+                top: 64%;
+                left: 35%;
             } 
-            @include respond(lgDesktop){
-                bottom: 22rem;
-                left: 52rem;
-            } 
-            @include respond(wideScreen){
-                bottom: 25rem;
-                left: 55rem;
-            } 
+            // @include respond(lgDesktop){
+            //     bottom: 22rem;
+            //     left: 52rem;
+            // } 
+            // @include respond(wideScreen){
+            //     bottom: 25rem;
+            //     left: 55rem;
+            // } 
         }
         &--four {
-            bottom: 10rem;
-            right: 14rem;
-            @include respond(ipadMini){
-                bottom: 18rem;
-                right: 31rem;
+            top: 71%;
+            left: 50%;
+            @include respond(smDesktop){
+                top: 73%;
+                left: 54%;
             } 
             @include respond(desktop){
-                bottom: 14rem;
-                left: 37rem;
+                top: 73%;
+                left: 29%;
             }
-            @include respond(lgDesktop){
-                bottom: 16rem;
-                left: 43rem;
-            } 
-            @include respond(wideScreen){
-                bottom: 16rem;
-                left: 47rem;
-            } 
+            // @include respond(lgDesktop){
+            //     bottom: 16rem;
+            //     left: 43rem;
+            // } 
+            // @include respond(wideScreen){
+            //     bottom: 16rem;
+            //     left: 47rem;
+            // } 
         }
     }
     &__image {
