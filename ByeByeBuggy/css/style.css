@@ -140,7 +140,7 @@ h2 {
     height: 60vh;
     width: 100%;
     position: relative;
-    background-image: url(/images/flower.jpg);
+    background-image: url(https://fuzzypumpkin.github.io/ByeByeBuggy/images/flower.jpg);
     background-position: 75% 0%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -240,7 +240,7 @@ h2 {
     .hero__logo--bottom {
       z-index: 4; }
   .hero__swoosh {
-    background: url(/images/yellowSwoosh1.svg) no-repeat;
+    background: url(https://fuzzypumpkin.github.io/ByeByeBuggy/images/yellowSwoosh1.svg) no-repeat;
     background-size: cover;
     width: 100%;
     height: 100%;
@@ -252,7 +252,7 @@ h2 {
         bottom: -1.4rem; } }
     @media (min-width: 415px) {
       .hero__swoosh {
-        background: url(/images/yellowSwoosh1m.svg) no-repeat;
+        background: url(https://fuzzypumpkin.github.io/ByeByeBuggy/images/yellowSwoosh1m.svg) no-repeat;
         bottom: -8rem; } }
     @media (min-width: 781px) {
       .hero__swoosh {
@@ -260,13 +260,13 @@ h2 {
         bottom: -2rem; } }
     @media (min-width: 1270px) {
       .hero__swoosh {
-        background: url(/images/yellowSwoosh1l.svg) no-repeat;
+        background: url(https://fuzzypumpkin.github.io/ByeByeBuggy/images/yellowSwoosh1l.svg) no-repeat;
         width: 105%;
         background-size: cover;
         bottom: 0; } }
     @media (min-width: 415px) {
       .hero__swoosh {
-        background: url(/images/yellowSwoosh1xl.svg) no-repeat;
+        background: url(https://fuzzypumpkin.github.io/ByeByeBuggy/images/yellowSwoosh1xl.svg) no-repeat;
         width: 100%;
         background-size: cover; } }
   .hero__motto {
@@ -425,7 +425,7 @@ h2 {
     width: 100%;
     overflow: hidden; }
   .product__instructions {
-    background: url(/images/infoS.svg) no-repeat;
+    background: url(https://fuzzypumpkin.github.io/ByeByeBuggy/images/infoS.svg) no-repeat;
     height: 15.2rem;
     width: 20.35rem;
     position: absolute;
@@ -436,7 +436,7 @@ h2 {
     justify-content: center; }
     @media (min-width: 415px) {
       .product__instructions {
-        background: url(/images/infoL.svg) no-repeat;
+        background: url(https://fuzzypumpkin.github.io/ByeByeBuggy/images/infoL.svg) no-repeat;
         height: 26.3rem;
         width: 47rem;
         right: -10rem;
@@ -536,7 +536,7 @@ h2 {
         flex-direction: row;
         align-items: flex-end; } }
   .product__swoosh {
-    background: url(/images/S2SwooshS.svg) no-repeat;
+    background: url(https://fuzzypumpkin.github.io/ByeByeBuggy/images/S2SwooshS.svg) no-repeat;
     background-size: cover;
     width: 100%;
     height: 100%;
@@ -546,7 +546,7 @@ h2 {
     z-index: -1; }
     @media (min-width: 1270px) {
       .product__swoosh {
-        background: url(/images/S2SwooshL.svg) no-repeat;
+        background: url(https://fuzzypumpkin.github.io/ByeByeBuggy/images/S2SwooshL.svg) no-repeat;
         background-size: cover; } }
 
 .testimonials {
@@ -562,7 +562,7 @@ h2 {
     content: "";
     display: block;
     position: absolute;
-    background-image: url(/images/eyes.jpg);
+    background-image: url(https://fuzzypumpkin.github.io/ByeByeBuggy/images/eyes.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -664,20 +664,20 @@ h2 {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(/images/footerSwooshS.svg);
+    background-image: url(https://fuzzypumpkin.github.io/ByeByeBuggy/images/footerSwooshS.svg);
     background-repeat: no-repeat; }
     @media (min-width: 415px) {
       .footer__swoosh {
-        background-image: url(/images/footerSwooshM.svg); } }
+        background-image: url(https://fuzzypumpkin.github.io/ByeByeBuggy/images/footerSwooshM.svg); } }
     @media (min-width: 781px) {
       .footer__swoosh {
-        background-image: url(/images/footerSwooshMM.svg); } }
+        background-image: url(https://fuzzypumpkin.github.io/ByeByeBuggy/images/footerSwooshMM.svg); } }
     @media (min-width: 1270px) {
       .footer__swoosh {
-        background-image: url(/images/footerSwooshL.svg); } }
+        background-image: url(https://fuzzypumpkin.github.io/ByeByeBuggy/images/footerSwooshL.svg); } }
     @media (min-width: 1600px) {
       .footer__swoosh {
-        background-image: url(/images/footerSwooshXL.svg); } }
+        background-image: url(https://fuzzypumpkin.github.io/ByeByeBuggy/images/footerSwooshXL.svg); } }
   .footer__content {
     display: flex;
     justify-content: center;

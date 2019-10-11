@@ -35,14 +35,6 @@
                 top: 3%;
                 left: 11%;
             } 
-            // @include respond(lgDesktop){
-            //     top: 2rem;
-            //     left: 15rem;
-            // } 
-            // @include respond(wideScreen){
-            //     top: 4rem;
-            //     left: 18rem;
-            // } 
         }
         &--two {
             top: 46%;
@@ -55,14 +47,6 @@
                 top: 44%;
                 left: 24%;
             } 
-            // @include respond(lgDesktop){
-            //     top: 35rem;
-            //     left: 35rem;
-            // } 
-            // @include respond(wideScreen){
-            //     top: 39rem;
-            //     left: 39rem;
-            // } 
         }
         &--three {
             top: 65%;
@@ -75,14 +59,6 @@
                 top: 64%;
                 left: 35%;
             } 
-            // @include respond(lgDesktop){
-            //     bottom: 22rem;
-            //     left: 52rem;
-            // } 
-            // @include respond(wideScreen){
-            //     bottom: 25rem;
-            //     left: 55rem;
-            // } 
         }
         &--four {
             top: 71%;
@@ -95,14 +71,6 @@
                 top: 73%;
                 left: 29%;
             }
-            // @include respond(lgDesktop){
-            //     bottom: 16rem;
-            //     left: 43rem;
-            // } 
-            // @include respond(wideScreen){
-            //     bottom: 16rem;
-            //     left: 47rem;
-            // } 
         }
     }
     &__image {
@@ -121,7 +89,7 @@
         overflow: hidden;
     }
     &__instructions {
-        background: url(/images/infoS.svg) no-repeat;
+        background: url(https://fuzzypumpkin.github.io/ByeByeBuggy/images/infoS.svg) no-repeat;
         height: 15.2rem;
         width: 20.35rem;
         position: absolute;
@@ -130,7 +98,7 @@
         align-items: center;
         justify-content: center;
         @include respond(ipadMini){
-            background: url(/images/infoL.svg) no-repeat;
+            background: url(https://fuzzypumpkin.github.io/ByeByeBuggy/images/infoL.svg) no-repeat;
             height: 26.3rem;
             width: 47rem;
             right: -10rem;
@@ -232,14 +200,14 @@
         }
     }
     &__swoosh {
-        background: url(/images/S2SwooshS.svg) no-repeat;
+        background: url(https://fuzzypumpkin.github.io/ByeByeBuggy/images/S2SwooshS.svg) no-repeat;
         background-size: cover;
         width: 100%; height: 100%;
         position: absolute;
         bottom: 0; right: 0;
         z-index: -1;
         @include respond(desktop){
-            background: url(/images/S2SwooshL.svg) no-repeat;
+            background: url(https://fuzzypumpkin.github.io/ByeByeBuggy/images/S2SwooshL.svg) no-repeat;
             background-size: cover;
         }
     }

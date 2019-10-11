@@ -6,17 +6,21 @@ function isVisible() {
     let displayHeight = secondScreen.getBoundingClientRect().top;
     if(displayHeight < 100) {
         logo.classList.add("shown");
+    } else{
+        if(logo.classList.contains("shown")){
+            logo.classList.remove("shown");
+        }
     };
 };
 
 function throttle(functIn, waitTime) {
     let time = Date.now();
     return function() {
-      if ((time + waitTime - Date.now()) < 0) {
-        functIn();
-        time = Date.now();
+        if ((time + waitTime - Date.now()) < 0) {
+            functIn();
+            time = Date.now();
         };
-      };
+    };
   };
   
 document.addEventListener("scroll", throttle(isVisible, 500));
@@ -27,9 +31,6 @@ const messages = document.querySelectorAll(".product__part");
 for (let i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener('mouseover', () => messageDisplay(i));
 }
-// for (let i = 0; i < buttons.length; i++) {
-//     buttons[i].addEventListener('mouseleave', () => messageHide(i));
-// }
 
 function messageDisplay(i){
     messages.forEach(function(message){
@@ -39,8 +40,3 @@ function messageDisplay(i){
     });
     messages[i].classList.remove("hidden");
 }
-// function messageHide(i){
-//     if(!messages[i].classList.contains("hidden")){
-//         messages[i].classList.add("hidden");
-//     }
-// }
