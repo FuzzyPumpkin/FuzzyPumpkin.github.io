@@ -1,15 +1,30 @@
-import React from 'react';
+import React, {useState}  from 'react';
+import Box from "./Box";
 import BoxList from "./BoxList";
+import {Route, Switch} from "react-router-dom";
 
 function App() {
+  const starterBoxes = [
+    {id: 1, fruit: "strawberries", veg: "asparagus", side: "chips", main: "fried rice"},
+    {id: 2, fruit: "banana", veg: "peas", side: "celery", main: "pbj"}
+  ];
+  const [boxes, setBoxes] = useState(starterBoxes);
+
   return (
     <div className="App">
-      <h1>Build My Bento</h1>
-      <p>new box link</p>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi et ea, ratione blanditiis 
+      <div className="app__headline">
+        <h1 className="app__title">Build My Bento</h1>
+        <a href="/new" className="app__link">New Box Design</a>
+      </div>
+      <p className="app__instructions">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi et ea, ratione blanditiis 
         illo eaque doloribus ipsa omnis veniam quo eos quas obcaecati, harum nulla maiores, incidunt 
         laboriosam placeat esse.</p>
-      <BoxList />
+      <Switch>
+        <Route exact path="/" render={(routeProps) => 
+          <BoxList {...routeProps} boxes={boxes}/>} />
+        <Route exact path="/new" render={(routeProps) => 
+          <Box {...routeProps} />} />
+      </Switch>
     </div>
   );
 }

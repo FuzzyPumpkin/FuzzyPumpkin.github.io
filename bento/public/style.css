@@ -1,0 +1,43 @@
+/* resets */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+}
+
+/* app */
+.App {
+    background: linear-gradient(156.63deg, rgba(152, 68, 79, 0.43) -0.47%, #98444F 73.85%), #FFFFFF;
+}
+.app__headline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem;
+}
+.app__instructions {
+    font-size: 2rem;
+    width: 60%;
+    margin: auto;
+    line-height: 3rem;
+}
+.app__link {
+    border: 2px solid #F2F3F1;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+    padding: 3rem;
+}
+.app__title {
+    font-family: "Libre Barcode 128 Text", sans-serif;
+    font-size: 9rem;
+}
