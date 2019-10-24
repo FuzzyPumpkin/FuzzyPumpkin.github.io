@@ -22,11 +22,8 @@ body {
   font-weight: 400;
   font-size: 1.5rem;
   color: #3b3a39;
-  background: #dadada;
+  background: white;
   position: relative; }
-  @media print {
-    body {
-      background: white; } }
 
 @media (max-width: 450px) {
   button {
@@ -41,7 +38,7 @@ body {
   background: linear-gradient(-33deg, rgba(255, 255, 255, 0.001) 30.5%, #dadada 31.5%, #dadada 32.5%, rgba(255, 255, 255, 0.001) 33.5%), linear-gradient(-33deg, rgba(255, 255, 255, 0.001) 30.5%, #dadada 31.5%, #dadada 32.5%, rgba(255, 255, 255, 0.001) 33.5%) 0 8px, linear-gradient(33deg, rgba(255, 255, 255, 0.001) 30.5%, #dadada 31.5%, #dadada 32.5%, rgba(255, 255, 255, 0.001) 33.5%), linear-gradient(33deg, rgba(255, 255, 255, 0.001) 30.5%, #dadada 31.5%, #dadada 32.5%, rgba(255, 255, 255, 0.001) 33.5%) 0 8px;
   background-size: 245px 90px;
   background-color: rgba(56, 51, 91, 0.3);
-  z-index: 1; }
+  z-index: -1; }
   @media (max-width: 770px) {
     .bgpattern {
       width: 122px; } }
@@ -50,7 +47,8 @@ body {
       width: 61px; } }
   .bgpattern--portfolio {
     position: absolute;
-    width: 100%; }
+    width: 100%;
+    z-index: 1; }
     @media (max-width: 770px) {
       .bgpattern--portfolio {
         width: 100%; } }
@@ -186,12 +184,9 @@ button {
 .u-section-box {
   padding: 1.5rem;
   margin: 1rem;
-  background-color: #fff7f7;
-  border-radius: 2rem; }
-
-.u-blue-border {
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
-  border: 1px solid #204969; }
+  background-color: white;
+  border-radius: .6rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4); }
 
 .u-white-border {
   border: 1px solid #fff7f7;
@@ -670,7 +665,8 @@ button {
 
 .flexible-content {
   display: flex;
-  flex-direction: row; }
+  flex-direction: row;
+  position: relative; }
   @media (max-width: 770px) {
     .flexible-content {
       display: flex;
@@ -700,12 +696,15 @@ button {
 
 .resheader {
   align-items: center;
+  justify-content: center;
   display: flex;
   flex-direction: row;
   margin: 2rem 0; }
   @media print {
     .resheader {
-      margin: 4rem 0 2rem 0; } }
+      display: flex;
+      flex-direction: column;
+      align-items: center; } }
   .resheader__column {
     display: flex;
     flex-direction: column; }
@@ -717,17 +716,19 @@ button {
       @media (max-width: 450px) {
         .resheader__column:nth-child(2) {
           margin-left: 0; } }
-      @media print {
-        .resheader__column:nth-child(2) {
-          margin-left: .5rem; } }
   .resheader__contact {
     display: flex;
-    flex-direction: column; }
+    flex-direction: row; }
+    @media (max-width: 770px) {
+      .resheader__contact {
+        flex-direction: column; } }
   .resheader__icon {
     height: 2rem;
     width: 2rem;
     margin: .5rem 1rem;
     fill: #3b3a39; }
+  .resheader__initial {
+    font-family: "Macondo Swash Caps", sans-serif; }
   .resheader__method {
     align-items: center;
     font-size: 1.75rem;
@@ -739,42 +740,12 @@ button {
     @media (max-width: 770px) {
       .resheader__method {
         font-size: 1.75rem; } }
-  .resheader__monogram {
-    font-size: 5rem;
-    font-family: "Macondo Swash Caps", cursive;
-    color: #fff7f7; }
+  .resheader__name {
+    margin-right: 6rem; }
     @media print {
-      .resheader__monogram {
-        font-size: 4rem; } }
-  .resheader__monogrambg {
-    width: 14rem;
-    height: 12rem;
-    margin-right: 4rem;
-    justify-content: center;
-    align-items: center;
-    border-radius: 45% 10% 70% 10%;
-    border: 1px solid #fff7f7;
-    background-color: #38335b;
-    box-shadow: -11px 28px 30px -20px rgba(0, 0, 0, 0.75);
-    display: flex;
-    flex-direction: row; }
-    @media (max-width: 770px) {
-      .resheader__monogrambg {
-        margin-right: 1rem; } }
-    @media (max-width: 450px) {
-      .resheader__monogrambg {
-        margin-right: 3rem; } }
-    @media (max-width: 390px) {
-      .resheader__monogrambg {
-        margin-right: 1rem; } }
-    @media print {
-      .resheader__monogrambg {
-        margin-right: 2rem;
-        width: 12rem;
-        height: 10rem; } }
-  @media print {
-    .resheader__name {
-      text-align: center; } }
+      .resheader__name {
+        margin-right: 0;
+        text-align: center; } }
   .resheader__row {
     display: flex;
     flex-direction: row; }
@@ -782,9 +753,13 @@ button {
       .resheader__row {
         display: flex;
         flex-direction: column; } }
-    @media print {
-      .resheader__row {
-        margin-left: -2.5rem; } }
+
+.resskills {
+  padding: 1.5rem 3rem; }
+  .resskills__lists {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem; }
 
 .portfolio {
   position: relative;

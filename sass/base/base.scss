@@ -23,11 +23,8 @@ body {
     font-weight: 400;
     font-size: 1.5rem;
     color: $color-text;
-    background: $color-background;
+    background: white;
     position: relative;
-    @media print {
-        background: white;
-    }
 }
 button {
     @include respond(phone){
@@ -47,7 +44,7 @@ button {
         linear-gradient(33deg, rgba(255,255,255,0.001) 30.5%, $color-background 31.5%, $color-background 32.5%, rgba(255,255,255,0.001) 33.5%) 0 8px;
 	background-size: 245px 90px;
     background-color: rgba($color-brand,.3);
-    z-index: 1;
+    z-index: -1;
     @include respond(tablet){
         width: 122px;
     }
@@ -57,6 +54,7 @@ button {
     &--portfolio {
         position: absolute;
         width: 100%;
+        z-index: 1;
         @include respond(tablet){
             width: 100%;
         }

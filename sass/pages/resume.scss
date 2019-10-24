@@ -30,6 +30,7 @@
 }
 .flexible-content {
     @include flex-row;
+    position: relative;
     @include respond(tablet){
         @include flex-column;
     }
@@ -61,10 +62,12 @@
 }
 .resheader {
     align-items: center;
+    justify-content: center;
     @include flex-row;
     margin: 2rem 0;
     @media print {
-        margin: 4rem 0 2rem 0;
+        @include flex-column;
+        align-items: center;
     }
 
     &__column {
@@ -78,18 +81,21 @@
             @include respond(phone){
                 margin-left: 0;
             }
-            @media print {
-                margin-left: .5rem;
-            }
         }
     }
     &__contact {
-        @include flex-column;
+        @include flex-row;
+        @include respond(tablet){
+            flex-direction: column;
+        }
     }
     &__icon {
         height: 2rem; width: 2rem;
         margin: .5rem 1rem;
         fill: $color-text;
+    }
+    &__initial {
+        font-family: "Macondo Swash Caps", sans-serif;
     }
     &__method {
         align-items: center;
@@ -102,45 +108,26 @@
             font-size: 1.75rem;
         }
     }
-    &__monogram {
-        font-size: 5rem;
-        font-family: "Macondo Swash Caps", cursive;
-        color: $color-background-accent;
-        @media print { font-size: 4rem;}
-    }
-    &__monogrambg {
-        width: 14rem; height: 12rem;
-        margin-right: 4rem;
-        justify-content: center;
-        align-items: center;
-        border-radius: 45% 10% 70% 10%;
-        border: 1px solid $color-background-accent;
-        background-color: $color-brand;
-        box-shadow: -11px 28px 30px -20px rgba(0,0,0,0.75);
-        @include flex-row;
-        @include respond(tablet){
-            margin-right: 1rem;
-        }
-        @include respond(phone){
-            margin-right: 3rem;
-        }
-        @include respond(tinyphone){
-            margin-right: 1rem;
-        }
-        @media print {
-            margin-right: 2rem;
-            width: 12rem; height: 10rem;
-        }
-    }
     &__name {
-        @media print {text-align: center;}
+        margin-right: 6rem;
+        @media print {
+            margin-right: 0;
+            text-align: center;
+        }
     }
     &__row {
         @include flex-row;
         @include respond(phone){
             @include flex-column;
         }
-        @media print { margin-left: -2.5rem;}
+    }
+}
+.resskills {
+    padding: 1.5rem 3rem;
+    &__lists {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 1rem;
     }
 }
 

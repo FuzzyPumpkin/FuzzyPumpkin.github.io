@@ -1,12 +1,9 @@
 .u-section-box {
     padding: 1.5rem;
     margin: 1rem;
-    background-color: $color-background-accent;
-    border-radius: 2rem;
-}
-.u-blue-border {
-    box-shadow: 0 1rem 2rem rgba(0,0,0,.4); 
-    border: 1px solid $color-text-headline;
+    background-color: white;
+    border-radius: .6rem;
+    @include shadow;
 }
 .u-white-border {
     border: 1px solid $color-background-accent;
