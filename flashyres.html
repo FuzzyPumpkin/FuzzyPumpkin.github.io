@@ -27,54 +27,36 @@
         <a href="mailto: kariminger@gmail.com" title="email" class="nav__links--link">Contact</a>
     </p>
 </nav>
-
-<!--resume cube-->
-<div class="swiper-container">
-    <!-- Additional required wrapper -->
+<div class="page_container">
+  <!--resume cube-->
+  <div class="swiper-container">
     <div class="swiper-wrapper">
-        <!-- Slides -->
-        <div class="swiper-slide">Slide 1</div>
-        <div class="swiper-slide">Slide 2</div>
-        <div class="swiper-slide">Slide 3</div>
-        ...
+      <div class="swiper-slide"><div class="bgpattern bgpattern--portfolio"></div></div>
+      <div class="swiper-slide" style="background:blue"><h1>Hello</h1></div>
+      <div class="swiper-slide" style="background:purple"></div>
     </div>
-    <!-- If we need pagination -->
+    <!-- Add Pagination -->
     <div class="swiper-pagination"></div>
-
-    <!-- If we need navigation buttons -->
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
-
-    <!-- If we need scrollbar -->
-    <div class="swiper-scrollbar"></div>
+  </div>
 </div>
-
 <script type="text/javascript" src="index.js"></script>
 <script src="swiper-5.2.0/package/js/swiper.min.js"></script>
 
 <!--Swiper script, inline per library readme-->
 <script>
-    var mySwiper = new Swiper ('.swiper-container', {
-      // Optional parameters
-      direction: 'vertical',
-      loop: true,
-  
-      // If we need pagination
-      pagination: {
-        el: '.swiper-pagination',
-      },
-  
-      // Navigation arrows
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-  
-      // And if we need scrollbar
-      scrollbar: {
-        el: '.swiper-scrollbar',
-      },
-    })
+  var swiper = new Swiper('.swiper-container', {
+    effect: 'cube',
+    grabCursor: true,
+    cubeEffect: {
+      shadow: true,
+      slideShadows: true,
+      shadowOffset: 20,
+      shadowScale: 0.94,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  });
 </script>
 </body>
 </html>

@@ -639,6 +639,19 @@ button {
   100% {
     top: -700%; } }
 
+.swiper-container {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -15rem;
+  margin-top: 10rem; }
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover; }
+
 .about {
   width: 60%;
   margin: 2rem auto; }
