@@ -1,6 +1,13 @@
 .flashyres {
   height: 80vh;
+  width: 42rem;
 
+  &__body {
+    background-color: $color-background-accent;
+  }
+  &__cubeface {
+    background-color: white;
+  }
 
 
   

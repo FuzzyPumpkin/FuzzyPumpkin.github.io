@@ -15,13 +15,13 @@
 	<meta name="msapplication-TileColor" content="#da532c">
 	<meta name="theme-color" content="#ffffff">
 </head>
-<body>
+<body class="flashyres__body">
 
 <!-- nav -->
 <nav class="nav" id="top">
-    <a href="#top" class="nav__monogram">KLM</a>
+    <a href="/" class="nav__monogram">KLM</a>
     <p class="nav__links">
-        <a href="#projects" class="nav__links--link">Projects</a>
+        <a href="/#projects" class="nav__links--link">Projects</a>
         <a href="/resume.html" class="nav__links--link">Resum&eacute;</a>
         <a href="https://github.com/FuzzyPumpkin" target="blank" class="nav__links--link">Github</a>
         <a href="mailto: kariminger@gmail.com" title="email" class="nav__links--link">Contact</a>
@@ -31,9 +31,178 @@
   <!--resume cube-->
   <div class="swiper-container">
     <div class="swiper-wrapper">
-      <div class="swiper-slide"><div class="bgpattern bgpattern--portfolio"></div></div>
-      <div class="swiper-slide" style="background:blue"><h1>Hello</h1></div>
-      <div class="swiper-slide" style="background:purple"></div>
+      <!-- base -->
+      <div class="swiper-slide flashyres__cubeface flashyres__cubeface--1">
+        <div class="bgpattern bgpattern--flashyres"></div>
+        <header class="resheader">
+            <div class="resheader__contact">
+                <h1 class="resheader__name"><span class="resheader__initial">K</span>ari <span class="resheader__initial">M</span>inger</h1>
+                <div class="resheader__row">
+                    <div class="resheader__column">
+                        <p class="resheader__method">
+                            <svg class="resheader__icon">
+                                <use xlink:href="images/symbol-defs.svg#icon-envelop"></use>
+                            </svg>
+                            kariminger@gmail.com
+                        </p>
+                        <p class="resheader__method">
+                            <svg class="resheader__icon">
+                            <use xlink:href="images/symbol-defs.svg#icon-linkedin"></use>
+                            </svg>
+                            https://www.linkedin.com/in/kari-minger
+                        </p>
+                    </div>
+                    <div class="resheader__column">
+                        <p class="resheader__method">
+                            <svg class="resheader__icon">
+                                <use xlink:href="images/symbol-defs.svg#icon-sphere"></use>
+                            </svg>
+                            https://github.com/FuzzyPumpkin
+                        </p>
+                        <p class="resheader__method">
+                            <svg class="resheader__icon">
+                                <use xlink:href="images/symbol-defs.svg#icon-location"></use>
+                            </svg>
+                            Chicago, IL
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="horizontal-rule"></div>
+        <section class="about">
+            <h2 class="about__headline">About Me</h2>
+            <p class="about__blurb">
+                I am an aspiring web developer looking for a position where I can learn and grow. I have a background 
+                using various programming languages to solve problems in my past positions and bring a 
+                passion for creating a usable web experience.
+            </p>
+        </section>
+        <section class="resskills u-section-box">
+            <h2>Skills</h2>
+            <div class="horizontal-rule"></div>
+            <div class="resskills__lists">
+                <ul>
+                    <li>React</li>
+                    <li>JavaScript</li>
+                    <li>SASS</li>
+                </ul>
+                <ul>
+                    <li>Figma</li>
+                    <li>Github</li>
+                    <li>MongoDB</li>
+                </ul>
+                <ul>
+                    <li>Node.js</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                </ul>
+            </div>
+        </section>
+      </div>
+      <!--projects-->
+      <div class="swiper-slide flashyres__cubeface flashyres__cubeface--2">
+          <div class="bgpattern bgpattern--flashyres"></div>
+          <section class="resprojects u-section-box">
+              <h2>Projects</h2>
+              <div class="horizontal-rule"></div>
+              <div class="resprojects__project">
+                  <h3><a href="https://fuzzypumpkin.github.io/ByeByeBuggy/" target="blank" class="resprojects__link">ByeByeBuggy</a></h3>
+                  <p>Created as a redesign of a dated website I stumbled upon, this project was built from wireframe 
+                      to Figma layout to code, mobile-first.</p>
+              </div>
+              <div class="resprojects__project">
+                  <h3><a href="https://fuzzypumpkin.github.io/Citrouille/index.html" target="blank" class="resprojects__link">Citrouille Floue</a></h3>
+                  <p>An example of parallax design, this site uses JavaScript functions to track restaurant open/closed 
+                      status and control reservation submissions.
+                  </p>
+              </div>
+              <div class="resprojects__project">
+                  <h3><a href="https://fuzzypumpkin.github.io/resourced/" target="blank" class="resprojects__link">reSOURCEd</a></h3>
+                  <p>A React app that displays resources for learning and practicing web development, using React Router 
+                      to create bookmarkable routes that sort resource cards by tag.
+                  </p>
+              </div>
+              <div class="resprojects__project">
+                  <h3><a href="https://fuzzypumpkin.github.io/RealEstate/index.html" target="blank" class="resprojects__link">Stacey Evy: Realtor</a></h3>
+                  <p>This three-page site uses JavaScript functions that fire on scroll to display real estate listings. 
+                  </p>
+              </div>
+          </section>
+      </div>
+      <!--experience-->
+      <div class="swiper-slide flashyres__cubeface flashyres__cubeface--3">
+          <div class="bgpattern bgpattern--flashyres"></div>
+          <section class="experience u-section-box">
+              <h2>Experience</h2>
+              <div class="horizontal-rule"></div>
+              <div class="experience__position">
+                  <h3 class="experience__span">
+                      <span class="experience__years">2015-Now</span>
+                      <span class="experience__company">Uniform Law Commission</span>
+                  </h3>
+                  <h4 class="experience__title">Accounting Assistant</h4>
+                  <ul class="experience__points">
+                      <li>Worked closely with product support through two CRM migrations</li>
+                      <li>Used JavaScript to automate features on PDF forms</li>
+                      <li>Programmed macros in Visual Basic</li>
+                      <li>Wrote documentation for processes and procedures</li>
+                  </ul>
+              </div>
+              <div class="experience__position">
+                  <h3 class="experience__span">
+                      <span class="experience__years">2012-2015</span>
+                      <span class="experience__company">Fifield Companies</span>
+                  </h3>
+                  <h4 class="experience__title">Accounting Assistant</h4>
+                  <ul class="experience__points">
+                      <li>Automated processes for monthly reporting on development projects</li>
+                  </ul>
+              </div>
+              <div class="experience__position">
+                  <h3 class="experience__span">
+                      <span class="experience__years">2010-2012</span>
+                      <span class="experience__company">Harris & Harris</span>
+                  </h3>
+                  <h4 class="experience__title">Payment Processor</h4>
+                  <ul class="experience__points">
+                      <li>Created heavily-customized utility to aid in analyzing data from City of Chicago website</li>
+                      <li>Wrote 63 page procedural documentation</li>
+                  </ul>
+              </div>
+              <div class="experience__position">
+                  <h3 class="experience__span">
+                      <span class="experience__years">2005-2009</span>
+                      <span class="experience__company">CCIM Institute</span>
+                  </h3>
+                  <h4 class="experience__title">Course Coordinator</h4>
+                  <ul class="experience__points">
+                      <li>Created tutorial presentation using CMS and HTML for distance learners</li>
+                  </ul>
+              </div>
+              <div class="experience__position">
+                  <h3 class="experience__span">
+                      <span class="experience__years">2002-2004</span>
+                      <span class="experience__company">Alick's Home Medical</span>
+                  </h3>
+                  <h4 class="experience__title">Billing Specialist</h4>
+                  <ul class="experience__points">
+                      <li>Spearheaded move to electronic claims filing</li>
+                  </ul>
+              </div>
+              <div class="experience__position">
+                  <h3 class="experience__span">
+                      <span class="experience__years">1999-2002</span>
+                      <span class="experience__company">Association Concepts</span>
+                  </h3>
+                  <h4 class="experience__title">Administrative Assistant</h4>
+                  <ul class="experience__points">
+                      <li>Helped design and handled updates to client website</li>
+                      <li>Learned how to create events in Alpha4 with no documentation available</li>
+                  </ul>
+              </div>
+          </section>
+      </div>
     </div>
     <!-- Add Pagination -->
     <div class="swiper-pagination"></div>

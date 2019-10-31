@@ -52,6 +52,10 @@ body {
     @media (max-width: 770px) {
       .bgpattern--portfolio {
         width: 100%; } }
+  .bgpattern--flashyres {
+    position: absolute;
+    width: 100%;
+    z-index: -1; }
 
 .bgpattern_alt {
   background-color: rgba(56, 51, 91, 0.3); }
@@ -640,7 +644,12 @@ button {
     top: -700%; } }
 
 .flashyres {
-  height: 80vh; }
+  height: 80vh;
+  width: 42rem; }
+  .flashyres__body {
+    background-color: #fff7f7; }
+  .flashyres__cubeface {
+    background-color: white; }
 
 .swiper-container {
   width: 100%;
