@@ -3,7 +3,7 @@ import React from 'react';
 export default function Header() {
     return (
         <header className="header" data-testid="header">
-            <nav>
+            <div>
                 <svg className="header__icon header__icon--logo">
 				    <use xlinkHref="./images/symbol-defs.svg#icon-organizm"></use>
 				</svg>
@@ -22,7 +22,7 @@ export default function Header() {
                         </li>
                     </ul>
                 </div>
-            </nav>
+            </div>
         </header>
     )
 }
