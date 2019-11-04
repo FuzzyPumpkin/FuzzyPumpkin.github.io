@@ -4,7 +4,7 @@ import Tasks from "../Tasks";
 
 export default function Content() {
     return (
-        <div>
+        <div className="content">
             <SideBar />
             <Tasks />
         </div>

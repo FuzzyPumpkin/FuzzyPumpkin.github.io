@@ -1,0 +1,42 @@
+**Sprint/Scrum Framework**
+
+Week 1 - 11/2 - 11/8
+Focus: Education
+* Education - Follow Youtube tutorial
+* Structure - Setup Firebase account/database
+* Design - Create SASS structure
+* Design - Finish layout for Tasks component and splash screen
+* Design - Style tutorial app according to layout, as possible
+* Security - obfuscate Firebase API key
+
+Week 2 - 11/9 - 11/15
+Focus: Tasks
+* Structure - refactor tutorial app to match plan for Organizm
+* Feature - drag & drop functionality for reordering list
+* Feature - search functionality
+* Design - style according to Figma layout
+* Design - responsive media queries
+* Accessibility - check semantic HTML/ARIA attributes
+* Accessibility - Lighthouse assessment
+* Deploy - Version 1 complete
+
+Week 3 - 11/16 - 11/22
+Focus: Lists
+
+Week 4 - 11/23 - 11/29
+Focus: Meal Planning
+
+Week 5 - 11/30 - 12/6
+Focus: Budget
+
+Week 6 - 12/7 - 12/13
+Focus: Trips
+
+Week 7 - 12/14 - 12/20
+Focus: Trackers
+
+Week 8 - 12/21 - 12/27
+Focus: Calendar
+
+Week 9 - 12/28 - 1/3
+Focus: Authentication

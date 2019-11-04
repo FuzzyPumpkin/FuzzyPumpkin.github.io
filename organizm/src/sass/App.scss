@@ -6,3 +6,21 @@
 
 @import "components/Tasks";
 @import "components/Footer";
+@import "components/Header";
+
+// temp styling during tutorial
+
+.content {
+    @include flex-row;
+}
+.tasks {
+    background-color: $color-white;
+    @include shadow;
+    padding: 1rem;
+}
+.sidebar {
+    background-color: $color-accent-light;
+    @include shadow;
+    margin-right: 1rem;
+    padding: 1rem;
+}
