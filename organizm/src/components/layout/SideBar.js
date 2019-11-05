@@ -4,9 +4,9 @@ export default function SideBar() {
     return (
         <div className="sidebar" data-testid="sidebar">
             <ul className="sidebar__generic">
-                <li>Inbox</li>
-                <li>Today</li>
-                <li>Week</li>
+                <li data-testid="Inbox">Inbox</li>
+                <li data-testid="Today">Today</li>
+                <li data-testid="Week">Week</li>
             </ul>
             <div className="sidebar__middle">
                 <h2>Projects</h2>
