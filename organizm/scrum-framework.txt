@@ -1,6 +1,6 @@
 **Sprint/Scrum Framework**
 
-Week 1 - 11/2 - 11/8
+Week 1(ext) - 11/2 - 11/15
 Focus: Education
 * Education - Follow Youtube tutorial
 * Structure - Setup Firebase account/database
@@ -9,7 +9,7 @@ Focus: Education
 * Design - Style tutorial app according to layout, as possible
 * Security - obfuscate Firebase API key
 
-Week 2 - 11/9 - 11/15
+Week 2 - 11/16 - 11/22
 Focus: Tasks
 * Structure - refactor tutorial app to match plan for Organizm
 * Feature - drag & drop functionality for reordering list
@@ -20,23 +20,23 @@ Focus: Tasks
 * Accessibility - Lighthouse assessment
 * Deploy - Version 1 complete
 
-Week 3 - 11/16 - 11/22
+Week 3 - 11/23 - 11/29
 Focus: Lists
 
-Week 4 - 11/23 - 11/29
+Week 4 - 11/30 - 12/6
 Focus: Meal Planning
 
-Week 5 - 11/30 - 12/6
+Week 5 - 12/7 - 12/13
 Focus: Budget
 
-Week 6 - 12/7 - 12/13
+Week 6 - 12/14 - 12/20
 Focus: Trips
 
-Week 7 - 12/14 - 12/20
+Week 7 - 12/21 - 12/27
 Focus: Trackers
 
-Week 8 - 12/21 - 12/27
+Week 8 - 12/28 - 1/3
 Focus: Calendar
 
-Week 9 - 12/28 - 1/3
+Week 9 - 1/3 - 1/8
 Focus: Authentication
