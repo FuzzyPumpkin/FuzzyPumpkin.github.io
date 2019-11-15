@@ -6,12 +6,16 @@ import moment from "moment";
 export const useTasks = selectedProject => {
     const [tasks, setTasks] = useState([]);
     const [archivedTasks, setArchivedTasks] = useState([]);
-  
+  //Don't fully understand this. Why "unsubscribe"? Everything else consists of Firebase methods, easily IDed in 
+  //docs.
+  //More research and reading of Firebase docs needed so that I can refactor this to be clearer and follow
+  //project constraints.
     useEffect(() => {
       let unsubscribe = firebase
         .firestore()
         .collection('tasks')
         .where('userId', '==', '12345');
+        //eventual refactor needed when multiple users are available.
   
       unsubscribe =
         selectedProject && !collatedTasksExist(selectedProject)
@@ -31,7 +35,7 @@ export const useTasks = selectedProject => {
           id: task.id,
           ...task.data(),
         }));
-  
+  //for final, will need today/week/month. V1 does not need this.
         setTasks(
           selectedProject === 'WEEK'
             ? newTasks.filter(
