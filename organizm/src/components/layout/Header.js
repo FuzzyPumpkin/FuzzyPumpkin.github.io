@@ -1,6 +1,8 @@
 import React from 'react';
+import Options from '../Options';
 
 export default function Header() {
+    
     return (
         <header className="header" data-testid="header">
             <h1 className="header__title">Organizm</h1>
@@ -15,6 +17,7 @@ export default function Header() {
                 <svg className="header__icon">
 		            <use xlinkHref="./images/symbol-defs.svg#icon-settings"></use>
 	            </svg>
+                <Options />
                 {/* For now, settings should be just for theme and clearing database */}
             </div>
         </header>
