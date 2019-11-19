@@ -3,7 +3,7 @@ import {firebaseApp} from "../firebase.js";
 // import moment from "moment"; when we have dates added
 
 
-
+//move argument to ref(), remove child method as a test to see if it will pull from db. See https://css-tricks.com/intro-firebase-react/
 const firebaseTasks = firebaseApp.database().ref().child('tasks');
 
 export function useTasks(userId, tasks){
