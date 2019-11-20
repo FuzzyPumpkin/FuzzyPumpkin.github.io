@@ -1,5 +1,5 @@
 import React from 'react';
-import {useTasks} from '../hooks';
+// import {useTasks} from '../hooks';
 
 export default function Tasks() {
     // const {tasks} = useTasks("12345");
@@ -13,7 +13,6 @@ export default function Tasks() {
                     </li>
                 ))}
             </ul> */}
-            {useTasks("12345")}
         </div>
     )
 }
