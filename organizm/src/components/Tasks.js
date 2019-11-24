@@ -1,19 +1,19 @@
 import React from 'react';
-import {showTasks} from '../hooks';
+import {useTasks} from '../hooks';
 
 export default function Tasks(props) {
-    const tasks = showTasks();
-    console.log(tasks); //this works
+    const tasksDB = useTasks();
+
     return (
         <div className="tasks" data-testid="tasks">
-            <ul className="tasks__list">
-                {tasks.map(task => (
+            <h1>Hello</h1>
+            {/* <ul className="tasks__list">
+                {tasksDB.tasks.map(task => (
                     <li key={task.id}>
                         <span>{task.task}</span>
                     </li>
                 ))}
-                {/* this returns undefined. WHY??? Scope should be good. */}
-            </ul>
+            </ul> */}
         </div>
     )
 }

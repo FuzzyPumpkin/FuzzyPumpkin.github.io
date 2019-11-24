@@ -1,4 +1,4 @@
-import React from 'react';
+import {useEffect, useState} from 'react';
 import 'firebase/database';
 import 'firebase/firestore';
 import {firebaseApp} from "../firebase.js";
@@ -8,17 +8,29 @@ import {firebaseApp} from "../firebase.js";
 
 const firebaseTasksDB = firebaseApp.firestore().collection('tasks');
 
-export function showTasks(){
-    const firebaseTasks = firebaseTasksDB.orderBy('id').limit(100);
-    const tasks = [];
-    firebaseTasks.onSnapshot(function(snapshot) {
-        snapshot.docChanges().forEach(function(change){
-            let task = change.doc.data();
-            tasks.push(task);
-        })
-    })
-    return tasks;
+export function useTasks(){
+    const [tasks, setTasks] = useState([]);
+    const [loading, setLoading] = useState(true)
+
+    useEffect(() => {
+        const tasksTemp = [];
+        async function getTasks(){
+            firebaseTasksDB.orderBy('id').limit(100).onSnapshot(function(snapshot) {
+                snapshot.docChanges().forEach(function(change){
+                    let task = change.doc.data();
+                    tasksTemp.push(task);
+                })
+            })
+        };
+        getTasks();
+        setTasks(tasksTemp);
+        setLoading(false);
+    }, [loading]);
+    console.log(tasks);
+    return {loading, tasks};  
 };
+
+   
   // firebaseTasks.add(initialTasks[0]); something like this to add
 
 // see https://codelabs.developers.google.com/codelabs/firebase-web/?authuser=0#7

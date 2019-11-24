@@ -1,4 +1,4 @@
-import {showTasks} from "./tasks.js";
+import {useTasks} from "./tasks.js";
 
 
-export {showTasks}; 
+export {useTasks}; 
