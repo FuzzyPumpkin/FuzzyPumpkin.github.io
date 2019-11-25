@@ -8,10 +8,11 @@ import {firebaseApp} from "../firebase.js";
 
 const firebaseTasksDB = firebaseApp.firestore().collection('tasks');
 
+
 export function useTasks(){
     const [tasks, setTasks] = useState([]);
-    const [loading, setLoading] = useState(true)
-
+    const [tasksLoading, setTasksLoading] = useState(true);
+    
     useEffect(() => {
         const tasksTemp = [];
         async function getTasks(){
@@ -24,10 +25,9 @@ export function useTasks(){
         };
         getTasks();
         setTasks(tasksTemp);
-        setLoading(false);
-    }, [loading]);
-    console.log(tasks);
-    return {loading, tasks};  
+        setTasksLoading(false);
+    }, [tasksLoading]);
+    return {tasksLoading, tasks};  
 };
 
    
