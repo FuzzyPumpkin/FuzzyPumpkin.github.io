@@ -7,8 +7,6 @@ export default function Options(props) {
         <div>
             <ul>
                 <li>Theme toggle 
-                    {/* <button onClick={() => toggleTheme("dark")}>Dark</button>
-                    <button onClick={() => toggleTheme("normal")}>Normal</button> */}
                     <button value="dark" onClick={toggleTheme}>Dark</button>
                     <button value="normal" onClick={toggleTheme} >Normal</button>
                 </li>
