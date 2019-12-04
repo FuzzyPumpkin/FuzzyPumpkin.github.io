@@ -2,4 +2,23 @@
     position: relative;
     overflow: hidden;
     height: 100%;
+    @include flex-column;
+    align-items: center;
+    background: $color-background;
+    
+
+    &__container {
+        width: 85%;
+        margin: 3.2rem 0;
+        @include shadow;
+        background: $color-white;
+        padding: 3rem;
+    }
+    &__item {
+        &--completed {
+            text-decoration: line-through;
+            opacity: .7;
+        }
+
+    }
 }

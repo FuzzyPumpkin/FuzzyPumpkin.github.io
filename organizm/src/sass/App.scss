@@ -13,8 +13,4 @@
 .content {
     @include flex-row;
 }
-.tasks {
-    background-color: $color-white;
-    @include shadow;
-    padding: 1rem;
-}
+
