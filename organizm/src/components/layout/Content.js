@@ -4,7 +4,7 @@ import Tasks from "../tasks/Tasks"
 export default function Content() {
     
     return (
-        <div>
+        <div className="content">
             <Tasks />
         </div>
     )

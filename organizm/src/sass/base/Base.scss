@@ -16,4 +16,9 @@ body {
     height: 100vh;
 }
 
-
+.App, .content, #root {
+    height: 100%;
+}
+.App {
+    @include flex-column;
+}

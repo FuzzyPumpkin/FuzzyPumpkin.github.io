@@ -1,23 +1,53 @@
 .tasks {
     position: relative;
     overflow: hidden;
-    height: 100%;
+    height: 100%; width: 100%;
     @include flex-column;
     align-items: center;
     background: $color-background;
     justify-content: space-between;
     
+    &__background {
+        position: absolute;
+        fill: $color-accent-dark;
+        height: 160%; width: 160%;
+        top: -30%;
+    }
     &__container {
-        width: 85%;
-        margin: 3.2rem 0;
+        width: 85%; height: 100%;
+        overflow: scroll;
         @include shadow;
         background: $color-white;
         padding: 3rem;
     }
+    &__deleteAll {
+        border: none;
+        background: $color-accent-dark;
+        color: $color-white;
+        width: 85%;
+        @include shadow;
+        font-size: 2.4rem;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
     &__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+        
         &--completed {
             text-decoration: line-through;
             opacity: .7;
+        }
+        &:hover {
+            background: rgba($color-accent-light, .5);
+        }
+        &-delete {
+            border: none;
+            background: transparent;
         }
     }
     &__button-icon {
@@ -28,6 +58,13 @@
         &--down {
             margin-right: 0;
             height: 3rem; width: 1.2rem;
+        }
+        &--trash {
+            fill: $color-white;
+            height: 2.4rem; width: 2.4rem;
+        }
+        &--miniTrash {
+            height: 1.6rem; width: 1.6rem;
         }
     }
     &__form {
@@ -45,5 +82,17 @@
             background: $color-white;
             box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
         }
+    }
+    &__layout {
+        height: 100%; width: 100%;
+        @include flex-column;
+        align-items: center;
+        margin: 3.2rem 0;
+    }
+    &__list {
+        list-style: none;
+    }
+    &__form-container, &__layout {
+        z-index: 2;
     }
 }
