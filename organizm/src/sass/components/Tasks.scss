@@ -5,8 +5,8 @@
     @include flex-column;
     align-items: center;
     background: $color-background;
+    justify-content: space-between;
     
-
     &__container {
         width: 85%;
         margin: 3.2rem 0;
@@ -19,6 +19,31 @@
             text-decoration: line-through;
             opacity: .7;
         }
+    }
+    &__button-icon {
+        height: 3rem; width: 2.6rem;
+        fill: $color-text;
+        margin: 0 .5rem;
 
+        &--down {
+            margin-right: 0;
+            height: 3rem; width: 1.2rem;
+        }
+    }
+    &__form {
+        @include flex-row;
+        justify-content: center;
+
+        &-container {
+            background: $color-accent-light;
+            padding: 1rem;
+            width: 100%;
+        }
+        &-input {
+            border-radius: 1rem;
+            border: 1px solid transparent;
+            background: $color-white;
+            box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
     }
 }

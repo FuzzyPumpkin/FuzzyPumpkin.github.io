@@ -1,4 +1,6 @@
 import React, {useState} from 'react';
+import TasksAdd from "./TasksAdd";
+import TasksSearch from "./TasksSearch";
 
 export default function Tasks(props) {
     const initialTasks = [
@@ -9,7 +11,8 @@ export default function Tasks(props) {
     const [tasks, setTasks] = useState(initialTasks);
     return (
         <div className="tasks">
-            {/* task entry component */}
+            <TasksAdd />
+            
             <div className="tasks__container">
                 <ul className="tasks__list">
                 {tasks.map(task => (
@@ -19,7 +22,8 @@ export default function Tasks(props) {
                 ))}
                 </ul>
             </div>
-            {/* search/sort component */}
+            
+            <TasksSearch />
         </div>
     )
 }
