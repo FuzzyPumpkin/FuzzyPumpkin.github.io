@@ -50,21 +50,26 @@
             background: transparent;
         }
     }
-    &__button-icon {
-        height: 3rem; width: 2.6rem;
-        fill: $color-text;
-        margin: 0 .5rem;
+    &__button {
+        background: transparent;
+        border: none;
 
-        &--down {
-            margin-right: 0;
-            height: 3rem; width: 1.2rem;
-        }
-        &--trash {
-            fill: $color-white;
-            height: 2.4rem; width: 2.4rem;
-        }
-        &--miniTrash {
-            height: 1.6rem; width: 1.6rem;
+        &-icon {
+            height: 3rem; width: 2.6rem;
+            fill: $color-text;
+            margin: 0 .5rem;
+
+            &--down {
+                margin-right: 0;
+                height: 3rem; width: 1.2rem;
+            }
+            &--trash {
+                fill: $color-white;
+                height: 2.4rem; width: 2.4rem;
+            }
+            &--miniTrash {
+                height: 1.6rem; width: 1.6rem;
+            }
         }
     }
     &__form {
@@ -79,6 +84,7 @@
         &-input {
             border-radius: 1rem;
             border: 1px solid transparent;
+            padding: 0 1rem;
             background: $color-white;
             box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
         }

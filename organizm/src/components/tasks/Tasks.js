@@ -1,27 +1,26 @@
-import React, {useState} from 'react';
+import React from 'react';
 import TasksAdd from "./TasksAdd";
 import TasksSearch from "./TasksSearch";
+import useTaskState from '../../hooks/useTaskState';
 
 export default function Tasks(props) {
-    const initialTasks = [
-        {id: 1, task: "Make Task List", completed: true},
-        {id: 2, task: "???", completed: false},
-        {id: 3, task: "Profit!", completed: false}
-    ];
-    const [tasks, setTasks] = useState(initialTasks);
+    const initialTasks = [{id: 1, task: "Use the form above to add tasks", completed: false}];
+    const {tasks, addTask, removeTask, toggleTask} = useTaskState(initialTasks);
+    
+
     return (
         <div className="tasks">
             <svg className="tasks__background">
 		        <use xlinkHref="./images/symbol-defs.svg#icon-logo"></use>
 	        </svg>
-            <TasksAdd />
+            <TasksAdd addTask ={addTask}/>
             <div className="tasks__layout">
                 <div className="tasks__container">
                     <ul className="tasks__list">
                     {tasks.map(task => (
                         <li className={`tasks__item ${task.completed && 'tasks__item--completed'}`} key={task.id}>
-                            {task.task}
-                            <button className="tasks__item-delete">
+                            <span onClick={() => toggleTask(task.id)}>{task.task}</span>
+                            <button className="tasks__item-delete" aria-label="Delete task" onClick={() => removeTask(task.id)}>
                                 <svg className="tasks__button-icon tasks__button-icon--miniTrash">
                                     <use xlinkHref="./images/symbol-defs.svg#icon-trashcan"></use>
                                 </svg>

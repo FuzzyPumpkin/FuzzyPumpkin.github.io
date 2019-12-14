@@ -10,7 +10,7 @@ export default function Header() {
                 <svg className="header__icon">
 		            <use xlinkHref="./images/symbol-defs.svg#icon-settings"></use>
 	            </svg>
-                <Options />
+                {/* <Options /> */}
             </div>
         </header>
     )
