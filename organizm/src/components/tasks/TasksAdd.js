@@ -29,6 +29,7 @@ export default function TasksAdd(props) {
                     </svg>
                 </button>
             </form>
+            <p className="tasks__form-datetext"></p>
         </div>
     )
 }

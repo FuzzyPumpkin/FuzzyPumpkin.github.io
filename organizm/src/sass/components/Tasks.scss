@@ -81,12 +81,22 @@
             padding: 1rem;
             width: 100%;
         }
+        &-datetext {
+            text-align: center;
+            font-size: 1rem;
+            margin-top: .5rem;
+            height: 1.5rem;
+        }
         &-input {
             border-radius: 1rem;
             border: 1px solid transparent;
             padding: 0 1rem;
             background: $color-white;
             box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+            &:focus {
+                outline: none;
+            }
         }
     }
     &__layout {
