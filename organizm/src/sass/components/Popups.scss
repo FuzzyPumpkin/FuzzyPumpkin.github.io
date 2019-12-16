@@ -1,0 +1,39 @@
+.datepicker {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,.3);
+    @include flex-row;
+    align-items: center;
+    justify-content: center;
+
+    &__button {
+        background: transparent;
+        border: none;
+        &--save {margin-left: auto;}
+    }
+    &__container{
+        width: 60%; height: 30%;
+        background-color: $color-white;
+        @include flex-column;
+        @include shadow;
+    }
+    &__chosen {
+        @include flex-row;
+        align-items: center;
+        padding: .5rem 1rem;
+
+        &-dateDisplay {
+            font-family: "Love Ya Like A Sister", sans-serif;
+            font-size: 2.6rem;
+        }
+    }
+    &__month {
+        @include flex-row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 1.5rem;
+        border-top: 1px solid $color-accent-dark;
+        border-bottom: 1px solid $color-accent-dark;
+        background-color: $color-accent-light;
+    }
+}

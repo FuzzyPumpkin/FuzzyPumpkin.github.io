@@ -1,14 +1,16 @@
-import React from 'react';
+import React, {useState} from 'react';
 import useInputState from '../../hooks/useInputState';
 
 export default function TasksAdd(props) {
     const [value, handleChange, reset] = useInputState("");
+    const [taskDate, setTaskDate] = useState("");
+    
     return (
         <div className="tasks__form-container">
             <form className="tasks__form" 
                 onSubmit={e => {
                     e.preventDefault();
-                    props.addTask(value);
+                    props.addTask(value, taskDate);
                     reset();
                     }}
             >

@@ -1,5 +1,6 @@
 import React from 'react';
-import Options from '../Options';
+// holding until dark/light theme implementation
+// import Options from '../Options';
 
 export default function Header() {
     

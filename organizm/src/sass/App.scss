@@ -7,8 +7,8 @@
 @import "components/Tasks";
 @import "components/Footer";
 @import "components/Header";
+@import "components/Popups";
 
-// temp styling during tutorial
 
 .content {
     @include flex-row;

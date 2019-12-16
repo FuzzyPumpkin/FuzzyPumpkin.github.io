@@ -1,5 +1,5 @@
 import React, {useContext} from 'react';
-import { ThemeContext } from '../context/theme-context';
+import { ThemeContext } from '../../context/theme-context';
 
 export default function Options(props) {
     const {toggleTheme} = useContext(ThemeContext);
