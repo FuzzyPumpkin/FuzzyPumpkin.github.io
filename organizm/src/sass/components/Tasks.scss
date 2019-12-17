@@ -80,6 +80,10 @@
             background: $color-accent-light;
             padding: 1rem;
             width: 100%;
+            z-index: 2;
+            &--add {
+                z-index: 3;
+            }
         }
         &-datetext {
             text-align: center;
@@ -104,11 +108,9 @@
         @include flex-column;
         align-items: center;
         margin: 3.2rem 0;
+        z-index: 1;
     }
     &__list {
         list-style: none;
-    }
-    &__form-container, &__layout {
-        z-index: 2;
     }
 }

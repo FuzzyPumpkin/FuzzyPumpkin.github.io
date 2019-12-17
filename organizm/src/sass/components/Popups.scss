@@ -1,10 +1,13 @@
 .datepicker {
+    position: absolute;
+    top: 0; left: 0;
     height: 100%;
     width: 100%;
-    background-color: rgba(0,0,0,.3);
+    background-color: rgba($color-text,.8);
     @include flex-row;
     align-items: center;
     justify-content: center;
+    z-index: 20;
 
     &__button {
         background: transparent;
@@ -25,6 +28,22 @@
         &-dateDisplay {
             font-family: "Love Ya Like A Sister", sans-serif;
             font-size: 2.6rem;
+        }
+    }
+    &__days {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);    
+    }
+    &__day {
+        text-align: center;
+        line-height: 2.5rem;
+        font-size: 1.6rem;
+        border-radius: 50%;
+        transition: all .4s ease-in;
+        &:hover {
+            background-color: rgba($color-accent-dark, .8);
+            
+            color: $color-white;
         }
     }
     &__month {

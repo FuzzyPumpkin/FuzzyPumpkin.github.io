@@ -1,12 +1,17 @@
 import React, {useState} from 'react';
 import useInputState from '../../hooks/useInputState';
+import DatePicker from "../popup/DatePicker";
 
 export default function TasksAdd(props) {
     const [value, handleChange, reset] = useInputState("");
     const [taskDate, setTaskDate] = useState("");
     
+    const updTaskDate = (date) => {
+        setTaskDate(date);
+    }
+
     return (
-        <div className="tasks__form-container">
+        <div className="tasks__form-container tasks__form-container--add">
             <form className="tasks__form" 
                 onSubmit={e => {
                     e.preventDefault();
@@ -25,6 +30,7 @@ export default function TasksAdd(props) {
                         <use xlinkHref="./images/symbol-defs.svg#icon-calendar"></use>
                     </svg>
                 </button>
+                {/* <DatePicker updTaskDate={updTaskDate} /> */}
                 <button type="submit" className="tasks__button" aria-label="Save Task">
                     <svg className="tasks__button-icon">
                         <use xlinkHref="./images/symbol-defs.svg#icon-save"></use>
