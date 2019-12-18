@@ -1,10 +1,8 @@
 import React, {useState} from 'react';
 
 
-//updTaskDate(newDate) to send to new task form
 
 export default function DatePicker(props) {
-    //find the current date and set to state as default chosen
     let currDate = new Date();
     let currDay = currDate.getDate();
     let currMonth = currDate.getMonth() + 1;
@@ -25,6 +23,7 @@ export default function DatePicker(props) {
         const year = nextMonth === 1 ? chosenDate.year + 1 : chosenDate.year;
         setChosenDate({month: nextMonth, day: day, year: year});
     }
+    
     return (
         <div className="datepicker">
             <div className="datepicker__container">
