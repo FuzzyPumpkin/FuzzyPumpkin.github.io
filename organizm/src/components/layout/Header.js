@@ -1,18 +1,19 @@
-import React from 'react';
-// holding until dark/light theme implementation
-// import Options from '../Options';
+import React, {useState} from 'react';
+import Options from '../popup/Options';
 
-export default function Header() {
+export default function Header(props) {
     
+    const [showOptions, setShowOptions] = useState(true);
+
     return (
         <header className="header" data-testid="header">
             <h1 className="header__title">Organizm</h1>
-            <div className="header__settings">
+            <button type="button" className="header__settings" onClick={() => setShowOptions(true)}>
                 <svg className="header__icon">
 		            <use xlinkHref="./images/symbol-defs.svg#icon-settings"></use>
 	            </svg>
-                {/* <Options /> */}
-            </div>
+            </button>
+            {showOptions && <Options module={props.module} setShowOptions={setShowOptions}/>}
         </header>
     )
 }

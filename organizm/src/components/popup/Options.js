@@ -1,17 +1,14 @@
-import React, {useContext} from 'react';
-import { ThemeContext } from '../../context/theme-context';
+import React from 'react';
 
 export default function Options(props) {
-    const {toggleTheme} = useContext(ThemeContext);
     return (
-        <div>
-            <ul>
-                <li>Theme toggle 
-                    <button value="dark" onClick={toggleTheme}>Dark</button>
-                    <button value="normal" onClick={toggleTheme} >Normal</button>
-                </li>
-                <li>Clear database</li>
-            </ul>
+        <div className="options">
+            <div className="options__container">
+                <button type="button" className="options__close" onClick={() => props.setShowOptions(false)}>X</button>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Ullam at accusamus provident, exercitationem ex sapiente qui eum ut? 
+                    Alias odit explicabo dignissimos accusamus nam fuga pariatur, eos tenetur fugiat doloremque!</p>
+            </div>
         </div>
     )
 }
