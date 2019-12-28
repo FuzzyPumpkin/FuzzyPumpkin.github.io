@@ -20,7 +20,8 @@ export default function Tasks(props) {
                     {tasks.map(task => (
                         <li className={`tasks__item ${task.completed && 'tasks__item--completed'}`} key={task.id}>
                             <span onClick={() => toggleTask(task.id)}>{task.task}</span>
-                            <button className="tasks__item-delete" aria-label="Delete task" onClick={() => removeTask(task.id)}>
+                            <span className="tasks__item--date">{task.formattedDate}</span>
+                            <button className="tasks__item--delete" aria-label="Delete task" onClick={() => removeTask(task.id)}>
                                 <svg className="tasks__button-icon tasks__button-icon--miniTrash">
                                     <use xlinkHref="./images/symbol-defs.svg#icon-trashcan"></use>
                                 </svg>

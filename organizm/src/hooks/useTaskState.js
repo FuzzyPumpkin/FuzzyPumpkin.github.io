@@ -5,8 +5,8 @@ export default initialTasks => {
     const [tasks, setTasks] = useLocalStorage("tasks", initialTasks);
     return {
         tasks,
-        addTask: (newTaskText, taskDate) => {
-            setTasks([...tasks, {id: uuid(), task: newTaskText, completed: false, date: taskDate}]);
+        addTask: (newTaskText, taskDate, formattedDate) => {
+            setTasks([...tasks, {id: uuid(), task: newTaskText, completed: false, date: taskDate, formattedDate: formattedDate}]);
         },
         removeTask: taskId => {
             const updatedTasks = tasks.filter(task => task.id !== taskId);

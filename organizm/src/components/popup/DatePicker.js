@@ -21,6 +21,11 @@ export default function DatePicker(props) {
                         {month: "October", days: 31},
                         {month: "November", days: 30},
                         {month: "December", days: 31}];
+    const chooseDate = (date) => {
+        const month = chosenDate.month;
+        const year = chosenDate.year;
+        setChosenDate({month: month, day: date, year: year});
+    }
     const dateBack = () => {
         const lastMonth = chosenDate.month === 1 ? 12 : chosenDate.month - 1;
         const day = chosenDate.day;
@@ -80,7 +85,7 @@ export default function DatePicker(props) {
                             <div className="datepicker__day" key={uuid()}></div>
                         ))}
                         {calendarDates().map(date => (
-                                <div className="datepicker__day" key={date}>{date}</div>
+                                <div className="datepicker__day" key={date} onClick={() => chooseDate(date)}>{date}</div>
                             ))
                         }
                     </div>

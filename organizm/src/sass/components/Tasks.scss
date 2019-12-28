@@ -45,9 +45,13 @@
         &:hover {
             background: rgba($color-accent-light, .5);
         }
-        &-delete {
+        &--delete {
             border: none;
             background: transparent;
+        }
+        &--date {
+            margin-left: auto;
+            font-size: 1rem;
         }
     }
     &__button {
