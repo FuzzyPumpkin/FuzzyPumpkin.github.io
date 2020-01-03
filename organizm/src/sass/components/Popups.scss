@@ -62,18 +62,20 @@
 
 .options {
     &__container {
-        width: 80%; height: 80%;
+        width: 80%;
         background-color: $color-white;
         @include flex-column;
         @include shadow;
         position: relative;
+        padding: 4rem;
+        align-items: center;
     }
     &__close {
         background: transparent;
         border: none;
         position: absolute;
         top: 0; right: 0;
-        margin: .5rem;
+        margin: 2rem;
         font-size: 2rem;
         transition: all .2s ease;
         outline: none;
@@ -81,5 +83,15 @@
         &:hover {
             color: $color-background;
         }
+    }
+    &__welcome {
+        color: rgba($color-text, .7);
+    }
+    & p {
+        font-size: 1.3rem;
+        margin: 1rem 0;
+    }
+    & a {
+        color: $color-accent-dark;
     }
 }

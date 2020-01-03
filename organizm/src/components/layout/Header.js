@@ -3,7 +3,7 @@ import Options from '../popup/Options';
 
 export default function Header(props) {
     
-    const [showOptions, setShowOptions] = useState(true);
+    const [showOptions, setShowOptions] = useState(false);
 
     return (
         <header className="header" data-testid="header">
