@@ -5,7 +5,7 @@ import useTaskState from '../../hooks/useTaskState';
 
 export default function Tasks(props) {
     const initialTasks = [{id: 1, task: "Use the form above to add tasks", completed: false}];
-    const {tasks, addTask, removeTask, toggleTask} = useTaskState(initialTasks);
+    const {tasks, addTask, removeTask, toggleTask, alphaSortTasks} = useTaskState(initialTasks);
     
 
     return (
@@ -13,7 +13,7 @@ export default function Tasks(props) {
             <svg className="tasks__background">
 		        <use xlinkHref="./images/symbol-defs.svg#icon-logo"></use>
 	        </svg>
-            <TasksAdd addTask ={addTask}/>
+            <TasksAdd addTask={addTask}/>
             <div className="tasks__layout">
                 <div className="tasks__container">
                     <ul className="tasks__list">
@@ -37,7 +37,7 @@ export default function Tasks(props) {
                     Delete Completed
                 </button>
             </div>
-            <TasksSearch />
+            <TasksSearch alphaSortTasks={alphaSortTasks}/>
         </div>
     )
 }

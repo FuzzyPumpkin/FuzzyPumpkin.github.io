@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 
-export default function TasksSearch() {
+export default function TasksSearch(props) {
     return (
         <div className="tasks__form-container">
             <form className="tasks__form">
@@ -8,9 +8,11 @@ export default function TasksSearch() {
 		            <use xlinkHref="./images/symbol-defs.svg#icon-search"></use>
 	            </svg>
                 <input className="tasks__form-input" type="text"></input>
-                <svg className="tasks__button-icon">
-		            <use xlinkHref="./images/symbol-defs.svg#icon-alpha"></use>
-	            </svg>
+                <button type="button" className="tasks__button" aria-label="Sort Alphabetically" onClick={() => props.alphaSortTasks("task")}>
+                    <svg className="tasks__button-icon">
+                        <use xlinkHref="./images/symbol-defs.svg#icon-alpha"></use>
+                    </svg>
+                </button>
                 <svg className="tasks__button-icon tasks__button-icon--down">
 		            <use xlinkHref="./images/symbol-defs.svg#icon-down"></use>
 	            </svg>
