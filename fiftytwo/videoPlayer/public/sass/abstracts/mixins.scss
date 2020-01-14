@@ -1,0 +1,35 @@
+@mixin respond($breakpoint){
+    @if $breakpoint == iphoneX {
+        @media (min-width: 360px) and (min-height: 800px){@content};
+    }
+    @if $breakpoint == ipadMini {
+        @media (min-width: 415px){@content};
+    }
+    @if $breakpoint == smDesktop {
+        @media (min-width: 781px){@content};
+    }
+    @if $breakpoint == desktop {
+        @media (min-width: 1270px){@content};
+    }
+    @if $breakpoint == lgDesktop {
+        @media (min-width: 1400px){@content};
+    }
+    @if $breakpoint == wideScreen {
+        @media (min-width: 1600px){@content};
+    }
+}
+
+
+@mixin flex-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flex-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin shadow {
+    box-shadow: -5px -5px 16px rgba(255, 255, 255, 0.5), 5px 5px 16px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}

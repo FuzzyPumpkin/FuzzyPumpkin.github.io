@@ -1,0 +1,15 @@
+{
+  "name": "videoplayer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "scripts-FINISHED.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "node-sass public/sass/main.scss public/style.css -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.13.0"
+  }
+}
