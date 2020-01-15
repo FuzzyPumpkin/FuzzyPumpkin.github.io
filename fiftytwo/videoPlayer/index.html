@@ -14,7 +14,46 @@
  - volume
  - status
  - screen & dropdown -->
-
+ <main class="grid">
+<!-- vid screen & choice -->
+<section class="video">
+  <select name="videoChoice" id="videoChoice">
+    <option value="">--Please choose a video--</option>
+  </select>
+  <video class="player__video viewer" src="652333414.mp4"></video>
+</section>
+<!-- control buttons -->
+<section class="buttons">
+  <button class="buttons__button buttons__button--play" type="button">
+    <svg class="buttons__svg">
+      <use xlink:href="public/images/symbol-defs.svg#icon-play3"></use>
+    </svg>
+  </button>
+  <button class="buttons__button buttons__button--ff" type="button">
+    <svg class="buttons__svg">
+      <use xlink:href="public/images/symbol-defs.svg#icon-forward3"></use>
+    </svg>
+  </button>
+  <button class="buttons__button buttons__button--rew" type="button">
+    <svg class="buttons__svg">
+      <use xlink:href="public/images/symbol-defs.svg#icon-backward2"></use>
+    </svg>
+  </button>
+  <button class="buttons__button buttons__button--pause" type="button">
+    <svg class="buttons__svg">
+      <use xlink:href="public/images/symbol-defs.svg#icon-pause2"></use>
+    </svg>
+  </button>
+</section>
+<!-- volume slider -->
+<section class="volume">
+  <input type="range" name="volume" class="volume__bar" min="0" max="1" step="0.05" value="1">
+</section>
+<!-- progress slider -->
+<section class="progress">
+  <div class="progress__bar"></div>
+</section>
+</main>
    <!-- <div class="player">
      <video class="player__video viewer" src="652333414.mp4"></video>
      <div class="player__controls">
@@ -29,6 +68,6 @@
      </div>
    </div> -->
 
-  <script src="scripts.js"></script>
+  <!-- <script src="scripts.js"></script> -->
 </body>
 </html>

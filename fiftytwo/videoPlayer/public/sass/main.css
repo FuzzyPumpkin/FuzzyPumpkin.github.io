@@ -19,4 +19,103 @@ body {
   background: #FBF4F4;
   position: relative;
 }
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+  width: 100%;
+      grid-template-areas: "video" "progress" "buttons" "volume";
+  grid-auto-columns: 1fr;
+}
+
+.video {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: video;
+}
+
+.progress {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: progress;
+  height: 50px;
+  width: 100%;
+  background-color: green;
+}
+
+.buttons {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: buttons;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 2rem;
+}
+
+.buttons__button {
+  border: 3px solid #FBF4F4;
+  border-radius: 1.5rem;
+  height: 4.5rem;
+  width: 4.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: -5px -5px 16px rgba(255, 255, 255, 0.5), 5px 5px 16px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: -5px -5px 16px rgba(255, 255, 255, 0.5), 5px 5px 16px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.buttons__button--play {
+  background-color: #316352;
+}
+
+.buttons__button--rew {
+  background-color: #F27F43;
+}
+
+.buttons__button--rew .buttons__svg {
+  padding-right: 5px;
+}
+
+.buttons__button--ff {
+  background-color: #70392F;
+}
+
+.buttons__button--ff .buttons__svg {
+  padding-left: 5px;
+}
+
+.buttons__button--pause {
+  background-color: #C4464D;
+}
+
+.buttons__svg {
+  fill: #FBF4F4;
+  height: 3rem;
+  width: 3rem;
+}
+
+.volume {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: volume;
+  height: 50px;
+  width: 100%;
+  background-color: blue;
+}
 /*# sourceMappingURL=main.css.map */
