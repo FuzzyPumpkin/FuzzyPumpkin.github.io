@@ -1,7 +1,7 @@
 {
   "name": "videoplayer",
   "version": "1.0.0",
-  "description": "",
+  "description": "A custom videoplayer created by Kari Minger",
   "main": "scripts-FINISHED.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

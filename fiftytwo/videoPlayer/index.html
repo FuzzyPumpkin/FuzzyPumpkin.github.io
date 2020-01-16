@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Video Player</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Custom video player created by Kari Minger.">  
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="public/sass/main.css">
 </head>
@@ -17,10 +19,10 @@
  <main class="grid">
 <!-- vid screen & choice -->
 <section class="video">
-  <select name="videoChoice" id="videoChoice">
+  <select class="video__dropdown" name="videoChoice" id="videoChoice">
     <option value="">--Please choose a video--</option>
   </select>
-  <video class="player__video viewer" src="652333414.mp4"></video>
+  <video class="video__screen" src="652333414.mp4"></video>
 </section>
 <!-- control buttons -->
 <section class="buttons">
@@ -46,6 +48,8 @@
   </button>
 </section>
 <!-- volume slider -->
+<!-- Perhaps instead of using default input/range, should make a div and program the style similar to the progress bar. Cannot at a glance
+grok how to style toggle or color progress-->
 <section class="volume">
   <input type="range" name="volume" class="volume__bar" min="0" max="1" step="0.05" value="1">
 </section>

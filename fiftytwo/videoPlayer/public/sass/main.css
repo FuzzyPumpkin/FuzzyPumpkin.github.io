@@ -3,8 +3,8 @@
 *::before {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 html {
@@ -21,23 +21,58 @@ body {
 }
 
 .grid {
+  width: 100%;
   display: -ms-grid;
   display: grid;
-  width: 100%;
-      grid-template-areas: "video" "progress" "buttons" "volume";
+      grid-template-areas: "video_container" "progress_container" "buttons_container" "volume_container";
   grid-auto-columns: 1fr;
 }
 
 .video {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
-  grid-area: video;
+  grid-area: video_container;
+  width: 100%;
+  margin-top: 5.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  align-items: center;
+}
+
+.video__screen {
+  width: 100%;
+}
+
+.video__dropdown {
+  margin: 0 1rem 2rem 1rem;
+  width: calc(100% - 2rem);
+  background-color: #FBF4F4;
+  border: 3px solid #FBF4F4;
+  -webkit-box-shadow: -5px -5px 16px rgba(255, 255, 255, 0.5), 5px 5px 16px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: -5px -5px 16px rgba(255, 255, 255, 0.5), 5px 5px 16px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 1.5rem;
+  color: rgba(53, 50, 50, 0.7);
+  text-decoration: underline;
+  font-size: 1.4rem;
+  font-family: "Roboto", sans-serif;
+  padding: .5rem 1.5rem;
 }
 
 .progress {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
-  grid-area: progress;
+  grid-area: progress_container;
   height: 50px;
   width: 100%;
   background-color: green;
@@ -46,7 +81,7 @@ body {
 .buttons {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
-  grid-area: buttons;
+  grid-area: buttons_container;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -56,6 +91,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -113,9 +149,21 @@ body {
 .volume {
   -ms-grid-row: 4;
   -ms-grid-column: 1;
-  grid-area: volume;
+  grid-area: volume_container;
   height: 50px;
   width: 100%;
   background-color: blue;
+}
+
+.volume__bar {
+  -webkit-appearance: media-sliderthumb;
+  height: 3rem;
+  -webkit-box-shadow: -5px -5px 16px rgba(255, 255, 255, 0.5), 5px 5px 16px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: -5px -5px 16px rgba(255, 255, 255, 0.5), 5px 5px 16px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border: 3px solid #FBF4F4;
+  border-radius: 1.5rem;
+  background-color: #FBF4F4;
+  margin: 2rem 1rem;
+  width: calc(100% - 2rem);
 }
 /*# sourceMappingURL=main.css.map */
