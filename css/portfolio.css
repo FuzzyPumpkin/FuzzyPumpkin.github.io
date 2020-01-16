@@ -435,13 +435,13 @@ button {
       flex-direction: column;
       align-items: center;
       width: 30%;
-      background: url(/images/resourcedBG.jpg) no-repeat;
+      background: url(/images/fiftytwoBG.jpg) no-repeat;
       background-size: cover; }
       .projects__popup-left--two {
         background: url(/images/buggyBg.jpg) no-repeat;
         background-size: cover; }
       .projects__popup-left--three {
-        background: url(/images/citrouilleBg.jpg) no-repeat;
+        background: url(/images/resourcedBG.jpg) no-repeat;
         background-size: cover; }
       .projects__popup-left--four {
         background: url(/images/realtorBg.jpg) no-repeat;
@@ -500,6 +500,9 @@ button {
           right: -1rem; } }
     .projects__popup-close:hover {
       color: #08ffc8; }
+
+#projOne .projects__popup-paragraph {
+  margin: 2rem 0 20rem 0; }
 
 .skills {
   background-color: #204969;
@@ -642,24 +645,6 @@ button {
     top: -600%; }
   100% {
     top: -700%; } }
-
-.flashyres {
-  height: 80vh;
-  width: 42rem; }
-  .flashyres__body {
-    background-color: #fff7f7; }
-  .flashyres__cubeface {
-    background-color: white; }
-
-.swiper-container {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  margin-top: 10rem; }
-
-.swiper-slide {
-  background-position: center;
-  background-size: cover; }
 
 .about {
   width: 60%;

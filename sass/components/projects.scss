@@ -143,14 +143,14 @@
             @include flex-column;
             align-items: center;
             width: 30%;
-            background: url(/images/resourcedBG.jpg) no-repeat;
+            background: url(/images/fiftytwoBG.jpg) no-repeat;
             background-size: cover;
             &--two {
                 background: url(/images/buggyBg.jpg) no-repeat;
                 background-size: cover;
             }
             &--three {
-                background: url(/images/citrouilleBg.jpg) no-repeat;
+                background: url(/images/resourcedBG.jpg) no-repeat;
                 background-size: cover;
             }
             &--four {
@@ -215,3 +215,4 @@
         &-close:hover {color: $color-highlight;}
     }
 }
+#projOne .projects__popup-paragraph {margin: 2rem 0 20rem 0;}
