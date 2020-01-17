@@ -34,22 +34,23 @@
 }
 .progress {
     grid-area: progress_container;
-    height: 50px; width: 100%;
-    background-color: green;
 }
 .buttons {
     grid-area: buttons_container;
     @include flex-row;
     width: 100%;
-    justify-content: space-between;
-    padding: 2rem;
+    justify-content: center;
+    padding: 0 2rem;
     &__button {
         border: 3px solid $color-white;
         border-radius: 1.5rem;
         height: 4.5rem; width: 4.5rem;
         @include flex-row;
         @include shadow;
-        &--play {background-color: $color-green;}
+        &--play {
+            background-color: $color-green;
+            margin: 0 4.5rem;
+        }
         &--rew {
             background-color: $color-orange;
             & .buttons__svg {
@@ -62,25 +63,53 @@
                 padding-left: 5px;
             }
         }
-        &--pause {background-color: $color-red;}
+        &--pause {
+            background-color: $color-red;
+            margin: 0 4.5rem;
+        }
     }
     &__svg {
         fill: $color-white;
         height: 3rem; width: 3rem;
+        &--hidden {
+            display: hidden;
+            width: 0; height: 0;
+        }
     }
 }
 .volume {
     grid-area: volume_container;
-    height: 50px; width: 100%;
-    background-color: blue;
-    &__bar {
-        -webkit-appearance: media-sliderthumb;
-        height: 3rem;
-        @include shadow;
-        border: 3px solid $color-white;
-        border-radius: 1.5rem;
+}
+
+.progress, .volume {
+    @include flex-row;
+    padding: 0 1rem;
+    align-items: center;
+    width: 100%;
+    &__svg {
+        fill: $color-text;
+        height: 3rem; width: 3rem;
+        &--hidden {
+            display: hidden;
+            width: 0; height: 0;
+        }
+    }
+}
+.progress__bar, .volume__bar {
+    -webkit-appearance: none;
+    margin: 2rem 1rem;
+    width: calc(100% - 2rem);
+    height: 2rem;
+    border: 3px solid $color-white;
+    border-radius: 1.5rem;
+    @include shadow;
+
+    &:focus {outline: none;}
+    //thumb button styling not working!
+    &::-webkit-slider-thumb, &::-moz-range-thumb {
+        -webkit-appearance: none;
+        height: 12.5rem; width: 3rem;
         background-color: $color-white;
-        margin: 2rem 1rem;
-        width: calc(100% - 2rem);
+        border-radius: 1.5rem;
     }
 }
