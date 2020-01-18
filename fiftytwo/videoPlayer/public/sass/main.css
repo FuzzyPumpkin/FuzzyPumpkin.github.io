@@ -111,11 +111,6 @@ body {
           box-shadow: -5px -5px 16px rgba(255, 255, 255, 0.5), 5px 5px 16px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.buttons__button--play {
-  background-color: #316352;
-  margin: 0 4.5rem;
-}
-
 .buttons__button--rew {
   background-color: #F27F43;
 }
@@ -132,9 +127,13 @@ body {
   padding-left: 5px;
 }
 
-.buttons__button--pause {
-  background-color: #C4464D;
+.buttons__playButton {
+  background-color: #316352;
   margin: 0 4.5rem;
+}
+
+.buttons__playButton--pause {
+  background-color: #C4464D;
 }
 
 .buttons__svg {
@@ -199,7 +198,7 @@ body {
 
 .progress__bar::-webkit-slider-thumb, .progress__bar::-moz-range-thumb, .volume__bar::-webkit-slider-thumb, .volume__bar::-moz-range-thumb {
   -webkit-appearance: none;
-  height: 12.5rem;
+  height: 3.5rem;
   width: 3rem;
   background-color: #FBF4F4;
   border-radius: 1.5rem;

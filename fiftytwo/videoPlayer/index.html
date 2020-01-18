@@ -26,28 +26,26 @@
 </section>
 <!-- control buttons -->
 <section class="buttons">
-  <button class="buttons__button buttons__button--rew" type="button">
+  <button class="buttons__button buttons__button--rew" type="button" data-skip="-25">
     <svg class="buttons__svg">
       <use xlink:href="public/images/symbol-defs.svg#icon-backward2"></use>
     </svg>
   </button>
-  <button class="buttons__button buttons__button--play" type="button">
-    <svg class="buttons__svg buttons__svg">
+  <button class="buttons__button buttons__playButton" id="playButton" type="button">
+    <svg class="buttons__svg buttons__svg" id="playIcon">
       <use xlink:href="public/images/symbol-defs.svg#icon-play3"></use>
     </svg>
-    <svg class="buttons__svg buttons__svg--hidden">
+    <svg class="buttons__svg buttons__svg--hidden" id="pauseIcon">
       <use xlink:href="public/images/symbol-defs.svg#icon-pause2"></use>
     </svg>
   </button>
-  <button class="buttons__button buttons__button--ff" type="button">
+  <button class="buttons__button buttons__button--ff" type="button" data-skip="25">
     <svg class="buttons__svg">
       <use xlink:href="public/images/symbol-defs.svg#icon-forward3"></use>
     </svg>
   </button>
 </section>
 <!-- volume slider -->
-<!-- Perhaps instead of using default input/range, should make a div and program the style similar to the progress bar. Cannot at a glance
-grok how to style toggle or color progress-->
 <section class="volume">
   <input type="range" name="volume" class="volume__bar" min="0" max="1" step="0.05" value="1">
   <svg class="volume__svg" aria-label="volume">
@@ -79,6 +77,6 @@ grok how to style toggle or color progress-->
      </div>
    </div> -->
 
-  <!-- <script src="scripts.js"></script> -->
+  <script src="scripts.js"></script>
 </body>
 </html>
