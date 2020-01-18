@@ -6,18 +6,16 @@ const pauseIcon = document.querySelector("#pauseIcon");
 const ffButton = document.querySelector(".buttons__button--ff");
 const rewButton = document.querySelector(".buttons__button--rew");
 const volumeBar = document.querySelector(".volume__bar");
-const progressBar = document.querySelector(".progress__bar");
-// const progress = player.querySelector(".progress");
-// const progressBar = player.querySelector(".progress__filled");
-// const ranges = player.querySelectorAll(".player__slider");
+const progress = document.getElementById('progress');
+const progressBar = document.querySelector('.progress__bar--indicator');
+
 
 playButton.addEventListener("click", togglePlay);
 video.addEventListener("click",togglePlay);
+video.addEventListener("loadedmetadata",updMaxDuration);
+video.addEventListener("timeupdate",updProgressBar);
 ffButton.addEventListener("click", skip);
 rewButton.addEventListener("click", skip);
-// ranges.forEach(range => range.addEventListener("change", rangeUpdate));
-// video.addEventListener("timeupdate", updProgress);
-// progress.addEventListener("click", scrub);
 
 function togglePlay(){
     video.paused ? video.play() : video.pause();
@@ -29,9 +27,17 @@ function togglePlay(){
 function skip(){
     video.currentTime += parseFloat(this.dataset.skip);
 };
-// function rangeUpdate(){
-//     video[this.name] = this.value;
-// };
+function updMaxDuration(){
+    progress.setAttribute('max', video.duration);
+};
+function updProgressBar(){
+    if (!progress.getAttribute('max')) progress.setAttribute('max', video.duration);
+   progress.value = video.currentTime;
+   const percentComplete = Math.floor((video.currentTime / video.duration) * 100) + '%';
+   console.log(percentComplete);
+   progressBar.style.width = percentComplete;
+};
+
 // function updProgress(){
 //     const percent = (video.currentTime / video.duration) * 100;
 //     progressBar.style.flexBasis = `${percent}%`;

@@ -167,6 +167,7 @@ body {
   padding: 0 1rem;
   align-items: center;
   width: 100%;
+  position: relative;
 }
 
 .progress__svg, .volume__svg {
@@ -190,17 +191,25 @@ body {
   border-radius: 1.5rem;
   -webkit-box-shadow: -5px -5px 16px rgba(255, 255, 255, 0.5), 5px 5px 16px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: -5px -5px 16px rgba(255, 255, 255, 0.5), 5px 5px 16px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  position: relative;
 }
 
 .progress__bar:focus, .volume__bar:focus {
   outline: none;
 }
 
-.progress__bar::-webkit-slider-thumb, .progress__bar::-moz-range-thumb, .volume__bar::-webkit-slider-thumb, .volume__bar::-moz-range-thumb {
-  -webkit-appearance: none;
-  height: 3.5rem;
-  width: 3rem;
+.progress__bar--indicator, .volume__bar--indicator {
+  background-color: #F8B45A;
+  border-radius: 1.5rem 0 0 1.5rem;
+}
+
+progress::-webkit-progress-bar {
   background-color: #FBF4F4;
   border-radius: 1.5rem;
+}
+
+progress::-webkit-progress-value {
+  background-color: #F8B45A;
+  border-radius: 1.5rem 0 0 1.5rem;
 }
 /*# sourceMappingURL=main.css.map */
