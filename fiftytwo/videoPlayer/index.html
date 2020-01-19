@@ -11,12 +11,7 @@
 <body>
 
 
-<!-- 4 grid areas
- - play/rew/etc buttons
- - volume
- - status
- - screen & dropdown -->
- <main class="grid">
+<main class="grid">
 <!-- vid screen & choice -->
 <section class="video">
   <select class="video__dropdown" name="videoChoice" id="videoChoice">
@@ -47,11 +42,13 @@
 </section>
 <!-- volume slider -->
 <section class="volume">
-  <input type="range" name="volume" class="volume__bar" min="0" max="1" step="0.05" value="1">
-  <svg class="volume__svg" aria-label="volume">
+  <progress class="volume__bar" value="0" min="0">
+    <span class="volume__bar--indicator"></span>
+  </progress>
+  <svg class="volume__svg volume__audible" aria-label="volume">
     <use xlink:href="public/images/symbol-defs.svg#icon-volume-medium"></use>
   </svg>
-  <svg class="volume__svg volume__svg--hidden" aria-label="volume">
+  <svg class="volume__svg volume__mute volume__svg--hidden" aria-label="volume off">
     <use xlink:href="public/images/symbol-defs.svg#icon-volume-mute2"></use>
   </svg>
 </section>
