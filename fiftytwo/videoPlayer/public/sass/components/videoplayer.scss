@@ -1,5 +1,5 @@
 .grid {
-    width: 100%;
+    width: 37.5rem;
     display: grid;
     grid-template-areas: "video_container"
         "progress_container"
@@ -17,20 +17,6 @@
 
     &__screen {
         width: 100%;
-    }
-    &__dropdown {
-        margin: 0 1rem 2rem 1rem;
-        width: calc(100% - 2rem);
-        background-color: $color-white;
-        border: 3px solid $color-white;
-        @include shadow;
-        border-radius: 1.5rem;
-        color: rgba($color-text, .7);
-        text-decoration: underline;
-        font-size: 1.4rem;
-        font-family: "Roboto", sans-serif;
-        padding: .5rem 1.5rem;
-        &:focus {outline: none;}
     }
 }
 .progress {
@@ -92,6 +78,7 @@
     align-items: center;
     width: 100%;
     position: relative;
+
     &__svg {
         fill: $color-text;
         height: 3rem; width: 3rem;

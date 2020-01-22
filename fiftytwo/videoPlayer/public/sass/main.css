@@ -18,10 +18,21 @@ body {
   color: #353232;
   background: #FBF4F4;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100vh;
 }
 
 .grid {
-  width: 100%;
+  width: 37.5rem;
   display: -ms-grid;
   display: grid;
       grid-template-areas: "video_container" "progress_container" "buttons_container" "volume_container";
@@ -52,25 +63,6 @@ body {
 
 .video__screen {
   width: 100%;
-}
-
-.video__dropdown {
-  margin: 0 1rem 2rem 1rem;
-  width: calc(100% - 2rem);
-  background-color: #FBF4F4;
-  border: 3px solid #FBF4F4;
-  -webkit-box-shadow: -5px -5px 16px rgba(255, 255, 255, 0.5), 5px 5px 16px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-          box-shadow: -5px -5px 16px rgba(255, 255, 255, 0.5), 5px 5px 16px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 1.5rem;
-  color: rgba(53, 50, 50, 0.7);
-  text-decoration: underline;
-  font-size: 1.4rem;
-  font-family: "Roboto", sans-serif;
-  padding: .5rem 1.5rem;
-}
-
-.video__dropdown:focus {
-  outline: none;
 }
 
 .progress {

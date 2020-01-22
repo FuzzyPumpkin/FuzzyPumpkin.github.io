@@ -20,12 +20,14 @@ video.addEventListener("click",togglePlay);
 video.addEventListener("loadedmetadata",updMaxDuration);
 video.addEventListener("timeupdate",updProgressBar);
 progress.addEventListener("click", function(e){
-    let pos = (e.pageX  - this.offsetLeft) / this.offsetWidth;
-    video.currentTime = pos * video.duration;
+    let posStart = ((window.innerWidth - 375) / 2) + 20;
+    let clickPoint = (e.pageX - posStart) / this.offsetWidth;
+    video.currentTime = clickPoint * video.duration;
 });
 volumeBar.addEventListener("click", function(e){
-    let pos = (e.pageX - this.offsetLeft)/this.offsetWidth;
-    pos <= 0.02 ? video.volume = 0 : video.volume = pos;
+    let posStart = ((window.innerWidth - 375) / 2) + 20;
+    let clickPoint = (e.pageX - posStart) / this.offsetWidth;
+    clickPoint <= 0.02 ? video.volume = 0 : video.volume = clickPoint;
     if(video.volume === 0 && volumeIconMute.classList.contains("volume__svg--hidden")){
         volumeIconMute.classList.remove("volume__svg--hidden");
         volumeIconAudible.classList.add("volume__svg--hidden");
