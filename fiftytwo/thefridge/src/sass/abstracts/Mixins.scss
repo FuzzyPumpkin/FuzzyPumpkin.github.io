@@ -1,0 +1,19 @@
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin shadow {
+    box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.8);
+}
+@mixin film {
+    background: linear-gradient(223.41deg, rgba(255, 255, 255, 0.5) 35.77%, rgba(255, 255, 255, 0) 96%);
+}
