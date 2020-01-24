@@ -14,5 +14,6 @@ body {
     background-color: $color-white;
     position: relative;
     height: 100vh;
+    @include flex-row;
+    justify-content: center;
 }
-
