@@ -6,16 +6,7 @@
     margin-top: 3rem;
     position: relative;
     padding: 3rem 5.5rem 0 5.5rem;
-    &::after {
-        content: "";
-        position: absolute;
-        top: 0; right: 0;
-        width: 100%; height: 100%;
-        background-color: $color-blue;
-        z-index: -1;
-        // holding until images uploaded as svg backgrounds in css can't be local
-        // background-image: url(.../images/symbol-defs.svg#icon-fridgeTop);
-    }
+    background-color: $color-blue;
 }
 .Board {
     height: 80%;
@@ -56,5 +47,26 @@
         z-index: 2;
         position: relative;
         width: 14rem;
+    }
+}
+.EmojiMagnet, .WordMagnet {
+    @include center;
+    @include shadow;
+    padding: 2rem;
+    font-family: "Special Elite", sans-serif;
+    background-color: $color-white;
+}
+
+.WordMagnet {
+    display: inline-block;
+}
+
+.EmojiMagnet {
+    @include flex-row;
+    border-radius: 50%;
+    height: 9.5rem; width: 9.5rem;
+
+    &__icon {
+        width: 6.5rem; height: 6.5rem;
     }
 }
