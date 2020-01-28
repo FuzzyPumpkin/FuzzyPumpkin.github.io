@@ -6,47 +6,60 @@
     margin-top: 3rem;
     position: relative;
     padding: 3rem 5.5rem 0 5.5rem;
-    background-color: $color-blue;
+    background-image: url(https://fuzzypumpkin.github.io/fiftytwo/thefridge/public/images/fridgeTop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .Board {
     height: 80%;
+    width: 100%;
+    padding: 5rem 10rem;
 }
-.attribution {
-    color: rgba($color-black, .5);
-    font-size: 1.2rem;
-    & a {
-        color: rgba($color-black, .75);
-        text-decoration: none;
-        &:hover {
-            color: rgba($color-white, .75);
+
+.controls {
+    @include flex-column;
+    width: 100%;
+
+    &__attribution {
+        text-align: center;
+        color: rgba($color-black, .5);
+        font-size: 1.2rem;
+        & a {
+            color: rgba($color-black, .75);
+            text-decoration: none;
+            &:hover {
+                color: rgba($color-white, .75);
+            }
         }
     }
-}
-.controls {
-    @include flex-row;
-    overflow: visible;
-    justify-content: flex-end;
     &__button {
+        margin-top: -6rem;
         margin-left: 5.5rem;
         color: $color-blue;
         font-family: "Maven Pro", sans-serif;
         font-weight: 400;
         font-size: 3rem;
         border: none;
-        background: transparent;
         position: relative;
         @include flex-row;
         @include center;
+        background-color: transparent;
     }
     &__buttonSvg {
         width: 18.5rem; height: 21rem;
         position: absolute;
-        top: -.7rem; right: -2.1rem;
+        top: 1.9rem; right: -2.1rem;
     }
     &__buttonText {
         z-index: 2;
         position: relative;
         width: 14rem;
+    }
+    &__row {
+        width: 100%;
+        @include flex-row;
+        overflow: visible;
+        justify-content: center;
     }
 }
 .EmojiMagnet, .WordMagnet {
