@@ -19,6 +19,12 @@
         @include shadow;
         background: $color-white;
         padding: 3rem;
+        @include respond(smDesktop){
+            width: 60%;
+        }
+        @include respond(smDesktop){
+            width: 40%;
+        }
     }
     &__deleteAll {
         border: none;
@@ -31,6 +37,12 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        @include respond(smDesktop){
+            width: 60%;
+        }
+        @include respond(smDesktop){
+            width: 40%;
+        }
     }
     &__item {
         display: flex;
@@ -52,6 +64,9 @@
         &--date {
             margin-left: auto;
             font-size: 1rem;
+            @include respond(smDesktop){
+                margin-right: 2rem;
+            }
         }
     }
     &__button {
@@ -87,6 +102,9 @@
             z-index: 2;
             &--add {
                 z-index: 3;
+                @include flex-row;
+                align-items: center;
+                justify-content: center;
             }
         }
         &-datetext {

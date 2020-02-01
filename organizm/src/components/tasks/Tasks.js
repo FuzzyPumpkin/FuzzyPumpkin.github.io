@@ -1,11 +1,10 @@
 import React from 'react';
 import TasksAdd from "./TasksAdd";
-import TasksSearch from "./TasksSearch";
 import useTaskState from '../../hooks/useTaskState';
 
 export default function Tasks(props) {
     const initialTasks = [{id: 1, task: "Use the form above to add tasks", completed: false}];
-    const {tasks, addTask, removeTask, toggleTask, alphaSortTasks} = useTaskState(initialTasks);
+    const {tasks, addTask, removeTask, toggleTask, deleteComplete} = useTaskState(initialTasks);
     
 
     return (
@@ -30,14 +29,13 @@ export default function Tasks(props) {
                     ))}
                     </ul>
                 </div>
-                <button className="tasks__deleteAll">
+                <button className="tasks__deleteAll" type="button" onClick={() => deleteComplete()}>
                     <svg className="tasks__button-icon tasks__button-icon--trash">
 		                <use xlinkHref="./images/symbol-defs.svg#icon-trashcan"></use>
 	                </svg>
                     Delete Completed
                 </button>
             </div>
-            <TasksSearch alphaSortTasks={alphaSortTasks}/>
         </div>
     )
 }

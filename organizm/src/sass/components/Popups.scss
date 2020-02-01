@@ -4,12 +4,21 @@
         background: transparent;
         border: none;
         &--save {margin-left: auto;}
+        &--close {
+            margin-left: 2rem;
+            font-size: 2.7rem;
+        }
     }
     &__container{
-        width: 60%; height: 30%;
+        width: 60%; 
+        padding: 1rem;
         background-color: $color-white;
         @include flex-column;
         @include shadow;
+        @include respond(smDesktop){
+            width: 30%;
+            padding: 2rem;
+        }
     }
     &__chosen {
         @include flex-row;
@@ -69,6 +78,9 @@
         position: relative;
         padding: 4rem;
         align-items: center;
+        @include respond(smDesktop){
+            width: 50%;
+        }
     }
     &__close {
         background: transparent;

@@ -47,7 +47,7 @@ export default function TasksAdd(props) {
                     </svg>
                 </button>
             </form>
-            {showDatePicker && <DatePicker updTaskDate={updTaskDate} />}
+            {showDatePicker && <DatePicker updTaskDate={updTaskDate} showPicker={setShowDatePicker} />}
             <p className="tasks__form-datetext">{formattedDate}</p>
         </div>
     )

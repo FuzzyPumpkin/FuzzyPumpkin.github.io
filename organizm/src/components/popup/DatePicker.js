@@ -70,6 +70,10 @@ export default function DatePicker(props) {
                             <use xlinkHref="./images/symbol-defs.svg#icon-save"></use>
                         </svg>
                     </button>
+                    <button type="button" 
+                        className="datepicker__button datepicker__button--close" 
+                        aria-label="Close Date Picker" 
+                        onClick={() => props.showPicker(false)}>X</button>
                 </p>
                 <div className="datepicker__calendar">
                     <div className="datepicker__month">
