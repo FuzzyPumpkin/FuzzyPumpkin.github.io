@@ -42,8 +42,9 @@ export default function DatePicker(props) {
 
     const calendarDates = () => {
         let dates = [];
-        for( let i = 1; i <= monthNames[chosenDate.month - 1].days; i++){
-        dates.push(i);
+        let numDays = chosenDate.month === 2 && chosenDate.year % 4 === 0 ? 29 : monthNames[chosenDate.month - 1].days;
+        for( let i = 1; i <= numDays; i++){
+            dates.push(i);
         }
         return dates;
     }
