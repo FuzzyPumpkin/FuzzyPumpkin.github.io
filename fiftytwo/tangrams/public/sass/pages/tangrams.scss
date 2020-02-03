@@ -1,0 +1,20 @@
+.background {
+    &__bubble {
+        background-color: rgba($color-lightBlue, .3);
+        border-radius: 50%;
+        position: absolute;
+
+        &--one {
+            width: 39rem; height: 39rem;
+            top: -5rem; right: -16rem;
+        }
+        &--two {
+            width: 28.5rem; height: 28.5rem;
+            bottom: -7rem; left: -10rem;
+        }
+    }
+}
+.container {
+    @include flex-column;
+    width: 100; height: 100%;
+}

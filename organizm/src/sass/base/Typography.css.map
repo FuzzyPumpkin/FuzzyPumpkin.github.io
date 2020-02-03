@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,EAAE,CAAC;EACC,WAAW,EAAE,mCAAmC;EAChD,SAAS,EAAE,MAAM;CACpB",
-    "sources": [
-        "Typography.scss"
-    ],
-    "names": [],
-    "file": "Typography.css"
-}

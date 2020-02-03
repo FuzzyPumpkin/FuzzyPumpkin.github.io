@@ -1,0 +1,18 @@
+{
+  "name": "tangrams",
+  "version": "1.0.0",
+  "description": "A small tangram simulator created by Kari Minger",
+  "main": "scripts.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "node-sass public/sass/main.scss public/style.css -w",
+    "start": "live-server"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "live-server": "^1.2.1",
+    "node-sass": "^4.13.0"
+  },
+  "devDependencies": {}
+}

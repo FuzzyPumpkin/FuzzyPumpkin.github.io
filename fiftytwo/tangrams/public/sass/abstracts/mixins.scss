@@ -1,0 +1,36 @@
+@mixin respond($breakpoint){
+    @if $breakpoint == landscapePhone {
+        @media (min-width: 781px){@content};
+    }
+    @if $breakpoint == desktop {
+        @media (min-width: 1270px){@content};
+    }
+    @if $breakpoint == lgDesktop {
+        @media (min-width: 1400px){@content};
+    }
+    @if $breakpoint == wideScreen {
+        @media (min-width: 1600px){@content};
+    }
+}
+
+
+@mixin flex-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+@mixin shadow {
+    box-shadow: .4rem .4rem .2rem rgba(0, 0, 0, 0.5);
+}
+@mixin border {
+    border: .6rem solid $color-black;
+}
+@mixin thinBorder {
+    border: .2rem solid $color-black;
+}
