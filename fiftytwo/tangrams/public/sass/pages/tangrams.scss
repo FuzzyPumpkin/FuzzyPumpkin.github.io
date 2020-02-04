@@ -14,7 +14,22 @@
         }
     }
 }
+.board {
+    @include border;
+    height: 37rem; //temp
+    width: 100%;
+    margin-bottom: 2rem;
+    background-color: $color-white;
+}
 .container {
     @include flex-column;
     width: 100; height: 100%;
+    padding: 2rem;
+    z-index: 2;
+    position: relative;
+
+    &__inner {
+        @include flex-column;
+        width: 100%;
+    }
 }

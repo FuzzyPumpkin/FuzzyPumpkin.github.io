@@ -1,0 +1,29 @@
+.buttons {
+    @include border;
+    @include flex-column;
+    padding: 2rem;
+    background-color: $color-white;
+
+    width: 100%;
+    &__button {
+        @include border;
+        @include shadow;
+        width: calc(50% - 1rem);
+        height: 4rem;
+        text-align: center;
+        background-color: transparent;
+        font-weight: 800;
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.8rem;
+
+        &--wide {
+            width: 100%;
+            margin-top: 2rem;
+        }
+    }
+    &__container {
+        @include flex-row;
+        justify-content: space-between;
+        width: 100%;
+    }
+}

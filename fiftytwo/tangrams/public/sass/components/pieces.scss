@@ -1,0 +1,7 @@
+.pieces {
+    @include border;
+    height: 15rem; //temp
+    width: 100%;
+    margin-bottom: 2rem;
+    background-color: $color-white;
+}
