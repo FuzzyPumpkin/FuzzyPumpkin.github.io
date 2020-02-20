@@ -81,13 +81,12 @@
 		</a>
 		<!-- project 3 -->
 		<a href="#projThree" class="projects__card">
-			<img src="images/resourced.jpg" alt="ReSOURCEd screenshot" class="projects__projectImage">
-			<h3 class="projects__card-projectName">ReSOURCEd</h3>
+			<img src="images/organizmIcon.jpg" alt="Organizm screenshot" class="projects__projectImage">
+			<h3 class="projects__card-projectName">Organizm</h3>
 			<ul class="projects__techList">
 				<li class="projects__techItem">React</li>
 				<li class="projects__techItem">JavaScript</li>
-				<li class="projects__techItem">HTML</li>
-				<li class="projects__techItem">CSS</li>
+				<li class="projects__techItem">SASS</li>
 			</ul>
 		</a>
 		<!-- project 4 -->
@@ -166,32 +165,34 @@
 		<div class="projects__popup" id="projThree">
 			<div class="projects__popup-content">
 				<div class="projects__popup-left projects__popup-left--three">
-					<img src="images/resourced.jpg" class="projects__popup-image" alt="reSOURCED screenshot"></img>
-					<a href="https://fuzzypumpkin.github.io/resourced/" target="blank" class="projects__buttonlink--ghlink">
+					<img src="images/organizmIcon.jpg" class="projects__popup-image" alt="Organizm screenshot"></img>
+					<a href="https://organizm.netlify.com/" target="blank" class="projects__buttonlink--ghlink">
 						<button class="projects__projectinfo-livelink">View Live</button>
 					</a>
-					<a href="https://github.com/FuzzyPumpkin/FuzzyPumpkin.github.io/tree/master/resourced" target="blank" class="projects__buttonlink">
+					<a href="https://github.com/FuzzyPumpkin/organizm" target="blank" class="projects__buttonlink">
 						<button class="projects__projectinfo-ghlink">View on Github</button>
 					</a>
 				</div>
 				<div class="projects__popup-right">
 					<a href="#projects" class="projects__popup-close">&times;</a>
-					<h2 class="projects__popup-title">reSOURCEd</h2>
+					<h2 class="projects__popup-title">Organizm</h2>
 					<article class="projects__popup-blurb">
-						<p class="projects__popup-paragraph">This is a site created to track resources I have found helpful in my journey. It includes courses I 
-							have taken as well as tools and lexicons I regularly refer to. While my main reason for creating the project was to gain more practice in 
-							using React, specifically routing in React, it also was to address the fact that I use three computers to learn and code on, as well as 
-							multiple browsers on those computers, and my repository of useful links were scattered throughout those browsers. This site keeps all of my 
-							links together and accessible from anywhere.</p>
+						<p class="projects__popup-paragraph">version 1 of ?-- This is a massive undertaking, a life-organization app that handles tasks, calendar, menu-planning, 
+							travel-planning, and completely customizable goal and symptom tracking. It will include some reporting functions.</p>
 				
-						<p class="projects__popup-paragraph">Content is managed through a JSON. The navigation bar and routes automatically update when new tags are used in the JSON, managed 
-							through state.</p>
+						<p class="projects__popup-paragraph">As of version 1, Organizm is a tasks list app with a bit extra added. It also includes a custom date picker so that a 
+							goal date can be added to a task. In later versions of the app, these dates will be used to sort tasks and to populate a calendar component. Data currently 
+							is saved to local storage. </p>
+						<p class="projects__popup-paragraph">
+							The name, Organizm, is an amalgam of "organize" and "organism". It will grow in breadth and complexity with future versions. Because of this, it needs a 
+							scalable architecture both in style and function. I used Sass to structure the CSS and BEM nomenclature as BEM/Sass/React are natural symbiots. I chose to use 
+							functional React components instead of class for a couple reasons: one, it's the trend. Two, hooks and context allow state to be shared and 
+							manipulated by multiple components while keeping the code structure cleaner, making it easier to scale.</p>
 					</article>
 					<ul class="projects__popup-list">
 						<li class="projects__techItem">React</li>
 						<li class="projects__techItem">JavaScript</li>
-						<li class="projects__techItem">CSS</li>
-						<li class="projects__techItem">HTML</li>
+						<li class="projects__techItem">SASS</li>
 					</ul>			
 				</div>
 			</div>
@@ -244,8 +245,15 @@
 				<li class="projects__info-listitem">
 					<span class="projects__info-projectname">Organizm</span>
 						- a massive React app using hooks and context focused on life organization
-					with many customization options. Project managed using Agile methodology with a scrum framework
-					and weekly sprints, as well as version control as new features are released.
+					with many customization options. 
+				</li>
+				<li class="projects__info-listitem">
+					<span class="projects__info-projectname">DailyUI</span>
+						- a 100 day challenge of creating a UI design each day.
+				</li>
+				<li class="projects__info-listitem">
+					<span class="projects__info-projectname">Practicum by Yandex</span>
+						- beta-testing a professional development program for those learning web development.
 				</li>
 			</ul>
 		<a href="https://github.com/FuzzyPumpkin" target="blank" class="projects__buttonlink">
