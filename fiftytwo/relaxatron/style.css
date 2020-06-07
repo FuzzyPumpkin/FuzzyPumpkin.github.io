@@ -9,42 +9,76 @@ body {
     min-height: 100vh;
     overflow: hidden;
     flex-direction: column;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.background--blankets {
+    background-image: url(images/blankets.jpg);
+}
+.background--chocolate {
+    background-image: url(images/chocolate.jpg);
+}
+.background--kitty {
+    background-image: url(images/kitty.jpg);
+}
+.background--laugh {
+    background-image: url(images/laugh.jpg);
+}
+.background--puppy {
+    background-image: url(images/puppy.jpg);
+}
+.background--rainbow {
+    background-image: url(images/rainbow.jpg);
+}
+.backgroundMask {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background-color: white;
+    opacity: 1;
+    animation: whiteWash 12.0s linear forwards infinite;
 }
 .center {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.container {
+.circle__container {
     height: 300px;
     width: 300px;
     position: relative;
     transform: scale(1);
 }
-.container.grow {
+.circle__container.grow {
     animation: grow 4s linear forwards;
 }
-.container.shrink {
+.circle__container.shrink {
     animation: shrink 4s linear forwards;
 }
-.gradient-circle {
-    /* Does not work, look for alternative (radial gradient?) */
-    /* background: conic-gradient(
-        #55b7a4 0%, #4ca493 33.33%, 
-        black 33.33%, black 50%,
-        #336d62 50%, #2a5b52 83.33%
-        black 83.33%, black 100%); */
-    background-color: blue;
-        
+.circle__border {
+    position: absolute;
+    top: -10px;
+    overflow: hidden;
+}
+.circle__border--breath {
+    background-color: blue; 
     height: 320px;
     width: 320px;
-    top: -10px;
     left: -10px;
-    z-index: -2;
+    z-index: -3;
     border-radius: 50%;
-    position: absolute;
 }
-.circle {
+.circle__border--hold {
+    background-color: red;
+    z-index: -2;
+    height: 340px;
+    width: 160px;
+    left: 85px;
+    transform: rotate(-30deg);
+}
+.circle__center {
     background-color: white;
     height: 100%;
     width: 100%;
@@ -53,7 +87,7 @@ body {
     z-index: -1;
     border-radius: 50%;
 }
-.pointer-container {
+.circle__pointer--container {
     position: absolute;
     top: -40px;
     left: 140px;
@@ -62,11 +96,15 @@ body {
     animation: rotatePointer 12.0s linear forwards infinite;
     transform-origin: bottom center;
 }
-.pointer {
+.circle__pointer {
     background-color: black;
     border-radius: 50%;
     height: 20px;
     width: 20px;
+}
+.visualization {
+    margin-top: 100px;
+    flex-direction: column;
 }
 
 @keyframes rotatePointer {
@@ -76,6 +114,12 @@ body {
     to {
         transform: rotate(360deg)
     }
+}
+@keyframes whiteWash {
+    0% {opacity: 1;}
+    5% {opacity: .5;}
+    98% {opacity: .5;}
+    100% {opacity: 1;}
 }
 @keyframes grow {
     from {
