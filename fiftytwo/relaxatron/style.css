@@ -41,24 +41,13 @@ body {
     z-index: -1;
     background-color: white;
     opacity: 1;
-    animation: whiteWash 12.0s linear forwards infinite;
+    -webkit-animation: whiteWash 12.0s linear forwards infinite;
+            animation: whiteWash 12.0s linear forwards infinite;
 }
 .center {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-.circle__container {
-    height: 300px;
-    width: 300px;
-    position: relative;
-    transform: scale(1);
-}
-.circle__container.grow {
-    animation: grow 4s linear forwards;
-}
-.circle__container.shrink {
-    animation: shrink 4s linear forwards;
 }
 .circle__border {
     position: absolute;
@@ -90,20 +79,35 @@ body {
     z-index: -1;
     border-radius: 50%;
 }
-.circle__pointer--container {
-    position: absolute;
-    top: -40px;
-    left: 140px;
-    width: 20px;
-    height: 190px;
-    animation: rotatePointer 12.0s linear forwards infinite;
-    transform-origin: bottom center;
+.circle__container {
+    height: 300px;
+    width: 300px;
+    position: relative;
+    transform: scale(1);
+}
+.circle__container.grow {
+    -webkit-animation: grow 4s linear forwards;
+            animation: grow 4s linear forwards;
+}
+.circle__container.shrink {
+    -webkit-animation: shrink 4s linear forwards;
+            animation: shrink 4s linear forwards;
 }
 .circle__pointer {
     background-color: #452A24;
     border-radius: 50%;
     height: 20px;
     width: 20px;
+}
+.circle__pointer--container {
+    position: absolute;
+    top: -40px;
+    left: 140px;
+    width: 20px;
+    height: 190px;
+    -webkit-animation: rotatePointer 12.0s linear forwards infinite;
+            animation: rotatePointer 12.0s linear forwards infinite;
+    transform-origin: bottom center;
 }
 .circle__text {
     font-size: 40px;
@@ -119,6 +123,44 @@ body {
 .visualization__text {
     font-size: 52px;
 }
+@-webkit-keyframes grow {
+    from {
+        transform: scale(1)
+    }
+    to {
+        transform: scale(1.2)
+    }
+}
+@keyframes grow {
+    from {
+        transform: scale(1)
+    }
+    to {
+        transform: scale(1.2)
+    }
+}
+@-webkit-keyframes whiteWash {
+    0% {opacity: 1;}
+    5% {opacity: .5;}
+    98% {opacity: .5;}
+    100% {opacity: 1;}
+}
+@keyframes whiteWash {
+    0% {opacity: 1;}
+    5% {opacity: .5;}
+    98% {opacity: .5;}
+    100% {opacity: 1;}
+}
+
+@-webkit-keyframes rotatePointer {
+    from {
+        transform: rotate(0deg)
+    }
+    to {
+        transform: rotate(360deg)
+    }
+}
+
 @keyframes rotatePointer {
     from {
         transform: rotate(0deg)
@@ -127,18 +169,12 @@ body {
         transform: rotate(360deg)
     }
 }
-@keyframes whiteWash {
-    0% {opacity: 1;}
-    5% {opacity: .5;}
-    98% {opacity: .5;}
-    100% {opacity: 1;}
-}
-@keyframes grow {
+@-webkit-keyframes shrink {
     from {
-        transform: scale(1)
+        transform: scale(1.2)
     }
     to {
-        transform: scale(1.2)
+        transform: scale(1)
     }
 }
 @keyframes shrink {

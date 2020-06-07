@@ -1,10 +1,12 @@
 const container = document.querySelector('.circle__container');
 const text = document.querySelector('.circle__text');
-const visualizationText = document.querySelector('.visualization__text');
 const visualizationBg = document.querySelector('body');
+const visualizationText = document.querySelector('.visualization__text');
+
 const totalTime = 12000;
 const breatheTime = (totalTime / 3);
 const holdTime = totalTime / 6;
+
 let visualizationNumber = 1;
 
 breatheAnimation();
@@ -12,6 +14,7 @@ breatheAnimation();
 function breatheAnimation(){
     text.innerHTML = "Breathe In";
     container.className = "circle__container center grow";
+    //handle visualization change//
     if(visualizationNumber === 1){
         visualizationText.innerText = "Puppies";
         visualizationBg.className = "center background--puppy";
