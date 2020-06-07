@@ -1,0 +1,95 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    min-height: 100vh;
+    overflow: hidden;
+    flex-direction: column;
+}
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container {
+    height: 300px;
+    width: 300px;
+    position: relative;
+    transform: scale(1);
+}
+.container.grow {
+    animation: grow 4s linear forwards;
+}
+.container.shrink {
+    animation: shrink 4s linear forwards;
+}
+.gradient-circle {
+    /* Does not work, look for alternative (radial gradient?) */
+    /* background: conic-gradient(
+        #55b7a4 0%, #4ca493 33.33%, 
+        black 33.33%, black 50%,
+        #336d62 50%, #2a5b52 83.33%
+        black 83.33%, black 100%); */
+    background-color: blue;
+        
+    height: 320px;
+    width: 320px;
+    top: -10px;
+    left: -10px;
+    z-index: -2;
+    border-radius: 50%;
+    position: absolute;
+}
+.circle {
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0; left: 0;
+    z-index: -1;
+    border-radius: 50%;
+}
+.pointer-container {
+    position: absolute;
+    top: -40px;
+    left: 140px;
+    width: 20px;
+    height: 190px;
+    animation: rotatePointer 12.0s linear forwards infinite;
+    transform-origin: bottom center;
+}
+.pointer {
+    background-color: black;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+}
+
+@keyframes rotatePointer {
+    from {
+        transform: rotate(0deg)
+    }
+    to {
+        transform: rotate(360deg)
+    }
+}
+@keyframes grow {
+    from {
+        transform: scale(1)
+    }
+    to {
+        transform: scale(1.2)
+    }
+}
+@keyframes shrink {
+    from {
+        transform: scale(1.2)
+    }
+    to {
+        transform: scale(1)
+    }
+}
