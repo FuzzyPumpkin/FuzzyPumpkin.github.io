@@ -12,6 +12,9 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    color: #452A24;
+    font-family: Poppins, sans-serif;
+    font-weight: 300;
 }
 .background--blankets {
     background-image: url(images/blankets.jpg);
@@ -63,7 +66,7 @@ body {
     overflow: hidden;
 }
 .circle__border--breath {
-    background-color: blue; 
+    background-color: #37D5BB; 
     height: 320px;
     width: 320px;
     left: -10px;
@@ -71,7 +74,7 @@ body {
     border-radius: 50%;
 }
 .circle__border--hold {
-    background-color: red;
+    background-color: #AC405C;
     z-index: -2;
     height: 340px;
     width: 160px;
@@ -79,7 +82,7 @@ body {
     transform: rotate(-30deg);
 }
 .circle__center {
-    background-color: white;
+    background-color: #F4F7F7;
     height: 100%;
     width: 100%;
     position: absolute;
@@ -97,16 +100,25 @@ body {
     transform-origin: bottom center;
 }
 .circle__pointer {
-    background-color: black;
+    background-color: #452A24;
     border-radius: 50%;
     height: 20px;
     width: 20px;
+}
+.circle__text {
+    font-size: 40px;
 }
 .visualization {
     margin-top: 100px;
     flex-direction: column;
 }
-
+.visualization__headline {
+    font-weight: 600;
+    font-size: 36px;
+}
+.visualization__text {
+    font-size: 52px;
+}
 @keyframes rotatePointer {
     from {
         transform: rotate(0deg)

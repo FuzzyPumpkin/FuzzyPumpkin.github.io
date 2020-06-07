@@ -38,12 +38,12 @@ function breatheAnimation(){
         }
     visualizationNumber++;
     setTimeout(()=> {
-        text.innerText = "Hold 1";
+        text.innerText = "Hold";
         setTimeout(()=> {
             text.innerText = "Breathe Out";
             container.className = "circle__container center shrink";
             setTimeout(()=> {
-                text.innerText = "Hold 2";
+                text.innerText = "Hold";
             }, breatheTime)
         }, holdTime)
     }, breatheTime)
