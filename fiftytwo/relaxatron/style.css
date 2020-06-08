@@ -5,6 +5,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+html {
+    font-size: 62.5%;
+}
 body {
     min-height: 100vh;
     overflow: hidden;
@@ -56,18 +59,18 @@ body {
 }
 .circle__border--breath {
     background-color: #37D5BB; 
-    height: 320px;
-    width: 320px;
-    left: -10px;
+    height: 32rem;
+    width: 32rem;
+    left: -1rem;
     z-index: -3;
     border-radius: 50%;
 }
 .circle__border--hold {
     background-color: #AC405C;
     z-index: -2;
-    height: 340px;
-    width: 160px;
-    left: 85px;
+    height: 34rem;
+    width: 16rem;
+    left: 8.5rem;
     transform: rotate(-30deg);
 }
 .circle__center {
@@ -80,8 +83,8 @@ body {
     border-radius: 50%;
 }
 .circle__container {
-    height: 300px;
-    width: 300px;
+    height: 30rem;
+    width: 30rem;
     position: relative;
     transform: scale(1);
 }
@@ -96,32 +99,32 @@ body {
 .circle__pointer {
     background-color: #452A24;
     border-radius: 50%;
-    height: 20px;
-    width: 20px;
+    height: 2rem;
+    width: 2rem;
 }
 .circle__pointer--container {
     position: absolute;
-    top: -40px;
-    left: 140px;
-    width: 20px;
-    height: 190px;
+    top: -4rem;
+    left: 14rem;
+    width: 2rem;
+    height: 19rem;
     -webkit-animation: rotatePointer 12.0s linear forwards infinite;
             animation: rotatePointer 12.0s linear forwards infinite;
     transform-origin: bottom center;
 }
 .circle__text {
-    font-size: 40px;
+    font-size: 4rem;
 }
 .visualization {
-    margin-top: 100px;
+    margin-top: 10rem;
     flex-direction: column;
 }
 .visualization__headline {
     font-weight: 600;
-    font-size: 36px;
+    font-size: 3.6rem;
 }
 .visualization__text {
-    font-size: 52px;
+    font-size: 5.2rem;
 }
 @-webkit-keyframes grow {
     from {
@@ -184,4 +187,10 @@ body {
     to {
         transform: scale(1)
     }
+}
+
+
+/* mobile tweaks */
+@media screen and (max-width: 420px){
+    html {font-size: 45%;}
 }
