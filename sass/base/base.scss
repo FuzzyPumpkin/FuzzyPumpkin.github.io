@@ -8,30 +8,13 @@
 // font size equiv to 10px, but allows for accessibility devices to change font size
 html {
     font-size: 62.5%;
-    @include respond(lowres){
-        font-size: 58%;
-    }
-    @include respond(phone){
-        font-size: 40%;
-    }
-    @media print {
-        font-size: 50%;
-    }
 }
 body {
     font-family: "Raleway", sans-serif;
     font-weight: 400;
-    font-size: 1.5rem;
     color: $color-text;
-    background: white;
     position: relative;
 }
-button {
-    @include respond(phone){
-        font-size: 1.5rem;
-    }
-}
-
 // background image
 .bgpattern {
     position: fixed;

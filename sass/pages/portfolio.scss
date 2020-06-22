@@ -2,7 +2,8 @@
     position: relative;
     right: 0; top: 0;
     width: 100%;
-    background-color: $color-background-accent;
-    font-size: 1.8rem;
+    height: 100vh;
+    background-color: $color-background;
     overflow: hidden;
+    @include flex-row;
 }

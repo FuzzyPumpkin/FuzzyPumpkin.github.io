@@ -1,0 +1,183 @@
+h1 {
+  font-family: "Maven Pro", sans-serif;
+  font-weight: 900;
+  font-size: 12rem;
+  color: #F2FDFF;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Special Elite", sans-serif;
+  font-weight: 400;
+  font-size: 3.6rem;
+  color: #000000;
+  background-color: white;
+  position: relative;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.App {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 110rem;
+  height: calc(100% - 3rem);
+  margin-top: 3rem;
+  position: relative;
+  padding: 3rem 5.5rem 0 5.5rem;
+  background-image: url(https://fuzzypumpkin.github.io/fiftytwo/thefridge/public/images/fridgeTop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.Board {
+  height: 80%;
+  width: 100%;
+  padding: 5rem 10rem;
+}
+
+.controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.controls__attribution {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 1.2rem;
+}
+
+.controls__attribution a {
+  color: rgba(0, 0, 0, 0.75);
+  text-decoration: none;
+}
+
+.controls__attribution a:hover {
+  color: rgba(242, 253, 255, 0.75);
+}
+
+.controls__button {
+  margin-top: -6rem;
+  margin-left: 5.5rem;
+  color: #24ACDE;
+  font-family: "Maven Pro", sans-serif;
+  font-weight: 400;
+  font-size: 3rem;
+  border: none;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: transparent;
+}
+
+.controls__buttonSvg {
+  width: 18.5rem;
+  height: 21rem;
+  position: absolute;
+  top: 1.9rem;
+  right: -2.1rem;
+}
+
+.controls__buttonText {
+  z-index: 2;
+  position: relative;
+  width: 14rem;
+}
+
+.controls__row {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  overflow: visible;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.EmojiMagnet, .WordMagnet {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.8);
+          box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.8);
+  padding: 2rem;
+  font-family: "Special Elite", sans-serif;
+  background-color: #F2FDFF;
+}
+
+.WordMagnet {
+  display: inline-block;
+}
+
+.EmojiMagnet {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border-radius: 50%;
+  height: 9.5rem;
+  width: 9.5rem;
+}
+
+.EmojiMagnet__icon {
+  width: 6.5rem;
+  height: 6.5rem;
+}
+/*# sourceMappingURL=App.css.map */
