@@ -1,11 +1,9 @@
 <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <defs>
 <!-- computer -->
-<symbol id="icon-computer" viewBox="0 0 80 65">
+<symbol id="icon-computer" viewBox="0 0 79 71">
 <title>computer</title>
-<rect x="12.1803" y="3" width="53.0164" height="30.0656" rx="7" stroke="#3B3A39" stroke-opacity="0.1" stroke-width="6"/>
-<path d="M9.82203 43.9431C10.7463 41.0383 13.4442 39.0656 16.4925 39.0656H61.4832C64.3256 39.0656 66.8858 40.7843 67.962 43.4151L71.5835 52.2676C73.4674 56.8728 70.0803 61.918 65.1047 61.918H13.6758C8.93818 61.918 5.56887 57.3102 7.00533 52.7956L9.82203 43.9431Z" stroke="#3B3A39" stroke-opacity="0.1" stroke-width="6"/>
-<line x1="25.5738" y1="54.0492" x2="51.8033" y2="54.0492" stroke="#3B3A39" stroke-opacity="0.1" stroke-width="6"/>
+<path d="M25.5738 57.0492H51.8033M9.18031 13C9.18031 7.47716 13.6575 3 19.1803 3H58.1967C63.7195 3 68.1967 7.47715 68.1967 13V29.0656C68.1967 34.5884 63.7196 39.0656 58.1967 39.0656H19.1803C13.6575 39.0656 9.18031 34.5884 9.18031 29.0656V13ZM6.96324 46.0335C8.28362 41.8838 12.1377 39.0656 16.4925 39.0656H61.4832C65.5438 39.0656 69.2012 41.521 70.7387 45.2792L74.3601 54.1317C77.0515 60.7105 72.2127 67.918 65.1047 67.918H13.6758C6.90775 67.918 2.09445 61.3355 4.14654 54.886L6.96324 46.0335Z" stroke="#3B3A39" stroke-opacity="0.1" stroke-width="6" fill="none"/>
 </symbol>
 <!-- github -->
 <symbol id="icon-github" viewBox="0 0 65 65">
@@ -22,33 +20,28 @@
 <!-- mail -->
 <symbol id="icon-mail" viewBox="0 0 80 65">
 <title>mail</title>
-<rect x="3" y="3" width="74" height="59" rx="7" stroke="#3B3A39" stroke-opacity="0.1" stroke-width="6"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M71.7801 6.41694C72.0332 7.68414 71.6686 9.05023 70.6863 10.0325L42.0325 38.6863C40.4704 40.2484 37.9378 40.2484 36.3757 38.6863L9.3137 11.6243C7.78814 10.0988 7.75246 7.64753 9.20663 6.07867C7.37752 6.44671 5.99998 8.06248 5.99998 10V16.7959L32.133 42.9289C36.0383 46.8342 42.3699 46.8342 46.2752 42.9289L74 15.2041V10C74 8.43038 73.0959 7.07192 71.7801 6.41694ZM5.93524 0.860646C7.17717 0.307467 8.55267 0 9.99998 0H6.79589L5.93524 0.860646ZM70 0C72.6008 0 74.9698 0.992913 76.7485 2.62036C76.2863 1.72454 75.6798 0.883932 74.9289 0.133029L74.7959 0H70Z" fill="#3B3A39" fill-opacity="0.1"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M70 6H10C7.79086 6 6 7.79086 6 10V55C6 57.2091 7.79086 59 10 59H70C72.2091 59 74 57.2091 74 55V10C74 7.79086 72.2091 6 70 6ZM10 0C4.47715 0 0 4.47715 0 10V55C0 60.5228 4.47715 65 10 65H70C75.5229 65 80 60.5228 80 55V10C80 4.47715 75.5229 0 70 0H10Z" fill="#3B3A39" fill-opacity="0.1"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M71.7801 6.41694C72.0332 7.68414 71.6686 9.05023 70.6863 10.0325L42.0325 38.6863C40.4704 40.2484 37.9378 40.2484 36.3757 38.6863L9.31373 11.6243C7.78817 10.0988 7.75249 7.64753 9.20666 6.07867C7.37755 6.44671 6 8.06248 6 10V16.7959L32.133 42.9289C36.0383 46.8342 42.3699 46.8342 46.2752 42.9289L74 15.2041V10C74 8.43038 73.0959 7.07192 71.7801 6.41694ZM5.93527 0.860646C7.17719 0.307467 8.55269 0 10 0H6.79591L5.93527 0.860646ZM70 0C72.6009 0 74.9698 0.992913 76.7485 2.62036C76.2864 1.72454 75.6798 0.883932 74.9289 0.133029L74.7959 0H70Z" fill="#3B3A39" fill-opacity="0.1"/>
 </symbol>
 <!-- mouse -->
 <symbol id="icon-mouse" viewBox="0 0 200 352">
 <title>mouse</title>
-<rect x="7" y="7" width="186" height="338" rx="83" stroke="#3B3A39" stroke-width="14"/>
-<line x1="186.012" y1="130" x2="13" y2="130" stroke="#3B3A39" stroke-width="14"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M108 35V2H94V35H108ZM108 105H94V123H108V105Z" fill="#3B3A39"/>
-<rect x="89" y="31" width="23" height="74" rx="11.5" fill="#37E994" stroke="#3B3A39" stroke-width="14"/>
+
 </symbol>
 <!-- mouseSmall -->
 <symbol id="icon-mouseSmall" viewBox="0 0 195 111">
 <title>mouseSmall</title>
-<rect x="191" y="4" width="102.795" height="187" rx="46" transform="rotate(90 191 4)" stroke="#3B3A39" stroke-width="8"/>
-<line x1="122.861" y1="103.046" x2="122.861" y2="7.20167" stroke="#3B3A39" stroke-width="8"/>
-<rect x="177.75" y="49" width="12.4972" height="40.75" rx="6.24858" transform="rotate(90 177.75 49)" fill="#37E994" stroke="#3B3A39" stroke-width="8"/>
+
 </symbol>
 <!-- paper -->
 <symbol id="icon-paper" viewBox="0 0 50 65">
 <title>paper</title>
-<rect x="3" y="3" width="44" height="59" rx="7" stroke="#3B3A39" stroke-opacity="0.1" stroke-width="6"/>
-<line x1="12" y1="50" x2="37" y2="50" stroke="#3B3A39" stroke-opacity="0.1" stroke-width="2"/>
-<line x1="12" y1="41" x2="37" y2="41" stroke="#3B3A39" stroke-opacity="0.1" stroke-width="2"/>
-<line x1="12" y1="32" x2="37" y2="32" stroke="#3B3A39" stroke-opacity="0.1" stroke-width="2"/>
-<line x1="12" y1="23" x2="37" y2="23" stroke="#3B3A39" stroke-opacity="0.1" stroke-width="2"/>
-<line x1="12" y1="14" x2="37" y2="14" stroke="#3B3A39" stroke-opacity="0.1" stroke-width="2"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M40 6H10C7.79086 6 6 7.79086 6 10V55C6 57.2091 7.79086 59 10 59H40C42.2091 59 44 57.2091 44 55V10C44 7.79086 42.2091 6 40 6ZM10 0C4.47715 0 0 4.47715 0 10V55C0 60.5228 4.47715 65 10 65H40C45.5228 65 50 60.5228 50 55V10C50 4.47715 45.5228 0 40 0H10Z" fill="#3B3A39" fill-opacity="0.1"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M37 51H12V49H37V51Z" fill="#3B3A39" fill-opacity="0.1"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M37 42H12V40H37V42Z" fill="#3B3A39" fill-opacity="0.1"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M37 33H12V31H37V33Z" fill="#3B3A39" fill-opacity="0.1"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M37 24H12V22H37V24Z" fill="#3B3A39" fill-opacity="0.1"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M37 15H12V13H37V15Z" fill="#3B3A39" fill-opacity="0.1"/>
 </symbol>
 </defs>
 </svg>
