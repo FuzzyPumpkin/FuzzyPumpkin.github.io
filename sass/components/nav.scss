@@ -27,5 +27,18 @@
             color: $color-text;
             z-index: 12;
         }
+        &--github::before {
+            content: "";
+            height: 1rem; width: 1rem;
+            background-image: url(images/github.svg);
+            // background-color: red;
+            position: absolute;
+            top: 0; left: 0;
+            opacity: 0;
+            transition: .3s ease-in;
+        }
+        &--github:hover::before {
+            opacity: 1;
+        }
     }
 }
