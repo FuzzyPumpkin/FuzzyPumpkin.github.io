@@ -1,11 +1,11 @@
 import React from 'react';
-import Options from "./Options.js";
+// import Options from "./Options.js";
 import Roller from "./Roller.js";
 
 function App() {
   return (
     <div className="App">
-      <Options />
+      {/* <Options /> */}
       <Roller />
     </div>
   );
