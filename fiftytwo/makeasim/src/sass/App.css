@@ -1,0 +1,33 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.5rem;
+  color: #0054D3;
+  background-color: #5CCAFF;
+  position: relative;
+  height: 100vh;
+}
+
+.Roller {
+  background-color: #F7F5F7;
+}
+
+.options__button {
+  width: 3rem;
+  height: 3rem;
+  margin: .5rem;
+  background: #F7F5F7;
+  border: none;
+}
+/*# sourceMappingURL=App.css.map */
