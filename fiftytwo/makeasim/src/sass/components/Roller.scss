@@ -1,3 +1,25 @@
 .Roller {
     background-color: $color-white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    & p {
+        margin-top: 1rem;
+    }
+}
+.roller {
+    &_traits {
+        &_list {
+            margin-left: 4rem;
+            list-style-type: square; 
+
+        }
+    }
+    &_label {
+        font-weight: bold;
+    }
+    &_siminfo {
+        border: 1pt solid black;
+    }
 }
