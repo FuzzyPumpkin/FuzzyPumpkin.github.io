@@ -1,5 +1,6 @@
 const traits = [
     {trait: "active", conflicts: ["lazy"], expansion: ""},
+    {trait: "adventurous", conflicts: [], expansion: "SE"},
     {trait: "ambitious", conflicts: ["lazy"], expansion: ""},
     {trait: "art lover", conflicts: [], expansion: ""},
     {trait: "bookworm", conflicts: [], expansion: ""},
@@ -39,6 +40,7 @@ const traits = [
     {trait: "noncommittal", conflicts: [], expansion: ""},
     {trait: "outgoing", conflicts: [], expansion: ""},
     {trait: "perfectionist", conflicts: [], expansion: ""},
+    {trait: "proper", conflicts: [], expansion: "SE"},
     {trait: "recycle disciple", conflicts: [], expansion: "EL"},
     {trait: "romantic", conflicts: [], expansion: ""},
     {trait: "self-assured", conflicts: [], expansion: ""},
