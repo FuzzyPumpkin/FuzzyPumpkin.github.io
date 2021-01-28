@@ -1,25 +1,49 @@
 .Roller {
-    background-color: $color-white;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    & p {
+    & p:not(:first-of-type) {
         margin-top: 1rem;
     }
 }
 .roller {
+    &_button {
+        background-color: $color-green;
+        color: $color-white;
+        border: 2pt solid $color-text;
+        border-radius: 1rem;
+        font-size: 2rem;
+        padding: 1rem;
+        margin: 1.5rem;
+        &:hover {
+            background-color: $color-text;
+        }
+    }
+    &_simdata {
+        background-color: $color-white;
+        border: 2pt solid $color-green;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        border-radius: 2.5rem;
+        width: 35rem;
+        margin: 1rem;
+    }
+    &_simList {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap; 
+        justify-content: center;
+    }
     &_traits {
         &_list {
             margin-left: 4rem;
             list-style-type: square; 
-
         }
     }
     &_label {
         font-weight: bold;
     }
-    &_siminfo {
-        border: 1pt solid black;
-    }
+    
 }

@@ -29,7 +29,7 @@ function Roller() {
     setSimList(familySimList);
     setHouseholdFunds(Math.floor(Math.random() * 60000) + 18000);
    };
-   
+
   const addSim = () => {
     let simSetup = {};
     simSetup.key = Math.floor(Math.random() * 1000);
@@ -86,30 +86,32 @@ function Roller() {
   return (
     <div className="Roller">
       <h1>Sim Roller</h1>
-      <button type="button" onClick={rollOptions}>Roll</button>
+      <button className="roller_button" type="button" onClick={rollOptions}>Roll</button>
       <h3>Result:</h3>
-      <p>Household Funds: {householdFunds}</p>
-      {simList.map(sim => (
-        <div key={sim.key}>
-        <p>Age: {sim.age}</p>
-        <p>Gender: {sim.gender}</p>
-        <p>Traits:</p>
-        <ul>
-          {sim.traits.map(trait => (
-            <li key={trait}>
-              {trait}
-            </li>))}
-          </ul>
-       { sim.isSpawn ? null : (
-          <div>
-            <p>Aspiration: {sim.aspiration}</p>
-            <p>Career: {sim.career}</p>
-            <p>Sexual Orientation: {sim.sexualOrientation}</p>
+      <p><span className="roller_label">Household Funds:</span> ${householdFunds}</p>
+      <div className="roller_simList">
+        {simList.map(sim => (
+          <div className="roller_simdata" key={sim.key}>
+          <p><span className="roller_label">Age:</span> {sim.age}</p>
+          <p><span className="roller_label">Gender:</span> {sim.gender}</p>
+          <p><span className="roller_label">Traits:</span></p>
+          <ul className="roller_traits_list">
+            {sim.traits.map(trait => (
+              <li key={trait}>
+                {trait}
+              </li>))}
+            </ul>
+        { sim.isSpawn ? null : (
+            <div>
+              <p><span className="roller_label">Aspiration:</span> {sim.aspiration}</p>
+              <p><span className="roller_label">Career:</span> {sim.career}</p>
+              <p><span className="roller_label">Sexual Orientation:</span> {sim.sexualOrientation}</p>
+            </div>
+          )
+        }
           </div>
-        )
-      }
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 }
