@@ -18,9 +18,19 @@ function Roller() {
     isSpawn: false, 
     key: 1
   }]);
+  const [householdFunds, setHouseholdFunds] = useState(0);
 
   const rollOptions = () => {
-    console.log("clicked");
+    let familySimList = [];
+    let randFamilySize = Math.floor(Math.random() * 8);
+    for(let i = 0; i <= randFamilySize; i++){
+      familySimList.push(addSim());
+    }
+    setSimList(familySimList);
+    setHouseholdFunds(Math.floor(Math.random() * 60000) + 18000);
+   };
+   
+  const addSim = () => {
     let simSetup = {};
     simSetup.key = Math.floor(Math.random() * 1000);
     simSetup.age = aspectFinder(ages);
@@ -57,9 +67,7 @@ function Roller() {
     };
     let randGender = Math.floor(Math.random() * 2);
     randGender === 0 ? simSetup.gender = "female" : simSetup.gender = "male"; 
-    //REMOVE THIS BEFORE DONE!!
-    console.log(simSetup);
-    setSimList([simSetup]);
+    return simSetup;
    };
 
    const spawnTraitFinder = (ageGroupTraits) => {
@@ -80,6 +88,7 @@ function Roller() {
       <h1>Sim Roller</h1>
       <button type="button" onClick={rollOptions}>Roll</button>
       <h3>Result:</h3>
+      <p>Household Funds: {householdFunds}</p>
       {simList.map(sim => (
         <div key={sim.key}>
         <p>Age: {sim.age}</p>
