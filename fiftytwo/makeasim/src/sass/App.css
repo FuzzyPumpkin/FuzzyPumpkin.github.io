@@ -1,3 +1,17 @@
+h1 {
+  font-family: "Red Rose", sans-serif;
+  color: #F7F5F7;
+  font-size: 3.6rem;
+  font-weight: 400;
+}
+
+h2 {
+  font-family: "Red Rose", sans-serif;
+  color: #F7F5F7;
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
 *,
 *::after,
 *::before {
@@ -17,7 +31,7 @@ body {
   background-color: #5CCAFF;
   position: relative;
   height: 100vh;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Roboto, sans-serif;
 }
 
 .Roller {
@@ -36,17 +50,14 @@ body {
           flex-direction: column;
 }
 
-.Roller p:not(:first-of-type) {
-  margin-top: 1rem;
-}
-
 .roller_button {
-  background-color: #92C744;
+  background-color: #80c048;
   color: #F7F5F7;
-  border: 2pt solid #0054D3;
-  border-radius: 1rem;
+  font-size: 1.8rem;
+  border: 3px solid #0054D3;
+  border-radius: 3rem;
   font-size: 2rem;
-  padding: 1rem;
+  padding: .75rem 2.5rem;
   margin: 1.5rem;
 }
 
@@ -56,7 +67,7 @@ body {
 
 .roller_simdata {
   background-color: #F7F5F7;
-  border: 2pt solid #92C744;
+  border: 3px solid #80c048;
   padding: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -65,9 +76,13 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  border-radius: 2.5rem;
-  width: 35rem;
+  border-radius: 1rem;
+  width: 25rem;
+  min-height: 32rem;
   margin: 1rem;
+  font-family: Roboto, sans-serif;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .roller_simList {
@@ -87,11 +102,18 @@ body {
 
 .roller_traits_list {
   margin-left: 4rem;
-  list-style-type: square;
+  list-style-type: none;
 }
 
 .roller_label {
-  font-weight: bold;
+  color: #80c048;
+  font-size: 1.4rem;
+}
+
+.roller_data {
+  color: #0054D3;
+  font-weight: 400;
+  margin: .25rem 0 .75rem 0;
 }
 
 .options__button {

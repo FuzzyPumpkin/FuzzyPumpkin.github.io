@@ -21,6 +21,7 @@ function Roller() {
   const [householdFunds, setHouseholdFunds] = useState(0);
 
   const rollOptions = () => {
+    //need check to make sure there is at least a teen/ya/a/elder
     let familySimList = [];
     let randFamilySize = Math.floor(Math.random() * 8);
     for(let i = 0; i <= randFamilySize; i++){
@@ -85,30 +86,32 @@ function Roller() {
   
   return (
     <div className="Roller">
-      <h1>Sim Roller</h1>
-      <button className="roller_button" type="button" onClick={rollOptions}>Roll</button>
-      <h3>Result:</h3>
-      <p><span className="roller_label">Household Funds:</span> ${householdFunds}</p>
+      <h1>Sim Family Roller</h1>
+      <button className="roller_button" type="button" onClick={rollOptions}>Roll It!</button>
+      <h2>Household Funds: ${householdFunds}</h2>
       <div className="roller_simList">
         {simList.map(sim => (
           <div className="roller_simdata" key={sim.key}>
-          <p><span className="roller_label">Age:</span> {sim.age}</p>
-          <p><span className="roller_label">Gender:</span> {sim.gender}</p>
-          <p><span className="roller_label">Traits:</span></p>
+            <p className="roller_label">this is a...</p>
+            <p className="roller_data"> {sim.gender} {sim.age}</p>
+        { sim.isSpawn ? null : (
+            <div>
+              <p className="roller_label">their aspiration is...</p>
+              <p className="roller_data"> {sim.aspiration}</p>
+              <p className="roller_label">they want to be a...</p>
+              <p className="roller_data"> {sim.career}</p>
+              <p className="roller_label">their ideal mate is...</p>
+              <p className="roller_data"> {sim.sexualOrientation}</p>
+            </div>
+          )
+        }
+        <p><span className="roller_label">their personality is...</span></p>
           <ul className="roller_traits_list">
             {sim.traits.map(trait => (
               <li key={trait}>
                 {trait}
               </li>))}
             </ul>
-        { sim.isSpawn ? null : (
-            <div>
-              <p><span className="roller_label">Aspiration:</span> {sim.aspiration}</p>
-              <p><span className="roller_label">Career:</span> {sim.career}</p>
-              <p><span className="roller_label">Sexual Orientation:</span> {sim.sexualOrientation}</p>
-            </div>
-          )
-        }
           </div>
         ))}
       </div>
