@@ -1,0 +1,29 @@
+.simcard {
+        background-color: $color-white;
+        border: 3px solid $color-green;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        border-radius: 1rem;
+        width: 25rem;
+        min-height: 32rem;
+        margin: 1rem;
+        font-family: Roboto, sans-serif;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    &_traits {
+        &_list {
+            margin-left: 4rem;
+            list-style-type: none; 
+        }
+    }
+    &_label {
+        color: $color-green;
+        font-size: 1.4rem;
+        font-weight: 700;
+    }
+    &_data {
+        color: $color-text;
+        font-weight: 400;
+        margin: .25rem 0 .75rem 0;
+    }
+}

@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import SimCard from "./SimCard";
 import aspirations from "./dictionaries/aspirations.js";
 import careers from "./dictionaries/careers.js";
 import traits from "./dictionaries/traits.js";
@@ -7,14 +8,13 @@ import childTraits from "./dictionaries/childTraits.js";
 import ages from "./dictionaries/ages.js";
 
 function Roller() {
-
   const [simList, setSimList] = useState([{
     age: "",
     aspiration: "",
     career: [""],
     traits: [""],
     gender: "",
-    sexualOrientation: "",
+    matePreference: "",
     isSpawn: false, 
     key: 1
   }]);
@@ -28,14 +28,15 @@ function Roller() {
       familySimList.push(addSim());
     }
     setSimList(familySimList);
-    setHouseholdFunds(Math.floor(Math.random() * 60000) + 18000);
+    setHouseholdFunds(Math.floor(Math.random() * 82000) + 18000);
    };
 
   const addSim = () => {
     let simSetup = {};
     simSetup.key = Math.floor(Math.random() * 1000);
     simSetup.age = aspectFinder(ages);
-
+    let randGender = Math.floor(Math.random() * 2);
+    randGender === 0 ? simSetup.gender = "female" : simSetup.gender = "male";
     if(simSetup.age === "toddler"){
       simSetup.traits = spawnTraitFinder(toddlerTraits);
       simSetup.isSpawn = true;
@@ -61,13 +62,11 @@ function Roller() {
       simSetup.aspiration = aspectFinder(aspirations).aspiration;
       let randOrientationNum = Math.floor(Math.random() * 100);
       if(randOrientationNum <= 75){
-        simSetup.sexualOrientation = "straight";
+        randGender === 0 ? simSetup.matePreference = "male" : simSetup.matePreference = "female";
       } else if(randOrientationNum <= 90){
-        simSetup.sexualOrientation = "gay";
-      } else{simSetup.sexualOrientation = "bisexual";}
+        randGender === 0 ? simSetup.matePreference = "female" : simSetup.matePreference = "male";
+      } else{simSetup.matePreference = "male or female";}
     };
-    let randGender = Math.floor(Math.random() * 2);
-    randGender === 0 ? simSetup.gender = "female" : simSetup.gender = "male"; 
     return simSetup;
    };
 
@@ -91,28 +90,7 @@ function Roller() {
       <h2>Household Funds: ${householdFunds}</h2>
       <div className="roller_simList">
         {simList.map(sim => (
-          <div className="roller_simdata" key={sim.key}>
-            <p className="roller_label">this is a...</p>
-            <p className="roller_data"> {sim.gender} {sim.age}</p>
-        { sim.isSpawn ? null : (
-            <div>
-              <p className="roller_label">their aspiration is...</p>
-              <p className="roller_data"> {sim.aspiration}</p>
-              <p className="roller_label">they want to be a...</p>
-              <p className="roller_data"> {sim.career}</p>
-              <p className="roller_label">their ideal mate is...</p>
-              <p className="roller_data"> {sim.sexualOrientation}</p>
-            </div>
-          )
-        }
-        <p><span className="roller_label">their personality is...</span></p>
-          <ul className="roller_traits_list">
-            {sim.traits.map(trait => (
-              <li key={trait}>
-                {trait}
-              </li>))}
-            </ul>
-          </div>
+          <SimCard sim={sim} key={sim.key} />
         ))}
       </div>
     </div>
