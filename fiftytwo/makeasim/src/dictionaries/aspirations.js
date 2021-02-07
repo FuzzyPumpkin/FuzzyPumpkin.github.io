@@ -13,7 +13,7 @@ const aspirations =
     {aspiration: "Eco Innovator", expansion: "EL"},
     {aspiration: "Extreme Sports Enthusiast", expansion: "SE"},
     {aspiration: "Fabulously Wealthy", expansion: ""},
-    {aspiration: "Freelance Botanist", expansion: ""},
+    {aspiration: "Freelance Botanist", expansion: "SEA"},
     {aspiration: "Friend of the World", expansion: ""},
     {aspiration: "Friend of the Animals", expansion: "CD"},
     {aspiration: "Good Vampire", expansion: "VA"},
