@@ -5,5 +5,9 @@
         margin: .5rem;
         background: $color-white;
         border: none;
+
+        &--pressed {
+            background: $color-green;
+        }
     }
 }

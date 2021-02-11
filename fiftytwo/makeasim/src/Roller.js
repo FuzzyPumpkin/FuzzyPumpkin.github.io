@@ -7,7 +7,7 @@ import toddlerTraits from "./dictionaries/toddlerTraits.js";
 import childTraits from "./dictionaries/childTraits.js";
 import ages from "./dictionaries/ages.js";
 
-function Roller() {
+function Roller({packs}) {
   const [simList, setSimList] = useState([{
     age: "",
     aspiration: "",

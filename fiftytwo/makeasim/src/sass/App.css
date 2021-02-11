@@ -88,6 +88,10 @@ body {
   border: none;
 }
 
+.options__button--pressed {
+  background: #6dbd27;
+}
+
 .simcard {
   background-color: #F7F5F7;
   border: 3px solid #6dbd27;
