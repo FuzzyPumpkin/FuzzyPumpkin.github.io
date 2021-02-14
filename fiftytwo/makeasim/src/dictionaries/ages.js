@@ -6,4 +6,10 @@ const ages = [
     "adult","adult","adult", 
     "elder"];
 
-export default ages;
+const firstSimAges = [
+    "teen","teen", 
+    "young adult","young adult","young adult","young adult", 
+    "adult","adult","adult", 
+    "elder"];
+
+export {ages, firstSimAges};

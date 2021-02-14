@@ -5,7 +5,7 @@ import careers from "./dictionaries/careers.js";
 import traits from "./dictionaries/traits.js";
 import toddlerTraits from "./dictionaries/toddlerTraits.js";
 import childTraits from "./dictionaries/childTraits.js";
-import ages from "./dictionaries/ages.js";
+import {ages, firstSimAges} from "./dictionaries/ages.js";
 
 function Roller({packs}) {
   const [simList, setSimList] = useState([{
@@ -19,14 +19,18 @@ function Roller({packs}) {
     key: 1
   }]);
   const [householdFunds, setHouseholdFunds] = useState(0);
+  const filteredTraits = traits.filter(trait => !packs.includes(trait.expansion));
+  const filteredChildTraits = childTraits.filter(trait => !packs.includes(trait.expansion));
+  const filteredAspirations = aspirations.filter(aspiration => !packs.includes(aspiration.expansion));
+  const filteredCareers = careers.filter(career => !packs.includes(career.expansion));
 
   const rollOptions = () => {
-    //need check to make sure there is at least a teen/ya/a/elder
     let familySimList = [];
     let randFamilySize = Math.floor(Math.random() * 8);
     for(let i = 0; i <= randFamilySize; i++){
       familySimList.push(addSim());
     }
+    familySimList[0].age = aspectFinder(firstSimAges);
     setSimList(familySimList);
     setHouseholdFunds(Math.floor(Math.random() * 82000) + 18000);
    };
@@ -41,25 +45,25 @@ function Roller({packs}) {
       simSetup.traits = spawnTraitFinder(toddlerTraits);
       simSetup.isSpawn = true;
     } else if(simSetup.age === "child"){
-      simSetup.traits = spawnTraitFinder(childTraits);
+      simSetup.traits = spawnTraitFinder(filteredChildTraits);
       simSetup.isSpawn = true;
     } else {
       let newTraits = [];
       for(let i = 0; i < 3; i++){
         for(let j = 0; j < i; j++){
-          let randTraitNum = Math.floor(Math.random() * traits.length);
-          if(newTraits.includes(traits[randTraitNum].trait) || traits[randTraitNum].conflicts.includes(newTraits[j])){
+          let randTraitNum = Math.floor(Math.random() * filteredTraits.length);
+          if(newTraits.includes(filteredTraits[randTraitNum].trait) || traits[randTraitNum].conflicts.includes(newTraits[j])){
               j--;
           } else{
-              newTraits.push(traits[randTraitNum].trait);
+              newTraits.push(filteredTraits[randTraitNum].trait);
           }
         }
       }
       if(simSetup.age === "teen"){newTraits.pop()};
       simSetup.traits = newTraits;
       simSetup.isSpawn = false;
-      simSetup.career = aspectFinder(careers).career;
-      simSetup.aspiration = aspectFinder(aspirations).aspiration;
+      simSetup.career = aspectFinder(filteredCareers).career;
+      simSetup.aspiration = aspectFinder(filteredAspirations).aspiration;
       let randOrientationNum = Math.floor(Math.random() * 100);
       if(randOrientationNum <= 75){
         randGender === 0 ? simSetup.matePreference = "male" : simSetup.matePreference = "female";
