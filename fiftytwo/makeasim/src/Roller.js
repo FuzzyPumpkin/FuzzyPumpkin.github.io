@@ -18,7 +18,7 @@ function Roller({packs}) {
     isSpawn: false, 
     key: 1
   }]);
-  const [householdFunds, setHouseholdFunds] = useState(0);
+  const [householdFunds, setHouseholdFunds] = useState("0");
   const filteredTraits = traits.filter(trait => !packs.includes(trait.expansion));
   const filteredChildTraits = childTraits.filter(trait => !packs.includes(trait.expansion));
   const filteredAspirations = aspirations.filter(aspiration => !packs.includes(aspiration.expansion));
@@ -32,9 +32,14 @@ function Roller({packs}) {
     }
     familySimList[0].age = aspectFinder(firstSimAges);
     setSimList(familySimList);
-    setHouseholdFunds(Math.floor(Math.random() * 82000) + 18000);
+    setHouseholdFunds(formatter.format(Math.floor(Math.random() * 82000) + 18000));
    };
 
+  const formatter = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+    minimumFractionDigits: 0
+  })
   const addSim = () => {
     let simSetup = {};
     simSetup.key = Math.floor(Math.random() * 1000);
@@ -91,7 +96,7 @@ function Roller({packs}) {
     <div className="Roller">
       <h1>Sim Family Roller</h1>
       <button className="roller_button" type="button" onClick={rollOptions}>Roll It!</button>
-      <h2>Household Funds: ${householdFunds}</h2>
+      <h2>Household Funds: {householdFunds}</h2>
       <div className="roller_simList">
         {simList.map(sim => (
           <SimCard sim={sim} key={sim.key} />

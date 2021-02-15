@@ -10,4 +10,19 @@
             background: $color-green;
         }
     }
+    &__packList {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    &__pack {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 1rem;
+        
+        &__name {
+            font-size: 1rem; 
+        }
+    }
 }
