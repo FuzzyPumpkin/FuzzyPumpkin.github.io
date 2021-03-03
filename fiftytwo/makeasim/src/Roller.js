@@ -19,6 +19,7 @@ function Roller({packs}) {
     key: 1
   }]);
   const [householdFunds, setHouseholdFunds] = useState("0");
+  const familySize = [0,0,0,0,0,0,1,1,1,1,1,2,2,2,3,3,4,4,5,6,7,8];
   const filteredTraits = traits.filter(trait => !packs.includes(trait.expansion));
   const filteredChildTraits = childTraits.filter(trait => !packs.includes(trait.expansion));
   const filteredAspirations = aspirations.filter(aspiration => !packs.includes(aspiration.expansion));
@@ -26,11 +27,11 @@ function Roller({packs}) {
 
   const rollOptions = () => {
     let familySimList = [];
-    let randFamilySize = Math.floor(Math.random() * 8);
-    for(let i = 0; i <= randFamilySize; i++){
-      familySimList.push(addSim());
+    let randFamilySize = aspectFinder(familySize);
+    familySimList.push(addSim(aspectFinder(firstSimAges)));
+    for(let i = 1; i <= randFamilySize; i++){
+      familySimList.push(addSim(aspectFinder(ages)));
     }
-    familySimList[0].age = aspectFinder(firstSimAges);
     setSimList(familySimList);
     setHouseholdFunds(formatter.format(Math.floor(Math.random() * 82000) + 18000));
    };
@@ -40,10 +41,10 @@ function Roller({packs}) {
     currency: 'USD',
     minimumFractionDigits: 0
   })
-  const addSim = () => {
+  const addSim = (ageStage) => {
     let simSetup = {};
     simSetup.key = Math.floor(Math.random() * 1000);
-    simSetup.age = aspectFinder(ages);
+    simSetup.age = ageStage;
     let randGender = Math.floor(Math.random() * 2);
     randGender === 0 ? simSetup.gender = "female" : simSetup.gender = "male";
     if(simSetup.age === "toddler"){

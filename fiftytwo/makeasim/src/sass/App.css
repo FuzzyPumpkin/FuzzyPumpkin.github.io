@@ -51,7 +51,7 @@ body {
 }
 
 .roller_button {
-  background-color: #6dbd27;
+  background-color: #298726;
   color: #F7F5F7;
   font-size: 1.8rem;
   border: 3px solid #0054D3;
@@ -89,7 +89,7 @@ body {
 }
 
 .options__button--pressed {
-  background: #6dbd27;
+  background: #298726;
 }
 
 .options__packList {
@@ -124,7 +124,7 @@ body {
 
 .simcard {
   background-color: #F7F5F7;
-  border: 3px solid #6dbd27;
+  border: 3px solid #298726;
   padding: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -148,7 +148,7 @@ body {
 }
 
 .simcard_label {
-  color: #6dbd27;
+  color: #298726;
   font-size: 1.4rem;
   font-weight: 700;
 }
