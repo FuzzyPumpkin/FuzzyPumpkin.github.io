@@ -97,7 +97,7 @@ function Roller({packs}) {
     <div className="Roller">
       <h1>Sim Family Roller</h1>
       <button className="roller_button" type="button" onClick={rollOptions}>Roll It!</button>
-      <h2>Household Funds: {householdFunds}</h2>
+          <h2 className="roller_funds">Household Funds: {householdFunds}</h2>
       <div className="roller_simList">
         {simList.map(sim => (
           <SimCard sim={sim} key={sim.key} />

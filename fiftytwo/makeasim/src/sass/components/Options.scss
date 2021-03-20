@@ -3,11 +3,33 @@
         width: 3rem;
         height: 3rem;
         margin: .5rem;
-        background: $color-white;
+        background: transparent;
         border: none;
-
+        position: relative;
+        transition: all .3s ease-in;
+        &::before, &--pressed::before {
+            position: absolute;
+            top: 1rem; right: -.5rem;
+            content: "";
+            background-color: $color-text;
+            height: .5rem;
+            transform: rotate(45deg);
+        }
+        &::before {
+            width: 0;
+        }
+        &:hover {
+            &::before {
+                width: 4rem;
+            }
+        }
         &--pressed {
-            background: $color-green;
+            &::before {
+                width: 4rem;
+            }
+        }
+        &:focus {
+            outline: none;
         }
     }
     &__packList {
@@ -24,5 +46,15 @@
         &__name {
             font-size: 1rem; 
         }
+        &__icon {
+            width: 3rem;
+            &:hover {
+                opacity: .8;
+            }
+            &--disabled {
+                opacity: .4;
+            }
+        }
+      
     }
 }

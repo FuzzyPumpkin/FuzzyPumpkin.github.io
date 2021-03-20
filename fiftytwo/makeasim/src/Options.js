@@ -40,7 +40,12 @@ function Options({togglePack, packs}) {
                 alt={ep.name}
                 className={packs.includes(ep.initials)? "options__button options__button--pressed": "options__button"} 
                 type="button"
-                onClick={() => togglePack(ep.initials)}>{ep.initials}</button>
+                onClick={() => togglePack(ep.initials)}>
+                  <img 
+                    className={packs.includes(ep.initials)? "options__pack__icon options__pack__icon--disabled": "options__pack__icon"}
+                    src={`./images/${ep.initials}.png`} 
+                    alt={ep.name} />
+                </button>
               <p className="options__pack__name">{ep.name}</p>
             </div>
             ))}
@@ -54,7 +59,12 @@ function Options({togglePack, packs}) {
                 alt={gp.name}
                 className={packs.includes(gp.initials)? "options__button options__button--pressed": "options__button"} 
                 type="button" 
-                onClick={() => togglePack(gp.initials)}>{gp.initials}</button>
+                onClick={() => togglePack(gp.initials)}>
+                  <img 
+                      className={packs.includes(gp.initials)? "options__pack__icon options__pack__icon--disabled": "options__pack__icon"}
+                      src={`./images/${gp.initials}.png`} 
+                      alt={gp.name} />
+                </button>
               <p className="options__pack__name">{gp.name}</p>
             </div>
             ))}
@@ -68,7 +78,12 @@ function Options({togglePack, packs}) {
                 alt={sp.name}
                 className={packs.includes(sp.initials)? "options__button options__button--pressed": "options__button"} 
                 type="button" 
-                onClick={() => togglePack(sp.initials)}>{sp.initials}</button>
+                onClick={() => togglePack(sp.initials)}>
+                  <img 
+                      className={packs.includes(sp.initials)? "options__pack__icon options__pack__icon--disabled": "options__pack__icon"}
+                      src={`./images/${sp.initials}.png`} 
+                      alt={sp.name} />
+                </button>
               <p className="options__pack__name">{sp.name}</p>
             </div>
             ))}
