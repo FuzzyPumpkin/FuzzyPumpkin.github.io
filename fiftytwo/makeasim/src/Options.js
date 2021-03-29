@@ -1,5 +1,5 @@
 import React from 'react';
-
+import OptionsButton from "./OptionsButton.js";
 
 function Options({togglePack, packs}) {
     const expansionPacks = [
@@ -33,59 +33,20 @@ function Options({togglePack, packs}) {
       <h1>Options</h1>
       <h2>Expansions</h2>
       <div className="options__packList">
-          {expansionPacks.map(ep => (
-            <div className="options__pack">
-              <button 
-                key={ep.initials}
-                alt={ep.name}
-                className={packs.includes(ep.initials)? "options__button options__button--pressed": "options__button"} 
-                type="button"
-                onClick={() => togglePack(ep.initials)}>
-                  <img 
-                    className={packs.includes(ep.initials)? "options__pack__icon options__pack__icon--disabled": "options__pack__icon"}
-                    src={`./images/${ep.initials}.png`} 
-                    alt={ep.name} />
-                </button>
-              <p className="options__pack__name">{ep.name}</p>
-            </div>
+        {expansionPacks.map(ep => (
+            <OptionsButton packType={ep} packs={packs} togglePack={togglePack} />
             ))}
       </div>
       <h2>Game Packs</h2>
       <div className="options__packList">
           {gamePacks.map(gp => (
-            <div className="options__pack">
-              <button 
-                key={gp.initials}
-                alt={gp.name}
-                className={packs.includes(gp.initials)? "options__button options__button--pressed": "options__button"} 
-                type="button" 
-                onClick={() => togglePack(gp.initials)}>
-                  <img 
-                      className={packs.includes(gp.initials)? "options__pack__icon options__pack__icon--disabled": "options__pack__icon"}
-                      src={`./images/${gp.initials}.png`} 
-                      alt={gp.name} />
-                </button>
-              <p className="options__pack__name">{gp.name}</p>
-            </div>
+              <OptionsButton packType={gp} packs={packs} togglePack={togglePack} />
             ))}
       </div>
       <h2>Stuff Packs</h2>
       <div className="options__packList">
           {stuffPacks.map(sp => (
-            <div className="options__pack">
-              <button 
-                key={sp.initials}
-                alt={sp.name}
-                className={packs.includes(sp.initials)? "options__button options__button--pressed": "options__button"} 
-                type="button" 
-                onClick={() => togglePack(sp.initials)}>
-                  <img 
-                      className={packs.includes(sp.initials)? "options__pack__icon options__pack__icon--disabled": "options__pack__icon"}
-                      src={`./images/${sp.initials}.png`} 
-                      alt={sp.name} />
-                </button>
-              <p className="options__pack__name">{sp.name}</p>
-            </div>
+              <OptionsButton packType={sp} packs={packs} togglePack={togglePack} />
             ))}
       </div>
     </div>

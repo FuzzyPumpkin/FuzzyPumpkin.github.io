@@ -1,10 +1,13 @@
-import React, {useState} from 'react';
+import React from 'react';
 import Options from "./Options.js";
 import Roller from "./Roller.js";
+import useLocalStorage from './hooks/useLocalStorage';
 
 function App() {
 
-  const [packs, setPacks] = useState([]);
+  // const [packs, setPacks] = useState([]);
+  const initialPacks = [];
+  const [packs, setPacks] = useLocalStorage("packs", initialPacks);
   const togglePack = (packName) => {
     let packList = [...packs];
     if(packList.includes(packName)){
