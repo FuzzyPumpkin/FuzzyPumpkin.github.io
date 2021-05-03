@@ -1,11 +1,11 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Options from "./Options.js";
 import Roller from "./Roller.js";
 import useLocalStorage from './hooks/useLocalStorage';
 
 function App() {
 
-  // const [packs, setPacks] = useState([]);
+  const [showOptions, setShowOptions] = useState(false);
   const initialPacks = [];
   const [packs, setPacks] = useLocalStorage("packs", initialPacks);
   const togglePack = (packName) => {
@@ -20,7 +20,12 @@ function App() {
 
   return (
     <div className="App">
-      <Options togglePack={togglePack} packs={packs}/>
+      <button type="button" className="app__button" onClick={() => setShowOptions(!showOptions)}>
+        <svg className="app__button__icon">
+		      <use xlinkHref="./images/symbol-defs.svg#icon-settings"></use>
+	      </svg>
+      </button>
+      {showOptions && <Options togglePack={togglePack} packs={packs}/>}
       <Roller packs={packs}/>
     </div>
   );

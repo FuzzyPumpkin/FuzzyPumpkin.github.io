@@ -89,6 +89,43 @@ body {
           justify-content: center;
 }
 
+.options {
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(92, 202, 255, 0.75);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.options__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #5CCAFF;
+  padding: 4rem;
+  border: 1px solid #f7f5f7;
+}
+
+.options__blurb {
+  max-width: 70%;
+}
+
 .options__button {
   width: 3rem;
   height: 3rem;
@@ -109,6 +146,7 @@ body {
   height: .5rem;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
+  z-index: 2;
 }
 
 .options__button::before {
@@ -155,6 +193,10 @@ body {
 
 .options__pack__name {
   font-size: 1rem;
+  color: #f7f5f7;
+  opacity: 0;
+  -webkit-transition: all .3s ease-in;
+  transition: all .3s ease-in;
 }
 
 .options__pack__icon {
@@ -167,6 +209,10 @@ body {
 
 .options__pack__icon--disabled {
   opacity: .4;
+}
+
+.options__button:hover + .options__pack__name {
+  opacity: 1;
 }
 
 .simcard {
@@ -202,5 +248,29 @@ body {
   color: #0054d3;
   font-weight: 400;
   margin: .25rem 0 .75rem 0;
+}
+
+.app__button {
+  z-index: 2;
+  width: 3rem;
+  height: 3rem;
+  margin: .5rem;
+  background: transparent;
+  border: none;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.app__button__icon {
+  fill: #f7f5f7;
+  width: 3rem;
+  height: 3rem;
+}
+
+.app__button:hover {
+  opacity: .5;
+  -webkit-transition: all .3s ease-in;
+  transition: all .3s ease-in;
 }
 /*# sourceMappingURL=App.css.map */
