@@ -2,11 +2,11 @@ import React from 'react';
 import OptionsButton from "./OptionsButton.js";
 import {expansionPacks, gamePacks, stuffPacks} from "./dictionaries/packs.js";
 
-function Options({togglePack, packs}) {
+function Options({togglePack, packs, showOptions}) {
 
   return (
-    <div className="options">
-      <div className="options__container">
+    <div className={!showOptions ? "options" : "options options--fadeIn"}>
+      <div className={!showOptions ? "options__container": "options__container options__container--slideIn"}>
         <h1>Options</h1>
         <h2>Expansions</h2>
         <div className="options__packList">

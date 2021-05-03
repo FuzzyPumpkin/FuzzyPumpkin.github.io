@@ -19,7 +19,7 @@ function Roller({packs}) {
     key: 1
   }]);
   const [householdFunds, setHouseholdFunds] = useState("0");
-  const familySize = [0,0,0,0,0,0,1,1,1,1,1,2,2,2,3,3,4,4,5,6,7,8];
+  const familySize = [0,0,0,0,0,0,1,1,1,1,1,2,2,2,3,3,4,4,5,6,7];
   const filteredTraits = traits.filter(trait => !packs.includes(trait.expansion));
   const filteredChildTraits = childTraits.filter(trait => !packs.includes(trait.expansion));
   const filteredAspirations = aspirations.filter(aspiration => !packs.includes(aspiration.expansion));
@@ -95,9 +95,11 @@ function Roller({packs}) {
   
   return (
     <div className="Roller">
-      <h1>Sim Family Roller</h1>
-      <button className="roller_button" type="button" onClick={rollOptions}>Roll It!</button>
-          <h2 className="roller_funds">Household Funds: {householdFunds}</h2>
+      <h1 className="roller_title"><span className="roller_title--main"> Sims</span> <span className="roller_title--accent"></span> <span className="roller_title--main"> Family Roller</span></h1>
+      <button className="roller_button" type="button" onClick={rollOptions}>
+        <span className="roller_button_text">Roll It!</span>
+      </button>
+      <h2 className="roller_funds">Household Funds: {householdFunds}</h2>
       <div className="roller_simList">
         {simList.map(sim => (
           <SimCard sim={sim} key={sim.key} />

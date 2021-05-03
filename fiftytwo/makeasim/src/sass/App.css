@@ -59,10 +59,35 @@ body {
   font-size: 2rem;
   padding: .75rem 2.5rem;
   margin: 1.5rem;
+  position: relative;
+  overflow: hidden;
 }
 
-.roller_button:hover {
+.roller_button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  border-radius: 3rem;
+  -webkit-transform: translate(-100%, -50%);
+          transform: translate(-100%, -50%);
+  width: 100%;
+  height: 100%;
   background-color: #0054d3;
+  -webkit-transition: -webkit-transform 0.6s cubic-bezier(0.53, 0.21, 0, 1);
+  transition: -webkit-transform 0.6s cubic-bezier(0.53, 0.21, 0, 1);
+  transition: transform 0.6s cubic-bezier(0.53, 0.21, 0, 1);
+  transition: transform 0.6s cubic-bezier(0.53, 0.21, 0, 1), -webkit-transform 0.6s cubic-bezier(0.53, 0.21, 0, 1);
+}
+
+.roller_button:hover::before {
+  -webkit-transform: translate(0, -52%);
+          transform: translate(0, -52%);
+}
+
+.roller_button_text {
+  position: relative;
+  z-index: 2;
 }
 
 .roller_funds {
@@ -89,12 +114,36 @@ body {
           justify-content: center;
 }
 
-.options {
+.roller_title {
+  margin: 4rem 0 2rem 0;
+}
+
+.roller_title--main {
+  position: relative;
+  z-index: 2;
+}
+
+.roller_title--accent {
+  position: relative;
+}
+
+.roller_title--accent::before {
+  content: "4";
+  position: absolute;
+  top: -75%;
+  left: -3rem;
+  color: #298726;
+  font-size: 10rem;
   z-index: 1;
+  opacity: .5;
+}
+
+.options {
+  z-index: 3;
   position: absolute;
   width: 100%;
   height: 100%;
-  background: rgba(92, 202, 255, 0.75);
+  background: rgba(247, 245, 247, 0.75);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -104,6 +153,11 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.options--fadeIn {
+  -webkit-animation: fade-in 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
 .options__container {
@@ -120,6 +174,12 @@ body {
   background: #5CCAFF;
   padding: 4rem;
   border: 1px solid #f7f5f7;
+  max-width: 80%;
+}
+
+.options__container--slideIn {
+  -webkit-animation: slide-in-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s both;
+  animation: slide-in-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s both;
 }
 
 .options__blurb {
@@ -215,6 +275,50 @@ body {
   opacity: 1;
 }
 
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateY(-1000px);
+    transform: translateY(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateY(-1000px);
+    transform: translateY(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 .simcard {
   background-color: rgba(247, 245, 247, 0.9);
   padding: 1rem;
@@ -231,6 +335,8 @@ body {
   -webkit-box-shadow: 0 0 0 0.35rem rgba(247, 245, 247, 0.65), 0 0 0 0.75rem rgba(247, 245, 247, 0.4), 0 0 0 1.5rem rgba(247, 245, 247, 0.25);
           box-shadow: 0 0 0 0.35rem rgba(247, 245, 247, 0.65), 0 0 0 0.75rem rgba(247, 245, 247, 0.4), 0 0 0 1.5rem rgba(247, 245, 247, 0.25);
   margin: 2rem;
+  -webkit-animation: slide-in-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-in-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 .simcard_traits_list {
@@ -250,14 +356,40 @@ body {
   margin: .25rem 0 .75rem 0;
 }
 
+@-webkit-keyframes slide-in-bottom {
+  0% {
+    -webkit-transform: translateY(1000px);
+    transform: translateY(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-bottom {
+  0% {
+    -webkit-transform: translateY(1000px);
+    transform: translateY(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 .App {
   background-image: url("https://fuzzypumpkin.github.io/fiftytwo/makeasim/public/images/PlumbobBg.png");
   background-repeat: no-repeat;
   background-position: left top;
 }
 
-.app__button {
-  z-index: 2;
+.App__button {
+  z-index: 10;
   width: 3rem;
   height: 3rem;
   margin: .5rem;
@@ -268,13 +400,13 @@ body {
   right: 1rem;
 }
 
-.app__button__icon {
+.App__button__icon {
   fill: #f7f5f7;
   width: 3rem;
   height: 3rem;
 }
 
-.app__button:hover {
+.App__button:hover {
   opacity: .5;
   -webkit-transition: all .3s ease-in;
   transition: all .3s ease-in;
