@@ -250,6 +250,12 @@ body {
   margin: .25rem 0 .75rem 0;
 }
 
+.App {
+  background-image: url("https://fuzzypumpkin.github.io/fiftytwo/makeasim/public/images/PlumbobBg.png");
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+
 .app__button {
   z-index: 2;
   width: 3rem;

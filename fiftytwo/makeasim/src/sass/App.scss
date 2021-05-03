@@ -8,6 +8,12 @@
 @import "components/Options";
 @import "components/SimCard";
 
+.App {
+    background-image: url("https://fuzzypumpkin.github.io/fiftytwo/makeasim/public/images/PlumbobBg.png");
+    background-repeat: no-repeat;
+    background-position: left top;
+
+}
 .app {
     &__button {
         z-index: 2;
