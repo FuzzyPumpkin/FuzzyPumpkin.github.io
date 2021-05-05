@@ -12,6 +12,8 @@
     background-image: url("https://fuzzypumpkin.github.io/fiftytwo/makeasim/public/images/PlumbobBg.png");
     background-repeat: no-repeat;
     background-position: left top;
+    height: 100%;
+
     &__button {
         z-index: 10;
         width: 3rem;
@@ -26,6 +28,7 @@
             fill: $color-white;
             width: 3rem;
             height: 3rem;
+            &--blue {fill: $color-text;}
         }
         &:hover {
             opacity: .5;

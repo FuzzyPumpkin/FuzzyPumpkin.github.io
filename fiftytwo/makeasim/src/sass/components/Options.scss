@@ -65,6 +65,7 @@
             outline: none;
         }
     }
+    &__button:hover + &__pack__name {opacity: 1;}
     &__packList {
         display: flex;
         flex-direction: row;
@@ -93,7 +94,14 @@
         }
       
     }
-    &__button:hover + &__pack__name {opacity: 1;}
+    &__settings {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      min-width: 70%;
+      margin: 1rem 0 4rem 0;
+    }
+    
 }
 
 

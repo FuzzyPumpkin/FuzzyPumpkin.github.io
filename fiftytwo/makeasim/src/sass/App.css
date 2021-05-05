@@ -34,6 +34,10 @@ body {
   font-family: Roboto, sans-serif;
 }
 
+#root {
+  height: 100%;
+}
+
 .Roller {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -225,6 +229,10 @@ body {
   outline: none;
 }
 
+.options__button:hover + .options__pack__name {
+  opacity: 1;
+}
+
 .options__packList {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -271,8 +279,18 @@ body {
   opacity: .4;
 }
 
-.options__button:hover + .options__pack__name {
-  opacity: 1;
+.options__settings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  min-width: 70%;
+  margin: 1rem 0 4rem 0;
 }
 
 @-webkit-keyframes fade-in {
@@ -386,6 +404,7 @@ body {
   background-image: url("https://fuzzypumpkin.github.io/fiftytwo/makeasim/public/images/PlumbobBg.png");
   background-repeat: no-repeat;
   background-position: left top;
+  height: 100%;
 }
 
 .App__button {
@@ -404,6 +423,10 @@ body {
   fill: #f7f5f7;
   width: 3rem;
   height: 3rem;
+}
+
+.App__button__icon--blue {
+  fill: #0054d3;
 }
 
 .App__button:hover {

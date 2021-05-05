@@ -6,6 +6,7 @@ import useLocalStorage from './hooks/useLocalStorage';
 function App() {
 
   const [showOptions, setShowOptions] = useState(false);
+  const [householdFundsLimits, setHouseholdFundsLimits] = useState([18000, 100000]);
   const initialPacks = [];
   const [packs, setPacks] = useLocalStorage("packs", initialPacks);
   const togglePack = (packName) => {
@@ -17,16 +18,20 @@ function App() {
     }
     setPacks(packList);
   };
+  const changeFundsLimits = () => {
+    console.log("function fired");
+    // need to actually handle change. maybe use hook?
+  }
 
   return (
     <div className="App">
       <button type="button" className="App__button" onClick={() => setShowOptions(!showOptions)}>
-        <svg className="App__button__icon">
+        <svg className={!showOptions ? "App__button__icon": "App__button__icon App__button__icon--blue"}>
 		      <use xlinkHref="./images/symbol-defs.svg#icon-settings"></use>
 	      </svg>
       </button>
-      {showOptions && <Options togglePack={togglePack} packs={packs} showOptions={showOptions}/>}
-      <Roller packs={packs}/>
+      {showOptions && <Options togglePack={togglePack} packs={packs} showOptions={showOptions} householdFundsLimits={householdFundsLimits} changeFundsLimits={changeFundsLimits}/>}
+      <Roller packs={packs} householdFundsLimits={householdFundsLimits}/>
     </div>
   );
 }

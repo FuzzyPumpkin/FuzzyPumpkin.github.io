@@ -7,7 +7,8 @@ import toddlerTraits from "./dictionaries/toddlerTraits.js";
 import childTraits from "./dictionaries/childTraits.js";
 import {ages, firstSimAges} from "./dictionaries/ages.js";
 
-function Roller({packs}) {
+function Roller({packs, householdFundsLimits}) {
+  const [firstRun, setFirstRun] = useState(true);
   const [simList, setSimList] = useState([{
     age: "",
     aspiration: "",
@@ -28,12 +29,15 @@ function Roller({packs}) {
   const rollOptions = () => {
     let familySimList = [];
     let randFamilySize = aspectFinder(familySize);
+    let upperFundsLimit = householdFundsLimits[1]-householdFundsLimits[0];
     familySimList.push(addSim(aspectFinder(firstSimAges)));
     for(let i = 1; i <= randFamilySize; i++){
       familySimList.push(addSim(aspectFinder(ages)));
     }
+    setFirstRun(false);
     setSimList(familySimList);
-    setHouseholdFunds(formatter.format(Math.floor(Math.random() * 82000) + 18000));
+    setHouseholdFunds(formatter.format(Math.floor(Math.random() * upperFundsLimit) + householdFundsLimits[0]));
+    console.log(Math.floor(Math.random() * upperFundsLimit));
    };
 
   const formatter = new Intl.NumberFormat('en-US', {
@@ -101,7 +105,7 @@ function Roller({packs}) {
       </button>
       <h2 className="roller_funds">Household Funds: {householdFunds}</h2>
       <div className="roller_simList">
-        {simList.map(sim => (
+        {!firstRun && simList.map(sim => (
           <SimCard sim={sim} key={sim.key} />
         ))}
       </div>
