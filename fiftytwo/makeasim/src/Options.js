@@ -1,6 +1,8 @@
 import React from 'react';
 import OptionsButton from "./OptionsButton.js";
 import {expansionPacks, gamePacks, stuffPacks} from "./dictionaries/packs.js";
+import NumericInput from 'react-numeric-input';
+
 
 function Options({togglePack, packs, showOptions, householdFundsLimits, changeFundsLimits}) {
 
@@ -32,12 +34,25 @@ function Options({togglePack, packs, showOptions, householdFundsLimits, changeFu
           <div><p>Household Funds:</p>
             <label>
               Minimum:
-              <input name="minHouseholdFunds" id="minHouseholdFunds" type="number" min="0" max="1000000" step="1" value={householdFundsLimits[0]} onChange={changeFundsLimits} />
+              <NumericInput 
+	              className="form-control" 
+	              value={householdFundsLimits[0]} 
+              	min={ 0 } 
+	              max={ 1000000 } 
+	              step={ 1 } 
+                onChange={(e) =>changeFundsLimits(e, 0)}
+              />
             </label>
-            {/* need to have a check so that minimum can't be more than maximum */}
             <label>
               Maximum:
-              <input name="maxHouseholdFunds" id="maxHouseholdFunds" type="number" min="0" max="1000000" step="1" value={householdFundsLimits[1]} onChange={changeFundsLimits}/>
+              <NumericInput 
+	              className="form-control" 
+	              value={householdFundsLimits[1]} 
+              	min={ 0 } 
+	              max={ 1000000 } 
+	              step={ 1 } 
+                onChange={(e) =>changeFundsLimits(e, 1)}
+              />
             </label>
           </div>
         </div>

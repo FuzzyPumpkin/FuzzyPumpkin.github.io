@@ -18,9 +18,11 @@ function App() {
     }
     setPacks(packList);
   };
-  const changeFundsLimits = () => {
-    console.log("function fired");
-    // need to actually handle change. maybe use hook?
+  const changeFundsLimits = (e, limDirection) => {
+    let currLimits = householdFundsLimits;
+    currLimits[limDirection] = e;
+    setHouseholdFundsLimits(currLimits);
+    console.log(householdFundsLimits);
   }
 
   return (
