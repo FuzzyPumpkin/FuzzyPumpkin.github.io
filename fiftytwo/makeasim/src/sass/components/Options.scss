@@ -66,6 +66,26 @@
         }
     }
     &__button:hover + &__pack__name {opacity: 1;}
+    &__form {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: .25rem 0;
+
+      &_input {
+        margin-left: .5rem;
+        width: 10rem;
+        border-radius: .5rem;
+        color: $color-text;
+        padding: .25rem .5rem;
+        border: none;
+      }
+      &_label {
+        color: $color-white;
+        text-align: center;
+        font-weight: 700;
+      }
+    }
     &__packList {
         display: flex;
         flex-direction: row;
@@ -100,10 +120,12 @@
       justify-content: space-around;
       min-width: 70%;
       margin: 1rem 0 4rem 0;
+      border: 1px solid white;
+      border-radius: .5rem;
+      padding: 1rem;
     }
     
 }
-
 
 
 @-webkit-keyframes fade-in {

@@ -4,7 +4,7 @@ import {expansionPacks, gamePacks, stuffPacks} from "./dictionaries/packs.js";
 import NumericInput from 'react-numeric-input';
 
 
-function Options({togglePack, packs, showOptions, householdFundsLimits, changeFundsLimits}) {
+function Options({togglePack, packs, showOptions, householdFundsLimits, changeFundsLimits, simCountLimits, changeSimLimits}) {
 
   return (
     <div className={!showOptions ? "options" : "options options--fadeIn"}>
@@ -30,25 +30,48 @@ function Options({togglePack, packs, showOptions, householdFundsLimits, changeFu
         </div>
         <h2>Roll Limits</h2>
         <div className="options__settings">
-          <div><p>Number of Sims:</p></div>
-          <div><p>Household Funds:</p>
-            <label>
-              Minimum:
+          <div ><p className="options__form_label">Number of Sims</p>
+            <label className="options__form">
+              <span>Minimum:</span>
               <NumericInput 
-	              className="form-control" 
+	              className="form-control options__form_input" 
+	              value={simCountLimits[0] + 1} 
+              	min={ 1 } 
+	              max={simCountLimits[1] + 1} 
+	              step={ 1 } 
+                onChange={(e) =>changeSimLimits(e, 0)}
+              />
+            </label>
+            <label className="options__form">
+              <span>Maximum:</span>
+              <NumericInput 
+	              className="form-control options__form_input" 
+	              value={simCountLimits[1] + 1} 
+              	min={simCountLimits[0] + 1} 
+	              max={ 8 } 
+	              step={ 1 } 
+                onChange={(e) =>changeSimLimits(e, 1)}
+              />
+            </label>
+          </div>
+          <div><p className="options__form_label">Household Funds</p>
+            <label className="options__form">
+              <span>Minimum:</span>
+              <NumericInput 
+	              className="form-control options__form_input" 
 	              value={householdFundsLimits[0]} 
               	min={ 0 } 
-	              max={ 1000000 } 
+	              max={householdFundsLimits[1]} 
 	              step={ 1 } 
                 onChange={(e) =>changeFundsLimits(e, 0)}
               />
             </label>
-            <label>
-              Maximum:
+            <label className="options__form">
+              <span>Maximum:</span>
               <NumericInput 
-	              className="form-control" 
+	              className="form-control options__form_input" 
 	              value={householdFundsLimits[1]} 
-              	min={ 0 } 
+              	min={householdFundsLimits[0]} 
 	              max={ 1000000 } 
 	              step={ 1 } 
                 onChange={(e) =>changeFundsLimits(e, 1)}

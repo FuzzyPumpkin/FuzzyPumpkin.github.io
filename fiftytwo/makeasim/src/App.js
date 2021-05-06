@@ -7,6 +7,7 @@ function App() {
 
   const [showOptions, setShowOptions] = useState(false);
   const [householdFundsLimits, setHouseholdFundsLimits] = useState([18000, 100000]);
+  const [simCountLimits, setSimCountLimits] = useState([0, 7]);
   const initialPacks = [];
   const [packs, setPacks] = useLocalStorage("packs", initialPacks);
   const togglePack = (packName) => {
@@ -22,7 +23,12 @@ function App() {
     let currLimits = householdFundsLimits;
     currLimits[limDirection] = e;
     setHouseholdFundsLimits(currLimits);
-    console.log(householdFundsLimits);
+  }
+  const changeSimLimits = (e, limDirection) => {
+    let currLimits = simCountLimits;
+    currLimits[limDirection] = e - 1;
+    setSimCountLimits(currLimits);
+    console.log(simCountLimits);
   }
 
   return (
@@ -32,8 +38,16 @@ function App() {
 		      <use xlinkHref="./images/symbol-defs.svg#icon-settings"></use>
 	      </svg>
       </button>
-      {showOptions && <Options togglePack={togglePack} packs={packs} showOptions={showOptions} householdFundsLimits={householdFundsLimits} changeFundsLimits={changeFundsLimits}/>}
-      <Roller packs={packs} householdFundsLimits={householdFundsLimits}/>
+      {showOptions && <Options 
+        togglePack={togglePack} 
+        packs={packs} 
+        showOptions={showOptions} 
+        householdFundsLimits={householdFundsLimits} 
+        changeFundsLimits={changeFundsLimits}
+        simCountLimits={simCountLimits} 
+        changeSimLimits={changeSimLimits}
+        />}
+      <Roller packs={packs} householdFundsLimits={householdFundsLimits} simCountLimits={simCountLimits}/>
     </div>
   );
 }

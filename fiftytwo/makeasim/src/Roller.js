@@ -7,7 +7,7 @@ import toddlerTraits from "./dictionaries/toddlerTraits.js";
 import childTraits from "./dictionaries/childTraits.js";
 import {ages, firstSimAges} from "./dictionaries/ages.js";
 
-function Roller({packs, householdFundsLimits}) {
+function Roller({packs, householdFundsLimits, simCountLimits}) {
   const [firstRun, setFirstRun] = useState(true);
   const [simList, setSimList] = useState([{
     age: "",
@@ -20,7 +20,9 @@ function Roller({packs, householdFundsLimits}) {
     key: 1
   }]);
   const [householdFunds, setHouseholdFunds] = useState("0");
-  const familySize = [0,0,0,0,0,0,1,1,1,1,1,2,2,2,3,3,4,4,5,6,7];
+  const weightedFamilySize = [0,0,0,0,0,0,1,1,1,1,1,2,2,2,3,3,4,4,5,6,7];
+  const minFamilySize = weightedFamilySize.filter( num => num >= simCountLimits[0]);
+  const familySize = minFamilySize.filter( num => num <= simCountLimits[1]);
   const filteredTraits = traits.filter(trait => !packs.includes(trait.expansion));
   const filteredChildTraits = childTraits.filter(trait => !packs.includes(trait.expansion));
   const filteredAspirations = aspirations.filter(aspiration => !packs.includes(aspiration.expansion));
@@ -28,6 +30,7 @@ function Roller({packs, householdFundsLimits}) {
 
   const rollOptions = () => {
     let familySimList = [];
+    console.log(familySize);
     let randFamilySize = aspectFinder(familySize);
     let upperFundsLimit = householdFundsLimits[1]-householdFundsLimits[0];
     familySimList.push(addSim(aspectFinder(firstSimAges)));
@@ -37,7 +40,6 @@ function Roller({packs, householdFundsLimits}) {
     setFirstRun(false);
     setSimList(familySimList);
     setHouseholdFunds(formatter.format(Math.floor(Math.random() * upperFundsLimit) + householdFundsLimits[0]));
-    console.log(Math.floor(Math.random() * upperFundsLimit));
    };
 
   const formatter = new Intl.NumberFormat('en-US', {
