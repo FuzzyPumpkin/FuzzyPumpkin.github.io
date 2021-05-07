@@ -25,10 +25,18 @@
             -webkit-animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) .5s both;
             animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) .5s both;
         }
+        @include respond(phone){
+          padding: .5rem;
+          max-width: 90%;
+      }
     }
 
     &__blurb {
         max-width: 70%;
+        @include respond(phone){
+          font-size: 1.2rem;
+          max-width: 85%;
+        }
     }
     &__button {
         width: 3rem;
@@ -38,6 +46,10 @@
         border: none;
         position: relative;
         transition: all .3s ease-in;
+
+        @include respond(phone){
+          margin: 0;
+      }
         &::before, &--pressed::before {
             position: absolute;
             top: 1rem; right: -.5rem;
@@ -71,7 +83,10 @@
         justify-content: space-between;
         align-items: center;
         margin: .25rem 0;
-
+        @include respond(phone){
+          font-size: 1.2rem;
+        }
+        
       &_input {
         margin-left: .5rem;
         width: 10rem;
@@ -79,6 +94,9 @@
         color: $color-text;
         padding: .25rem .5rem;
         border: none;
+        @include respond(phone){
+          width: 8rem;
+        }
       }
       &_label {
         color: $color-white;
@@ -90,12 +108,16 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        justify-content: center;
     }
     &__pack {
         display: flex;
         flex-direction: column;
         align-items: center;
         margin: 1rem;
+        @include respond(phone){
+          margin: .2rem;
+      }
         
         &__name {
             font-size: 1rem; 
@@ -123,11 +145,27 @@
       border: 1px solid white;
       border-radius: .5rem;
       padding: 1rem;
+      @include respond(phone){
+        padding: .5rem;
+        margin: 1rem 0 1.5rem 0;
+      }
+      & div:first-of-type {
+        @include respond(phone){
+          margin-right: 2rem;
+        }
+      }
     }
     
 }
-
-
+// I hate using important in styling. Unfortunately, with the npm package I used for numeric input it was required.
+b { 
+    background: transparent !important;
+    @include respond(phone){
+      width: 1.2rem !important;
+      font-size: .8rem !important;
+      margin: 0 0 0 4px !important;
+    }
+  }
 @-webkit-keyframes fade-in {
     0% {
       opacity: 0;
