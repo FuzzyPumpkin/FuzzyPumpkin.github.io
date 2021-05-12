@@ -1,0 +1,63 @@
+.options__button {
+  width: 3rem;
+  height: 3rem;
+  margin: .5rem;
+  background: transparent;
+  border: none;
+  position: relative;
+}
+
+.options__button--pressed::before {
+  position: absolute;
+  top: 1rem;
+  right: -.5rem;
+  content: "";
+  background-color: red;
+  height: .5rem;
+  width: 4rem;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.options__packList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.options__pack {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1rem;
+}
+
+.options__pack__name {
+  font-size: 1rem;
+}
+
+.options__pack__icon {
+  width: 3rem;
+}
+
+.options__pack__icon:hover {
+  opacity: .8;
+}
+
+.options__pack__icon--disabled {
+  opacity: .4;
+}
+/*# sourceMappingURL=Options.css.map */

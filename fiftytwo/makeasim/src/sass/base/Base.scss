@@ -1,0 +1,18 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {font-size: 62.5%;}
+body {
+    font-size: 1.5rem;
+    color: $color-text;
+    background-color: $color-background;
+    position: relative;
+    height: 100vh;
+    font-family: Roboto, sans-serif;
+}
+#root {height: 100%;}
+

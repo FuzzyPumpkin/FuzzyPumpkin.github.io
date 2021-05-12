@@ -1,0 +1,17 @@
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+}
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin respond($breakpoint){
+    @if $breakpoint == phone {
+        @media (max-width: 450px){@content};
+    }
+    @if $breakpoint == lgDesktop {
+        @media (min-width: 1400px){@content};
+    }
+}

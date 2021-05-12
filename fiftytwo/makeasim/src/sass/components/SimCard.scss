@@ -1,0 +1,58 @@
+.simcard {
+        background-color: rgba(247, 245, 247, .9);
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        width: 23rem;
+        min-height: 30rem;
+        font-family: Roboto, sans-serif;
+        box-shadow: 0 0 0 .35rem rgba(247, 245, 247, .65),
+        0 0 0 .75rem rgba(247, 245, 247, .4),
+        0 0 0 1.5rem rgba(247, 245, 247, .25);
+        margin: 2rem;
+        -webkit-animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+    &_traits {
+        &_list {
+            margin-left: 4rem;
+            list-style-type: none; 
+        }
+    }
+    &_label {
+        color: $color-green;
+        font-size: 1.4rem;
+        font-weight: 700;
+    }
+    &_data {
+        color: $color-text;
+        font-weight: 400;
+        margin: .25rem 0 .75rem 0;
+    }
+}
+
+
+@-webkit-keyframes slide-in-bottom {
+    0% {
+      -webkit-transform: translateY(1000px);
+              transform: translateY(1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slide-in-bottom {
+    0% {
+      -webkit-transform: translateY(1000px);
+              transform: translateY(1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      opacity: 1;
+    }
+  }

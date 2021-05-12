@@ -1,0 +1,38 @@
+@import "abstracts/Variables";
+@import "abstracts/Mixins";
+
+@import "base/Typography";
+@import "base/Base";
+
+@import "components/Roller";
+@import "components/Options";
+@import "components/SimCard";
+
+.App {
+    background-image: url("https://fuzzypumpkin.github.io/fiftytwo/makeasim/public/images/PlumbobBg.png");
+    background-repeat: no-repeat;
+    background-position: left top;
+    height: 100%;
+
+    &__button {
+        z-index: 10;
+        width: 3rem;
+        height: 3rem;
+        margin: .5rem;
+        background: transparent;
+        border: none;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        &__icon {
+            fill: $color-white;
+            width: 3rem;
+            height: 3rem;
+            &--blue {fill: $color-text;}
+        }
+        &:hover {
+            opacity: .5;
+            transition: all .3s ease-in;
+        }
+    }
+}
