@@ -1,0 +1,87 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html { font-size: 62.5%; }
+body {font-size: 1.6rem;
+    color: rgb(32, 37, 39);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    position: relative;
+    padding: 4rem;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(97, 190, 200);}
+
+.container {
+    margin: 5rem 10%;
+    max-width: 100rem;
+    padding: 5rem;
+    border-radius: 3rem;
+    background-color: rgb(250, 250, 249);
+}
+p {
+    margin: 2rem 1rem;
+    line-height: 2.4rem;}
+h1 {font-size: 6rem;
+    font-family: 'Gluten', cursive;
+    color: rgb(232, 114, 100);}
+h2 {font-size: 3.2rem;
+    font-weight: 300;
+    color: rgb(232, 114, 100);}
+h3 {font-size: 2.4rem;
+    font-weight: 300;
+    position: absolute;
+    top: -1.5rem;
+    background-color: rgb(250, 250, 249);
+    padding: 0 1rem;
+    color: rgb(232, 114, 100);}
+footer {
+    position: absolute;
+    bottom: 2rem;
+    text-align: center;
+    width: 100%;
+}
+header {
+    padding: 1rem 6rem;
+    line-height: 2.4rem;
+}
+.headline__greeting {margin-bottom: -1rem;}
+.headline__description {margin-top: -1rem;}
+
+.ruleset {
+    position: relative;
+    margin: 2rem;
+    border: solid .25rem rgb(232, 114, 100);
+    border-radius: 25.5rem 1.0rem 2.25rem 1.5rem/1.5rem 2.25rem 1.5rem 2.55rem;
+    padding: 1rem 3rem 2rem 3rem;
+}
+.plumbob {
+    position: absolute;
+    z-index: -1;
+    right: -2rem;
+    top: 10%;
+    opacity: .75;
+    transform: rotate(15deg);
+    
+}
+.bunny {
+    position: absolute;
+    z-index: -1;
+    left: -2rem;
+    bottom: 20%;
+    opacity: .75;
+    transform: rotate(-15deg);
+}
+li {
+    position: relative;}
+li::before {
+    content: "";
+    height: 1.6rem;
+    position: absolute;
+    left: -2.5rem;
+    background: url('../images/plumbobSticker.png') no-repeat left top;}
+ul {list-style-type: none;}
