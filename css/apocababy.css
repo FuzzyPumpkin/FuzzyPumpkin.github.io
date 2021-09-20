@@ -5,8 +5,9 @@
   padding: 0;
   box-sizing: border-box; }
 
-html { font-size: 62.5%; }
-body {font-size: 1.6rem;
+/* TAGS */
+body {
+    font-size: 1.6rem;
     color: rgb(32, 37, 39);
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
@@ -15,71 +16,30 @@ body {font-size: 1.6rem;
     display: flex;
     justify-content: center;
     background-color: rgb(97, 190, 200);}
-
-.container {
-    margin: 5rem 10%;
-    max-width: 100rem;
-    padding: 5rem;
-    border-radius: 3rem;
-    background-color: rgb(250, 250, 249);
-}
-p {
-    margin: 2rem 1rem;
-    line-height: 2.4rem;}
-h1 {font-size: 6rem;
-    font-family: 'Gluten', cursive;
-    color: rgb(232, 114, 100);}
-h2 {font-size: 3.2rem;
-    font-weight: 300;
-    color: rgb(232, 114, 100);}
-h3 {font-size: 2.4rem;
-    font-weight: 300;
-    position: absolute;
-    top: -1.5rem;
-    background-color: rgb(250, 250, 249);
-    padding: 0 1rem;
-    color: rgb(232, 114, 100);}
 footer {
     position: absolute;
     bottom: 2rem;
     text-align: center;
-    width: 100%;
-}
+    width: 100%;}
+h1, h2, h3 {color: rgb(232, 114, 100);}
+h2, h3 {font-weight: 300;}
+h1 {
+    font-size: 6rem;
+    font-family: 'Gluten', cursive;}
+h2 {font-size: 3.2rem;}
+h3 {
+    font-size: 2.4rem;
+    position: absolute;
+    top: -1.5rem;
+    background-color: rgb(250, 250, 249);
+    padding: 0 1rem;}
 header {
     padding: 1rem 6rem;
-    line-height: 2.4rem;
-}
-.headline__greeting {margin-bottom: -1rem;}
-.headline__description {margin-top: -1rem;}
-
-.ruleset {
-    position: relative;
-    margin: 2rem;
-    border: solid .25rem rgb(232, 114, 100);
-    border-radius: 25.5rem 1.0rem 2.25rem 1.5rem/1.5rem 2.25rem 1.5rem 2.55rem;
-    padding: 1rem 3rem 2rem 3rem;
-}
-.plumbob {
-    position: absolute;
-    z-index: -1;
-    right: -2rem;
-    top: 10%;
-    opacity: .75;
-    transform: rotate(15deg);
-    
-}
-.bunny {
-    position: absolute;
-    z-index: -1;
-    left: -2rem;
-    bottom: 20%;
-    opacity: .75;
-    transform: rotate(-15deg);
-}
+    line-height: 2.4rem;}
+html { font-size: 62.5%; }
 li {
     position: relative;
-    line-height: 2.5rem;
-}
+    line-height: 2.5rem;}
 li::before {
     content: "";
     height: 2rem;
@@ -88,17 +48,46 @@ li::before {
     top: 50%;
     transform: translateY(-50%);
     width: 1.1rem;
-    background-image: url('/images/plumbobLI.png');
-}
-.list {list-style-type: none;
+    background-image: url('/images/plumbobLI.png');}
+p {
+    margin: 2rem 1rem;
+    line-height: 2.4rem;}
+
+/* CLASSES */
+.background {
+    position: absolute;
+    z-index: -1;
+    opacity: .75;}
+.background--bunny {
+    left: -2rem;
+    bottom: 20%;
+    transform: rotate(-15deg);}
+.background--plumbob {  
+    right: -2rem;
+    top: 10%;
+    transform: rotate(15deg);}
+.container {
+    margin: 5rem 10%;
+    max-width: 100rem;
+    padding: 5rem;
+    border-radius: 3rem;
+    background-color: rgb(250, 250, 249);}
+.headline__greeting {margin-bottom: -1rem;}
+.headline__description {margin-top: -1rem;}
+.list {
+    list-style-type: none;
     padding: 0 10rem;}
 .list--sim {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-}
+    flex-wrap: wrap;}
 .list--sim li {width: 50%;}
 .preamble {
     background-color: rgb(232, 114, 100);
-    color:rgb(250, 250, 249);
-}
+    color:rgb(250, 250, 249);}
+.ruleset {
+    position: relative;
+    margin: 2rem;
+    border: solid .25rem rgb(232, 114, 100);
+    border-radius: 25.5rem 1.0rem 2.25rem 1.5rem/1.5rem 2.25rem 1.5rem 2.55rem;
+    padding: 1rem 3rem 2rem 3rem;}
