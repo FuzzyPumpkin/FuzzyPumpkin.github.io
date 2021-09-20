@@ -77,11 +77,28 @@ header {
     transform: rotate(-15deg);
 }
 li {
-    position: relative;}
+    position: relative;
+    line-height: 2.5rem;
+}
 li::before {
     content: "";
-    height: 1.6rem;
+    height: 2rem;
     position: absolute;
     left: -2.5rem;
-    background: url('../images/plumbobSticker.png') no-repeat left top;}
-ul {list-style-type: none;}
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.1rem;
+    background-image: url('/images/plumbobLI.png');
+}
+.list {list-style-type: none;
+    padding: 0 10rem;}
+.list--sim {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.list--sim li {width: 50%;}
+.preamble {
+    background-color: rgb(232, 114, 100);
+    color:rgb(250, 250, 249);
+}
