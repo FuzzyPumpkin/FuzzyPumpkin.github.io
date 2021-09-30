@@ -18,7 +18,7 @@ const delButtons = document.querySelectorAll(".delete");
 addButton.addEventListener("click", function(){
     let newElement = document.createElement("li");
     let buttonTag = '<button class="delete" id=' + colorPicker.value + '><svg class="delete__image"><use xlink:href="images/symbol-defs.svg#icon-delete"></use></svg></button>';
-    newElement.innerHTML = newColor.value + '<div class="displayList__daub" style="background-color:' + colorPicker.value + '"></div>' + buttonTag; 
+    newElement.innerHTML = '<div class="displayList__daub" style="background-color:' + colorPicker.value + '"></div>' + newColor.value + buttonTag; 
     newElement.accessKey = newColor.value;
     newElement.childNodes[1].addEventListener("click", delItem);
     colorList.push({hex: colorPicker.value, color: newColor.value});

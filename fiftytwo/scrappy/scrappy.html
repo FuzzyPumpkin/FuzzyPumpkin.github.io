@@ -7,6 +7,9 @@
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
     <link rel="manifest" href="images/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Birthstone+Bounce:wght@500&family=Poppins:wght@300&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="A random choice tool for use when creating a project out of scraps, or many available colors, of yarn. Like my work? See my portfolio at www.kariminger.com!">
     <meta name="author" content="Kari Minger">
@@ -15,17 +18,21 @@
 <body>
     <main>
         <h1>Scrappy</h1>
-        <section>
+        <p class="blurb">A tool to choose yarn colors for projects using multiple colors in random ways.</p>
+        <section class="formContainer">
             <h2>Available Yarn Colors</h2>
             <div class="form">
                 <input type="text" class="form__newColor" placeholder="Yarn color to add"></input>
                 <input type="color" class="form__colorPicker">
-                <button class="form__addBtn">Add</button>
+                <button class="form__addBtn button"><span>Add</span>
+                    <svg class="form__addBtn__image">
+                        <use xlink:href="images/symbol-defs.svg#icon-add"></use>
+                    </svg></button>
             </div>
-            <ul class="displayList centered"></ul>
+            <ul class="displayList"></ul>
         </section>
         <section>
-            <button class="choose">Choose two
+            <button class="choose button"><span>Choose two</span>
                 <svg class="choose__image">
                     <use xlink:href="images/symbol-defs.svg#icon-ballOfYarn"></use>
                 </svg>
