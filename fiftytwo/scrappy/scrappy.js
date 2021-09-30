@@ -6,6 +6,14 @@ const savedColorList = localStorage.savedColorList;
 let colorList = [];
 const choices = document.querySelector(".choices");
 
+
+populateFromStorage = (listText) => {
+  listText === undefined ? displayList.innerHTML = "" : displayList.innerHTML = listText;
+};
+populateFromStorage(localStorage.listText);
+const delButtons = document.querySelectorAll(".delete");
+
+
 addButton.addEventListener("click", function(){
     let newElement = document.createElement("li");
     let buttonTag = '<button class="delete">del</button>';
@@ -25,9 +33,7 @@ function delItem(){
   localStorage.listText = displayList.innerHTML;
   colorList = updatedColorList;
 }
-populateFromStorage = (listText) => {
-  listText === undefined ? displayList.innerHTML = "" : displayList.innerHTML = listText;
-};
+
 
 chooseButton.addEventListener("click", function(){
   let firstColor = colorList[Math.floor(Math.random() * colorList.length)];
@@ -35,5 +41,5 @@ chooseButton.addEventListener("click", function(){
   choices.innerHTML = firstColor + " + " + secondColor;
 });
 
-populateFromStorage(localStorage.listText);
+
 
