@@ -3,22 +3,37 @@
 <head>
 	<title>Scrappy - a scrap yarn project tool</title>
     <link rel="stylesheet" type="text/css" href="scrappy.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="images/site.webmanifest">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="A random choice tool for use when creating a project out of scraps, or many available colors, of yarn. Like my work? See my portfolio at www.kariminger.com!">
     <meta name="author" content="Kari Minger">
     <meta charset="utf-8"/>
 </head>
 <body>
-<h1>Scrappy</h1>
-<h2>Available Yarn Colors</h2>
-<input type="text" class="newColor" placeholder="Yarn color to add"></input>
-<input type="color" class="colorPicker">
-<button class="add">Add</button>
-<ul class="displayList centered">
-    
-</ul>
-<button class="choose">Choose two</button>
-<p class="choices"></p>
+    <main>
+        <h1>Scrappy</h1>
+        <section>
+            <h2>Available Yarn Colors</h2>
+            <div class="form">
+                <input type="text" class="form__newColor" placeholder="Yarn color to add"></input>
+                <input type="color" class="form__colorPicker">
+                <button class="form__addBtn">Add</button>
+            </div>
+            <ul class="displayList centered"></ul>
+        </section>
+        <section>
+            <button class="choose">Choose two
+                <svg class="choose__image">
+                    <use xlink:href="images/symbol-defs.svg#icon-ballOfYarn"></use>
+                </svg>
+            </button>
+            <div class="choices"></div>
+        </section>
+</main>
 <script type="text/javascript" src="scrappy.js"></script>
 </body>
 </html>
+
