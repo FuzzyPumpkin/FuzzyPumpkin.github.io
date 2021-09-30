@@ -73,6 +73,7 @@ section:first-of-type {
 .choices {
     display:flex;
     margin-top: 3rem;
+    height: 20rem;
 }
 .choices__color{
      width: 10rem;
