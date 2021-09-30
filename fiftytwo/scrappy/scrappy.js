@@ -18,7 +18,7 @@ const delButtons = document.querySelectorAll(".delete");
 addButton.addEventListener("click", function(){
     let newElement = document.createElement("li");
     let buttonTag = '<button class="delete" id=' + colorPicker.value + '>del</button>';
-    newElement.innerHTML = newColor.value + " " + buttonTag; 
+    newElement.innerHTML = newColor.value + '<div class="displayList__daub" style="background-color:' + colorPicker.value + '"></div>' + buttonTag; 
     newElement.accessKey = newColor.value;
     newElement.childNodes[1].addEventListener("click", delItem);
     colorList.push({hex: colorPicker.value, color: newColor.value});
@@ -39,7 +39,7 @@ function delItem(){
 chooseButton.addEventListener("click", function(){
   let firstColor = colorList[Math.floor(Math.random() * colorList.length)];
   let secondColor = colorList[Math.floor(Math.random() * colorList.length)];
-  choices.innerHTML = firstColor.color + " + " + secondColor.color;
+  choices.innerHTML = '<p><span style="color:' + firstColor.hex +'">' + firstColor.color + '</span> <span style="color:' + secondColor.hex +'">' + secondColor.color + '</span></p>';
 });
 
 
