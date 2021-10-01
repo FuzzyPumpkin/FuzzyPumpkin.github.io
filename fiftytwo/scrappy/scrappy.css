@@ -7,8 +7,7 @@
 
 html {
     font-size: 62.5%; 
-    height: 100vh;
-    
+    min-height: 100vh;
 }
 body {
     position: relative;
@@ -161,3 +160,14 @@ section:first-of-type {
      font-family: 'Poppins', sans-serif;
      padding: 0 .5rem;
  }
+
+ @media (max-width: 450px) {
+    html {
+        font-size: 50%; 
+    }
+    main {
+        max-width: 100%;
+        margin: 0;
+    }
+    .form__newColor {width: 20rem;}
+}
