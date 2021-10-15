@@ -17,8 +17,9 @@ addColor = (color) => {
   displayList.appendChild(newElement);
 }
 
-populateFromStorage = (storedColorList) => {
-  if(storedColorList != undefined){
+populateFromStorage = () => {
+  if(localStorage.savedColorList != undefined){
+    let storedColorList = JSON.parse(localStorage.savedColorList);
     for(let i = 0; i < storedColorList.length; i++){
       addColor(storedColorList[i]);
     };
@@ -29,7 +30,7 @@ populateFromStorage = (storedColorList) => {
     delButtons[i].addEventListener("click", delItem);
   };
 };
-populateFromStorage(JSON.parse(localStorage.savedColorList));
+populateFromStorage();
 
 
 addButton.addEventListener("click", function(){
