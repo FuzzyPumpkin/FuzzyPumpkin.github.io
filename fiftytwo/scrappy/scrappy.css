@@ -116,6 +116,46 @@ section:first-of-type {
     margin-top: 2rem;
     position: relative;
 }
+.example {
+    background-color: aqua;
+}
+.example__blurb {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 1;
+}
+.example__blurb::before {
+    content: " ";
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    height: 1rem;
+    width: 1rem;
+    transform: rotate(200deg);
+    background-image: url(/images/arrow.svg);
+}
+.example__blurb::after {
+    content: " ";
+    position: absolute;
+    right: -1rem;
+    top: 1rem;
+    height: 1rem;
+    width: 1rem;
+    transform: rotate(-25deg);
+    background-image: url(/images/arrow.svg);
+}
+.example__image {
+    display: none;
+    background-image: url(/images/blanket.jpg);
+    width: 40rem;
+    height: 53.3rem;
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    box-shadow: -10px -10px 59px 10px rgba(245,231,245,1), 10px 10px 59px 10px rgba(245,231,245,1);
+    transform: rotate(8deg);
+}
 .formContainer {
     border-top: rgb(138, 116, 184, .8) dashed .3rem;
     border-bottom: rgb(138, 116, 184, .8) dashed .3rem;
